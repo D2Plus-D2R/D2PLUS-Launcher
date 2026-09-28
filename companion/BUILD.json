@@ -1,0 +1,10 @@
+{
+  "version": "1.0.0-beta.1",
+  "upstream": "https://github.com/Fr4nsson/D2RDamageNumbers",
+  "upstreamCommit": "f0f832bd3096c1c185c0a04c4f756928ce3320d5",
+  "sha256": "bfc9cb5076c6ad3f73e7bf167598940fd9619fae34f538fc19ebe14de04ba3d5",
+  "compiler": "llvm-mingw 20260922, x86_64 UCRT, static C++ runtime; cross-compiled on Linux",
+  "license": "MIT; font SIL OFL 1.1; see notices",
+  "windowsRuntimeTested": false,
+  "liveD2RTested": false
+}

@@ -1,0 +1,16 @@
+{
+  "name": "d2plus-launcher",
+  "productName": "D2PLUS Launcher",
+  "version": "0.0.2-alpha",
+  "description": "D2PLUS offline desktop launcher",
+  "main": "desktop/main.cjs",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "test": "node --test test/launcher.test.cjs test/setup.test.cjs test/desktop.test.cjs",
+    "test:ui": "node --test test/setup-ui.test.cjs"
+  },
+  "devDependencies": {
+    "jsdom": "26.1.0"
+  }
+}

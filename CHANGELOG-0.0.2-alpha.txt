@@ -1,0 +1,10 @@
+Alpha 0.0.2 — Native desktop release candidate
+- Public version renamed from the earlier internal 0.2.0 label.
+- D2PLUS Launcher.exe with frameless application window, no browser tabs or console.
+- Actual reference artwork with scaled, aligned interactive controls and live status.
+- Native minimize/close; single-instance launcher; controlled wiki/editor windows.
+- First-run wizard, saved paths, shortcut import, download verification and overlay
+  behavior carried forward from the functional prototype.
+- Per-user installer with desktop/Start-menu shortcuts and file-list uninstaller.
+- Existing hero editor files and companion binary retained unchanged; wiki 1.0.6.
+- Windows execution and visual/DPI testing remain pending.

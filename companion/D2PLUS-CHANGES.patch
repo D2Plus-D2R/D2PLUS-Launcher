@@ -1,0 +1,185 @@
+--- upstream/D2RDamageNumbers.cpp
++++ d2plus/D2RDamageNumbers.cpp
+@@ -1,3 +1,5 @@
++#include "SuitePortable.h"
++#include "SuiteIntegration.h"
+ #include <windows.h>
+ #include <bcrypt.h>
+ #include <dwmapi.h>
+@@ -392,8 +394,10 @@
+ }
+ 
+ static bool CloseIfWatchedD2RProcessExited() {
+-    if (!g_d2rProcessWatch) return false;
+-    if (WaitForSingleObject(g_d2rProcessWatch, 0) != WAIT_OBJECT_0) return false;
++    if (!SuiteParentExited()) {
++        if (!g_d2rProcessWatch) return false;
++        if (WaitForSingleObject(g_d2rProcessWatch, 0) != WAIT_OBJECT_0) return false;
++    }
+ 
+     if (g_overlayWnd && IsWindow(g_overlayWnd)) {
+         DestroyWindow(g_overlayWnd);
+@@ -434,6 +438,7 @@
+         return true;
+     }
+ 
++    SuiteStatus("error-memory-check");
+     std::wstring message =
+         L"D2R Damage Numbers could not find the required D2R memory offsets and will close.\n\n"
+         L"One possible reason is that Diablo II: Resurrected is paused.\n\n"
+@@ -737,6 +742,8 @@
+ 
+ static BOOL CALLBACK EnumWindowsProc(HWND hwnd, LPARAM) {
+     if (!IsWindowVisible(hwnd)) return TRUE;
++    DWORD windowPid=0; GetWindowThreadProcessId(hwnd,&windowPid);
++    if (SuiteTargetPid() && windowPid!=SuiteTargetPid()) return TRUE;
+ 
+     wchar_t title[512]{};
+     GetWindowTextW(hwnd, title, 512);
+@@ -789,6 +796,7 @@
+     g_gameRect = rc;
+     g_hasGameRect = true;
+ 
++    SuiteStatus("running-memory-checks-passed");
+     ShowWindow(g_overlayWnd, SW_SHOWNA);
+ 
+     SetWindowPos(
+@@ -1113,6 +1121,7 @@
+     }
+ 
+     case WM_DESTROY:
++        SuiteStatus("stopped");
+         AppendLogBlock(L"Overlay stopped");
+         FrameTimer::Stop(hwnd);
+         TrayController::RemoveTrayIcon(hwnd);
+@@ -1131,6 +1140,8 @@
+     const wchar_t CLASS_NAME[] = L"D2RDamageNumbersOverlay";
+     const bool scanMemory = HasCommandLineSwitch(L"--scan-memory");
+ 
++    if (!SuiteInitialize()) { SuiteStatus("error-target"); return 5; }
++    SuiteStatus("checking");
+     ConfigureMemoryScannerIntegration();
+     LoadConfig();
+ 
+@@ -1154,10 +1165,27 @@
+         return 2;
+     }
+ 
++    SuiteTargetPid()=d2rProcess.processId;
++    if (!SuiteValidateIdentity(d2rProcess.processId)) { SuiteStatus("error-target"); ReleaseSingleInstanceLock(); return 5; }
+     std::wstring currentD2RHash;
+     CheckD2RHashForLaunch(d2rProcess.processPath, currentD2RHash);
+ 
++    // A game window may appear before an unpaused offline session exists.
++    // Probe using the ORIGINAL validator; never draw or bypass a failed check.
++    if (!SuiteEnv(L"D2PLUS_TARGET_PID").empty()) {
++        const ULONGLONG deadline=GetTickCount64()+180000;
++        std::wstring readinessStatus;
++        while (GetTickCount64()<deadline) {
++            if (!SuiteValidateIdentity(d2rProcess.processId) || SuiteParentExited()) {
++                SuiteStatus("error-target"); ReleaseSingleInstanceLock(); return 5;
++            }
++            if (ValidateD2RMemoryOffsets(d2rProcess.processId,readinessStatus)) break;
++            SuiteStatus("waiting-offline-game");
++            Sleep(2000);
++        }
++    }
+     if (!ValidateOffsetsForLaunch(d2rProcess.processId)) {
++        SuiteStatus("error-memory-check");
+         ReleaseSingleInstanceLock();
+         return 3;
+     }
+--- upstream/FrameTimer.cpp
++++ d2plus/FrameTimer.cpp
+@@ -1,3 +1,4 @@
++#include "SuitePortable.h"
+ #include "FrameTimer.h"
+ 
+ #include <mmsystem.h>
+--- upstream/OverlayRenderer.cpp
++++ d2plus/OverlayRenderer.cpp
+@@ -1,3 +1,4 @@
++#include "SuitePortable.h"
+ #include "OverlayRenderer.h"
+ 
+ #include <cmath>
+--- upstream/MemoryScanner.cpp
++++ d2plus/MemoryScanner.cpp
+@@ -1,3 +1,5 @@
++#include "SuitePortable.h"
++#include "SuiteIntegration.h"
+ // Memory scanner implementation slice.
+ #include "MemoryScanner.h"
+ 
+@@ -574,6 +576,10 @@
+ 
+ static bool FindD2RProcessId(DWORD& processId) {
+     processId = 0;
++    if (SuiteTargetPid()) {
++        if (!SuiteValidateIdentity(SuiteTargetPid())) return false;
++        processId = SuiteTargetPid(); return true;
++    }
+ 
+     HANDLE snapshot = CreateToolhelp32Snapshot(TH32CS_SNAPPROCESS, 0);
+     if (snapshot == INVALID_HANDLE_VALUE) return false;
+@@ -586,9 +592,9 @@
+         do {
+             if (_wcsicmp(entry.szExeFile, L"D2R.exe") == 0 ||
+                 _wcsicmp(entry.szExeFile, L"Diablo II Resurrected.exe") == 0) {
++                if (found) { CloseHandle(snapshot); processId=0; return false; }
+                 processId = entry.th32ProcessID;
+                 found = processId != 0;
+-                break;
+             }
+         } while (Process32NextW(snapshot, &entry));
+     }
+--- upstream/targetver.h
++++ d2plus/targetver.h
+@@ -1,6 +1,6 @@
+ #pragma once
+ 
+-// // Including SDKDDKVer.h defines the highest available Windows platform.
++// // Including sdkddkver.h defines the highest available Windows platform.
+ // If you wish to build your application for a previous Windows platform, include WinSDKVer.h and
+-// set the _WIN32_WINNT macro to the platform you wish to support before including SDKDDKVer.h.
+-#include <SDKDDKVer.h>
++// set the _WIN32_WINNT macro to the platform you wish to support before including sdkddkver.h.
++#include <sdkddkver.h>
+--- upstream/DpsTracker.cpp
++++ d2plus/DpsTracker.cpp
+@@ -1,3 +1,4 @@
++#include "SuitePortable.h"
+ #include "DpsTracker.h"
+ 
+ #include <cwchar>
+--- upstream/TrayController.cpp
++++ d2plus/TrayController.cpp
+@@ -1,3 +1,4 @@
++#include "SuitePortable.h"
+ #include "TrayController.h"
+ 
+ #include <shellapi.h>
+--- upstream/DamageNumberSystem.cpp
++++ d2plus/DamageNumberSystem.cpp
+@@ -1,3 +1,4 @@
++#include "SuitePortable.h"
+ #include "DamageNumberSystem.h"
+ 
+ #include <algorithm>
+--- upstream/OverlayConfig.cpp
++++ d2plus/OverlayConfig.cpp
+@@ -1,3 +1,5 @@
++#include "SuitePortable.h"
++#include "SuiteIntegration.h"
+ #include "OverlayConfig.h"
+ 
+ #include <cwchar>
+@@ -193,6 +195,8 @@
+ }
+ 
+ std::wstring GetConfigPath() {
++    auto suitePath=SuiteEnv(L"D2PLUS_CONFIG_PATH");
++    if (!suitePath.empty()) return suitePath;
+     wchar_t modulePath[MAX_PATH]{};
+     DWORD length = GetModuleFileNameW(nullptr, modulePath, MAX_PATH);
+     if (length == 0 || length >= MAX_PATH) {

@@ -1,0 +1,51 @@
+name: Build alpha packages
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+permissions:
+  contents: write
+concurrency:
+  group: alpha-release
+  cancel-in-progress: false
+jobs:
+  package:
+    if: github.event_name == 'workflow_dispatch' || contains(github.event.head_commit.message, '[build-alpha]')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: Install build dependencies
+        run: sudo apt-get update && sudo apt-get install -y nsis
+      - name: Unpack offline suite
+        run: python3 build/unpack-suite.py
+      - name: Install test dependencies
+        run: npm install --ignore-scripts
+      - name: Run launcher and setup tests
+        run: |
+          npm test
+          npm run test:ui
+      - name: Build installer and portable ZIP
+        run: python3 build/package.py --makensis /usr/bin/makensis
+      - name: Package source and verify ZIP
+        run: |
+          git archive --format=zip --prefix=D2PLUS-Launcher/ HEAD > dist/D2PLUS_GitHub_Alpha_0.0.2.zip
+          python3 - <<'PY'
+          from pathlib import Path
+          import zipfile,hashlib
+          dist=Path('dist')
+          for p in dist.glob('*.zip'):
+              with zipfile.ZipFile(p) as z:
+                  assert z.testzip() is None, str(p)
+          files=sorted([*dist.glob('*.zip'),*dist.glob('*.exe')])
+          (dist/'SHA256SUMS-0.0.2-alpha.txt').write_text(''.join(hashlib.sha256(p.read_bytes()).hexdigest()+'  '+p.name+'\n' for p in files))
+          PY
+      - name: Create a draft prerelease
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          if gh release view v0.0.2-alpha >/dev/null 2>&1; then
+            echo 'This release already exists. Refusing to replace its files.'
+            exit 1
+          fi
+          gh release create v0.0.2-alpha dist/*.exe dist/*.zip dist/SHA256SUMS-0.0.2-alpha.txt --draft --prerelease --target "$GITHUB_SHA" --title 'D2PLUS Launcher — Alpha 0.0.2' --notes-file release-notes/v0.0.2-alpha.md

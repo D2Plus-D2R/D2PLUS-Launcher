@@ -1,0 +1,18 @@
+node_modules/
+build-cache/
+dist/
+_site/
+release-assets/
+*.log
+.env
+.env.*
+*.d2s
+*.d2i
+*.key
+*.pem
+settings.json
+.DS_Store
+
+# Compiled offline assets are tracked in vendor/offline-suite.zip.part*.
+docs/*
+!docs/launcher/

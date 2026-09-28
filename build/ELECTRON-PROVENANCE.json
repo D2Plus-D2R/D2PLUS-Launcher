@@ -1,0 +1,6 @@
+{
+  "version": "v44.4.5",
+  "source": "https://github.com/electron/electron/releases/download/v44.4.5/electron-v44.4.5-win32-x64.zip",
+  "sha256": "11c395820a5aaa8ebcc0686b476d0ac98a730274ebfbdc8cf5538a7c2815cb5d",
+  "verifiedAgainst": "https://github.com/electron/electron/releases/download/v44.4.5/SHASUMS256.txt"
+}
