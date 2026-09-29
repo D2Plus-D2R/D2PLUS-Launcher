@@ -10,10 +10,10 @@ D2PLUS is a passion project developed by a father of three with a busy life and 
 
 [Download packages and installation notes](https://github.com/D2Plus-D2R/D2PLUS-Launcher/releases)
 
-The Alpha 0.0.2 release is currently a private draft. These links will become available to viewers after the release is published and the repository is made public.
+Alpha 0.0.2 is available as a public prerelease. Choose the gameplay mod for a new installation; the launcher is an optional companion.
 
-- Full gameplay mod: `D2PLUS_Mod_Alpha_0.0.2_Level95.zip`.
-- Small update for the existing working mod: `D2PLUS_Level95_Defaults_UPDATE_Alpha_0.0.2.zip`.
+- [Full gameplay mod — D2PLUS_Mod_Alpha_0.0.2.zip](https://github.com/D2Plus-D2R/D2PLUS-Launcher/releases/download/v0.0.2-alpha/D2PLUS_Mod_Alpha_0.0.2.zip).
+- [Small update for the existing working mod — D2PLUS_Defaults_UPDATE_Alpha_0.0.2.zip](https://github.com/D2Plus-D2R/D2PLUS-Launcher/releases/download/v0.0.2-alpha/D2PLUS_Defaults_UPDATE_Alpha_0.0.2.zip).
 - Optional Windows launcher: installer or portable ZIP in the same release.
 
 
@@ -24,7 +24,7 @@ The Alpha 0.0.2 release is currently a private draft. These links will become av
 - 200 original uniques, 32 four-piece sets, eight custom runes and 64 runewords.
 - Restored legacy uniques, Diablo I-inspired equipment and 32 unique trinkets.
 - A level cap of 100.
-- Seven endgame class sets containing 28 pieces, with level requirements reduced to 95.
+- Class-specific equipment that supports builds from early leveling through the endgame.
 
 ### Smelting and crafting
 
@@ -72,9 +72,9 @@ Yes. You MUST own Diablo II: Resurrected through Blizzard and have it installed.
 
 ### Which download should I choose?
 
-For the complete gameplay mod, use **D2PLUS_Mod_Alpha_0.0.2_Level95.zip**.
+For the complete gameplay mod, use **D2PLUS_Mod_Alpha_0.0.2.zip**.
 
-If you already have the working D2PLUS build used for this update, **D2PLUS_Level95_Defaults_UPDATE_Alpha_0.0.2.zip** contains the changed files. Merge it into your existing source mod folder. It does not include the artwork or other required assets.
+If you already have the working D2PLUS build used for this update, **D2PLUS_Defaults_UPDATE_Alpha_0.0.2.zip** contains the changed files. Merge it into your existing source mod folder. It does not include the artwork or other required assets.
 
 The launcher installer and portable ZIP are separate downloads. Installing the launcher does not install the gameplay mod for you.
 
@@ -92,9 +92,9 @@ Many features have individual D2RMM options. Review them, then click **Install M
 
 Be careful with features that add items or inventory space. Back up your saves, remove affected custom items before disabling their content, and clear the extra backpack cells before turning off the expanded inventory.
 
-### Is level 95 the new level cap?
+### What is the level cap?
 
-No. The cap is still **100**. Level 95 is the new requirement for the 28 pieces in the seven endgame class sets.
+The cap is **100**, with an optional smoother experience curve for levels 80–100.
 
 ### Are damage numbers required?
 
@@ -124,7 +124,7 @@ Include your game and D2RMM versions, enabled options, the steps that caused the
 - Matches the configured D2R installation, prevents duplicate managed launches and handles game exit.
 - Provides a verified D2RMM download option and clear component status.
 
-This launcher bundle does **not** include the full D2PLUS D2RMM mod or the game. Use your existing working mod installation. A public D2PLUS mod update feed is not yet configured.
+The gameplay mod and launcher are separate downloads in the same [release](https://github.com/D2Plus-D2R/D2PLUS-Launcher/releases/tag/v0.0.2-alpha). Install the full gameplay mod through D2RMM, then configure the optional launcher. An automatic mod update feed is not yet configured.
 
 ## First setup
 
@@ -182,4 +182,5 @@ D2PLUS is an unofficial fan project, not affiliated with or endorsed by Blizzard
 
 ## Repository setup
 
-The repository is private. The page is prepared but not deployed. Run the manual **Build alpha packages** workflow to create a draft prerelease with installer, portable ZIP and checksums. It does not publish the draft. Keep the page download buttons disabled until a public release exists.
+The repository and Alpha 0.0.2 prerelease are public. The **Build alpha packages** workflow creates draft launcher releases. The **Publish D2PLUS page** workflow is manual; run it after committing website changes to update GitHub Pages.
+
