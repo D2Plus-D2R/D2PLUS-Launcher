@@ -4,7 +4,7 @@ first build without adding installed game data to the source repository tree.
 """
 from pathlib import Path
 import json,hashlib,base64,os,urllib.request,urllib.error
-root=Path(__file__).resolve().parents[1];manifest=json.loads((root/'release-inputs/alpha-v05.json').read_text());dest=root/'dist';dest.mkdir(exist_ok=True)
+root=Path(__file__).resolve().parents[1];manifest=json.loads((root/'release-inputs/alpha-v07.json').read_text());dest=root/'dist';dest.mkdir(exist_ok=True)
 repo=manifest['repository'];token=os.environ.get('GH_TOKEN','')
 for f in manifest['files']:
  path=dest/f['name']

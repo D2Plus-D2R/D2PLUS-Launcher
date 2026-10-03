@@ -1,7 +1,7 @@
 {
   "name": "d2plus-launcher",
   "productName": "D2PLUS Launcher",
-  "version": "0.5.0-alpha",
+  "version": "0.7.0-alpha",
   "description": "D2PLUS offline desktop launcher",
   "main": "desktop/main.cjs",
   "private": true,

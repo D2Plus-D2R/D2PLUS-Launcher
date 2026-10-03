@@ -49,3 +49,15 @@ test('home and direct launcher routes resolve the JavaScript and stylesheet they
   assert.equal(count,2);
  }
 });
+
+test('map reset persists, preserves custom arguments and changes only launch arguments',async t=>{
+ const s=setup(t);await s.l.save({...c,resetOfflineMaps:true});const again=new Launcher(s.options);
+ assert.equal(again.config.resetOfflineMaps,true);await again.launchGame();
+ assert.equal(s.a.launched.arguments,c.arguments+' -resetofflinemaps');assert.equal(again.config.arguments,c.arguments);
+});
+test('map switch deduplicates standalone flags without altering quoted values',()=>{
+ const {mapArguments}=require('../scripts/map-options.cjs');
+ const input='-mod "My Mod" -x "value -resetofflinemaps" -RESETOFFLINEMAPS -txt "-resetofflinemaps"';
+ assert.equal(mapArguments(input,false),'-mod "My Mod" -x "value -resetofflinemaps"  -txt ');
+ assert.equal(mapArguments(input,true),'-mod "My Mod" -x "value -resetofflinemaps"  -txt -resetofflinemaps');
+});

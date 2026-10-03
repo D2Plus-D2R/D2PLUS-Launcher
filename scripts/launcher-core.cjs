@@ -2,9 +2,10 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const crypto = require('node:crypto');
-const VERSION = '0.5.0-alpha';
+const VERSION = '0.7.0-alpha';
+const {mapArguments}=require('./map-options.cjs');
 const DEFAULTS = Object.freeze({gameExe:'', modDirectory:'', arguments:'', workingDirectory:'',
-  d2rmmExe:'', setupComplete:false, enableDamageNumbers:false, companionExe:'', showDps:false, dpsX:85, dpsY:15, fontSize:26});
+  d2rmmExe:'', setupComplete:false, resetOfflineMaps:false, enableDamageNumbers:false, companionExe:'', showDps:false, dpsX:85, dpsY:15, fontSize:26});
 const norm = s => path.win32.normalize(String(s || '')).replace(/\\+$/, '').toLowerCase();
 const identity = p => `${p.pid}:${p.started}`;
 // Windows command-line quoting: backslashes before double quotes follow CommandLineToArgvW rules.
@@ -112,7 +113,7 @@ class Launcher {
     if(all.games.some(p=>norm(p.exe)===norm(this.config.gameExe)||!p.exe))throw new Error('A D2R instance from this installation (or with unreadable identity) is already running. Close it first.');
     if(this.now()<this.pendingLaunchUntil)return {launchPending:true};
     this.pendingLaunchUntil=this.now()+30000;
-    try {const result=await this.adapter.launchGame(this.config);this.message='D2PLUS launched. Damage numbers will start if enabled and ready.';return result;}
+    try {const result=await this.adapter.launchGame({...this.config,arguments:mapArguments(this.config.arguments,this.config.resetOfflineMaps)});this.message='D2PLUS launched. Damage numbers will start if enabled and ready.';return result;}
     catch(e){this.pendingLaunchUntil=0;throw e;}
   }
   async tick(){

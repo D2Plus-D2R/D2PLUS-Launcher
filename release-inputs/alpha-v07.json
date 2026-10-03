@@ -1,0 +1,148 @@
+{
+  "repository": "D2Plus-D2R/D2PLUS-Launcher",
+  "tag": "v0.7-alpha",
+  "files": [
+    {
+      "name": "D2PLUS_Alpha_v0.7_Complete_D2RMM.zip",
+      "size": 111608156,
+      "sha256": "b03491c4ddcabb5b0f9ba58ee081bf692f4f1345edc5dd0b13b85aec2fece2c6",
+      "blobs": [
+        {
+          "sha": "a8f8220425c4d118954b58844d2c6198c5ba8933",
+          "size": 4194304
+        },
+        {
+          "sha": "094145d8f4cf64155e55b9a6fbd08a8345b91077",
+          "size": 4194304
+        },
+        {
+          "sha": "0c1932e97ba7ebc5e9b3af0bfc89a3202afa87c6",
+          "size": 4194304
+        },
+        {
+          "sha": "f75b075286c77dabbdb7ba56c29c8966748c2bde",
+          "size": 4194304
+        },
+        {
+          "sha": "cdfd57ffb796194d4e54ca7e2d8f0341a19f00e7",
+          "size": 4194304
+        },
+        {
+          "sha": "ec7016f9e12b5669cba5718ac084b2cd9ced6db5",
+          "size": 4194304
+        },
+        {
+          "sha": "521846e1754221993cd0ee5b68eb3f6a31635d1b",
+          "size": 4194304
+        },
+        {
+          "sha": "e89909c7d0a20e488f5f1b54a97b2f3e16f3e11b",
+          "size": 4194304
+        },
+        {
+          "sha": "1ffba4bd42d053b3fa6749d65a1df1511e745b55",
+          "size": 4194304
+        },
+        {
+          "sha": "4fabcf038aa34ca4237b0e14ee8bf1d773ac48f1",
+          "size": 4194304
+        },
+        {
+          "sha": "4e2007168dd658cc80b2e0bf9e9070890c7d3154",
+          "size": 4194304
+        },
+        {
+          "sha": "f27e22f8ea7829502e33bd9f70ce555c2238c44e",
+          "size": 4194304
+        },
+        {
+          "sha": "fd566eb2350bc3cb6ef5a227de262f927decaf39",
+          "size": 4194304
+        },
+        {
+          "sha": "472380b2cddf01627393b3acbbb5702f34d79eb2",
+          "size": 4194304
+        },
+        {
+          "sha": "f03c78e0d6019eb87cda1d491fc446e9a5b419fc",
+          "size": 4194304
+        },
+        {
+          "sha": "532a5580f22f2eb30fc4497c76dfc8623b3a2d87",
+          "size": 4194304
+        },
+        {
+          "sha": "fd604a5d3c82852bd2fdafbfa81b0336f3bad242",
+          "size": 4194304
+        },
+        {
+          "sha": "432facec1767afbe5fadf51210149fd7ad3f922b",
+          "size": 4194304
+        },
+        {
+          "sha": "9df8111b240d54144f4112ad74c6645fea9714ba",
+          "size": 4194304
+        },
+        {
+          "sha": "aae91648fc7a52486c1bb66a10888dc3944a3721",
+          "size": 4194304
+        },
+        {
+          "sha": "934a4f0f248899fe52f2edfd11c9df3708e7bfa9",
+          "size": 4194304
+        },
+        {
+          "sha": "e05ab056353e85dfdc2cc6c64d4fb046f9a9c774",
+          "size": 4194304
+        },
+        {
+          "sha": "5aa199cf69cfab83c332599539935e20764cc8fc",
+          "size": 4194304
+        },
+        {
+          "sha": "9b184b04b29ec07d4259075006aa6b7ce14f42a2",
+          "size": 4194304
+        },
+        {
+          "sha": "b05ce113e996bb3ca0c94090cd3292dcb7b8832e",
+          "size": 4194304
+        },
+        {
+          "sha": "984fd2ca32ee7d1d650905aa8c9809187b32adbc",
+          "size": 4194304
+        },
+        {
+          "sha": "6b1bbd7c2d8119df057d6a06f4d2b3c33eb21314",
+          "size": 2556252
+        }
+      ]
+    },
+    {
+      "name": "D2PLUS_Companion_Alpha_v0.7.apk",
+      "size": 17362574,
+      "sha256": "4c6ababab1491be0caa60cd2e2601f1aa22f5668c18406cdd93d69aedf845841",
+      "blobs": [
+        {
+          "sha": "d6d2782128b97b069d5c86034e13894b0bb89ccd",
+          "size": 4194304
+        },
+        {
+          "sha": "d199bcf8e72dfea7404abadef04495310752db2c",
+          "size": 4194304
+        },
+        {
+          "sha": "99dd535e3468b21438093fb541ecc2e0615a2083",
+          "size": 4194304
+        },
+        {
+          "sha": "0877470b6f33632c02531a750966cc4402679087",
+          "size": 4194304
+        },
+        {
+          "sha": "874093d840de12ae686e98299c093a5ec0f175b3",
+          "size": 585358
+        }
+      ]
+    }
+  ]
+}
