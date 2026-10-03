@@ -21,7 +21,7 @@ def renamed(v):
  if isinstance(v,dict):return {k:renamed(x) for k,x in v.items()}
  return v
 records[:]=[renamed(r) for r in records]
-smelts={r['input 1'].split(',')[0]:r for r in cube if r['description'].startswith('D2PLUS Smelt:') and r['enabled']=='1'}
+smelts={name(r['input 1'].split(',')[0]):r for r in cube if r['description'].startswith('D2PLUS Smelt:') and r['enabled']=='1'}
 updated_smelts=0
 for r in records:
  if r['kind']=='Recipe' and (r['name'].startswith('D2PLUS Smelt:') or r['name'].startswith('Smelt ')):

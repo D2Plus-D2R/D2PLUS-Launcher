@@ -7,7 +7,7 @@ permissions:
   contents: write
 concurrency:
   group: alpha-release
-  cancel-in-progress: false
+  cancel-in-progress: true
 jobs:
   package:
     if: github.event_name == 'workflow_dispatch' || contains(github.event.head_commit.message, '[build-alpha]')

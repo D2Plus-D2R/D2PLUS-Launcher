@@ -23,3 +23,5 @@ test('release download uses the exact gameplay package checksum and version',()=
  assert.equal(CATALOG.d2plus.sha256,manifest.files[0].sha256);assert.ok(CATALOG.d2plus.url.endsWith('/v0.7-alpha/'+manifest.files[0].name));
  assert.equal(require('../package.json').version,require('../scripts/launcher-core.cjs').VERSION);
 });
+
+test('localized set names receive the actual reduced smelting rewards',()=>{const d=JSON.parse(fs.readFileSync(path.join(root,'database.json')));for(const [id,out] of [['entry-2450','Sol Rune'],['entry-2493','Ort Rune'],['entry-2497','Ort Rune']])assert.deepEqual(d.records.find(r=>r.id===id).outputs,[out]);});

@@ -120,7 +120,7 @@
     {
       "name": "D2PLUS_Companion_Alpha_v0.7.apk",
       "size": 17362574,
-      "sha256": "4c6ababab1491be0caa60cd2e2601f1aa22f5668c18406cdd93d69aedf845841",
+      "sha256": "96e910a813fceaf828dd0b1feacfc29d6ac914d9802434269de26fa81fde7f26",
       "blobs": [
         {
           "sha": "d6d2782128b97b069d5c86034e13894b0bb89ccd",
@@ -135,11 +135,11 @@
           "size": 4194304
         },
         {
-          "sha": "0877470b6f33632c02531a750966cc4402679087",
+          "sha": "6b6778ce77d85aa2f88ac7c5a318cc2e65e4a14c",
           "size": 4194304
         },
         {
-          "sha": "874093d840de12ae686e98299c093a5ec0f175b3",
+          "sha": "e78a0713cf4cc39959e1890a3b2536d918a338b9",
           "size": 585358
         }
       ]
