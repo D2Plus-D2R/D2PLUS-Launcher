@@ -2,7 +2,7 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const crypto = require('node:crypto');
-const VERSION = '0.0.2-alpha';
+const VERSION = '0.5.0-alpha';
 const DEFAULTS = Object.freeze({gameExe:'', modDirectory:'', arguments:'', workingDirectory:'',
   d2rmmExe:'', setupComplete:false, enableDamageNumbers:false, companionExe:'', showDps:false, dpsX:85, dpsY:15, fontSize:26});
 const norm = s => path.win32.normalize(String(s || '')).replace(/\\+$/, '').toLowerCase();

@@ -19,33 +19,42 @@ jobs:
       - name: Unpack offline suite
         run: python3 build/unpack-suite.py
       - name: Install test dependencies
-        run: npm install --ignore-scripts
-      - name: Run launcher and setup tests
+        run: npm ci --ignore-scripts
+      - name: Run launcher, setup and wiki tests
         run: |
           npm test
           npm run test:ui
+      - name: Materialize verified gameplay packages
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 build/fetch-release-inputs.py
       - name: Build installer and portable ZIP
         run: python3 build/package.py --makensis /usr/bin/makensis
-      - name: Package source and verify ZIP
+      - name: Package source and offline wiki; verify archives
         run: |
-          git archive --format=zip --prefix=D2PLUS-Launcher/ HEAD > dist/D2PLUS_GitHub_Alpha_0.0.2.zip
+          git archive --format=zip --prefix=D2PLUS-Launcher/ HEAD > dist/D2PLUS_GitHub_Alpha_v0.5.zip
           python3 - <<'PY'
           from pathlib import Path
           import zipfile,hashlib
           dist=Path('dist')
+          with zipfile.ZipFile(dist/'D2PLUS_Offline_Wiki_Alpha_v0.5.zip','w',zipfile.ZIP_DEFLATED) as z:
+              for p in sorted(Path('docs').rglob('*')):
+                  if p.is_file() and not p.is_relative_to('docs/launcher'):
+                      z.write(p,p.as_posix())
+              z.writestr('START_HERE.txt','Extract the entire ZIP. Open docs/wiki/index.html for the Alpha v0.5 offline wiki. Keep the docs directory and its assets together. Existing companion pages are included.\n')
           for p in dist.glob('*.zip'):
               with zipfile.ZipFile(p) as z:
                   assert z.testzip() is None, str(p)
           files=sorted([*dist.glob('*.zip'),*dist.glob('*.exe')])
-          (dist/'SHA256SUMS-0.0.2-alpha.txt').write_text(''.join(hashlib.sha256(p.read_bytes()).hexdigest()+'  '+p.name+'\n' for p in files))
+          (dist/'SHA256SUMS-0.5.0-alpha.txt').write_text(''.join(hashlib.sha256(p.read_bytes()).hexdigest()+'  '+p.name+'\n' for p in files))
           PY
-      - name: Create a draft prerelease
+      - name: Publish Alpha v0.5 prerelease
         env:
           GH_TOKEN: ${{ github.token }}
           GH_REPO: ${{ github.repository }}
         run: |
-          if gh release view v0.0.2-alpha >/dev/null 2>&1; then
+          if gh release view v0.5-alpha >/dev/null 2>&1; then
             echo 'This release already exists. Refusing to replace its files.'
             exit 1
           fi
-          gh release create v0.0.2-alpha dist/*.exe dist/*.zip dist/SHA256SUMS-0.0.2-alpha.txt --draft --prerelease --target "$GITHUB_SHA" --title 'D2PLUS Launcher — Alpha 0.0.2' --notes-file release-notes/v0.0.2-alpha.md
+          gh release create v0.5-alpha dist/*.exe dist/*.zip dist/SHA256SUMS-0.5.0-alpha.txt --prerelease --target "$GITHUB_SHA" --title 'D2PLUS — Alpha v0.5' --notes-file release-notes/v0.5-alpha.md

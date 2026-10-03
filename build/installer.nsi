@@ -14,10 +14,10 @@ InstallDir "$LOCALAPPDATA\Programs\D2PLUS Launcher"
 RequestExecutionLevel user
 SetCompressor /SOLID lzma
 SetCompressorDictSize 32
-VIProductVersion "0.0.0.2-alpha"
+VIProductVersion "0.5.0.0"
 VIAddVersionKey /LANG=1033 "ProductName" "D2PLUS Launcher Setup"
-VIAddVersionKey /LANG=1033 "FileDescription" "D2PLUS Launcher Alpha 0.0.2 Installer"
-VIAddVersionKey /LANG=1033 "FileVersion" "0.0.2.0"
+VIAddVersionKey /LANG=1033 "FileDescription" "D2PLUS Launcher Alpha v0.5 Installer"
+VIAddVersionKey /LANG=1033 "FileVersion" "0.5.0.0"
 VIAddVersionKey /LANG=1033 "LegalCopyright" "D2PLUS contributors"
 !define MUI_ABORTWARNING
 !define MUI_WELCOMEPAGE_TITLE "Welcome to D2PLUS Launcher"
@@ -51,7 +51,7 @@ Section "D2PLUS Launcher"
  CreateShortcut "$SMPROGRAMS\D2PLUS\D2PLUS Launcher.lnk" "$INSTDIR\D2PLUS Launcher.exe"
  CreateShortcut "$DESKTOP\D2PLUS Launcher.lnk" "$INSTDIR\D2PLUS Launcher.exe"
  WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\D2PLUSLauncher" "DisplayName" "D2PLUS Launcher"
- WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\D2PLUSLauncher" "DisplayVersion" "0.0.2-alpha"
+ WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\D2PLUSLauncher" "DisplayVersion" "0.5.0-alpha"
  WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\D2PLUSLauncher" "Publisher" "D2PLUS"
  WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\D2PLUSLauncher" "InstallLocation" "$INSTDIR"
  WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\D2PLUSLauncher" "UninstallString" '$\"$INSTDIR\Uninstall D2PLUS Launcher.exe$\"'

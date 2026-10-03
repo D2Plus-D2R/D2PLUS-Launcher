@@ -1,0 +1,124 @@
+{
+  "repository": "D2Plus-D2R/D2PLUS-Launcher",
+  "tag": "v0.5-alpha",
+  "files": [
+    {
+      "name": "D2PLUS_Alpha_v0.5_Working_Shard.zip",
+      "sha256": "f12bca78021037977f057d79b39cba42aa63ef8d0eac7857fc98e953c2f53614",
+      "size": 101952023,
+      "blobs": [
+        {
+          "sha": "3a9e7857e0384df885481b00303dfbb346c729fd",
+          "size": 4194304
+        },
+        {
+          "sha": "c2db2c3cdbf6dad6bc259374d2897d9275a65b91",
+          "size": 4194304
+        },
+        {
+          "sha": "85aef3ce27fd3bf1fa038e5de88c2df3d208d005",
+          "size": 4194304
+        },
+        {
+          "sha": "59828294e6ea02628912c23c07f65dfcbcea7e10",
+          "size": 4194304
+        },
+        {
+          "sha": "c8e562eadd3ad361297e1cc342215bc3f1938041",
+          "size": 4194304
+        },
+        {
+          "sha": "240d7292c328e78446f33459c877d2518b475821",
+          "size": 4194304
+        },
+        {
+          "sha": "effbd915aec119a8314b76d2f7398c7b7850cd86",
+          "size": 4194304
+        },
+        {
+          "sha": "fcd7df2721c63e8fcc6cf739423504531dbf1310",
+          "size": 4194304
+        },
+        {
+          "sha": "426cb5ac45be8a7657d90899d5a1bfdfa32f833b",
+          "size": 4194304
+        },
+        {
+          "sha": "f47aa0d80664e04059f1426ed5fd2348e7320572",
+          "size": 4194304
+        },
+        {
+          "sha": "e791e92017153ba80fb734689c2265258198cfd1",
+          "size": 4194304
+        },
+        {
+          "sha": "8a97319260c0293c2cdbbbc45efc8045185d6391",
+          "size": 4194304
+        },
+        {
+          "sha": "e3a661a8a161f83d9a6bddcf6b328781071fb1df",
+          "size": 4194304
+        },
+        {
+          "sha": "7d3f581153a1dfdf59f7eb7aba2fc67e783983a4",
+          "size": 4194304
+        },
+        {
+          "sha": "7c44934b7ebb105b1e0ff4a76681a3e9761e1159",
+          "size": 4194304
+        },
+        {
+          "sha": "724543844b5ab241f2ea03d8a741953ce74bef4b",
+          "size": 4194304
+        },
+        {
+          "sha": "a826191b3b585af7910faa091bfe5ef7cee05392",
+          "size": 4194304
+        },
+        {
+          "sha": "54d11c6d505fbc7a87edef34ce3400a480d7067e",
+          "size": 4194304
+        },
+        {
+          "sha": "73b79a23b88725d765835e5bbb4af5141b79819f",
+          "size": 4194304
+        },
+        {
+          "sha": "1ca4ee93913bfab8aa22379bdb521b0d62e1bf76",
+          "size": 4194304
+        },
+        {
+          "sha": "91b0acba7bd7516197f86d50bc9d8209c3a0df3b",
+          "size": 4194304
+        },
+        {
+          "sha": "d611b1e44148f23414f923ff3b7a8c87e32cd201",
+          "size": 4194304
+        },
+        {
+          "sha": "a496315d1fe3ba6cfd1b0350a06121368b7aed1d",
+          "size": 4194304
+        },
+        {
+          "sha": "d15120fc487b1265999ac3009720d5673b7faa96",
+          "size": 4194304
+        },
+        {
+          "sha": "af8b44758f90168a656422e26e133116d5115489",
+          "size": 1288727
+        }
+      ]
+    },
+    {
+      "name": "D2PLUS_Worldstone_Shard_Only.zip",
+      "sha256": "ca204977699d77896509c176f3a8d0165b30c5091910c9171af7f8a654df97d7",
+      "size": 23867,
+      "blobs": [
+        {
+          "sha": "bd791dabe23af066e88bc0f5e68788c9a8e1be35",
+          "size": 23867
+        }
+      ]
+    }
+  ]
+}

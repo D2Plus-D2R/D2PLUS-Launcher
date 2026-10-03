@@ -1,7 +1,7 @@
-D2PLUS Launcher Alpha 0.0.2 — Windows x64 desktop build
+D2PLUS Launcher Alpha v0.5 — Windows x64 desktop build
 
 INSTALLER (recommended)
-Run D2PLUS_Launcher_Setup_0.0.2-alpha.exe. It installs to:
+Run D2PLUS_Launcher_Setup_0.5.0-alpha.exe. It installs to:
 %LOCALAPPDATA%\Programs\D2PLUS Launcher
 It creates desktop and Start-menu shortcuts. No administrator access is requested.
 The installer is not code-signed; no D2PLUS signing certificate is configured.
@@ -22,8 +22,9 @@ After changing D2RMM options, apply them with Install Mods before launching.
 
 D2RMM can be downloaded as the official Windows 1.9.1 ZIP with SHA-256 verification.
 Extract the verified download and select D2RMM.exe. Existing working versions are
-not replaced. No game files are bundled. D2PLUS mod installation remains in D2RMM;
-a public D2PLUS auto-update feed has not been configured.
+not replaced. Download Alpha v0.5 from Install & Updates for the installed-data
+snapshot. Follow its READ_ME.txt; it is not a D2RMM source mod. Updating the
+launcher alone does not overwrite your mod, source settings or saves.
 
 ARTWORK
 The main screen uses the actual supplied 31366.png reference (JPEG encoded), with
@@ -34,7 +35,7 @@ image is static; this release does not invent animated assets. Setup windows use
 readable matching dark panels. Minimize and close controls work as native controls.
 
 WIKI / EDITOR
-Open in separate desktop application windows. The wiki is 1.0.6; the existing
+Open in separate desktop application windows. The wiki covers Alpha v0.5; the existing
 compiled hero editor and its data are unchanged from the working suite.
 Export character edits before closing. If tool windows are open, the launcher asks
 before closing them. The native app uses its own browser-data profile; favorites,

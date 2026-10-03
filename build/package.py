@@ -21,16 +21,16 @@ for name in ['desktop','scripts','docs','companion','licenses','test']:
  shutil.copytree(ROOT/name,app/name,dirs_exist_ok=True)
 for name in ['package.json','LICENSE','THIRD_PARTY_NOTICES.md']:
  shutil.copy2(ROOT/name,app/name)
-for name in ['README-DESKTOP.txt','CHANGELOG-0.0.2-alpha.txt']:
+for name in ['README-DESKTOP.txt','CHANGELOG-0.5.0-alpha.txt']:
  shutil.copy2(ROOT/name,out/name)
 shutil.copy2(ROOT/'build/ELECTRON-PROVENANCE.json',out/'ELECTRON-PROVENANCE.json')
 quote=lambda p:str(p).replace('/','\\').replace('$','$$').replace('"','$\\"')
 files=sorted(p.relative_to(out) for p in out.rglob('*') if p.is_file());dirs=sorted((p.relative_to(out) for p in out.rglob('*') if p.is_dir()),key=lambda p:len(p.parts),reverse=True)
 (ROOT/'build/uninstall-files.nsh').write_text('\n'.join('Delete "$INSTDIR\\'+quote(p)+'"' for p in files)+'\n'+'\n'.join('RMDir "$INSTDIR\\'+quote(p)+'"' for p in dirs)+'\n')
-portable=ROOT/'dist/D2PLUS_Launcher_Portable_0.0.2-alpha.zip'
+portable=ROOT/'dist/D2PLUS_Launcher_Portable_0.5.0-alpha.zip'
 with zipfile.ZipFile(portable,'w',zipfile.ZIP_DEFLATED,compresslevel=6) as z:
  for p in out.rglob('*'):
   if p.is_file():z.write(p,'D2PLUS-Launcher/'+p.relative_to(out).as_posix())
 print(portable)
 if args.makensis:
- exe=ROOT/'dist/D2PLUS_Launcher_Setup_0.0.2-alpha.exe';subprocess.run([args.makensis,'-V2','-DPAYLOAD='+str(out),'-DOUTFILE='+str(exe),str(ROOT/'build/installer.nsi')],check=True);print(exe)
+ exe=ROOT/'dist/D2PLUS_Launcher_Setup_0.5.0-alpha.exe';subprocess.run([args.makensis,'-V2','-DPAYLOAD='+str(out),'-DOUTFILE='+str(exe),str(ROOT/'build/installer.nsi')],check=True);print(exe)

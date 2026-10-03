@@ -1,38 +1,13 @@
-# Publish the prepared GitHub project
+# Alpha v0.5 release workflow
 
-Suggested repository name: **D2PLUS-Launcher**. Release title: **D2PLUS Launcher — Alpha 0.0.2**. Tag: **v0.0.2-alpha**. Mark it as a **pre-release**.
+The current release tag is `v0.5-alpha`. Launcher package version is `0.5.0-alpha`; the user-facing name is Alpha v0.5.
 
-## 1. Prepare the repository
+The Build alpha packages workflow runs on a main-branch commit containing `[build-alpha]`, or a manual dispatch. It restores the checked offline suite, runs launcher/setup/wiki tests, verifies staged gameplay ZIPs, builds the Windows installer and portable package, creates the standalone offline wiki and source ZIPs, then publishes a prerelease with SHA-256 checksums. The workflow refuses to replace an existing release.
 
-Create a private draft repository first if the inherited artwork distribution review is unfinished; see PUBLIC-RELEASE-REVIEW.md. Extract the source ZIP and upload the contents of its `D2PLUS-Launcher` folder to the repository root. Include `.github/`; GitHub Desktop or git will include that folder reliably.
+The Pages workflow runs after a successful release build or by manual dispatch. It publishes the landing page, using tag-specific release links. Prereleases do not use `/releases/latest`.
 
-Keep the installer, portable ZIP, downloaded runtimes and your character saves out of git. The prepared `.gitignore` excludes build output, settings and saves. Put the large download packages in **Releases**, not the repository file tree.
+Gameplay ZIPs are installed snapshots, not D2RMM source mods. `release-inputs/alpha-v05.json` records their exact sizes and hashes. Initial transfer uses GitHub blob objects without adding the game-data ZIPs to the source tree; after publication, the release assets are the durable source for rebuilds. Preserve the attached ZIPs. The source repository contains the launcher and offline reference assets.
 
-## 2. Draft the prerelease
+To update the wiki from an extracted working snapshot, run `python3 build/update-wiki.py /path/to/data`. Review the generated records, then `python3 build/repack-suite.py` to refresh the vendor bundle and checksum. Keep user saves, settings, downloaded runtimes and built packages out of commits.
 
-Open **Releases → Draft a new release**. Choose/create `v0.0.2-alpha` on the intended source commit. Paste `release-notes/v0.0.2-alpha.md` as the description, mark **This is a pre-release**, and attach:
-
-- D2PLUS_Launcher_Setup_0.0.2-alpha.exe
-- D2PLUS_Launcher_Portable_0.0.2-alpha.zip
-- D2PLUS_GitHub_Alpha_0.0.2.zip
-- SHA256SUMS-0.0.2-alpha.txt
-
-Save as draft until the release review and your Windows smoke test are complete. When published, the site must use the tag-specific release URL. `/releases/latest` is unsuitable for this alpha.
-
-## 3. Configure the page
-
-Edit `site/config.json`: set `repository` to your exact `OWNER/D2PLUS-Launcher`, and leave `releasePublished` false until the public prerelease and its assets exist. Set it true only after checking the installer and ZIP downloads. The workflow gets the repository name from GitHub automatically; the config value also supports local previews.
-
-In the repository choose **Settings → Pages → Source: GitHub Actions**. Then open **Actions → Publish D2PLUS page → Run workflow**. The prepared workflow is manual; merely uploading these files does not publish the website. It builds and publishes only `site/`, keeping the desktop backend and editor separate.
-
-GitHub's deployment output reports the final page URL. For a standard project site it will usually be `https://OWNER.github.io/D2PLUS-Launcher/`; do not assume that address until GitHub confirms it.
-
-For future edits, commit the page changes and manually run the workflow again. Do not place private information in site files. Local preview: run `python3 build/site.py`, then serve `_site/` with any static web server.
-
-## 4. Check before announcing
-
-Open the page on desktop and phone, verify each download, install on Windows, check button alignment at your display scaling, and test an offline game with damage numbers off. Test the overlay separately and record the exact executable version. Wiki/editor changes should use a disposable character first.
-
-Official documentation checked for this handoff:
-- https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages
-- https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository
+Windows installation, display scaling, live D2R launching and in-game sprite checks remain separate validation steps. Existing third-party license notices accompany the launcher.

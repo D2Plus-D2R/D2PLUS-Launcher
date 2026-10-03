@@ -1,0 +1,13 @@
+D2PLUS Alpha v0.5 — October 3, 2026
+
+Launcher and offline wiki refreshed for the user-tested working mod snapshot.
+- Verified download of the v0.5 working snapshot from GitHub.
+- Blood Raven, Cow King, Summoner and Doom Knight mercenary documentation.
+- 135 hireling rows refreshed; six Doom Knight skills documented.
+- Six 10-minute Hell potions and corresponding-difficulty Countess-drop Wardens.
+- Custom 1x1 Worldstone Shard artwork; recipes unchanged.
+- Rune-name and numeric passive-tooltip presentation fixes documented.
+- Dungeon prototypes remain excluded from this working snapshot.
+
+Existing launcher settings and hero editor save-format data are retained.
+Windows installation and game runtime checks remain necessary.

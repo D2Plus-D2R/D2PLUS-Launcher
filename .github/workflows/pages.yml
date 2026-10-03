@@ -1,6 +1,9 @@
 name: Publish D2PLUS page
 on:
   workflow_dispatch:
+  workflow_run:
+    workflows: [Build alpha packages]
+    types: [completed]
 permissions:
   contents: read
   pages: write
@@ -10,6 +13,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   deploy:
+    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     environment:
       name: github-pages

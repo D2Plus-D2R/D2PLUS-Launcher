@@ -1,186 +1,72 @@
-# D2PLUS
+# D2PLUS — Alpha v0.5
 
-D2PLUS is a Diablo II: Resurrected mod designed for offline single-player. It adds items, crafting recipes, skill changes and endgame content, with progression based on equipment you find yourself. Its smelting system converts eligible uniques and set items into runes through Horadric Cube recipes that require crafting currencies.
+D2PLUS expands **offline single-player Diablo II: Resurrected** with equipment, Cube crafting, skill changes, mercenaries and endgame progression. You need your own installed copy of the game. The project is unofficial and is not affiliated with Blizzard Entertainment.
 
-## About the project
+[Alpha v0.5 downloads](https://github.com/D2Plus-D2R/D2PLUS-Launcher/releases/tag/v0.5-alpha) · [Release notes](release-notes/v0.5-alpha.md) · [Report a problem](https://github.com/D2Plus-D2R/D2PLUS-Launcher/issues)
 
-D2PLUS is a passion project developed by a father of three with a busy life and a vision for an enhanced single-player version of Diablo II: Resurrected. The developer makes no profit whatsoever from the project. You MUST own the game through Blizzard to play.
+## What changed in v0.5
 
-## Downloads
+| Act | Mercenary appearance | Specializations |
+| --- | --- | --- |
+| I | Reskinned Blood Raven with visible bow | Native Fire and Cold variants |
+| II | Cow King | Native auras and Jab |
+| III | Summoner with Diablo I-inspired robe | Fire, Lightning and Cold |
+| V | Fixed-sword Doom Knights | Dreadguard and red Doom Reaver, each with three custom skills |
 
-[Download packages and installation notes](https://github.com/D2Plus-D2R/D2PLUS-Launcher/releases)
+- **Hell Alchemy:** six expensive level-60 buff potions, each lasting **10 minutes**. Sold by Akara, Lysander, Alkor, Jamella and Malah in Hell. Target prices: 500,000–650,000 gold before discounts.
+- **Sovereign Warden:** distinguished escorts configured for all five act bosses, using the Countess parent drop table of the corresponding difficulty. Andariel and Mephisto were explicitly confirmed in playtesting. Rune outcomes remain random.
+- **Worldstone Shard:** new transparent inventory artwork, still **1×1**, with existing Cube recipes preserved.
+- Custom rune-name and numeric passive-tooltip presentation fixes are included in the working prototype.
+- Launcher, offline wiki, news and patch notes now describe Alpha v0.5. All 135 hireling records were refreshed from the installed working tables.
 
-Alpha 0.0.2 is available as a public prerelease. Choose the gameplay mod for a new installation; the launcher is an optional companion.
+The Summoner mercenary's robe also changes the Summoner boss because they share texture assets. The failed private Sorcerer, horn-removal and wizard-hat experiments are excluded. Astral Reliquary and Sovereign Dunes remain experimental and are **not enabled in this working snapshot**; their portal-entry crashes are unresolved. Existing Furnace of Storms content is retained.
 
-- [Full gameplay mod — D2PLUS_Mod_Alpha_0.0.2.zip](https://github.com/D2Plus-D2R/D2PLUS-Launcher/releases/download/v0.0.2-alpha/D2PLUS_Mod_Alpha_0.0.2.zip).
-- [Small update for the existing working mod — D2PLUS_Defaults_UPDATE_Alpha_0.0.2.zip](https://github.com/D2Plus-D2R/D2PLUS-Launcher/releases/download/v0.0.2-alpha/D2PLUS_Defaults_UPDATE_Alpha_0.0.2.zip).
-- Optional Windows launcher: installer or portable ZIP in the same release.
+## Choose a download
 
+| File | Purpose |
+| --- | --- |
+| `D2PLUS_Alpha_v0.5_Working_Shard.zip` | Complete installed gameplay snapshot, based on the user-tested prototype plus the Shard art replacement |
+| `D2PLUS_Worldstone_Shard_Only.zip` | Small D2RMM addon for an already working v0.5 setup; load after D2PLUS and other item-art mods |
+| `D2PLUS_Launcher_Setup_0.5.0-alpha.exe` | Windows x64 installer with the refreshed offline wiki and existing hero editor |
+| `D2PLUS_Launcher_Portable_0.5.0-alpha.zip` | Portable launcher; extract all files together |
+| `D2PLUS_Offline_Wiki_Alpha_v0.5.zip` | Standalone offline reference; extract and open `docs/wiki/index.html` |
+| `D2PLUS_GitHub_Alpha_v0.5.zip` | Launcher source and bundled companion assets; not the gameplay mod's D2RMM source |
 
-## Features
+The gameplay snapshot is **installed output**, not a configurable D2RMM source package. It preserves the tested data supplied by the mod author. The previously assembled replacement source bundle is not used for this release.
 
-### Items and progression
+## Install the working gameplay snapshot
 
-- 200 original uniques, 32 four-piece sets, eight custom runes and 64 runewords.
-- Restored legacy uniques, Diablo I-inspired equipment and 32 unique trinkets.
-- A level cap of 100.
-- Class-specific equipment that supports builds from early leveling through the endgame.
+1. Close D2R. Back up your installed mod output and offline saves.
+2. Merge the ZIP's `data` folder and `modinfo.json` into your game's `mods/D2RMM/D2RMM.mpq` folder, replacing matching files. Follow the enclosed `READ_ME.txt`.
+3. Keep your working launch arguments and save location. The supplied metadata uses the `D2RMM` name and save path. If your output uses another name, preserve your matching metadata instead.
+4. Launch through your working D2RMM shortcut or configure the launcher to use that output.
 
-### Smelting and crafting
+**Clicking Install Mods in D2RMM regenerates its output.** Older source packages can overwrite v0.5. The Shard-only addon preserves the new artwork across reinstalls of a matching v0.5 source setup; it does not add the other v0.5 gameplay features.
 
-Eligible uniques and set items can be combined with Artisan's Ember and Sovereign Seal to recover a rune. The smelting catalog lists the supported items and their outputs.
+## Launcher and wiki
 
-The crafting system also includes 64 new recipes, Elder Gems and three currencies: Artisan's Ember, Sovereign Seal and Worldstone Shard.
+Install the Windows launcher or extract the portable ZIP. Existing paths, launch arguments and damage-companion preferences are retained. The Install & Updates screen downloads the v0.5 gameplay snapshot with SHA-256 verification; applying that snapshot is a separate, manual step. Installing the launcher alone does not replace gameplay data or saves.
 
-### Skills and mercenaries
+The offline wiki includes the item and recipe catalog, runeword finder, build archive, current mercenary records, Hell potion effects and prices, Warden information, and v0.5 news. Earlier news and build guides retain their historical context; gear recommendations have not been re-optimized for the new mercenaries. The hero editor remains the existing version and has not received a new save-format implementation in this release.
 
-D2PLUS adds 21 passives, three for each of the seven original classes, alongside skill and synergy adjustments. Optional experimental modules include elemental Barbarian warcries, revised Barbarian masteries and a four-skill Druid overhaul.
+Damage numbers are optional and default off for fresh settings. They measure monster health loss, which can include mercenary and summon damage. The existing compatibility checks remain in place.
 
-Mercenary changes include stat improvements and progression sets.
+## Continuing D2PLUS features
 
-### Boss contracts and dungeon
+- Original uniques, 32 four-piece sets, eight custom runes and 64 runewords.
+- Legacy uniques, Diablo I-inspired items and 32 unique trinkets from Nightmare/Hell cows.
+- Level 100 progression, 21 class passives and optional Barbarian/Druid skill changes.
+- Sovereign Seals, Artisan's Embers, Elder Gems and Worldstone Shards.
+- Smelting eligible uniques and set items into runes through Cube recipes.
+- Season I contracts for Andariel, the Countess, Mephisto, Pindleskin and Baal.
+- Expanded 13×8 inventory, themed interface and Practical HUD integration.
 
-Season I includes contracts for Andariel, the Countess, Mephisto, Pindleskin and Baal. Each difficulty has separate contracts and rune rewards. An in-game journal tracks progress.
+## Status and troubleshooting
 
-The Furnace of Storms is a four-floor Hell dungeon using Worldstone-style areas. Entry is available through a Cube recipe.
+This is an alpha. Working gameplay behavior was reported by the author; file and automated checks do not replace live Windows or D2R testing. The installer is unsigned. For a bug report, include your game version, launcher version, installation method, enabled source mods if applicable, and reproduction steps.
 
-### Interface and companion tools
+Do not use this offline mod on Battle.net. Keep character backups before changing content or using the optional editor.
 
-The interface includes a 13-by-8 backpack, themed menus and HUD, custom item artwork and boss icons.
+## Building
 
-A separate Windows launcher provides access to the configured game launch, offline wiki, hero editor and optional damage display.
-
-## Configuration and status
-
-The mod uses D2RMM and has 71 configurable options. The supplied preset uses standard monster density and disables extra dungeon rooms.
-
-This is an alpha release. Some features are experimental. Package validation is complete; Windows installation and gameplay testing of this exact release remain pending. Installation instructions and validation details are below.
-
-## FAQ
-
-### Is this for Diablo II: Resurrected or classic Lord of Destruction?
-
-This package is for **Diablo II: Resurrected on Windows**, installed through D2RMM. It is not the classic Lord of Destruction mod.
-
-### Can I use it on Battle.net or ladder?
-
-D2PLUS is built for **offline single-player**. This release does not provide a multiplayer realm or Battle.net support.
-
-### Do I need to own Diablo II: Resurrected?
-
-Yes. You MUST own Diablo II: Resurrected through Blizzard and have it installed. D2RMM is also required. The downloads contain the mod and companion tools, not the game.
-
-### Which download should I choose?
-
-For the complete gameplay mod, use **D2PLUS_Mod_Alpha_0.0.2.zip**.
-
-If you already have the working D2PLUS build used for this update, **D2PLUS_Defaults_UPDATE_Alpha_0.0.2.zip** contains the changed files. Merge it into your existing source mod folder. It does not include the artwork or other required assets.
-
-The launcher installer and portable ZIP are separate downloads. Installing the launcher does not install the gameplay mod for you.
-
-### Do I have to use the launcher or hero editor?
-
-No. You can keep launching through your working D2RMM setup or shortcut. The launcher brings the companion tools together, and using the hero editor is entirely optional.
-
-### Can I keep my existing character?
-
-Keep a backup and test with a copy first. This update preserves the existing set IDs, bonuses and artwork references, but live character compatibility still needs to be checked in game. Keep your current mod name, launch arguments and save path.
-
-### Can I turn features off?
-
-Many features have individual D2RMM options. Review them, then click **Install Mods** to apply a change.
-
-Be careful with features that add items or inventory space. Back up your saves, remove affected custom items before disabling their content, and clear the extra backpack cells before turning off the expanded inventory.
-
-### What is the level cap?
-
-The cap is **100**, with an optional smoother experience curve for levels 80–100.
-
-### Are damage numbers required?
-
-No. The optional damage companion is off by default in fresh launcher settings. It measures monster health loss, which can include mercenary and summon damage. It is not a player-only damage meter.
-
-### Does it work with other D2RMM mods?
-
-Compatibility depends on what the other mods change. Mods that replace the same tables, inventory layouts or UI files can conflict. Start with D2PLUS on its own, then add other mods one at a time and check the result.
-
-### What should I include in a bug report?
-
-Include your game and D2RMM versions, enabled options, the steps that caused the problem, and any relevant screenshots or diagnostic ZIP. Say whether it happens with a new character, an existing character, or both.
-
-
----
-
-# Launcher setup and technical notes
-
-## What it does
-
-- Opens a D2PLUS-themed desktop window based on the supplied reference artwork.
-- Guides you through game, mod and companion paths on first use.
-- Imports your working Windows shortcut and preserves extra launch arguments.
-- Uses the mod files already installed by D2RMM; it does not silently reinstall mods.
-- Opens the offline wiki and hero editor in their own application windows.
-- Offers damage numbers as a persistent option, off by default for new settings.
-- Matches the configured D2R installation, prevents duplicate managed launches and handles game exit.
-- Provides a verified D2RMM download option and clear component status.
-
-The gameplay mod and launcher are separate downloads in the same [release](https://github.com/D2Plus-D2R/D2PLUS-Launcher/releases/tag/v0.0.2-alpha). Install the full gameplay mod through D2RMM, then configure the optional launcher. An automatic mod update feed is not yet configured.
-
-## First setup
-
-1. Close the old Offline Suite console; both launchers use local port 8080.
-2. Run the installer and open the **D2PLUS Launcher** desktop shortcut.
-3. Import your known-working `.lnk` shortcut, or select `D2R.exe`, the installed mod output folder and complete launch arguments.
-4. Verify the mod output name and arguments. Keeping the correct output name matters for finding your existing saves.
-5. If you changed D2RMM options, click **Install Mods** in D2RMM before launching.
-6. Test offline D2PLUS with damage numbers off first. Enable them after confirming the game works.
-
-The installer uses `%LOCALAPPDATA%\Programs\D2PLUS Launcher`. Launcher settings remain at `%LOCALAPPDATA%\D2PLUS\OfflineSuite\settings.json`.
-
-## Damage numbers
-
-The bundled source-built companion is based on [Fr4nsson/D2RDamageNumbers](https://github.com/Fr4nsson/D2RDamageNumbers). Original memory/compatibility checks remain active; no offsets were invented. Exact D2R compatibility has not been verified here.
-
-Use offline single-player in windowed or borderless mode. First-run positioning can require hovering over several monsters. Configure the optional DPS display so it avoids the Practical HUD.
-
-The overlay measures **monster health loss**. Rapid hits, mercenaries and summons may be combined. It is not a precise player-only DPS meter or a confirmed critical-strike detector. A companion error does not prevent the wiki, editor or game from opening.
-
-## Testing and limitations
-
-- 22 automated launcher, setup, persistence and desktop-shell tests passed for this renamed release. Page navigation, draft download buttons and published tag-specific links were also checked.
-- Windows executable structure and package integrity are checked during packaging.
-- No live Windows installer, D2R, overlay accuracy or display-scaling test has been performed in this environment.
-- Installer is unsigned.
-- Browser-based wiki notes/favorites do not automatically migrate to the desktop app's separate profile; use the wiki's backup export/import.
-- The installer preserves game files, saves and launcher settings. Export editor changes before closing the launcher.
-
-See [release notes](release-notes/v0.0.2-alpha.md), [full setup instructions](README-DESKTOP.txt) and [publishing instructions](PUBLISHING.md).
-
-## Source and development
-
-`desktop/` contains the Electron shell; `scripts/` the Windows launcher backend; `docs/launcher/` the launcher interface. The unchanged compiled wiki/editor are stored in `vendor/offline-suite.zip.part*` and unpacked into `docs/` for development and packaging. `companion/` contains the companion binary, source, patch and notices.
-
-The GitHub Pages marketing page is isolated under `site/`; the publishing workflow uploads only the generated `_site/` folder. It does not expose the backend or your settings.
-
-```sh
-python3 build/unpack-suite.py
-npm install
-npm test
-npm run test:ui
-python3 build/site.py
-```
-
-To package Windows x64 files, use `python3 build/package.py --makensis /path/to/makensis`. It downloads the pinned Electron archive, verifies its recorded SHA-256 and builds the portable package and installer. Python 3 and NSIS are build requirements. Electron is needed separately only when using `npm start` for development.
-
-## Credits and rights
-
-Thanks to Fr4nsson for D2RDamageNumbers; dschu012 for d2s-editor and d2s; TrayHard for d2r-saver; Sappho for Trading Market source material credited by the wiki; and the Electron, Bootstrap, Bootswatch, jQuery and Popper projects.
-
-Existing MIT/OFL and other notices are retained in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md), `licenses/`, and `companion/notices/`. The root MIT license originates from the inherited hero editor. It is **not** a blanket license for Blizzard artwork or every bundled asset. See [public release review](PUBLIC-RELEASE-REVIEW.md) before publishing the full bundle.
-
-D2PLUS is an unofficial fan project, not affiliated with or endorsed by Blizzard Entertainment. Diablo II and Diablo II: Resurrected belong to their respective owners.
-
-## Repository setup
-
-The repository and Alpha 0.0.2 prerelease are public. The **Build alpha packages** workflow creates draft launcher releases. The **Publish D2PLUS page** workflow is manual; run it after committing website changes to update GitHub Pages.
-
+`python3 build/unpack-suite.py` restores bundled offline assets. Run `npm install --ignore-scripts`, `npm test` and `npm run test:ui`. Build Windows packages with `python3 build/package.py --makensis /path/to/makensis`. See [PUBLISHING.md](PUBLISHING.md) for the release workflow. Third-party credits and licenses are retained in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
