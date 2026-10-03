@@ -14,6 +14,8 @@ for f in manifest['files']:
   with urllib.request.urlopen(url) as response:data=response.read()
  except urllib.error.HTTPError as e:
   if e.code!=404:raise
+  data=b''
+ if len(data)!=f['size'] or hashlib.sha256(data).hexdigest()!=f['sha256']:
   chunks=[]
   for blob in f['blobs']:
    request=urllib.request.Request(f"https://api.github.com/repos/{repo}/git/blobs/{blob['sha']}",headers={'Accept':'application/vnd.github+json','Authorization':'Bearer '+token,'User-Agent':'D2PLUS-release-builder'})

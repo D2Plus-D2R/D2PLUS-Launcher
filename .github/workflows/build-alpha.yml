@@ -54,7 +54,13 @@ jobs:
           GH_REPO: ${{ github.repository }}
         run: |
           if gh release view v0.7-alpha >/dev/null 2>&1; then
-            echo 'This release already exists. Refusing to replace its files.'
-            exit 1
+            # This one-time correction updates companion documentation only.
+            # Refuse to replace an unrelated or stable release.
+            gh api repos/$GH_REPO/releases/tags/v0.7-alpha > /tmp/current-release.json
+            python3 -c 'import json; r=json.load(open("/tmp/current-release.json")); assert r["id"] == 402683243 and r["prerelease"] and r["target_commitish"] == "c5366937d1f079babfa20dbe9f60674ece115c06"'
+            gh release upload v0.7-alpha dist/*.exe dist/*.zip dist/*.apk dist/SHA256SUMS-0.7.0-alpha.txt --clobber
+            printf '\nCompanion documentation correction built from commit `%s`. The original prerelease tag is retained; download the attached source archive for the corrected companion assets.\n' "$GITHUB_SHA" >> release-notes/v0.7-alpha.md
+            gh release edit v0.7-alpha --notes-file release-notes/v0.7-alpha.md
+          else
+            gh release create v0.7-alpha dist/*.exe dist/*.zip dist/*.apk dist/SHA256SUMS-0.7.0-alpha.txt --prerelease --target "$GITHUB_SHA" --title 'D2PLUS — Alpha v0.7' --notes-file release-notes/v0.7-alpha.md
           fi
-          gh release create v0.7-alpha dist/*.exe dist/*.zip dist/*.apk dist/SHA256SUMS-0.7.0-alpha.txt --prerelease --target "$GITHUB_SHA" --title 'D2PLUS — Alpha v0.7' --notes-file release-notes/v0.7-alpha.md
