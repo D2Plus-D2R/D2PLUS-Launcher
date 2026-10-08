@@ -3,7 +3,7 @@ const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypt
 const {Readable}=require('node:stream'),{pipeline}=require('node:stream/promises');
 const {powershell}=require('./windows-adapter.cjs');
 const CATALOG=Object.freeze({
- d2plus:{"name": "D2PLUS Alpha v0.7 complete D2RMM mod", "page": "https://github.com/D2Plus-D2R/D2PLUS-Launcher/releases/tag/v0.7-alpha", "url": "https://github.com/D2Plus-D2R/D2PLUS-Launcher/releases/download/v0.7-alpha/D2PLUS_Alpha_v0.7_Complete_D2RMM.zip", "file": "D2PLUS_Alpha_v0.7_Complete_D2RMM.zip", "sha256": "b03491c4ddcabb5b0f9ba58ee081bf692f4f1345edc5dd0b13b85aec2fece2c6", "instructions": "Verified complete mod downloaded. Close D2R, extract into D2RMM/mods, preserve the D2PLUS_Alpha_v05_Complete folder name, disable older overlapping D2PLUS modules and click Install Mods. See README_INSTALL.txt."},
+ d2plus:{"name": "D2PLUS Alpha v0.8 complete D2RMM mod", "page": "https://github.com/D2Plus-D2R/D2PLUS-Launcher/releases/tag/v0.8-alpha", "url": "https://github.com/D2Plus-D2R/D2PLUS-Launcher/releases/download/v0.8-alpha/D2PLUS_Alpha_v0.8_Complete_D2RMM.zip", "file": "D2PLUS_Alpha_v0.8_Complete_D2RMM.zip", "sha256": "bc8db5c544363875134b57e58191d1cc5018286b03806c39e98c5cf9ab73d9a8", "instructions": "Verified complete mod downloaded. Close D2R, extract into D2RMM/mods, preserve the D2PLUS_Alpha_v08_Complete folder name, disable older overlapping D2PLUS modules and click Install Mods. See README_INSTALL.txt."},
  d2rmm:{name:'D2RMM 1.9.1 for Windows',page:'https://github.com/olegbl/d2rmm/releases',url:'https://github.com/olegbl/d2rmm/releases/download/v1.9.1/D2RMM.1.9.1.zip',file:'D2RMM.1.9.1.zip',sha256:'b6f93d8b777c25f80ec80ed9429865a9c55c8d5797601362ed51f39cec4271b7'},
  game:{name:'Diablo II: Resurrected',page:'https://diablo2.blizzard.com/'},
  damage:{name:'D2R Damage Numbers',page:'https://github.com/Fr4nsson/D2RDamageNumbers'}
@@ -11,6 +11,16 @@ const CATALOG=Object.freeze({
 class SetupService {
  constructor({launcher,adapter,stateDir,fetchImpl=fetch}){Object.assign(this,{launcher,adapter,stateDir,fetchImpl});this.job=null;this.controller=null;this.task=null;}
  snapshot(){return {download:this.job,catalog:CATALOG};}
+ async install(){
+  if(this.job?.state==='Downloading')throw Error('Wait for the current download to finish first.');
+  const {installSnapshot}=require('./guided-install.cjs');
+  const manifest=JSON.parse(fs.readFileSync(path.join(this.launcher.suiteRoot,'gameplay/manifest.json'),'utf8'));
+  this.job={name:'D2PLUS Alpha v0.8',state:'Installing',message:'Checking files and installing. Existing mod output is kept as a backup.',bytes:0};
+  try{
+   const result=await installSnapshot({launcher:this.launcher,stateDir:this.stateDir,archive:path.join(this.launcher.suiteRoot,'gameplay',manifest.name),sha256:manifest.sha256});
+   this.job.state='Complete';this.job.message='Installed. Ready to launch.'+(result.backup?' Previous mod backup: '+result.backup:'');return result;
+  }catch(e){this.job.state='Error';this.job.message=e.message;throw e;}
+ }
  async scanMods(exe){if(this.adapter.platform!=='win32')throw Error('Folder detection is available on Windows.');if(typeof exe!=='string'||!path.win32.isAbsolute(exe))throw Error('Select D2R.exe first.');const root=path.win32.join(path.win32.dirname(exe),'mods');const entries=await fs.promises.readdir(root,{withFileTypes:true}).catch(()=>[]);const found=[];for(const e of entries){if(!e.isDirectory())continue;const directory=path.join(root,e.name);if(fs.existsSync(path.join(directory,e.name+'.mpq')))found.push({name:e.name,directory});}return {mods:found};}
  async check(){const c=this.launcher.config;let gameError='',exeInfo=null;try{await this.launcher.validateGame();exeInfo=await this.launcher.inspect();}catch(e){gameError=e.message;}
  return {gameReady:!gameError,gameError,exeInfo,d2rmmReady:!!c.d2rmmExe&&fs.existsSync(c.d2rmmExe),companionReady:fs.existsSync(this.launcher.companionPath()),wikiReady:fs.existsSync(path.join(this.launcher.suiteRoot,'docs/wiki/index.html')),editorReady:fs.existsSync(path.join(this.launcher.suiteRoot,'docs/index.html'))};}
@@ -19,7 +29,7 @@ class SetupService {
  if(!CATALOG[kind])throw Error('Unknown component.');return powershell("Start-Process -FilePath $d.url; '{}'",{url:CATALOG[kind].page});}
  startDownload(id){const item=CATALOG[id];if(!item?.url)throw Error('This component is obtained from its official page.');if(this.job?.state==='Downloading')return this.snapshot();this.controller=new AbortController();this.job={id,name:item.name,state:'Downloading',bytes:0,total:0,message:'Connecting to the official release…'};this.task=this.download(item,this.controller.signal).catch(e=>{this.job.state='Error';this.job.message=e.name==='AbortError'?'Download cancelled.':e.message;});return this.snapshot();}
  async download(item,signal){const dir=path.join(this.stateDir,'downloads');fs.mkdirSync(dir,{recursive:true});const dest=path.join(dir,item.file),temp=dest+'.partial';const hash=crypto.createHash('sha256');const timer=setTimeout(()=>this.controller.abort(),20*60*1000);
- try{const response=await this.fetchImpl(item.url,{signal,headers:{'User-Agent':'D2PLUS-Launcher/0.7.0-alpha'}});if(!response.ok||!response.body)throw Error('Download failed (HTTP '+response.status+'). Use the official download page.');this.job.total=Number(response.headers.get('content-length'))||0;this.job.message='Downloading official ZIP; it will not run automatically.';
+ try{const response=await this.fetchImpl(item.url,{signal,headers:{'User-Agent':'D2PLUS-Launcher/0.8.0-alpha'}});if(!response.ok||!response.body)throw Error('Download failed (HTTP '+response.status+'). Use the official download page.');this.job.total=Number(response.headers.get('content-length'))||0;this.job.message='Downloading official ZIP; it will not run automatically.';
  const body=Readable.fromWeb(response.body);body.on('data',chunk=>{hash.update(chunk);this.job.bytes+=chunk.length;if(this.job.bytes>1024*1024*1024)this.controller.abort();});await pipeline(body,fs.createWriteStream(temp),{signal});
  if(hash.digest('hex')!==item.sha256)throw Error('Checksum mismatch. Download discarded; use the official release page.');if(fs.existsSync(dest))fs.unlinkSync(dest);fs.renameSync(temp,dest);this.job.state='Complete';this.job.path=dest;this.job.message=item.instructions||'Verified ZIP downloaded. Open Downloads, extract it to your chosen folder, then Browse for D2RMM.exe.';
  }finally{clearTimeout(timer);if(fs.existsSync(temp))fs.unlinkSync(temp);}}

@@ -1,66 +1,63 @@
-name: Build alpha packages
+name: Build Alpha v0.8 packages
 on:
-  workflow_dispatch:
   push:
     branches: [main]
+  workflow_dispatch:
 permissions:
   contents: write
 concurrency:
-  group: alpha-release
-  cancel-in-progress: true
+  group: alpha-v08-build
+  cancel-in-progress: false
 jobs:
   package:
-    if: github.event_name == 'workflow_dispatch' || contains(github.event.head_commit.message, '[build-alpha]')
-    runs-on: ubuntu-latest
+    if: github.event_name == 'workflow_dispatch' || contains(github.event.head_commit.message, '[publish-v08]')
+    runs-on: windows-latest
     steps:
       - uses: actions/checkout@v6
-      - name: Install build dependencies
-        run: sudo apt-get update && sudo apt-get install -y nsis
-      - name: Unpack offline suite
-        run: python3 build/unpack-suite.py
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.14.3'
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '22'
+      - uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: '25'
+      - name: Unpack companion sources
+        run: python build/unpack-suite.py
       - name: Install test dependencies
         run: npm ci --ignore-scripts
-      - name: Run launcher, setup and wiki tests
+      - name: Validate launcher and companion data
         run: |
           npm test
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
           npm run test:ui
-      - name: Materialize verified gameplay packages
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+      - name: Reconstruct checksum-verified gameplay inputs
         env:
           GH_TOKEN: ${{ github.token }}
-        run: python3 build/fetch-release-inputs.py
-      - name: Build installer and portable ZIP
-        run: python3 build/package.py --makensis /usr/bin/makensis
-      - name: Package source and offline wiki; verify archives
         run: |
-          git archive --format=zip --prefix=D2PLUS-Launcher/ HEAD > dist/D2PLUS_GitHub_Alpha_v0.7.zip
-          python3 - <<'PY'
-          from pathlib import Path
-          import zipfile,hashlib
-          dist=Path('dist')
-          with zipfile.ZipFile(dist/'D2PLUS_Offline_Wiki_Alpha_v0.7.zip','w',zipfile.ZIP_DEFLATED) as z:
-              for p in sorted(Path('docs').rglob('*')):
-                  if p.is_file() and not p.is_relative_to('docs/launcher'):
-                      z.write(p,p.as_posix())
-              z.writestr('START_HERE.txt','Extract the entire ZIP. Open docs/wiki/index.html for the Alpha v0.7 offline wiki. Keep the docs directory and its assets together. Existing companion pages are included.\n')
-          for p in dist.glob('*.zip'):
-              with zipfile.ZipFile(p) as z:
-                  assert z.testzip() is None, str(p)
-          files=sorted([*dist.glob('*.zip'),*dist.glob('*.exe'),*dist.glob('*.apk')])
-          (dist/'SHA256SUMS-0.7.0-alpha.txt').write_text(''.join(hashlib.sha256(p.read_bytes()).hexdigest()+'  '+p.name+'\n' for p in files))
-          PY
-      - name: Publish Alpha v0.7 prerelease
+          python build/reconstruct-gameplay.py
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          python build/fetch-release-inputs.py --input-dir dist
+      - name: Install NSIS compiler
+        run: choco install nsis --version=3.11 --yes --no-progress
+      - name: Build Windows packages
+        run: python build/package.py --makensis 'C:/Program Files (x86)/NSIS/makensis.exe'
+      - uses: actions/upload-artifact@v4
+        with:
+          name: D2PLUS-Alpha-v0.8-Windows
+          path: |
+            dist/*.exe
+            dist/D2PLUS_Launcher_Portable_*.zip
+          if-no-files-found: error
+      - name: Build unsigned Android reference update kit
+        run: python build/package-android-kit.py
+      - name: Package references and release source
+        run: python build/package-release-extras.py
+      - name: Publish the verified Alpha v0.8 prerelease
         env:
           GH_TOKEN: ${{ github.token }}
           GH_REPO: ${{ github.repository }}
-        run: |
-          if gh release view v0.7-alpha >/dev/null 2>&1; then
-            # This one-time correction updates companion documentation only.
-            # Refuse to replace an unrelated or stable release.
-            gh api repos/$GH_REPO/releases/tags/v0.7-alpha > /tmp/current-release.json
-            python3 -c 'import json; r=json.load(open("/tmp/current-release.json")); assert r["id"] == 402683243 and r["prerelease"] and r["target_commitish"] == "c5366937d1f079babfa20dbe9f60674ece115c06"'
-            gh release upload v0.7-alpha dist/*.exe dist/*.zip dist/*.apk dist/SHA256SUMS-0.7.0-alpha.txt --clobber
-            printf '\nCompanion documentation correction built from commit `%s`. The original prerelease tag is retained; download the attached source archive for the corrected companion assets.\n' "$GITHUB_SHA" >> release-notes/v0.7-alpha.md
-            gh release edit v0.7-alpha --notes-file release-notes/v0.7-alpha.md
-          else
-            gh release create v0.7-alpha dist/*.exe dist/*.zip dist/*.apk dist/SHA256SUMS-0.7.0-alpha.txt --prerelease --target "$GITHUB_SHA" --title 'D2PLUS — Alpha v0.7' --notes-file release-notes/v0.7-alpha.md
-          fi
+        run: python build/publish-release.py

@@ -7,7 +7,8 @@ cfg=json.loads((root/'site/config.json').read_text())
 repo=os.environ.get('GITHUB_REPOSITORY') or cfg['repository']
 if repo and not re.fullmatch(r'[A-Za-z0-9-]+/[A-Za-z0-9._-]+',repo):raise SystemExit('Invalid owner/repository')
 cfg['repository']=repo
-out=root/'_site'
+out=(root/'_site').resolve()
+if out.parent != root.resolve() or out.name != '_site':raise SystemExit('Unsafe site output path')
 if out.exists():shutil.rmtree(out)
 shutil.copytree(root/'site',out)
 (out/'config.json').unlink()

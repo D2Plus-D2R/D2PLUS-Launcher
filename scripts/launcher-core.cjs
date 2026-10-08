@@ -2,7 +2,7 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const crypto = require('node:crypto');
-const VERSION = '0.7.0-alpha';
+const VERSION = '0.8.0-alpha';
 const {mapArguments}=require('./map-options.cjs');
 const DEFAULTS = Object.freeze({gameExe:'', modDirectory:'', arguments:'', workingDirectory:'',
   d2rmmExe:'', setupComplete:false, resetOfflineMaps:false, enableDamageNumbers:false, companionExe:'', showDps:false, dpsX:85, dpsY:15, fontSize:26});

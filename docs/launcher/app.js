@@ -1,5 +1,5 @@
 'use strict';
-const $=id=>document.getElementById(id),VERSION='0.7.0-alpha';
+const $=id=>document.getElementById(id),VERSION='0.8.0-alpha';
 let token='',connected=false,busy=false,initialized=false,step=0,current={},dirty=false,gameReady=false,toastTimer;
 const fields=['gameExe','workingDirectory','d2rmmExe','modDirectory','arguments','companionExe','fontSize','showDps','dpsX','dpsY'];
 const labels=['Welcome','Game','Mod & tools','Overlay','Review'];
@@ -18,7 +18,7 @@ function render(s){current=s.config;$('status').textContent=s.state;$('status').
  const job=s.setup?.download;for(const el of document.querySelectorAll('.download-status')){el.replaceChildren();if(job){const text=document.createElement('span');text.textContent=job.name+' — '+job.state+'. '+job.message+(job.bytes?' ('+(job.bytes/1048576).toFixed(1)+' MB'+(job.total?' / '+(job.total/1048576).toFixed(1)+' MB':'')+')':'');el.append(text);if(job.state==='Downloading'){const p=document.createElement('progress');if(job.total){p.max=job.total;p.value=job.bytes;}el.append(p);}}}
  if(!initialized){if(!dirty)fill(current);initialized=true;if(!current.setupComplete)openSetup(0);}
 }
-async function refresh(){try{const r=await fetch('/api/status',{cache:'no-store'});if(!r.ok)throw Error('Backend unavailable.');const s=await r.json();if(s.version!==VERSION)throw Error('A different suite is running on port 8080. Close its console, then start this prototype.');token=s.token;connected=true;$('connection').textContent='Connected locally • Launcher Alpha v0.7 desktop • Wiki Alpha v0.7';render(s);}catch(e){connected=false;$('connection').textContent=e.message+' Open D2PLUS Launcher.exe to reconnect. Your typed fields stay on this page.';$('readyLabel').textContent='Backend disconnected';$('lamp').classList.remove('ok');}finally{controls();}}
+async function refresh(){try{const r=await fetch('/api/status',{cache:'no-store'});if(!r.ok)throw Error('Backend unavailable.');const s=await r.json();if(s.version!==VERSION)throw Error('A different suite is running on port 8080. Close its console, then start this prototype.');token=s.token;connected=true;$('connection').textContent='Connected locally • Launcher Alpha v0.8 desktop • Wiki Alpha v0.8';render(s);}catch(e){connected=false;$('connection').textContent=e.message+' Open D2PLUS Launcher.exe to reconnect. Your typed fields stay on this page.';$('readyLabel').textContent='Backend disconnected';$('lamp').classList.remove('ok');}finally{controls();}}
 async function save(extra={}){const r=await api('settings',{...read(),...extra});current=r.config;dirty=false;gameReady=false;toast('Settings saved on this PC.');return r;}
 async function check(){await save();const r=await api('setup-check');gameReady=r.gameReady;const checks=[r.gameReady?'✓ Game and installed mod paths verified.':'Game: '+r.gameError,r.d2rmmReady?'✓ D2RMM found.':'D2RMM not selected or missing; optional for launching an installed mod.',r.companionReady?'✓ Companion executable found; compatibility remains unverified.':'Companion missing; wiki, editor and game remain available.',r.wikiReady?'✓ Offline wiki included.':'Wiki missing.',r.editorReady?'✓ Hero editor included.':'Editor missing.'];$('checkResults').textContent=checks.join(' ');$('checkResults').classList.toggle('good',r.gameReady);return r;}
 for(const id of fields)$(id).addEventListener('input',()=>{dirty=true;gameReady=false;});
@@ -43,3 +43,5 @@ $('quit').onclick=()=>{if(window.d2plusDesktop)window.d2plusDesktop.close();else
 function fitArtwork(){document.documentElement.style.setProperty('--scale',Math.min(window.innerWidth/1536,window.innerHeight/961));}
 fitArtwork();window.addEventListener('resize',fitArtwork);
 refresh();setInterval(refresh,2500);
+
+for(const b of document.querySelectorAll('[data-install-gameplay]'))b.onclick=()=>act(async()=>{await save();const result=await api('install-gameplay');const r=await fetch('/api/status',{cache:'no-store'});const state=await r.json();fill(state.config);current=state.config;dirty=false;gameReady=true;toast('Alpha v0.8 installed. Ready to launch.');if($('wizard').open)showStep(4);});

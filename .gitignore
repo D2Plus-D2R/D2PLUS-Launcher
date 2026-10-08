@@ -1,4 +1,5 @@
 node_modules/
+__pycache__/
 build-cache/
 dist/
 _site/
@@ -16,3 +17,8 @@ settings.json
 # Compiled offline assets are tracked in vendor/offline-suite.zip.part*.
 docs/*
 !docs/launcher/
+
+gameplay/*.zip
+android/local.properties
+android/*.keystore
+android/build/

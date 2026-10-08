@@ -34,6 +34,7 @@ function createSuite({suiteRoot=path.resolve(__dirname,'..'),stateDir=path.join(
             }
             case '/api/build-arguments': return require('./arguments-helper.cjs').buildArguments(data.directory,data.arguments);
             case '/api/setup-check': return setup.check();
+            case '/api/install-gameplay': return setup.install();
             case '/api/scan-mods': return setup.scanMods(data.gameExe);
             case '/api/open-component': return setup.open(data.component);
             case '/api/download': return setup.startDownload(data.component);
