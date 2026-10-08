@@ -1,5 +1,11 @@
 name: Publish D2PLUS page
 on:
+  push:
+    branches: [main]
+    paths:
+      - 'site/**'
+      - 'build/site.py'
+      - '.github/workflows/pages.yml'
   workflow_dispatch:
   workflow_run:
     workflows: [Build alpha packages]
@@ -13,7 +19,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   deploy:
-    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
+    if: github.event_name == 'push' || github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     environment:
       name: github-pages
