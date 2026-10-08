@@ -1,0 +1,7 @@
+D2PLUS Alpha v0.8 Android Companion
+This APK uses the new D2PLUS release signing identity created October 8, 2026.
+Uninstall the old companion before installing this release. This clears old app
+data, including preferences/bookmarks. Future updates signed with this new key
+can update v0.8 normally. Package: com.d2plus.companion; versionCode: 8.
+Verified signature schemes: v2 and v3. Physical-device testing remains separate.
+Certificate SHA-256: 18b9f6fea79926265b70e61cd2ea4e5fb5382d3236cc5c3fa2208b85531c6144

@@ -22,5 +22,8 @@ from another commit. Older tags/releases are preserved.
 
 Pages deploys only after the release workflow succeeds for the release commit.
 Normal later website edits retain their push-based deployment. The Android APK
-download remains disabled until the original signing key is available. Never put
-private keys or signing passwords in this repository.
+was signed locally with a new release identity because the v0.7 key was unavailable.
+Its manifest records the public certificate fingerprint and verified signed APK
+hash. The signed-Android workflow uploads that already-signed APK; it never receives
+a private key or password. Existing users must uninstall the older companion first.
+Never put private keys or signing passwords in this repository.

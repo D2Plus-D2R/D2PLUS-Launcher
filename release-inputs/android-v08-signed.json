@@ -1,0 +1,62 @@
+{
+  "file": "D2PLUS_Companion_Alpha_v0.8.apk",
+  "sha256": "6a63b582e9cdf7e7bc1b0b65f234ef24986796029e15d1710ababed18ad5a390",
+  "bytes": 18879853,
+  "certificateSha256": "18b9f6fea79926265b70e61cd2ea4e5fb5382d3236cc5c3fa2208b85531c6144",
+  "signatureVerified": true,
+  "zipAlignmentVerified": true,
+  "package": "com.d2plus.companion",
+  "versionCode": 8,
+  "versionName": "0.8.0-alpha",
+  "payloadEntriesUnchanged": 2714,
+  "newSigningIdentity": true,
+  "requiresUninstallOfOldCompanion": true,
+  "deviceTested": false,
+  "signatureSchemesVerified": [
+    "v2",
+    "v3"
+  ],
+  "blobs": [
+    {
+      "sha": "221d7a720bba4571a4f64e1e2f94b3d7da351d74",
+      "size": 4320000
+    },
+    {
+      "sha": "cf9e0518ddedf7591e569ea82572c58083f541c2",
+      "size": 4320000
+    },
+    {
+      "sha": "00af968175df305f387def2d52a91b22ab1d00a1",
+      "size": 4320000
+    },
+    {
+      "sha": "03b027728ac6b82d80990526f48dc0a32026df04",
+      "size": 4320000
+    },
+    {
+      "sha": "2ca8eb9a1babf6aaccf24d6ed9b2c72d191b31d7",
+      "size": 1599853
+    }
+  ],
+  "releaseId": 406784026,
+  "releaseTag": "v0.8-alpha",
+  "originalReleaseCommit": "f06153b4de680d130487193d6a0ca568f5fab03d",
+  "expectedAssets": {
+    "D2PLUS_Alpha_v0.8_Complete_D2RMM.zip": "bc8db5c544363875134b57e58191d1cc5018286b03806c39e98c5cf9ab73d9a8",
+    "D2PLUS_Alpha_v0.8_Installed_Snapshot.zip": "cdabd41304d1f4b278f74038c5709fa150e1a187f36cb65ced90e82c67a39091",
+    "D2PLUS_Android_Alpha_v0.8_Update_Kit.zip": "57873ba4a817ce6c3958d30156012cbd7d7c314729fed4a4ab34e1e0e84b48e5",
+    "D2PLUS_Launcher_Portable_0.8.0-alpha.zip": "51a94f6d3bd1a0cd0a75c8559ce0b3dcfa0b6f2212feb90e3bdcb3510e84e68a",
+    "D2PLUS_Launcher_Setup_0.8.0-alpha.exe": "0ec4b0547f54f1adc356106780cef6fcbc62ff0b0ee81d2b9278c2c4b365d2ea",
+    "D2PLUS_Offline_Wiki_Alpha_v0.8.zip": "40b50422031ca3c903da69fd1044e213509d1fd0cd3c8a8b3b452eefe87ba1c4",
+    "D2PLUS_Source_Alpha_v0.8.zip": "f7cbb25a8c76f00d5537545fd75c4334b831c54175cc6a09fbac10d115fa82d4",
+    "D2PLUS_Website_Alpha_v0.8.zip": "4c4dc351ae5917a3da7aaaf343a0a7254221c53631f027823f8cbd93154cd583",
+    "SHA256SUMS-0.8.0-alpha.txt": "cb9b0317f0f179bcf70ca9f9f925ac074ce95874cf42d42c39de16341ed043f1"
+  },
+  "signingTools": {
+    "source": "https://dl.google.com/android/repository/build-tools_r35_windows.zip",
+    "repositoryMetadata": "https://dl.google.com/android/repository/repository2-3.xml",
+    "sha1": "af059bb67cf7786f45ee0db85e2d24985df1b4b6",
+    "sha256": "5753c679a1b90bcf6fbc9945a2ce39dfb9e74f1df0831a1e1866ae5b594326f0",
+    "bytes": 59878107
+  }
+}
