@@ -5,7 +5,7 @@ on:
     paths: ['site/**', 'build/site.py', '.github/workflows/pages.yml']
   workflow_dispatch:
   workflow_run:
-    workflows: [Build Alpha v0.8 packages, Publish signed Android v0.8]
+    workflows: [Build AlphaV0.8.2 packages, Publish signed Android v0.8]
     types: [completed]
 permissions:
   contents: read
@@ -16,7 +16,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   deploy:
-    if: (github.event_name == 'push' && !contains(github.event.head_commit.message, '[publish-v08]') && !contains(github.event.head_commit.message, '[publish-android-v08]')) || github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
+    if: (github.event_name == 'push' && !contains(github.event.head_commit.message, '[publish-v082]') && !contains(github.event.head_commit.message, '[publish-android-v08]')) || github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     environment:
       name: github-pages

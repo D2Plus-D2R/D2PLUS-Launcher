@@ -1,5 +1,3 @@
 # Bundled offline suite
 
-The unchanged compiled wiki/editor ZIP is split into two parts for upload. `python3 build/unpack-suite.py` joins the parts in memory, verifies SHA-256, and extracts them into docs/. Do not extract each part individually.
-
-Combined ZIP SHA-256: `f662fe21ecb2983c6202aa349ae4686e97ff47ba5e51728cc3e96d506ce1abfc`
+The current AlphaV0.8.2 wiki, mobile reference and hero editor assets are split into parts. Run `python build/unpack-suite.py` to verify the combined SHA-256 and extract them. The expected hash is stored in that script. Do not extract parts individually.

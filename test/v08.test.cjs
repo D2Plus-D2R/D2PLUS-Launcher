@@ -35,5 +35,5 @@ test('new installed save stats and socket columns match the native editor schema
  for(const r of Object.values(d.itemTypes))if(r.maxsockets3!==undefined)assert.equal(r.maxsock40,r.maxsockets3);
 });
 test('editor manifest hashes cover the actual refreshed data',()=>{
- for(const stem of ['v105_data','constants_105']){const m=json('d2plus/'+stem+'.manifest.json');assert.equal(m.profile,'d2plus-alpha-v0.8');assert.equal(m.sha256,crypto.createHash('sha256').update(fs.readFileSync(path.join(docs,'d2plus/'+stem+'.json'))).digest('hex'));}
+ for(const stem of ['v105_data','constants_105']){const m=json('d2plus/'+stem+'.manifest.json');assert.equal(m.profile,'d2plus-alpha-v0.8.2');assert.equal(m.sha256,crypto.createHash('sha256').update(fs.readFileSync(path.join(docs,'d2plus/'+stem+'.json'))).digest('hex'));}
 });

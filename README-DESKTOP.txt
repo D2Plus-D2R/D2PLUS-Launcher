@@ -1,4 +1,4 @@
-D2PLUS Launcher Alpha v0.8 - Windows x64
+D2PLUS Launcher AlphaV0.8.2 - Windows x64
 
 Run the Setup EXE, or extract the complete portable ZIP and open D2PLUS Launcher.exe.
 The launcher includes the complete gameplay snapshot, offline wiki, hero editor,
@@ -7,7 +7,7 @@ and optional damage companion. No separate runtime installation is required.
 EASIEST SETUP
 1. Close Diablo II: Resurrected.
 2. In launcher Setup, Browse to your installed D2R.exe.
-3. Choose Install Alpha v0.8. The launcher verifies and installs its bundled files,
+3. Choose Install AlphaV0.8.2. The launcher verifies and installs its bundled files,
    retains previous mod output as a backup, and sets the launch arguments.
 4. Click Launch D2PLUS. Select an offline character in the game.
 
@@ -25,7 +25,7 @@ silently truncate values. Keep the original character backup and export edits.
 Damage numbers remain optional, with the existing companion compatibility checks.
 Map rerolling uses the Reset offline maps checkbox and takes effect after relaunch.
 
-Previous mod backups are beside the installed mod, named NAME.before-v08-IDENTIFIER.
+Previous mod backups are beside the installed mod, named NAME.before-v082-IDENTIFIER.
 To restore one, close D2R, move the current NAME folder aside and rename the backup
 to NAME. The launcher uninstaller removes application files, not installed gameplay,
 mod backups, saved characters or settings. Launching uses local port 8080.

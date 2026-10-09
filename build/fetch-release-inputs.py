@@ -6,7 +6,7 @@ from pathlib import Path
 import argparse,json,hashlib,urllib.request,urllib.error,shutil
 root=Path(__file__).resolve().parents[1]
 parser=argparse.ArgumentParser();parser.add_argument('--input-dir',type=Path);args=parser.parse_args()
-manifest=json.loads((root/'release-inputs/alpha-v08.json').read_text())
+manifest=json.loads((root/'release-inputs/alpha-v082.json').read_text())
 dest=root/'dist';dest.mkdir(exist_ok=True)
 for f in manifest['files']:
  path=dest/f['name'];source=(args.input_dir/f['name']) if args.input_dir else path

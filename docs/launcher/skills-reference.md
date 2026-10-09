@@ -1,319 +1,291 @@
-# D2PLUS skill changes
+# AlphaV0.8.2 skill reference
 
-## Overview
-
-D2PLUS strengthens underused skills and puts more damage into the skill itself. Lower synergy requirements leave more points for a second attack, summons, or utility.
-
-Each class gets three new passives with five spendable ranks each. Several existing skills become new attacks or support abilities.
-
-| Class | Main changes | Builds it supports |
-| --- | --- | --- |
-| Amazon | Chaining lightning spear attacks; stronger bow, poison, and spear scaling. | Storm Lance/Fend, poison spear, fire/cold bow. |
-| Sorceress | Frequent lightning strikes while attacking or casting. | Storm Enchant, Nova/Tempest, Hydra/cold. |
-| Necromancer | Stronger bone attacks and summons; corpse-based life/mana recovery. | Bone/summon, Poison Dagger, corpse sustain. |
-| Paladin | A new magic spell; revised weapon and holy skill scaling. | Judgment/Holy Bolt, Vengeance, Charge. |
-| Barbarian | Broad masteries, elemental buffs, lightning warcries, and a physical ward. | Elemental Frenzy, Storm Cry, physical ward builds. |
-| Druid | Cold mastery, offensive pets, and a healing vine. | Hurricane/shapeshift, physical summons, sustain wolf. |
-| Assassin | Revised martial arts, blades, and fire traps; magic knockback. | Fire traps/magic, blades, elemental martial arts. |
-| Warlock | Energy boosts Cleave and Echoing Strike; new casting/attack passives. | Energy Eldritch, Chaos caster, attack/demon hybrid. |
-
-Examples use skill level 20 and five ranks for new passives. Hard ranks are points you spend; equipment bonuses do not count toward hard-rank synergies.
+Generated from the compiled skill descriptions. See the offline wiki for current formulas and revised build plans.
 
 ## Amazon
 
-Power Strike becomes Storm Lance. Stronger base damage and lighter synergy requirements make bow, poison, and spear hybrids easier to build.
-
-### Skill changes
-
-| Skill | D2PLUS change | Benefit |
-| --- | --- | --- |
-| Magic Arrow | Higher flat damage growth; AR starts at +20%, then +12% per level. | A stronger magic backup for physical bows. |
-| Exploding Arrow | Higher explosion damage; Fire Arrow synergy is 10% per hard rank. | Fire damage with fewer support points. |
-| Immolation Arrow | Higher direct fire damage; Exploding Arrow synergy is 8%. | Alternate ground fire with another attack. The 0.6-second delay is unchanged. |
-| Freezing Arrow | Higher cold damage; Cold Arrow synergy is 8%. | More room for physical bows or Valkyrie. |
-| Poison Javelin | Higher poison growth; Plague Javelin synergy is 8%; 0.6-second delay. | A useful poison secondary attack. |
-| Plague Javelin | Higher poison growth; Poison Javelin synergy is 8%. | Poison/spear hybrids. One-second delay is unchanged. |
-| Impale | Revised durability parameters and higher listed AR growth. | A heavy spear hit alongside pack clearing. |
-| Fend | +100% damage, then +15% per level; +50% AR, then +12% per level. | Stronger physical spear attacks alongside lightning. |
-
-### Storm Lance replaces Power Strike
-
-A melee lightning strike that chains to six targets at level 20, reaching eight at level 30. Costs 4 mana and uses 100% weapon damage. AR starts at +40%, then gains +10% per level. Lightning Strike grants 5% lightning damage per hard rank.
-
-It gives spear Amazons pack clearing without switching to javelins. Keeps Power Strike's level-six requirement and prerequisites; Lightning Strike remains separate.
-
-### New passives
-
-| Passive | Unlock | At five ranks | Use |
-| --- | --- | --- | --- |
-| Thread the Needle | 12 | +10 points pierce chance. | Projectile builds with more gear freedom. |
-| Hunters Discipline | 6 | +60% AR. | Bow and spear hit chance. |
-| Storm Conduit | 24 | +10% lightning skill damage. | Lightning offense. |
-
-**Try:** Storm Lance/Fend, poison/Fend, or fire/cold bows. Poison applications do not stack as separate full damage effects.
+- **Magic Arrow** (level 1): creates a magical arrow or bolt that does extra damage
+- **Fire Arrow** (level 1): magically enhances your arrows or bolts with fire
+- **Inner Sight** (level 1): illuminates nearby enemies making them easier to hit for you and your party
+- **Critical Strike** (level 1): passive - your attacks have a chance to do double damage
+- **Jab** (level 1): attacks with a series of rapid thrusts using a javelin or spear class weapon
+- **Cold Arrow** (level 6): magically enhances your arrows or bolts by adding cold damage and a slowing effect cold arrows only do half of their regular damage
+- **Multiple Shot** (level 6): magically splits one arrow or bolt into many
+- **Dodge** (level 6): passive - you have a chance to dodge a melee attack when attacking or standing still
+- **Storm Lance** (level 6): Release straight lightning bolts. +1 bolt at skill levels 10 and 20. Adds 50% weapon damage.  On impact: chains up to 3 times. Chain damage: 25% skill lightning.
+- **Poison Javelin** (level 6): magically enhances your javelin to leave a trail of poison clouds
+- **Exploding Arrow** (level 12): enchants an arrow or bolt that explodes on contact, damaging all nearby enemies
+- **Slow Missiles** (level 12): illuminates nearby enemies and slows their ranged attacks
+- **Avoid** (level 12): passive - you have a chance to dodge enemy missiles when attacking or standing still
+- **Impale** (level 12): increases attack damage but rapidly degrades the weapon
+- **Lightning Bolt** (level 12): magically converts your javelin into a bolt of lightning
+- **Ice Arrow** (level 18): magically enhances your arrow or bolt to freeze your enemies
+- **Guided Arrow** (level 18): enhances your arrows and bolts to track your target or seek one of its own
+- **Penetrate** (level 18): passive - increases your attack rating
+- **Charged Strike** (level 18): adds lightning damage to javelin and spear class weapons and releases charged bolts upon impact
+- **Plague Javelin** (level 18): magically enhances your javelin to release expanding clouds of poison upon impact
+- **Strafe** (level 24): magically splits one arrow into several that target multiple nearby enemies
+- **Immolation Arrow** (level 24): enhances arrows or bolts to cause severe fire damage and creates a pyre upon impact
+- **Decoy** (level 24): creates a duplicate of yourself that draws fire from enemies
+- **Evade** (level 24): passive - you have a chance to dodge a melee or missile attack when walking or running
+- **Fend** (level 24): attacks all adjacent targets
+- **Freezing Arrow** (level 30): magically enhances an arrow or bolt to freeze entire groups of monsters
+- **Valkyrie** (level 30): summons a powerful Valkyrie ally
+- **Pierce** (level 30): passive - your missiles have a chance to pass through enemies that they hit
+- **Lightning Strike** (level 30): adds lightning damage to javelin and spear class weapons and releases chain lightning upon impact
+- **Lightning Fury** (level 30): changes a thrown javelin into a powerful bolt of lightning that splits on impact
+- **Thread the Needle** (level 12): +2 percentage points of missile piercing chance per rank. Maximum 5 ranks. Always active; affects the owner unless stated otherwise.
+- **Hunters Discipline** (level 6): +12% Attack Rating per rank. Maximum 5 ranks. Always active; affects the owner unless stated otherwise.
+- **Storm Conduit** (level 24): +2% Lightning Skill Damage per rank. Maximum 5 ranks. Always active; affects the owner unless stated otherwise.
 
 ## Sorceress
 
-Thunder Storm becomes Arcane Tempest: a short buff with frequent lightning strikes while you attack or cast. Revised damage growth leaves more points for mixed-element builds.
-
-### Skill changes
-
-| Skill | D2PLUS change | Benefit |
-| --- | --- | --- |
-| Inferno | Higher fire and revised range growth; Warmth synergy is 8%. | More damage from a focused channeling investment. |
-| Blaze | Higher fire growth; Warmth synergy is 3%. Fire Wall is not an active synergy. | Mobile fire damage with spare points. |
-| Hydra | Higher base damage; Fire Bolt/Fire Ball synergies are 2% each. | Fire alongside cold casting. No casting delay is already standard D2R behavior. |
-| Nova | Higher lightning growth; Static Field remains a 5% synergy. | Stronger damage before buying every synergy. |
-| Frost Nova | Higher cold growth; Blizzard/Frozen Orb synergies are 6% each. | Close-range cold with room for another element. |
-| Glacial Spike | Higher damage; Ice Bolt/Ice Blast/Frozen Orb synergies are 3% each. | Freeze control in a mixed caster. |
-| Enchant | Higher fire growth; Warmth synergy is 6%; AR starts at +25%, then +12% per level. | More flexible melee or ranged Enchant builds. |
-
-### Arcane Tempest replaces Thunder Storm
-
-Strikes one nearby enemy per pulse, with no splash. Costs 24 mana. At level 20 it lasts 12 seconds and strikes every 0.6 seconds. Duration caps at 16 seconds at level 40; strike interval caps at 0.48 seconds from level 23. Static Field grants 4% damage per hard rank.
-
-Frequent strikes make it useful alongside Nova, Lightning, or Enchant. The cost is refreshing it more often.
-
-### New passives
-
-| Passive | Unlock | At five ranks | Use |
-| --- | --- | --- | --- |
-| Emberguard | 12 | +40% defense. | Melee Enchant or exposed casters. |
-| Static Reservoir | 12 | +40% mana regeneration. | Sustained casting. |
-| Wintercraft | 24 | +10% cold skill damage. | Cold damage alongside Cold Mastery. |
-
-**Try:** Hydra/cold, Arcane Tempest/Nova, Storm Enchant, or Frost Nova hybrids.
+- **Fire Bolt** (level 1): creates a magical flaming missile
+- **Warmth** (level 1): passive - increases the rate at which you recover mana
+- **Charged Bolt** (level 1): creates multiple, randomly directed bolts of electrical energy
+- **Ice Bolt** (level 1): creates a magical bolt of ice that damages and slows your enemies
+- **Frozen Armor** (level 1): increases your defense and freezes enemies that hit you
+- **Inferno** (level 6): creates a continuous jet of flame to scorch your enemies
+- **Static Field** (level 6): creates an electrical field that reduces life of all nearby enemies
+- **Telekinesis** (level 6): uses the power of your mind to pick up items, use objects, and knock back enemies
+- **Frost Nova** (level 6): creates an expanding ring of ice that damages and slows all nearby enemies
+- **Ice Blast** (level 6): creates a magical sphere of ice that damages and freezes your enemy
+- **Blaze** (level 12): creates a wall of fire in your wake to scorch your enemies
+- **Fire Ball** (level 12): creates an explosive sphere of fiery death to engulf your enemies
+- **Nova** (level 12): creates an expanding ring of lightning to shock nearby enemies
+- **Lightning** (level 12): creates a powerful lightning bolt to lay waste to your enemies
+- **Shiver Armor** (level 12): increases your defense freezes and damages enemies that hit you
+- **Fire Wall** (level 18): creates a wall of flame that burns nearby enemies
+- **Enchant** (level 18): enchants equipped weapon of targeted character or minion adds fire damage to all weapons
+- **Chain Lightning** (level 18): creates a bolt of lightning that arcs through several targets
+- **Teleport** (level 18): instantly moves to a destination within your line of sight
+- **Glacial Spike** (level 18): creates a magical ice comet that freezes or kills nearby enemies
+- **Meteor** (level 24): summons a meteor from the heavens to crush and incinerate your enemies
+- **Arcane Tempest** (level 24): Short-duration storm follows you, striking one nearby enemy per pulse. No splash in Test 1.
+- **Energy Shield** (level 24): creates a magical shield that consumes mana instead of health when you take damage
+- **Blizzard** (level 24): summons massive shards of ice to destroy your enemies
+- **Chilling Armor** (level 24): increases defense and discharges an ice bolt in retaliation against ranged attackers
+- **Fire Mastery** (level 30): passive - increases all damage caused by your fire spells
+- **Hydra** (level 30): summons a multi-headed beast of flame to reduce your enemies to ashes
+- **Lightning Mastery** (level 30): passive - increases all damage caused by your lightning spells
+- **Frozen Orb** (level 30): creates a magical globe that sprays a torrent of ice bolts to lay waste to your enemies
+- **Cold Mastery** (level 30): passive - increases the damage of your cold spells by piercing enemies' resistances to cold
+- **Emberguard** (level 12): +8% Defense per rank. Maximum 5 ranks. Always active; affects the owner unless stated otherwise.
+- **Static Reservoir** (level 12): +8% Mana Regeneration per rank. Maximum 5 ranks. Always active; affects the owner unless stated otherwise.
+- **Wintercraft** (level 24): +2% Cold Skill Damage per rank. Maximum 5 ranks. Always active; affects the owner unless stated otherwise.
 
 ## Necromancer
 
-Bone attacks gain more damage from their own levels, summons get stronger, and Soul Harvest adds corpse-based recovery.
-
-### Skill changes
-
-| Skill | D2PLUS change | Benefit |
-| --- | --- | --- |
-| Teeth | Higher base damage; four bone synergies contribute 6% each. | Pack damage without buying every synergy first. |
-| Bone Spear | Higher base damage; four bone synergies contribute 4% each. | More room for summons or curses. |
-| Bone Spirit | Higher base damage; four bone synergies contribute 4% each. | Focused magic damage with spare utility points. |
-| Poison Dagger | Much higher poison growth; Poison Explosion/Poison Nova synergies are 10% each. | Stronger melee poison. |
-| Skeletal Mage | Up to 12 mages at level 18; stronger life/defense. Missile level uses Mage plus Skeleton Mastery levels. | A more substantial elemental army. |
-| Blood Golem | Higher damage and revised healing; 8% life synergy where referenced by other golems. | Golem sustain and durability. |
-| Fire Golem | Higher fire growth; Holy Fire level caps at 35; 8% damage synergy where referenced. | More rewarding fire-golem investment. |
-| Revive | Costs 35 mana; lasts 275 seconds at level 20; +65% movement speed. | Less army maintenance while casting. |
-
-### Soul Harvest replaces Weaken
-
-Select it on right click to recover life and mana from nearby corpses. Pulses once per second with no upkeep cost. At level 20: 65% recovery chance and 48 life plus 48 mana per consumed corpse. Chance caps at 85%; recovery is `8 + 2 × skill level`.
-
-Helps casters, dagger fighters, and summoners recover after kills. It consumes corpses needed for Corpse Explosion or summons and replaces Weaken's damage debuff.
-
-### New passives
-
-| Passive | Unlock | At five ranks | Use |
-| --- | --- | --- | --- |
-| Grave Meditation | 6 | +40% mana regeneration. | Bone, poison, and corpse casting. |
-| Venom Lore | 24 | +10% poison skill damage. | Poison offense. |
-| Deathless Covenant | 24 | +10 summon-resistance stat points. | Summon durability; pet coverage needs gameplay confirmation. |
-
-**Try:** bone/skeleton, mage/Corpse Explosion, Poison Dagger/Soul Harvest, or Revive-supported bone casting.
+- **Amplify Damage** (level 1): curses a group of enemies, increasing the non-magic damage they receive
+- **Teeth** (level 1): fires a barrage of summoned barbed teeth
+- **Bone Armor** (level 1): creates an orbiting shield of bone that absorbs melee damage
+- **Skeleton Mastery** (level 1): passive - increases life and damage of raised skeletons and revived creatures
+- **Raise Skeleton** (level 1): cast on the corpse of a slain monster, this raises a skeleton warrior that fights for you
+- **Dim Vision** (level 6): curses a group of monsters, reducing their vision radius
+- **Soul Harvest** (level 6): Keep selected on right click to consume nearby corpses for life and mana. No soul stacks in Test 1.
+- **Poison Dagger** (level 6): adds poison to your dagger attacks
+- **Corpse Explosion** (level 6): cast on the corpse of a slain monster, it explodes, damaging nearby enemies
+- **Clay Golem** (level 6): creates a golem from the earth to fight by your side
+- **Iron Maiden** (level 12): curses a group of enemies, causing them to damage themselves when damaging others
+- **Terror** (level 12): curses a group of monsters, causing them to flee in terror
+- **Bone Wall** (level 12): creates an impassable barrier of bone and debris
+- **Golem Mastery** (level 12): Enhances Speed and Life of all your Golems
+- **Raise Skeletal Mage** (level 12): cast on the corpse of a slain monster, this raises a skeleton mage that fights for you
+- **Confuse** (level 18): curses a monster to force it to attack random targets
+- **Life Tap** (level 18): curses a group of monsters so that damaging them gives the attacker life
+- **Poison Explosion** (level 18): cast on the corpse of a slain monster, toxic gas is released that poisons nearby monsters
+- **Bone Spear** (level 18): summons a deadly spike of bone to impale your enemies
+- **Blood Golem** (level 18): creates a golem that shares with you the life it steals
+- **Attract** (level 24): curses a monster to become the target of all nearby monsters this curse may not be overridden by another curse
+- **Decrepify** (level 24): curses a group of enemies to make them slow, weak and take amplified damage
+- **Bone Prison** (level 24): creates a barrier of fossilized bone around your target
+- **Summon Resist** (level 24): passive - increases the resistances of all summoned creatures
+- **Iron Golem** (level 24): transforms a metallic item into a golem that gains the properties of the item
+- **Lower Resist** (level 30): curses an enemy to take more damage from all magical attacks lowers resistances of monsters lowers maximum resistances of hostile players
+- **Poison Nova** (level 30): emits an expanding ring of concentrated poison
+- **Bone Spirit** (level 30): releases a spirit of the restless undead that tracks its target or finds one of its own
+- **Fire Golem** (level 30): creates a golem that converts the damage it receives from fire into life
+- **Revive** (level 30): returns a monster to life to fight by your side
+- **Grave Meditation** (level 6): +8% Mana Regeneration per rank. Maximum 5 ranks. Always active; affects the owner unless stated otherwise.
+- **Venom Lore** (level 24): +2% Poison Skill Damage per rank. Maximum 5 ranks. Always active; affects the owner unless stated otherwise.
+- **Deathless Covenant** (level 24): +2 percentage points of Summon Resistance per rank. Maximum 5 ranks. Always active; affects the owner unless stated otherwise.
 
 ## Paladin
 
-Conversion becomes Judgment, a magic spell that shares investment with Holy Bolt. Revised weapon and aura scaling supports more than one primary attack.
-
-### Skill changes
-
-| Skill | D2PLUS change | Benefit |
-| --- | --- | --- |
-| Sacrifice | +220% damage, then +20% per level; Redemption/Fanaticism synergies are 8%/4%. Self-damage falls to 4% at level 20. | Heavy hits with less recoil as it levels. |
-| Charge | +130% damage, then +30% per level; Might/Vigor synergies are 14% each; costs 7 mana. | Stronger mobile weapon offense. |
-| Holy Bolt | Higher magic growth; Fist of the Heavens synergy is 20%; Prayer supports healing. No Blessed Hammer damage synergy. | Holy damage and healing. |
-| Thorns | 400% returned damage, then +50% per level, alongside flat retaliation. | Retaliation-focused aura builds. |
-| Vengeance | Each element starts at 85% weapon base, then +8% per level; Resist aura synergies are 8%, Salvation is 4%. | Three damage types with flexible aura investment. |
-| Sanctuary | Stronger anti-undead damage, AR, and magic pulses; Cleansing synergy is 5%. | Undead-focused weapon and support builds. |
-| Fist of the Heavens | Higher primary lightning growth; Holy Shock synergy is 10%. | More rewarding lightning investment. Its 0.4-second delay is unchanged. |
-
-### Judgment replaces Conversion
-
-A delayed magic-damage column followed by holy bolts. Costs 12 mana with a 0.8-second delay. Primary damage starts at 80–120 and grows with levels; Holy Bolt grants 5% primary damage per hard rank.
-
-Use it with Holy Bolt or Fist of the Heavens, or as a magic backup on a weapon build. Weapon damage and Conviction do not boost the primary magic spell. Secondary holy bolts retain target restrictions.
-
-### New passives
-
-| Passive | Unlock | At five ranks | Use |
-| --- | --- | --- | --- |
-| Measured Strikes | 6 | +60% AR. | Charge, Zeal, Vengeance, Sacrifice. |
-| Storm Zeal | 24 | +10% lightning skill damage. | Holy Shock and Fist of the Heavens lightning. |
-| Purity of Blood | 12 | +25 points poison resistance. | Frees resistance requirements on gear. |
-
-**Try:** Judgment/Holy Bolt, Fist of the Heavens/Judgment, Vengeance, or Charge with a support aura.
+- **Sacrifice** (level 1): increased accuracy and damage at the cost of life
+- **Smite** (level 1): temporarily stun your enemy by bashing it with your shield
+- **Might** (level 1): when active, aura increases the damage done by you and your party
+- **Prayer** (level 1): when active, aura slowly regenerates the life of you and your party
+- **Resist Fire** (level 1): when active, aura decreases fire damage done to you and your party
+- **Holy Bolt** (level 6): a bolt of divine energy that damages demons and undead or heals allies
+- **Holy Fire** (level 6): when active, aura damages nearby enemies with heavenly flames adds fire damage to your attack
+- **Thorns** (level 6): when active, aura reflects melee damage taken by you and your party back at your enemies
+- **Defiance** (level 6): when active, aura increases the defense of you and your party
+- **Resist Cold** (level 6): when active, aura decreases cold damage done to you and your party
+- **Zeal** (level 12): allows you to attack multiple adjacent enemies with a single attack
+- **Charge** (level 12): charge into battle and attack an enemy
+- **Blessed Aim** (level 12): when active, aura increases the attack rating for you and your party
+- **Cleansing** (level 12): when active, aura reduces the length of time you and your party will remain poisoned or cursed
+- **Resist Lightning** (level 12): when active, aura decreases lightning damage done to you and your party
+- **Vengeance** (level 18): fire, lightning and cold damage are added to each successful attack
+- **Blessed Hammer** (level 18): summons an ethereal hammer that spirals outwards damaging enemies it hits
+- **Concentration** (level 18): when active, aura increases the damage and decreases the chance that the attack will be interrupted for you and your party
+- **Holy Freeze** (level 18): when active, aura freezes nearby monsters adds cold damage to your attack
+- **Vigor** (level 18): when active, aura increases stamina recovery rate, maximum stamina and movement speed for you and your party
+- **Judgment** (level 24): Cast a delayed magic column on an enemy, releasing holy bolts. This is a spell, not a weapon strike in Test 1.
+- **Holy Shield** (level 24): enhances your shield with divine power
+- **Holy Shock** (level 24): when active, aura causes pulses of electricity to damage nearby enemies adds lightning damage to your attack
+- **Sanctuary** (level 24): when active, aura damages the undead and knocks them back
+- **Meditation** (level 24): when active, aura increases mana recovery for you and your party
+- **Fist of the Heavens** (level 30): lightning strikes your target as holy bolts seek out nearby enemies
+- **Fanaticism** (level 30): when active, aura increases damage, attack speed and attack rating for you and your party
+- **Conviction** (level 30): when active, aura reduces the defenses and resistances of nearby enemies
+- **Redemption** (level 30): when active, aura attempts to redeem the souls of slain enemies to give you life and mana
+- **Salvation** (level 30): when active, aura decreases fire, cold and lightning damage done to you and your party
+- **Measured Strikes** (level 6): +12% Attack Rating per rank. Maximum 5 ranks. Always active; affects the owner unless stated otherwise.
+- **Storm Zeal** (level 24): +2% Lightning Skill Damage per rank. Maximum 5 ranks. Always active; affects the owner unless stated otherwise.
+- **Purity of Blood** (level 12): +5 percentage points of Poison Resistance per rank. Maximum 5 ranks. Always active; affects the owner unless stated otherwise.
 
 ## Barbarian
 
-Weapon-specific masteries become broad combat passives. Warcries add elemental support and lightning casting; Ancestral Standard supports physical builds.
-
-### Mastery replacements
-
-| D2R skill → D2PLUS skill | At level 20 | Benefit |
-| --- | --- | --- |
-| Blade Mastery → Arms Master | +192% AR, +123% physical damage, scaling critical chance; works across weapon families. | Change weapons without rebuilding mastery points. |
-| Axe Mastery → Primal Weapon Mastery | +80% fire/cold/lightning, +60% poison, +40% magic skill damage; melee AR; up to 5% elemental/poison pierce from hard ranks; 0–40 added fire, cold, and lightning attack damage. | Elemental weapons and Storm Cry. |
-| Mace Mastery → Blood Thirst | 12% life leech and +45% maximum life. | Physical attack sustain. Storm Cry does not leech. |
-| Polearm Mastery → Colossal Might | +60 Strength and 25% Crushing Blow. | Heavy weapons and boss attacks. |
-| Throwing Mastery → Wind Runner | +45% run/walk and +45% hit recovery. | Mobility; throwing quantity/pierce benefits are lost. |
-| Spear Mastery → Savage Instinct | 45% Open Wounds and 25% Deadly Strike. | Physical damage and sustained pressure. |
-
-### Warcry replacements
-
-| D2R skill → D2PLUS skill | What changes | Benefit |
-| --- | --- | --- |
-| Shout → Primordial Infusion | Adds fire/cold attack damage and lightning skill damage to the Barbarian and nearby allies. | Elemental offense; replaces Shout's defense buff. |
-| Battle Cry → Shattering Roar | −58 fire, cold, and lightning resistance at level 20. | Elemental attacks/casting; replaces the old defense/damage debuffs. |
-| War Cry → Storm Cry | Lightning nova with stun; 24–425 base damage at level 20. Howl, Taunt, and Shattering Roar synergies are 4% each. | Lightning singer builds. |
-| Grim Ward → Ancestral Standard | Corpse-based ward lasting 20 seconds. At level 20: 30% enemy slow and −30 physical resistance; both cap at 35 at level 25. | Physical combat without fear scattering targets. |
-
-Storm Cry uses an expanded nova missile range; the visible radius needs gameplay confirmation. Howl remains unchanged.
-
-### Primordial Infusion scaling
-
-| Skill level | Added fire attack damage | Added cold attack damage | Lightning skill damage |
-| --- | --- | --- | --- |
-| 20 | 200–400 | 75–150 | +20% |
-| 30 | 400–800 | 150–300 | +20% |
-
-Fire/cold growth doubles above level 20. Lightning skill damage caps at +20%. Shout's duration synergies remain.
-
-### Attack changes
-
-| Skill | D2PLUS change | Benefit |
-| --- | --- | --- |
-| Double Throw | Double Swing synergy is 12%; AR starts at +30%, then +12% per level. | Throwing offense, with ammunition sustain handled separately. |
-| Stun | +8% damage per skill level; Bash synergy is 6%. | Damage on a control attack. |
-| Leap Attack | +150% weapon damage, then +40% per level; Leap synergy is 7%; costs 10 mana. | Mobile heavy hits. |
-| Concentrate | +100% damage, then +8% per level; Battle Orders/Bash synergies are 6%/5%. | Durable single-target offense. |
-| Berserk | +180% magic-converted attack damage, then +18% per level; Howl/Battle Orders synergies are 6% each. | Magic damage alongside physical attacks. |
-
-### New passives
-
-| Passive | Unlock | At five ranks | Use |
-| --- | --- | --- | --- |
-| Battle Instinct | 6 | +60% AR. | Weapon hit chance. |
-| Killing Edge | 24 | +5 points Critical Strike. | Physical double-damage chance. |
-| Singers Breath | 12 | +50% mana regeneration. | Repeated warcries. |
-
-**Try:** elemental Frenzy, Storm Cry/Primal Weapon Mastery/Shattering Roar, or physical Whirlwind with Ancestral Standard. Critical Strike and Deadly Strike do not multiply together for four-times damage.
+- **Bash** (level 1): powerful blow that increases the damage done to enemies and knocks them back
+- **Arms Master** (level 1): Passive: increases physical attack damage, attack rating, and critical strike chance with all weapon types.
+- **Primal Weapon Mastery** (level 1): Channel elemental and supernatural power through any weapon. Increases elemental, poison, and magic damage; improves attack rating and pierces resistances.
+- **Blood Thirst** (level 1): Passive: grants life stolen per hit and increased maximum life.
+- **Howl** (level 1): sends nearby monsters scrambling away in fear
+- **Find Potion** (level 1): use on the corpse of a slain monster for a chance to find a potion
+- **Leap** (level 6): Jump into the air and knock back nearby enemies when you land
+- **Double Swing** (level 6): when two weapons are equipped attacks two targets if possible, or one target twice
+- **Colossal Might** (level 6): Passive: grants additional strength and a chance of Crushing Blow.
+- **Wind Runner** (level 6): Passive: grants faster run/walk and faster hit recovery.
+- **Savage Instinct** (level 6): Passive: grants a chance of Open Wounds and Deadly Strike.
+- **Taunt** (level 6): enrages a monster into relentlessly attacking
+- **Primordial Infusion** (level 6): Adds fire and cold attack damage to you and nearby allies while active. Lightning skill damage: +1% per level, up to +20%.
+- **Stun** (level 12): stuns your target for a short time and increases your attack rating
+- **Double Throw** (level 12): allows you to throw two different throwing weapons at the same time
+- **Increased Stamina** (level 12): passive - increases your stamina
+- **Find Item** (level 12): use on the corpse of a slain monster to find hidden treasures
+- **Leap Attack** (level 18): leaps to and attacks target enemy and damages surrounding enemies
+- **Concentrate** (level 18): attack that is not interruptible and improves attack rating and defense
+- **Iron Skin** (level 18): passive - improves defense
+- **Shattering Roar** (level 18): Reduce nearby enemies' fire, lightning, and cold resistances.
+- **Frenzy** (level 24): allows you to swing two weapons at once each successful attack increases your overall speed requires you to equip two weapons
+- **Increased Speed** (level 24): passive - increases walk and run speed
+- **Battle Orders** (level 24): improves the maximum mana, life and stamina of you and your party
+- **Ancestral Standard** (level 24): Raise a corpse-anchored ward that slows enemies and lowers physical resistance. Native ward visuals; no ally buff in Test 1.
+- **Whirlwind** (level 30): a whirling dance of death that cuts a path through the legions of your enemies
+- **Berserk** (level 30): a powerful but reckless attack that increases damage and attack rating but decreases defense
+- **Natural Resistance** (level 30): passive - increases natural resistances to elemental and poison damage
+- **Storm Cry** (level 30): Unleash a stunning cry that deals lightning damage to nearby enemies.
+- **Battle Command** (level 30): increases all current skill levels for you and your party
+- **Battle Instinct** (level 6): +12% Attack Rating per rank. Maximum 5 ranks. Always active; affects the owner unless stated otherwise.
+- **Killing Edge** (level 24): +1 percentage point of passive Critical Strike per rank. Maximum 5 ranks. Always active; affects the owner unless stated otherwise.
+- **Singers Breath** (level 12): +10% Mana Regeneration per rank. Maximum 5 ranks. Always active; affects the owner unless stated otherwise.
 
 ## Druid
 
-Cold mastery, offensive pets, and corpse healing let Druids choose between damage support and sustain.
-
-### Skill replacements
-
-| D2R skill → D2PLUS skill | At level 20 | Benefit |
-| --- | --- | --- |
-| Arctic Blast → Permafrost | +100% cold skill damage and 40 points cold pierce. | Hurricane/cold hybrids; replaces the beam. |
-| Hunger → Ravage | +215% physical attack damage; retains life/mana leech. | A recovery bite with useful damage. Feral Rage remains unchanged. |
-| Solar Creeper → Blight Creeper | Poison vine with −525 flat defense and −30 physical resistance on enemies; resistance reduction caps at 40 points. | Physical attacks, summons, and Tornado; replaces mana recovery. |
-| Spirit of Barbs → Spirit of the Gale | 62–315 lightning attack damage and +30% IAS to eligible allies; IAS caps at 40%. | Shapeshift and summon attack support. |
-| Carrion Vine → Bloodroot | Up to 15% maximum-life healing per corpse, capped from level 10; +760% summon-life growth at level 20. | Durable healing for high-life Druids. |
-
-Choose one vine: Bloodroot for healing, Blight for physical support, or Poison Creeper for poison. Poison Creeper still supports Rabies. Gale competes with Oak Sage and Heart of Wolverine.
-
-### Other skill changes
-
-| Skill | D2PLUS change | Benefit |
-| --- | --- | --- |
-| Raven | Revised damage growth; attacks per summon are `20 + 2 × (level − 1)`. | Less frequent replacement in Raven builds. |
-| Spirit Wolf | Increased defense scaling and physical growth fields. Active cold damage uses separate fields. | Summon support; a cold-damage buff is not confirmed. |
-| Molten Boulder | Higher physical/fire growth; Volcano gives 8% physical synergy, Firestorm gives 8% fire. | Mixed damage with fewer synergy points. |
-| Rabies | Higher poison growth; Poison Creeper synergy is 12%. | Poison alongside another shapeshift attack. |
-| Fire Claws | Higher fire growth; Firestorm/Molten Boulder synergies are 8% each. | Fire attacks with room for summons or defense. |
-| Twister | Higher physical growth; Tornado/Hurricane synergies are 6% each. | More useful wind control. |
-| Armageddon | Higher fire growth; Firestorm/Molten Boulder give 7% fire synergy each; Volcano gives 18% physical. | Fire/physical damage alongside attacks. |
-
-### New passives
-
-| Passive | Unlock | At five ranks | Use |
-| --- | --- | --- | --- |
-| Wild Covenant | 24 | +10 summon-resistance stat points. | Army durability; pet coverage needs gameplay confirmation. |
-| Ironhide | 12 | +40% defense. | Shapeshifters and exposed casters. |
-| Heart of Winter | 24 | +10% cold skill damage. | Owner cold damage alongside Permafrost. |
-
-**Try:** Hurricane/shapeshift, Fire Claws/summons, Ravage/Gale, Tornado/Blight, or summons with Bloodroot. Owner cold bonuses are not confirmed to transfer to pets.
+- **Raven** (level 1): summon ravens to peck out the eyes of your enemies
+- **Poison Creeper** (level 1): summon a vine that spreads disease to all it contacts
+- **Werewolf** (level 1): transform into a werewolf
+- **Lycanthropy** (level 1): passive - improves duration and life when in werewolf or werebear form
+- **Firestorm** (level 1): unleash fiery chaos to burn your enemies
+- **Oak Sage** (level 6): summon a spirit pet that increases life for you and your party
+- **Summon Spirit Wolf** (level 6): summon a wolf with teleporting ability to fight by your side
+- **Werebear** (level 6): transform into a werebear with unstoppable attacks
+- **Molten Boulder** (level 6): launch a boulder of flaming hot magma that knocks back your enemies
+- **Permafrost** (level 6): Passive: increases your cold skill damage and reduces enemy cold resistance against your cold damage.
+- **Bloodroot** (level 12): Summon a durable healing vine that consumes corpses. Shares native one-vine limit. No physical eruption in Test 1.
+- **Feral Rage** (level 12): when in werewolf form, go into a frenzied rage to steal increasing amounts of life from your enemies with successive hits
+- **Maul** (level 12): when in werebear form, maul your enemies for increasing extra damage with successive hits
+- **Fissure** (level 12): open volcanic vents below your enemies, burning them to a crisp
+- **Cyclone Armor** (level 12): shield yourself from damage caused by fire, cold, and lightning
+- **Heart of Wolverine** (level 18): summon a spirit pet that adds to the damage and attack rating of you and your party
+- **Summon Dire Wolf** (level 18): summon a wolf that becomes enraged, eating corpses to increase damage it does to enemies
+- **Rabies** (level 18): when in werewolf form, bite your enemies to inflict them with disease that spreads to other monsters
+- **Fire Claws** (level 18): when in werewolf or werebear form, maul your enemies with a fiery claw attack
+- **Twister** (level 18): release several small whirlwinds that cut a path through your enemies
+- **Blight Creeper** (level 24): Summon a creeping blight that periodically poisons nearby enemies and reduces their defense and physical resistance. Does not consume corpses.
+- **Ravage** (level 24): A powerful shapeshifted attack with life and mana steal. Preview: no additional Crushing Blow, Open Wounds, or Ignore Target Defense.
+- **Shock Wave** (level 24): when in werebear form, create a shock wave that stuns nearby enemies
+- **Volcano** (level 24): summon forth a volcano to rain death and destruction over your enemies
+- **Tornado** (level 24): create a funnel of wind and debris to blast your enemies
+- **Spirit of the Gale** (level 30): Summon a spirit that grants nearby allies lightning attack damage and increased attack speed.
+- **Summon Grizzly** (level 30): summon a ferocious grizzly bear
+- **Fury** (level 30): when in werewolf form, attack either multiple adjacent targets or one target multiple times
+- **Armageddon** (level 30): create a meteor shower to rain fiery destruction on nearby enemies
+- **Hurricane** (level 30): create a massive storm of wind and debris to pound your enemies to bits
+- **Wild Covenant** (level 24): +2 percentage points of Summon Resistance per rank. Maximum 5 ranks. Always active; affects the owner unless stated otherwise.
+- **Ironhide** (level 12): +8% Defense per rank. Maximum 5 ranks. Always active; affects the owner unless stated otherwise.
+- **Heart of Winter** (level 24): +2% Cold Skill Damage per rank. Maximum 5 ranks. Always active; affects the owner unless stated otherwise.
 
 ## Assassin
 
-Stronger elemental martial arts and fire traps leave room for utility. Shadow Rift adds magic damage and spacing; blades shift more damage into flat skill scaling.
-
-### Skill changes
-
-| Skill | D2PLUS change | Benefit |
-| --- | --- | --- |
-| Fists of Fire | Higher fire growth; Phoenix Strike synergy is 8%. | Focused fire martial arts. |
-| Claws of Thunder | Higher maximum lightning growth; Phoenix Strike synergy is 6%. | Lightning charge attacks. |
-| Blades of Ice | Higher cold growth; Phoenix Strike synergy is 6%. | Cold damage and control. |
-| Blade Sentinel | Higher flat damage; 50% weapon damage versus 75% in current D2R. | More skill damage, less strong-weapon scaling. One-second delay is unchanged. |
-| Blade Fury | Higher flat damage; 75% weapon damage; firing parameter set to 4; blade synergies remain 10% each. | Blade offense; actual firing cadence needs gameplay confirmation. |
-| Blade Shield | Higher flat damage; 37.5% weapon damage versus 75% in current D2R; pulses every 0.8 seconds. | Close-range pressure with lower weapon scaling. |
-| Wake of Fire | Higher fire growth; Fire Blast/Wake of Inferno synergies are 5% each. | Fire traps with spare utility points. |
-| Wake of Inferno | Higher fire growth; Fire Blast/Wake of Fire synergies are 6% each. | Focused fire traps. |
-
-### Shadow Rift replaces Psychic Hammer
-
-An area magic blast with outward knockback. Costs 6 mana, has a 0.6-second delay, and starts at 6–12 magic damage with increasing level growth.
-
-It gives fire trappers a second damage type and blade users a spacing tool. It has no stun or conversion; Mind Blast remains available. Knockback can push enemies away from traps.
-
-### New passives
-
-| Passive | Unlock | At five ranks | Use |
-| --- | --- | --- | --- |
-| Blade Guidance | 12 | +60% AR. | Blade/weapon attacks where hit checks apply. |
-| Still Mind | 6 | +40% mana regeneration. | Traps, casts, and blades. |
-| Ember Discipline | 24 | +10% fire skill damage. | Fire martial arts and traps. |
-
-**Try:** fire traps/Shadow Rift, blades with shadow utility, or single-element martial arts with a backup attack.
+- **Fire Blast** (level 1): throw a fire bomb to blast your enemies to bits
+- **Claw Mastery** (level 1): passive - improves your skill with claw class weapons
+- **Shadow Rift** (level 1): Cast an area magic blast with outward knockback. No conversion, stun or inward pull in Test 1.
+- **Tiger Strike** (level 1): Charge-up Skill  consecutive hits add damage bonuses to finishing moves must use a dragon finishing move or normal attack to release charges
+- **Dragon Talon** (level 1): Finishing Move  kick your enemies out of your way adds charged-up bonuses to the kick
+- **Shock Web** (level 6): throw a web of lightning to shock your enemies
+- **Blade Sentinel** (level 6): set a spinning blade to patrol between you and target point
+- **Burst of Speed** (level 6): increases attack and movement speed for a period of time
+- **Fists of Fire** (level 6): Charge-up Skill  consecutive hits add fire damage to finishing moves can only be used with claw class weapons must use a dragon finishing move or normal attack to release charges
+- **Dragon Claw** (level 6): Finishing Move  slice and dice your enemies with your dual claw class weapons adds charged-up bonuses to both claw attacks
+- **Charged Bolt Sentry** (level 12): a trap that emits charged bolts at enemies that pass near
+- **Wake of Fire** (level 12): a trap that emits waves of fire
+- **Weapon Block** (level 12): passive - chance to block when you are using dual claw class weapons
+- **Cloak of Shadows** (level 12): cast a shadow to blind nearby enemies lowering their defenses for a period of time
+- **Cobra Strike** (level 12): Charge-up Skill  consecutive hits add life and mana stealing to finishing moves must use a dragon finishing move or normal attack to release charges
+- **Blade Fury** (level 18): throw spinning blades to slice up your enemies
+- **Fade** (level 18): raise all resistances and resist curses for a period of time
+- **Shadow Warrior** (level 18): summon a shadow of yourself that mimics your skills and fights by your side
+- **Claws of Thunder** (level 18): Charge-up Skill  consecutive hits add lightning damage to finishing moves can only be used with claw class weapons must use a dragon finishing move or normal attack to release charges
+- **Dragon Tail** (level 18): Finishing Move  knock back your enemies with an explosive kick adds charged-up bonuses to the kick
+- **Lightning Sentry** (level 24): a trap that shoots lightning to scorch passing enemies
+- **Wake of Inferno** (level 24): trap that sprays fire at passing enemies
+- **Mind Blast** (level 24): using the power of your mind stun a group of enemies and convert the feeble-minded
+- **Blades of Ice** (level 24): Charge-up Skill  consecutive hits add cold damage to finishing moves can only be used with claw class weapons must use a dragon finishing move or normal attack to release charges
+- **Dragon Flight** (level 24): Finishing Move  teleport to your enemies and destroy them with a kick adds charged-up bonuses to the kick
+- **Death Sentry** (level 30): trap that shoots lightning at your enemies or explodes nearby corpses laying waste to more enemies
+- **Blade Shield** (level 30): spinning blades slice enemies who stray too close
+- **Venom** (level 30): add poison damage to your weapons
+- **Shadow Master** (level 30): summon a powerful shadow of yourself to fight by your side
+- **Phoenix Strike** (level 30): Charge-up Skill  adds elemental novas to finishing moves must use a dragon finishing move or normal attack to release charges
+- **Blade Guidance** (level 12): +12% Attack Rating per rank. Maximum 5 ranks. Always active; affects the owner unless stated otherwise.
+- **Still Mind** (level 6): +8% Mana Regeneration per rank. Maximum 5 ranks. Always active; affects the owner unless stated otherwise.
+- **Ember Discipline** (level 24): +2% Fire Skill Damage per rank. Maximum 5 ranks. Always active; affects the owner unless stated otherwise.
 
 ## Warlock
 
-Energy becomes an offensive stat for Cleave and Echoing Strike. Three passives support Eldritch attacks, casting, and attack/demon hybrids.
-
-### New passives
-
-| Passive | Unlock | At five ranks | Use |
-| --- | --- | --- | --- |
-| Sigil Lord | 30 | +25% faster cast rate and +25% maximum mana. | Chaos and mixed casters. |
-| Astral Communion | 30 | +100% mana regeneration; adds Energy-based damage to Cleave/Echoing Strike. | Energy-focused Eldritch attacks. |
-| Demonic Resonance | 30 | 15% Crushing Blow, 15% IAS, 5% physical damage reduction; capped at effective level five. | Owner attacks and durability alongside demons. |
-
-### Energy damage scaling
-
-Added damage percentage: `min(300, current Energy × Astral Communion hard ranks / 5)`.
-
-| Current Energy | One hard rank | Three hard ranks | Five hard ranks |
-| --- | --- | --- | --- |
-| 100 | +20% | +60% | +100% |
-| 200 | +40% | +120% | +200% |
-| 300 | +60% | +180% | +300% |
-| 400 | +80% | +240% | +300% |
-
-Equipment Energy counts; bonus skill levels do not replace hard ranks here. The bonus adds to the attack's damage calculation, rather than multiplying final damage separately.
-
-Energy investment trades life for offense. Demonic Resonance buffs the owner, not the demons, and does not scale with demon count.
-
-**Try:** Energy/Echoing Strike, Energy/Cleave, Sigil Lord Chaos casting, or weapon attacks with demon support.
-
-## Build tips
-
-- Pick a main attack and one backup that solves a real problem. Maxing all three new passives still costs 15 points.
-- Attack, spell, and pet damage use different bonuses. Leech, Crushing Blow, and Deadly Strike do not turn ordinary spells into weapon hits.
-- Resistance reduction is damage-type specific and does not automatically break every immunity.
-- Corpse recovery and wards compete with Corpse Explosion and summons. Plan for fights before the first corpse.
-- Cast rate, attack speed, and hit recovery depend on breakpoints. Skill scaling can also hit a cap.
-
-## Sources
-
-Values come from the D2PLUS gameplay tables and All Classes Classic Pack. Enable the class-pack changes to use their replacement skills.
-
-D2R comparison references: [2.4](https://news.blizzard.com/en-us/article/23788293/diablo-ii-resurrected-patch-2-4-ladder-now-live), [2.6](https://news.blizzard.com/en-us/article/23899624/diablo-ii-resurrected-ladder-season-three-has-concluded), [2.7](https://news.blizzard.com/en-us/article/23938388/diablo-ii-resurrected-ladder-season-4-has-concluded), [3.2](https://news.blizzard.com/en-us/article/24261478/diablo-ii-resurrected-ladder-season-14-has-concluded), and [3.3](https://news.blizzard.com/en-us/article/24296140/diablo-ii-resurrected-ladder-season-15-now-live).
+- **Summon Goatman** (level 1): Summons a Goatman to fight by your side
+- **Demonic Mastery** (level 1): Passive - Enhances your summoned and bound demons
+- **Death Mark** (level 6): Forces your demon to teleport to and attack an enemy
+- **Summon Tainted** (level 12): Summons a Tainted to fight by your side
+- **Summon Defiler** (level 18): Summons a defiler that binds enemy souls together   to take shared damage
+- **Blood Oath** (level 6): Passive - Bind the lifeforce of your demon   to protect from enemy attacks
+- **Engorge** (level 24): Heal and empower your demon by feeding it a corpse
+- **Blood Boil** (level 18): Erupt your demon's blood to damage nearby enemies
+- **Consume** (level 30): Sacrifice your demon in exchange for power
+- **Bind Demon** (level 30): Force an injured demon to do your bidding
+- **Levitation Mastery** (level 1): Passive - Improve your ability to levitate your equipped  weapon with your mind
+- **Eldritch Blast** (level 24): Blast hexed enemies with draining magical damage   and refresh the duration of their active hex
+- **Hex: Bane** (level 1): Hexes your weapon to impair enemies and add magic damage
+- **Hex: Siphon** (level 24): Hexes your weapon to extract the lifeforce of slain enemies
+- **Psychic Ward** (level 18): Creates a mental shield that absorbs damage from   attacks and can stun melee attackers
+- **Echoing Strike** (level 12): Create echoes of your melee weapon that pierce through enemies
+- **Hex: Purge** (level 12): Hexes your weapon to warp enemies creating a chance  they will erupt when hit
+- **Blade Warp** (level 18): Hurl an astral weapon that teleports you to its impact
+- **Cleave** (level 6): Attack all enemies in an expanding arc
+- **Mirrored Blades** (level 30): Attack with mirror duplicates of your weapon
+- **Sigil: Lethargy** (level 6): Lay a sigil on the ground that slows and weakens enemies
+- **Ring of Fire** (level 6): Releases a volley of expanding hellfire in all directions that pushes   enemies away
+- **Miasma Bolt** (level 1): Fires a bolt of darkness that releases a cloud of entropy
+- **Sigil: Rancor** (level 12): Lay a sigil on the ground that enrages those who enter  and has a chance for enemies to attack one another
+- **Enhanced Entropy** (level 24): Passive - Improve your mastery over the entropic forces   of shadow magic
+- **Flame Wave** (level 18): Unleashes a rolling wall of fire that burns the ground in  its wake
+- **Miasma Chain** (level 12): Summon shadowy chains that emit a suffocating miasma   between you and the target
+- **Sigil: Death** (level 24): Lay a sigil on the ground that hastens the death  of injured enemies in a violent explosion
+- **Apocalypse** (level 30): Create a pentagram that engulfs all enemies in hellfire Reduces enemy fire resistance for apocalypse’s damage
+- **Abyss** (level 30): Create a tear in the fabric of reality which pulls enemies  close before violently collapsing
+- **Sigil Lord** (level 30): Test variant: improves manual casting. No automatic Sigil casts. Five ranks; +5% Faster Cast Rate and +5% Maximum Mana per rank.
+- **Astral Communion** (level 30): Test variant: +20% Mana Regeneration per rank. Each hard rank adds 1% Cleave/Echoing Strike damage per 5 Energy (maximum 300% total). Normal weapon attribute scaling remains. Five ranks.
+- **Demonic Resonance** (level 30): Test variant: bonuses always affect you, regardless of active demons. Per rank: +3% Crushing Blow, +3% Increased Attack Speed, and 1% physical damage reduction. Five ranks.

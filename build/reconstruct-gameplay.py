@@ -3,11 +3,11 @@ After release publication, fetch-release-inputs.py downloads the complete assets
 """
 from pathlib import Path
 import json,zipfile,hashlib,urllib.request,urllib.error,os,base64,sys
-ROOT=Path(__file__).resolve().parents[1];M=json.loads((ROOT/'release-inputs/alpha-v08-reconstruction.json').read_text());cache=ROOT/'build-cache';cache.mkdir(exist_ok=True)
+ROOT=Path(__file__).resolve().parents[1];M=json.loads((ROOT/'release-inputs/alpha-v082-reconstruction.json').read_text());cache=ROOT/'build-cache';cache.mkdir(exist_ok=True)
 sha=lambda b:hashlib.sha256(b).hexdigest()
 
 def fetch_published():
- manifest=json.loads((ROOT/'release-inputs/alpha-v08.json').read_text());dest=ROOT/'dist';dest.mkdir(exist_ok=True)
+ manifest=json.loads((ROOT/'release-inputs/alpha-v082.json').read_text());dest=ROOT/'dist';dest.mkdir(exist_ok=True)
  for f in manifest['files']:
   url=f"https://github.com/{manifest['repository']}/releases/download/{manifest['tag']}/{f['name']}"
   try:

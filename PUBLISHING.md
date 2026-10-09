@@ -1,29 +1,24 @@
-# Publishing Alpha v0.8
+# Publishing AlphaV0.8.2
 
-The reviewed gameplay packages are identified by exact SHA-256 hashes in
-release-inputs/alpha-v08.json. The reconstruction recipe combines unchanged files
-from the existing public v0.7 package with verified staged Git blobs. Every input
-file and final gameplay ZIP is checked before the launcher build begins.
+The release is based on the user-supplied Alphav0.8.2.zip. The compiled gameplay
+payload is preserved byte-for-byte. Exact input hashes are recorded in
+release-inputs/alpha-v082.json; the reconstruction recipe checks every file and ZIP.
 
-The source bundle already contains the migrated companions. Do not run the
-one-time v0.7 migration again against the updated data. For a local rebuild:
+For a local build, unpack the offline suite, run npm ci --ignore-scripts, supply
+the gameplay packages with build/fetch-release-inputs.py --input-dir, run npm test
+and npm run test:ui, then build/package.py with NSIS 3.11 on Windows x64.
+Use Python 3.14.3 for reproducible ZIP compression. The content sync and guide
+scripts document how the catalogs and recommendations were generated; they are
+not required to rebuild the already-reviewed vendor bundle.
 
-1. Run `python build/unpack-suite.py` and `npm ci --ignore-scripts`.
-2. Run `python build/fetch-release-inputs.py --input-dir PATH_TO_RELEASE_PACKAGES`.
-3. Run `npm test` and `npm run test:ui`.
-4. Run `python build/package.py --makensis PATH_TO_MAKENSIS` on Windows x64.
+A main-branch commit containing [publish-v082] starts the guarded release build.
+CI reconstructs gameplay, builds the launcher, rebuilds the unsigned Android kit,
+verifies the already-signed APK and every reference asset, then publishes a draft
+as the new v0.8.2-alpha prerelease after all upload hashes match. Older public
+releases cannot be overwritten. Pages deploys only after the build succeeds.
 
-Use Python 3.14.3 and NSIS 3.11. The GitHub build workflow performs these checks,
-then builds installer/portable, wiki and source packages. A main-branch commit
-containing [publish-v08], or manual workflow dispatch, starts the release build.
-The publisher creates a draft v0.8-alpha prerelease, verifies uploaded checksums,
-then publishes it. It refuses to overwrite an existing public release or a draft
-from another commit. Older tags/releases are preserved.
-
-Pages deploys only after the release workflow succeeds for the release commit.
-Normal later website edits retain their push-based deployment. The Android APK
-was signed locally with a new release identity because the v0.7 key was unavailable.
-Its manifest records the public certificate fingerprint and verified signed APK
-hash. The signed-Android workflow uploads that already-signed APK; it never receives
-a private key or password. Existing users must uninstall the older companion first.
-Never put private keys or signing passwords in this repository.
+The signed APK keeps the private v0.8 identity and uses versionCode 82.
+Signing keys and passwords are held outside this repository and never reach CI.
+The data includes 33 existing unsupported item-template cases; their editor
+safety rejection is retained. All 33 build plans pass native save round-trips.
+Game and physical Android behavior are not certified by automated checks.
