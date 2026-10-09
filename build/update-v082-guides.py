@@ -121,3 +121,6 @@ write(W/'database.json',d);(W/'data.js').write_text('window.D2PLUS_DATA = '+json
 write(E/'build-guides.json',{'source':'D2PLUS AlphaV0.8.2 · data-reviewed October 9, 2026','guides':d['guides']})
 write(W/'GUIDE_V082_AUDIT.json',{'version':'AlphaV0.8.2','guides':audits,'gameplayBenchmarked':False})
 print(json.dumps(audits,indent=2))
+
+import subprocess,sys
+subprocess.run([sys.executable,str(Path(__file__).with_name('audit-v082-equipment.py'))],check=True)

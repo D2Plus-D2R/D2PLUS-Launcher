@@ -11,7 +11,9 @@ test('AlphaV0.8.2 wiki renders new content offline and preserves unique records'
  const w=dom.window;w.scrollTo=()=>{};
  for(const file of ['data.js','item-presentation.js','trinkets.js','app.js'])w.eval(fs.readFileSync(path.join(root,file),'utf8'));
  const text=w.document.querySelector('#content').textContent;
- for(const term of ['Cow King','Dreadguard','Doom Reaver','Ironblood Draught','10 minutes','Worldforge Shard'])assert.ok(text.includes(term),term);
+ assert.ok(!fs.readFileSync(path.join(root,'app.js'),'utf8').includes('alpha-v0822'));
+ assert.ok(fs.readFileSync(path.join(root,'../launcher/index.html'),'utf8').includes('37 unique balance changes'));
+ for(const term of ['Cow King','Dreadguard','Doom Reaver','Ironblood Draught','10 minutes','Worldforge Shard','October 9, 2026','The Warden takes form','Storm Lance'])assert.ok(text.includes(term),term);
  assert.ok(d.records.some(r=>r.name==='Token of Regret'));
  w.location.hash='#companions';w.dispatchEvent(new w.HashChangeEvent('hashchange'));
  assert.ok(w.document.querySelector('#content').textContent.includes('Blood Raven'));
