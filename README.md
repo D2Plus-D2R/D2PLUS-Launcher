@@ -1,75 +1,35 @@
-# D2PLUS AlphaV0.8.2
+# D2PLUS Alpha V0.9
 
-Released October 9, 2026. Complete release built from the supplied compiled AlphaV0.8.2 archive.
+Released October 11, 2026. Built from the user-confirmed working D2RMMAlphaV0.9.zip snapshot.
 
-## World and combat
+## All-in-one installation
 
-- Sovereign Wardens use the custom demonic HD model and eight animation states. The final smaller scale, longer walk stride, higher claw swing and grounded death/corpse poses are included.
-- Warden claws gain a fire effect and added fire damage equal to 20% of physical damage; all six Warden definitions have 20% more life in Normal, Nightmare and Hell. Andariel and the other act-boss models keep their own appearances.
+- One standalone D2RMM mod contains the complete working Alpha V0.9 snapshot. No previous D2PLUS bundle or separate visual add-ons are required.
 
-## Items, skills and presentation
+## Towns and presentation
 
-- 37 unique items rebalanced: 19 nerfs to strong early/mid-game outliers and 18 buffs to overlooked items. New drops use the current values; existing saved items retain their prior rolls.
-- Storm Lance releases aimed lightning bolts from range, gains primary bolts at total skill levels 10 and 20, and carries 50% native weapon damage on the primary bolts. Impact chains use 25% skill lightning with the existing three-jump limit.
-- 68 equipment appearances receive custom inventory art and/or visual treatment, including class capstone sets and Diablo I-inspired uniques. Long capstone set-name localization keys are repaired.
-- Updated skill-panel border/background and corrected numeric tooltips for Storm Lance, Arcane Tempest, Soul Harvest and Ancestral Standard.
+- Rogue Encampment gains dark rose-covered stone walls, permanent Akara, Charsi and Gheed shops, a compact gothic meeting hall, a warrior statue and stone pillar lights. Shop and statue collision is included.
+- Kurast town receives darker rose-covered stonework and hanging vines. The Pandemonium Fortress gains dark gothic stone, roses, lighting and a central warrior statue.
+- Gold-and-ember town waypoints, the custom safebox and matching Horadric Cube, larger potion artwork, and darker stone HUD are included.
+
+## Characters and complete sets
+
+- The redesigned demonic Warlock has purple eyes and custom garments. The custom Act III sorcerer carries a spellbook, uses daggers and grimoires, and includes Cleave for all three elements.
+- Seven level-95 class sets gain matching colored full-set radiance effects. Paragon’s Ascension remains unchanged.
+- Includes the mercenary and scenery asset fixes tested during development, plus the existing Sovereign Warden, gameplay, rune stash and material stash features.
 
 ## Companion tools
 
-- Wiki and hero editor now share the current unique, set and skill names. All 33 build guides are revised for the current skills, with explicit prerequisites and legal point budgets.
-- Complete fixed-settings D2RMM package, bundled Windows installer and portable launcher, offline wiki and Android companion are synchronized to AlphaV0.8.2. Rune/material stash tabs, crafting, mercenaries and all 163 enabled runewords remain included.
+- Launcher, offline references, Android companion, website and splash screen now identify this release as Alpha V0.9.
 
-## Unique nerfs
+## Installation
 
-- Emberglass's Seed: Fire skills: +1 removed
-- Cinderbloom's Seed: Fire skills: +1 removed
-- Gravecaller's Seed: All resistances: 16 total → 10 total (duplicates consolidated)
-- Gravecaller's Oath: All resistances: 26 total → 18 total (duplicates consolidated)
-- Wildheart's Seed: All resistances: 16 total → 10 total (duplicates consolidated)
-- Wildheart's Oath: All resistances: 26 total → 18 total (duplicates consolidated)
-- Iron Covenant's Token: Aura level: 3 → 2; Enhanced damage: 97–122 → 80–105
-- Quiet Lantern's Token: Aura level: 3 → 1
-- Quiet Lantern's Oath: Aura level: 5 → 3
-- Quickening Hand's Token: Faster cast rate: 15 → 10
-- Quickening Hand's Oath: Faster cast rate: 20 → 15
-- Bonesnap: Enhanced damage: 200–300 → 180–240; Crushing Blow: 40 → 30
-- Razorswitch: All resistances: 50 → 35; Magic damage reduction: 15 → 10
-- Emberglass's Dominion: Fire skills: +2 removed
-- Cinderbloom's Dominion: Fire skills: +2 removed
-- Quickening Hand's Covenant: Increased attack speed: 25 → 20; Faster cast rate: 25 → 20; All resistances: 23 → 15
-- Silent Guillotine's Dominion: Assassin skills: 2 → 1; Crushing Blow: 20 → 15
-- Gravecaller's Dominion: All resistances: 46 total → 35 total (duplicates consolidated)
-- Wildheart's Dominion: All resistances: 46 total → 35 total (duplicates consolidated)
+Windows launcher: select D2R.exe and click Install Alpha V0.9. The complete gameplay is bundled. Keep the same mod output name and save path; the launcher backs up the previous installed output.
 
-## Unique buffs
+D2RMM: extract D2PLUS_AlphaV0.9_Complete_D2RMM.zip into the D2RMM application's mods folder. Enable only D2PLUS - Alpha V0.9 Complete for this release, disable older D2PLUS complete bundles and all included D2PLUS visual/mercenary/Warden add-ons, and click Install Mods. No previous version is required. This is one fixed-settings snapshot, not a stack of separate optional modules. Do not merge the new source folder over an old mod folder. Keep your existing output name (normally D2RMM) and launch with -mod D2RMM -txt.
 
-- Bladebone: Enhanced damage: 30–50 → 50–70
-- Stoutnail: Attacker takes damage: 3–10 → 8–16; Life: adds 10
-- Ironstone: Maximum lightning damage: 10 → 35
-- Blacktongue: Enhanced damage: 50–60 → 70–90; Increased attack speed: adds 10
-- The Patriarch: Enhanced damage: 100–120 → 120–150; Increased attack speed: adds 10
-- Lance of Yaggai: Enhanced damage: adds 40–60
-- Witherstring: Enhanced damage: 40–50 → 60–80; Magic Arrow level: 3 → 5
-- Leadcrow: Enhanced damage: 70 → 90; Increased attack speed: adds 15
-- Coif of Glory: Lightning resistance: 15 → 25; Faster hit recovery: adds 10
-- Venom Ward: Poison length reduction: 50 → 75; Faster hit recovery: adds 15
-- Heavenly Garb: Faster cast rate: adds 10
-- Snakecord: Life stolen per hit: adds 2
-- Hellmouth: Increased attack speed: adds 20
-- Swordguard: Increased attack speed: adds 20
-- Atma's Wail: All resistances: adds 20
-- Black Hades: Damage to demons: 30–60 → 100–150
-- Corpsemourn: red-Enhanced damage: adds 10
-- Skull Collector: Faster cast rate: adds 30
+Requires your own Diablo II: Resurrected with Reign of the Warlock. The Android companion is an offline reference app, not the game; its existing release signing identity and versionCode 90 allow an in-place update over the signed V0.8/V0.8.2 companion. Export data first if replacing an earlier differently signed app.
 
-## Installation and compatibility
-
-Use the Windows setup for bundled gameplay, wiki and hero editor. Select D2R.exe and Install AlphaV0.8.2. Keep your existing output name/save path. The installer retains the prior output as a backup and requires D2R to be closed.
-
-For D2RMM, extract the Complete_D2RMM ZIP into the application’s mods folder. Enable D2PLUS - AlphaV0.8.2 Complete and disable older complete bundles and overlapping Warden/balance/visual add-ons already included here. This is a fixed-settings snapshot. Requires your own D2R with Reign of the Warlock for this compiled dataset.
-
-The Android APK uses the same release signing identity as v0.8 and a higher version code, so it can update that installation. Devices still using the older v0.7 signing identity require removal of that older app first; export companion data before doing so.
-
-Guides are checked against the release data and point budgets; they are recommendations, not measured build rankings. Archive, editor, installer and APK checks do not certify every in-game interaction or physical Android device. The supplied gameplay files are preserved byte-for-byte.
+The source gameplay snapshot was confirmed working by the user. Packaging checks do not certify every in-game interaction or physical Android device. Gameplay assets and tables are preserved from the supplied archive; only release branding and the splash image are updated. Existing saved item rolls are not regenerated.
 
 Website: https://d2plus-d2r.github.io/D2PLUS-Launcher/

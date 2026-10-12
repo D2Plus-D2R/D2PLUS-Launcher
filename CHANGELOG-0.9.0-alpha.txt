@@ -1,0 +1,33 @@
+# D2PLUS Alpha V0.9
+
+Released October 11, 2026. Built from the user-confirmed working D2RMMAlphaV0.9.zip snapshot.
+
+## All-in-one installation
+
+- One standalone D2RMM mod contains the complete working Alpha V0.9 snapshot. No previous D2PLUS bundle or separate visual add-ons are required.
+
+## Towns and presentation
+
+- Rogue Encampment gains dark rose-covered stone walls, permanent Akara, Charsi and Gheed shops, a compact gothic meeting hall, a warrior statue and stone pillar lights. Shop and statue collision is included.
+- Kurast town receives darker rose-covered stonework and hanging vines. The Pandemonium Fortress gains dark gothic stone, roses, lighting and a central warrior statue.
+- Gold-and-ember town waypoints, the custom safebox and matching Horadric Cube, larger potion artwork, and darker stone HUD are included.
+
+## Characters and complete sets
+
+- The redesigned demonic Warlock has purple eyes and custom garments. The custom Act III sorcerer carries a spellbook, uses daggers and grimoires, and includes Cleave for all three elements.
+- Seven level-95 class sets gain matching colored full-set radiance effects. Paragon’s Ascension remains unchanged.
+- Includes the mercenary and scenery asset fixes tested during development, plus the existing Sovereign Warden, gameplay, rune stash and material stash features.
+
+## Companion tools
+
+- Launcher, offline references, Android companion, website and splash screen now identify this release as Alpha V0.9.
+
+## Installation
+
+Windows launcher: select D2R.exe and click Install Alpha V0.9. The complete gameplay is bundled. Keep the same mod output name and save path; the launcher backs up the previous installed output.
+
+D2RMM: extract D2PLUS_AlphaV0.9_Complete_D2RMM.zip into the D2RMM application's mods folder. Enable only D2PLUS - Alpha V0.9 Complete for this release, disable older D2PLUS complete bundles and all included D2PLUS visual/mercenary/Warden add-ons, and click Install Mods. No previous version is required. This is one fixed-settings snapshot, not a stack of separate optional modules. Do not merge the new source folder over an old mod folder. Keep your existing output name (normally D2RMM) and launch with -mod D2RMM -txt.
+
+Requires your own Diablo II: Resurrected with Reign of the Warlock. The Android companion is an offline reference app, not the game; its existing release signing identity and versionCode 90 allow an in-place update over the signed V0.8/V0.8.2 companion. Export data first if replacing an earlier differently signed app.
+
+The source gameplay snapshot was confirmed working by the user. Packaging checks do not certify every in-game interaction or physical Android device. Gameplay assets and tables are preserved from the supplied archive; only release branding and the splash image are updated. Existing saved item rolls are not regenerated.
