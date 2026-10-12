@@ -1,5 +1,5 @@
 'use strict';
-const $=id=>document.getElementById(id),VERSION='0.9.0-alpha';
+const $=id=>document.getElementById(id),VERSION='0.9.1-alpha';
 let token='',connected=false,busy=false,initialized=false,step=0,current={},dirty=false,gameReady=false,toastTimer;
 const fields=['gameExe','workingDirectory','d2rmmExe','modDirectory','arguments','companionExe','fontSize','showDps','dpsX','dpsY'];
 const labels=['Welcome','Game','Mod & tools','Overlay','Review'];

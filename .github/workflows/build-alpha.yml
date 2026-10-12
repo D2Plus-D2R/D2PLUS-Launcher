@@ -38,9 +38,11 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          python build/reconstruct-gameplay.py
+          python build/stash-hotfix.py
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
           python build/fetch-release-inputs.py --input-dir dist
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          python build/verify-stash-output.py
       - name: Install NSIS compiler
         run: choco install nsis --version=3.11 --yes --no-progress
       - name: Build Windows packages

@@ -23,7 +23,7 @@ test('AlphaV0.9 wiki renders new content offline and preserves unique records',(
 test('release download uses the exact gameplay package checksum and version',()=>{
  const {CATALOG}=require('../scripts/setup-service.cjs');
  const manifest=JSON.parse(fs.readFileSync(path.join(__dirname,'../release-inputs/alpha-v09.json')));
- assert.equal(CATALOG.d2plus.sha256,manifest.files[0].sha256);assert.ok(CATALOG.d2plus.url.endsWith('/v0.9-alpha/'+manifest.files[0].name));
+ assert.equal(CATALOG.d2plus.sha256,manifest.files[0].sha256);assert.ok(CATALOG.d2plus.url.endsWith('/v0.9.1-alpha/'+manifest.files[0].name));
  assert.equal(require('../package.json').version,require('../scripts/launcher-core.cjs').VERSION);
 });
 

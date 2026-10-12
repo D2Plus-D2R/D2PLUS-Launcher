@@ -1,9 +1,11 @@
-# Publishing Alpha V0.9
+# Publishing the Alpha V0.9 stash hotfix (0.9.1-alpha)
 
-The complete release comes from D2RMMAlphaV0.9.zip, the user-confirmed working snapshot. Gameplay bytes are retained; splash/UI branding changes are listed in the release validation report. The D2RMM source is one fixed-settings mod and does not need older bundles or add-ons.
+Only the two Act V preset 154 ObjectClass cells change from the published V0.9 game data. Build from the public SHA-256-pinned inputs in release-inputs/stash-hotfix-baseline.json; never read a live game installation for this release.
 
-Run build/unpack-suite.py, npm ci --ignore-scripts, npm test and npm run test:ui. Supply the reviewed gameplay packages with build/fetch-release-inputs.py --input-dir, or reconstruct the checksum-verified inputs. Build the Windows launcher with build/package.py and NSIS 3.11. Python 3.12.14 matches the packaged ZIP inputs.
+Use Python 3.12.10 on Windows. Run build/stash-hotfix.py, build/verify-stash-output.py and build/fetch-release-inputs.py --input-dir dist. The pinned output hashes must match. The verifier executes the standalone mod and compares all 1663 emitted game files to the installed snapshot.
 
-A main-branch commit containing [publish-v09] triggers the guarded build, verifies the input and signed APK hashes, publishes the new v0.9-alpha prerelease, and then deploys GitHub Pages. Existing public releases are retained. Do not deploy the V0.9 website before its release downloads exist.
+Run build/unpack-suite.py, npm ci --ignore-scripts, npm test and npm run test:ui. Build the Windows launcher with build/package.py and NSIS 3.11.
 
-Android versionCode 90 and versionName 0.9.0-alpha retain the V0.8/V0.8.2 signing identity. Private signing files remain outside the repository and are never uploaded to CI.
+A main-branch commit containing [publish-v09] triggers the guarded build, verifies inputs and signed APK, publishes v0.9.1-alpha, then deploys GitHub Pages. Older public releases remain intact. Do not deploy changed download links before release assets exist.
+
+Android stays at versionCode 90 and versionName 0.9.0-alpha with its original signing identity. Companion reference data is unchanged. No private keys or local experimental files are included.

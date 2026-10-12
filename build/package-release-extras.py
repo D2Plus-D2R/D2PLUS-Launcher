@@ -14,5 +14,5 @@ with zipfile.ZipFile(D/'D2PLUS_Website_AlphaV0.9.zip','w',zipfile.ZIP_DEFLATED,c
 for p in D.glob('*.zip'):
  with zipfile.ZipFile(p) as z:assert z.testzip() is None,p.name
 files=sorted([*D.glob('*.zip'),*D.glob('*.exe'),*D.glob('*.apk')])
-(D/'SHA256SUMS-0.9.0-alpha.txt').write_text(''.join(hashlib.sha256(p.read_bytes()).hexdigest()+'  '+p.name+'\n' for p in files),encoding='utf-8')
+(D/'SHA256SUMS-0.9.1-alpha.txt').write_text(''.join(hashlib.sha256(p.read_bytes()).hexdigest()+'  '+p.name+'\n' for p in files),encoding='utf-8')
 print('Verified',len(files),'release archives/executables.')

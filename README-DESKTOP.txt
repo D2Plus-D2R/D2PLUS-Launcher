@@ -1,3 +1,5 @@
+Alpha V0.9 stash hotfix — launcher 0.9.1-alpha. After updating, use Setup > Install AlphaV0.9 Stash Hotfix to reinstall the corrected game files. Keep the existing mod folder and save path.
+
 D2PLUS Launcher AlphaV0.9 - Windows x64
 
 Run the Setup EXE, or extract the complete portable ZIP and open D2PLUS Launcher.exe.

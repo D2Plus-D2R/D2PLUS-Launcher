@@ -1,3 +1,7 @@
+# Current download: Alpha V0.9 Harrogath stash hotfix
+
+[Download 0.9.1-alpha](https://github.com/D2Plus-D2R/D2PLUS-Launcher/releases/tag/v0.9.1-alpha). Windows packages and the standalone D2RMM mod include the bank fix only. Azmodan and Alpha V1.0 test content are excluded. Reinstall the bundled game snapshot after updating the launcher. [Hotfix notes](release-notes/v0.9.1-alpha.md).
+
 # D2PLUS Alpha V0.9
 
 Released October 11, 2026. Built from the user-confirmed working D2RMMAlphaV0.9.zip snapshot.
