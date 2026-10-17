@@ -3,3 +3,5 @@ dialog{width:min(850px,94vw);max-height:94vh;padding:0;color:#d6c9ae;background:
 @media(max-height:750px){dialog{max-height:94vh}.wizard-body{min-height:260px;padding-top:16px;padding-bottom:16px}.wizard-head{padding-top:14px}.step h3{font-size:26px}.wizard-footer{padding-top:12px;padding-bottom:12px}}
 
 .map-reset-control{position:absolute;left:1170px;top:669px;width:320px;padding:10px;background:#101310;border:1px solid #675439}.map-reset-control p{font:12px/1.4 Arial,sans-serif;color:#b9ad96;margin:8px 0 0}
+
+#releaseSplash{position:fixed;inset:0;z-index:9999;background:#050504;display:grid;place-items:center;pointer-events:none;animation:releaseFade .4s 1.4s forwards}#releaseSplash img{width:100%;height:100%;object-fit:contain}@keyframes releaseFade{to{opacity:0;visibility:hidden}}

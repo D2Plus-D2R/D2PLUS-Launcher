@@ -1,4 +1,4 @@
-name: Build AlphaV0.9 packages
+name: Build AlphaV1.0 packages
 on:
   push:
     branches: [main]
@@ -6,11 +6,11 @@ on:
 permissions:
   contents: write
 concurrency:
-  group: alpha-v09-build
+  group: alpha-v10-build
   cancel-in-progress: true
 jobs:
   package:
-    if: github.event_name == 'workflow_dispatch' || contains(github.event.head_commit.message, '[publish-v09]')
+    if: github.event_name == 'workflow_dispatch' || contains(github.event.head_commit.message, '[publish-v10]')
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v6
@@ -38,18 +38,18 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          python build/stash-hotfix.py
+          python build/reconstruct-gameplay.py
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
           python build/fetch-release-inputs.py --input-dir dist
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
-          python build/verify-stash-output.py
+          python build/verify-release-output.py
       - name: Install NSIS compiler
         run: choco install nsis --version=3.11 --yes --no-progress
       - name: Build Windows packages
         run: python build/package.py --makensis 'C:/Program Files (x86)/NSIS/makensis.exe'
       - uses: actions/upload-artifact@v4
         with:
-          name: D2PLUS-AlphaV0.9-Windows
+          name: D2PLUS-AlphaV1.0-Windows
           path: |
             dist/*.exe
             dist/D2PLUS_Launcher_Portable_*.zip
@@ -62,7 +62,7 @@ jobs:
         run: python build/fetch-signed-apk.py
       - name: Package references and release source
         run: python build/package-release-extras.py
-      - name: Publish the verified AlphaV0.9 prerelease
+      - name: Publish the verified AlphaV1.0 prerelease
         env:
           GH_TOKEN: ${{ github.token }}
           GH_REPO: ${{ github.repository }}

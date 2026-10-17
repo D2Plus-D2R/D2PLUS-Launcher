@@ -1,11 +1,10 @@
-# Publishing the Alpha V0.9 stash hotfix (0.9.1-alpha)
+# Publishing Alpha V1.0
 
-Only the two Act V preset 154 ObjectClass cells change from the published V0.9 game data. Build from the public SHA-256-pinned inputs in release-inputs/stash-hotfix-baseline.json; never read a live game installation for this release.
+Source: user-confirmed D2PLUSAlphaV1.0.zip, SHA-256 75e8005ce03d050397753d23ffcf5de5a442d72643d7ab552e370384737244fe.
+The release preserves game content and updates only three UI branding layouts and the two loading splash sprites. The complete standalone D2RMM output is verified against all 2241 data files.
 
-Use Python 3.12.10 on Windows. Run build/stash-hotfix.py, build/verify-stash-output.py and build/fetch-release-inputs.py --input-dir dist. The pinned output hashes must match. The verifier executes the standalone mod and compares all 1663 emitted game files to the installed snapshot.
+The guarded [publish-v10] workflow reconstructs hash-pinned packages, tests the launcher and references, builds Windows installer/portable packages, validates the signed Android APK and publishes v1.0-alpha. Pages deploys after successful publication, so download links are not switched early. Older releases remain available.
 
-Run build/unpack-suite.py, npm ci --ignore-scripts, npm test and npm run test:ui. Build the Windows launcher with build/package.py and NSIS 3.11.
+Android package com.d2plus.companion uses versionCode 100 / 1.0.0-alpha and the same signing certificate as earlier signed releases. Private keys are never included in this repository or CI.
 
-A main-branch commit containing [publish-v09] triggers the guarded build, verifies inputs and signed APK, publishes v0.9.1-alpha, then deploys GitHub Pages. Older public releases remain intact. Do not deploy changed download links before release assets exist.
-
-Android stays at versionCode 90 and versionName 0.9.0-alpha with its original signing identity. Companion reference data is unchanged. No private keys or local experimental files are included.
+The fixed-settings D2RMM mod needs no previous D2PLUS install. Disable older complete bundles and included addons before installing it. Preserve output/save paths. Existing game saves are never included in distribution.

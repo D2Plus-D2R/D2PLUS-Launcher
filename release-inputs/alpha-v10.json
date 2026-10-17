@@ -1,0 +1,16 @@
+{
+  "repository": "D2Plus-D2R/D2PLUS-Launcher",
+  "tag": "v1.0-alpha",
+  "files": [
+    {
+      "name": "D2PLUS_AlphaV1.0_Complete_D2RMM.zip",
+      "size": 551641531,
+      "sha256": "674dab17b5061f230d03a536f2e7bedaf97d8e1414a4b2f9345b62aa1a507ccc"
+    },
+    {
+      "name": "D2PLUS_AlphaV1.0_Installed_Snapshot.zip",
+      "size": 551495560,
+      "sha256": "c6a6c8a08f1dbf9ca9122d4ef016e317ace84f7874d3730e82f8dc404ebce384"
+    }
+  ]
+}

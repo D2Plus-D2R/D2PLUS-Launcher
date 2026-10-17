@@ -1,39 +1,31 @@
-# Current download: Alpha V0.9 Harrogath stash hotfix
+# D2PLUS Alpha V1.0 — More trouble in Sanctuary
 
-[Download 0.9.1-alpha](https://github.com/D2Plus-D2R/D2PLUS-Launcher/releases/tag/v0.9.1-alpha). Windows packages and the standalone D2RMM mod include the bank fix only. Azmodan and Alpha V1.0 test content are excluded. Reinstall the bundled game snapshot after updating the launcher. [Hotfix notes](release-notes/v0.9.1-alpha.md).
+Alpha V1.0 is here! This update gives you a couple of new reasons to watch your back, and a fresh look for more of Sanctuary.
 
-# D2PLUS Alpha V0.9
+Azmodan the Lord of Sin joins Baal in all three difficulties, replacing the Act V Warden. He has a custom four-legged model, his own attacks, and Diablo-style loot with a higher chance of no drop.
 
-Released October 11, 2026. Built from the user-confirmed working D2RMMAlphaV0.9.zip snapshot.
+The Butcher is back beside Griswold in Tristram, complete with his cleaver, voice lines and combat sounds. He hits hard, has high defense and lower resistances. Uber Tristram gets its own separate Uber Butcher.
 
-## All-in-one installation
+Lut Gholein gets a dark gothic Egyptian makeover, the Arcane Sanctuary has a new gothic look, and Harrogath is darker, snowier and caught in heavier snowfall.
 
-- One standalone D2RMM mod contains the complete working Alpha V0.9 snapshot. No previous D2PLUS bundle or separate visual add-ons are required.
+The Gothic Rose HUD brings back the familiar health and mana orbs with weathered roses, embellished angel and demon statues, and updated belt alignment. Other menu borders stay familiar.
 
-## Towns and presentation
+Greater and Super healing/mana potion artwork has been swapped so the stronger tier reads larger. Rejuvenation potions have a stronger presence in monster potion drops, and the Cairn Stones now wear dark stone and gold.
 
-- Rogue Encampment gains dark rose-covered stone walls, permanent Akara, Charsi and Gheed shops, a compact gothic meeting hall, a warrior statue and stone pillar lights. Shop and statue collision is included.
-- Kurast town receives darker rose-covered stonework and hanging vines. The Pandemonium Fortress gains dark gothic stone, roses, lighting and a central warrior statue.
-- Gold-and-ember town waypoints, the custom safebox and matching Horadric Cube, larger potion artwork, and darker stone HUD are included.
+All of this comes in one standalone D2RMM mod, along with the earlier town upgrades, custom mercenaries, Warlock look, set radiance and the Harrogath stash fix. The launcher, offline references, Android companion and loading splash are updated together.
 
-## Characters and complete sets
+The Butcher's normal loot matches Griswold. In Nightmare he uses Normal Andariel's regular loot, and in Hell he uses Nightmare Andariel's regular loot. His Uber version has its own balance and loot.
 
-- The redesigned demonic Warlock has purple eyes and custom garments. The custom Act III sorcerer carries a spellbook, uses daggers and grimoires, and includes Cleave for all three elements.
-- Seven level-95 class sets gain matching colored full-set radiance effects. Paragon’s Ascension remains unchanged.
-- Includes the mercenary and scenery asset fixes tested during development, plus the existing Sovereign Warden, gameplay, rune stash and material stash features.
+## Getting the update
 
-## Companion tools
+Use the new Windows launcher installer or portable download, then choose **Install AlphaV1.0** in Setup to update the game files. Updating the launcher alone does not install the gameplay update.
 
-- Launcher, offline references, Android companion, website and splash screen now identify this release as Alpha V0.9.
+For D2RMM, extract **D2PLUS_AlphaV1.0_Complete_D2RMM.zip** into your D2RMM application's `mods` folder. Enable **D2PLUS - Alpha V1.0 Complete** and disable older D2PLUS complete bundles and the included test/visual addons. Click Install Mods. This is one complete fixed-settings mod; no older D2PLUS version or separate addon is required.
 
-## Installation
+Close D2R before installing. Keep your existing output name and save path (normally D2RMM), and start a new game for the new monster spawns. Character saves are not included or changed. Requires your own Diablo II: Resurrected with Reign of the Warlock.
 
-Windows launcher: select D2R.exe and click Install Alpha V0.9. The complete gameplay is bundled. Keep the same mod output name and save path; the launcher backs up the previous installed output.
+The Android download is the offline companion, not the game. It retains the existing signing identity and updates to versionCode 100 / 1.0.0-alpha.
 
-D2RMM: extract D2PLUS_AlphaV0.9_Complete_D2RMM.zip into the D2RMM application's mods folder. Enable only D2PLUS - Alpha V0.9 Complete for this release, disable older D2PLUS complete bundles and all included D2PLUS visual/mercenary/Warden add-ons, and click Install Mods. No previous version is required. This is one fixed-settings snapshot, not a stack of separate optional modules. Do not merge the new source folder over an old mod folder. Keep your existing output name (normally D2RMM) and launch with -mod D2RMM -txt.
-
-Requires your own Diablo II: Resurrected with Reign of the Warlock. The Android companion is an offline reference app, not the game; its existing release signing identity and versionCode 90 allow an in-place update over the signed V0.8/V0.8.2 companion. Export data first if replacing an earlier differently signed app.
-
-The source gameplay snapshot was confirmed working by the user. Packaging checks do not certify every in-game interaction or physical Android device. Gameplay assets and tables are preserved from the supplied archive; only release branding and the splash image are updated. Existing saved item rolls are not regenerated.
+This release uses the supplied, user-confirmed working D2PLUSAlphaV1.0.zip. Only loading-screen/version branding is changed during packaging. Automated package and app checks are separate from testing every encounter or Android device. Let us know what feels good and what still needs a tweak!
 
 Website: https://d2plus-d2r.github.io/D2PLUS-Launcher/
