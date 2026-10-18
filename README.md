@@ -1,4 +1,10 @@
-D2PLUS Alpha V1.1
+D2PLUS Alpha V1.1.2
+
+### Alpha V1.1.2 update
+
+This update fixes clipped equipment icons and missing equipped models, improves Accursed names and bonus tooltips, adds Ritual Sigil storage, and includes a little more UI polish with an updated loading splash. Existing equipment keeps its saved stats and rolls.
+
+[Read the short update notes](release-notes/v1.1.2-alpha.md).
 
 D2PLUS is an offline overhaul for Diablo II: Resurrected that gives you more to build, more to hunt, and more to do after the campaign.
 
@@ -103,7 +109,7 @@ Custom potion graphics make health, mana, and rejuvenation potions easier to dis
 
 The stash includes support for custom runes and crafting materials. Shared storage remains at five tabs. The complete package does not require D2RLoader.
 
-Character selection, introductory artwork, and the loading splash have been updated to fit the D2PLUS theme, with the splash showing Alpha V1.1.
+Character selection, introductory artwork, and the loading splash have been updated to fit the D2PLUS theme, with the splash showing Alpha V1.1.2.
 
 Tools that come with the mod
 
