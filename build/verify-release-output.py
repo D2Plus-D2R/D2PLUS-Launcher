@@ -2,7 +2,7 @@
 from pathlib import Path
 import hashlib, json, subprocess, tempfile, zipfile
 R=Path(__file__).resolve().parents[1]
-M=json.loads((R/'release-inputs/alpha-v11.json').read_text())
+M=json.loads((R/'release-inputs/alpha-v11-hotfix.json').read_text())
 with tempfile.TemporaryDirectory(prefix='d2plus-stash-check-') as temp:
     root=Path(temp)
     for item in M['files']:
@@ -22,4 +22,4 @@ with tempfile.TemporaryDirectory(prefix='d2plus-stash-check-') as temp:
                     if e['path'].startswith('D2RMM.mpq/data/'):
                         expected[e['path'].removeprefix('D2RMM.mpq/data/')]=e
                 (root/'expected.json').write_text(json.dumps(expected))
-    subprocess.run(['node',str(R/'test/stash-output.cjs'),str(root)],check=True)
+    subprocess.run(['node',str(R/'test/stash-output.cjs'),str(root),'1.1.1-alpha'],check=True)

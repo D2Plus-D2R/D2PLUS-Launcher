@@ -17,5 +17,5 @@ for p in D.glob('*.zip'):
 practice=R/'release-inputs/Accursed_Test_Characters.zip'
 if practice.exists():shutil.copy2(practice,D/'D2PLUS_Accursed_Test_Characters_AlphaV1.1.zip')
 files=sorted([*D.glob('*.zip'),*D.glob('*.exe'),*D.glob('*.apk')])
-(D/'SHA256SUMS-1.1.0-alpha.txt').write_text(''.join(hashlib.sha256(p.read_bytes()).hexdigest()+'  '+p.name+'\n' for p in files),encoding='utf-8')
+(D/'SHA256SUMS-1.1.1-alpha.txt').write_text(''.join(hashlib.sha256(p.read_bytes()).hexdigest()+'  '+p.name+'\n' for p in files),encoding='utf-8')
 print('Verified',len(files),'release archives/executables.')

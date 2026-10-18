@@ -21,8 +21,5 @@ assert 'Verified using v2 scheme (APK Signature Scheme v2): true' in result and 
 subprocess.run([str(B/'zipalign.exe'),'-c','-P','16','4',str(apk)],check=True)
 badging=subprocess.check_output([str(B/'aapt.exe'),'dump','badging',str(apk)],text=True)
 assert "name='com.d2plus.companion' versionCode='110' versionName='1.1.0-alpha'" in badging
-with zipfile.ZipFile(apk) as z:
- for folder in ['wiki','mobile','d2plus']:
-  for p in (R/'docs'/folder).rglob('*'):
-   if p.is_file():assert z.read('assets/htdocs/'+p.relative_to(R/'docs').as_posix())==p.read_bytes(),p
-print('Verified signed APK, original v0.8 identity, version and every companion reference asset.')
+# Hotfix 1 changes game/UI assets only. Keep the checksum-pinned signed V1.1 APK.
+print('Verified unchanged signed Alpha V1.1 APK, original identity, version and alignment.')

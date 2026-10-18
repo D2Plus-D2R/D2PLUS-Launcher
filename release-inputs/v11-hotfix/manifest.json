@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "version": "1.1.1-alpha",
+  "displayVersion": "Alpha V1.1 Hotfix 1",
+  "tag": "v1.1.1-alpha",
+  "note": "Restore Ritual Sigil names and the violet Accursed tooltip label; slim character-selection frames and remove side figures.",
+  "files": [
+    {
+      "path": "local/lng/strings/item-names.json",
+      "source": "files/local/lng/strings/item-names.json",
+      "size": 1247203,
+      "sha256": "2ef67611ee2ab92f161ab5fc44dac652ac8da25231b8ff33d4bc343bd5dbb3ae",
+      "baselineSha256": "78f956dc78fe02a68cdd22dcf75fe07778591161ebf3b8c4f7522c3dee2fe15f"
+    },
+    {
+      "path": "local/lng/strings/item-modifiers.json",
+      "source": "files/local/lng/strings/item-modifiers.json",
+      "size": 239119,
+      "sha256": "0053ba9ce605a03239317acf7c3d18398d801ff6a61f6cb43fce5ef8c1c8cdd6",
+      "baselineSha256": "967f617b677c75201c9af7f4bc10295ef4bba08358779951a2f3145619651121"
+    },
+    {
+      "path": "local/lng/next_string_id.txt",
+      "source": "files/local/lng/next_string_id.txt",
+      "size": 676,
+      "sha256": "0315b457d51818aa263f016ad364dff9d49acbc0cdb2ea7ed266553ef2a56c03",
+      "baselineSha256": "c18d2979ad1d5d32e10e188d367222c0856c4aba1c31b81bae7641f40d32911d"
+    },
+    {
+      "path": "hd/global/ui/frontend/hd/final/d2plus_character_border_left.sprite",
+      "source": "files/hd/global/ui/frontend/hd/final/d2plus_character_border_left.sprite",
+      "size": 6929320,
+      "sha256": "44bca47172a16bf04d45156045d3ab74d39b6aa0c4bfee90d3b79d859e04de11",
+      "baselineSha256": "39b1d7f647364a0ffe0ab2966b1dfb3c1f48783c86f7e7c3f374114842d9a0a4"
+    },
+    {
+      "path": "hd/global/ui/frontend/hd/final/d2plus_character_border_left.lowend.sprite",
+      "source": "files/hd/global/ui/frontend/hd/final/d2plus_character_border_left.lowend.sprite",
+      "size": 1732360,
+      "sha256": "2033f9cd378f04e78833949f8f4fde6d1bf237145fd28d6b2c7dbc1f6b49fb5d",
+      "baselineSha256": "11dbb1dc6570c15baf9e638dfb389a1c110371b23530034e6f62d7a3450bb8fb"
+    },
+    {
+      "path": "hd/global/ui/frontend/hd/final/d2plus_character_border_right.sprite",
+      "source": "files/hd/global/ui/frontend/hd/final/d2plus_character_border_right.sprite",
+      "size": 6929320,
+      "sha256": "44bca47172a16bf04d45156045d3ab74d39b6aa0c4bfee90d3b79d859e04de11",
+      "baselineSha256": "39b1d7f647364a0ffe0ab2966b1dfb3c1f48783c86f7e7c3f374114842d9a0a4"
+    },
+    {
+      "path": "hd/global/ui/frontend/hd/final/d2plus_character_border_right.lowend.sprite",
+      "source": "files/hd/global/ui/frontend/hd/final/d2plus_character_border_right.lowend.sprite",
+      "size": 1732360,
+      "sha256": "2033f9cd378f04e78833949f8f4fde6d1bf237145fd28d6b2c7dbc1f6b49fb5d",
+      "baselineSha256": "11dbb1dc6570c15baf9e638dfb389a1c110371b23530034e6f62d7a3450bb8fb"
+    },
+    {
+      "path": "global/ui/layouts/mainmenubuttonribbonhd.json",
+      "source": "files/global/ui/layouts/mainmenubuttonribbonhd.json",
+      "size": 3864,
+      "sha256": "3f1d571945f71446de3df8fd8e416cadc38a23d760eefd77b0d17172dbc0e519",
+      "baselineSha256": "5004bd958a732cf91356541f11d9f3588080a84d58572f7c819e69744bb4039a"
+    },
+    {
+      "path": "global/ui/layouts/characterselectpanelhd.json",
+      "source": "files/global/ui/layouts/characterselectpanelhd.json",
+      "size": 5629,
+      "sha256": "5deed0ac0f41645e8ffe085ce9db8ce4058c99c05c28d9703bf466957eb73859",
+      "baselineSha256": "762f4536b1868620df5115d19f2cfc86006c342282a0203e5c629b7c07b0e7f0"
+    }
+  ],
+  "removed": [
+    {
+      "path": "local/lng/strings/d2plus-accursed.json",
+      "baselineSha256": "31a1f525fbca558601bdebf889106b5e921e8039ecd394f111f10392e3921037"
+    }
+  ]
+}

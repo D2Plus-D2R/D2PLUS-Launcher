@@ -1,4 +1,4 @@
-name: Build AlphaV1.1 packages
+name: Build AlphaV1.1 Hotfix 1 packages
 on:
   push:
     branches: [main]
@@ -6,11 +6,11 @@ on:
 permissions:
   contents: write
 concurrency:
-  group: alpha-v11-build
+  group: alpha-v11-hotfix1-build
   cancel-in-progress: true
 jobs:
   package:
-    if: github.event_name == 'workflow_dispatch' || contains(github.event.head_commit.message, '[publish-v11]')
+    if: github.event_name == 'workflow_dispatch' || contains(github.event.head_commit.message, '[publish-v11-hotfix1]')
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v6
@@ -28,41 +28,34 @@ jobs:
         run: python build/unpack-suite.py
       - name: Install test dependencies
         run: npm ci --ignore-scripts
+      - name: Apply the reviewed hotfix to verified Alpha V1.1 archives
+        run: python build/apply-v11-hotfix.py
       - name: Validate launcher and companion data
         run: |
           npm test
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
           npm run test:ui
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
-      - name: Reconstruct checksum-verified gameplay inputs
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          python build/reconstruct-gameplay.py
-          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
-          python build/fetch-release-inputs.py --input-dir dist
-          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
           python build/verify-release-output.py
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
       - name: Install NSIS compiler
         run: choco install nsis --version=3.11 --yes --no-progress
       - name: Build Windows packages
         run: python build/package.py --makensis 'C:/Program Files (x86)/NSIS/makensis.exe'
       - uses: actions/upload-artifact@v4
         with:
-          name: D2PLUS-AlphaV1.1-Windows
+          name: D2PLUS-AlphaV1.1-Hotfix1-Windows
           path: |
             dist/*.exe
             dist/D2PLUS_Launcher_Portable_*.zip
           if-no-files-found: error
-      - name: Build unsigned Android reference update kit
-        run: python build/package-android-kit.py
       - name: Verify signed Android companion
         env:
           GH_TOKEN: ${{ github.token }}
         run: python build/fetch-signed-apk.py
       - name: Package references and release source
         run: python build/package-release-extras.py
-      - name: Publish the verified AlphaV1.1 prerelease
+      - name: Publish the verified AlphaV1.1 Hotfix 1 prerelease
         env:
           GH_TOKEN: ${{ github.token }}
           GH_REPO: ${{ github.repository }}

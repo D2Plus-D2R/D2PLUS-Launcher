@@ -22,8 +22,8 @@ test('AlphaV1.1 wiki renders new content offline and preserves unique records',(
 });
 test('release download uses the exact gameplay package checksum and version',()=>{
  const {CATALOG}=require('../scripts/setup-service.cjs');
- const manifest=JSON.parse(fs.readFileSync(path.join(__dirname,'../release-inputs/alpha-v11.json')));
- assert.equal(CATALOG.d2plus.sha256,manifest.files[0].sha256);assert.ok(CATALOG.d2plus.url.endsWith('/v1.1-alpha/'+manifest.files[0].name));
+ const manifest=JSON.parse(fs.readFileSync(path.join(__dirname,fs.existsSync(path.join(__dirname,'../gameplay/release.json'))?'../gameplay/release.json':'../release-inputs/alpha-v11.json')));
+ assert.equal(CATALOG.d2plus.sha256,manifest.files[0].sha256);assert.ok(CATALOG.d2plus.url.endsWith('/'+manifest.tag+'/'+manifest.files[0].name));
  assert.equal(require('../package.json').version,require('../scripts/launcher-core.cjs').VERSION);
 });
 

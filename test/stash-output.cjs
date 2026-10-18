@@ -4,7 +4,7 @@ const root=process.argv[2],core=path.join(root,'D2PLUS_Alpha_v11_Complete');
 const expected=JSON.parse(fs.readFileSync(path.join(root,'expected.json')));
 const manifest=JSON.parse(fs.readFileSync(path.join(core,'INSTALL_MANIFEST.json')));
 const seen=new Set();
-assert.equal(manifest.version,'1.1.0-alpha');
+assert.equal(manifest.version,process.argv[3]||'1.1.0-alpha');
 assert.equal(manifest.files.length,Object.keys(expected).length);
 function check(p,b){
  const e=expected[p];assert.ok(e,p);assert.ok(!seen.has(p),'duplicate '+p);

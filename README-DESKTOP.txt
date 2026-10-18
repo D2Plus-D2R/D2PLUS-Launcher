@@ -1,4 +1,4 @@
-Alpha V1.1 — launcher 1.1.0-alpha. After updating, use Setup > Install AlphaV1.1 to reinstall the corrected game files. Keep the existing mod folder and save path.
+Alpha V1.1 Hotfix 1, launcher 1.1.1-alpha. After updating, use Setup > Install AlphaV1.1 to reinstall the corrected game files. Keep the existing mod folder and save path.
 
 D2PLUS Launcher AlphaV1.1 - Windows x64
 
