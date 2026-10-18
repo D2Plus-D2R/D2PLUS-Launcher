@@ -1,7 +1,7 @@
 """Reconstruct and verify the already-signed APK; private keys never reach CI."""
 from pathlib import Path
 import json,hashlib,base64,urllib.request,os,subprocess,zipfile
-R=Path(__file__).resolve().parents[1];D=R/'dist';D.mkdir(exist_ok=True);M=json.loads((R/'release-inputs/android-v10-signed.json').read_text())
+R=Path(__file__).resolve().parents[1];D=R/'dist';D.mkdir(exist_ok=True);M=json.loads((R/'release-inputs/android-v11-signed.json').read_text())
 sha=lambda b:hashlib.sha256(b).hexdigest()
 parts=[]
 for blob in M['blobs']:
@@ -20,7 +20,7 @@ assert 'Signer #1 certificate SHA-256 digest: '+M['certificateSha256'] in result
 assert 'Verified using v2 scheme (APK Signature Scheme v2): true' in result and 'Verified using v3 scheme (APK Signature Scheme v3): true' in result
 subprocess.run([str(B/'zipalign.exe'),'-c','-P','16','4',str(apk)],check=True)
 badging=subprocess.check_output([str(B/'aapt.exe'),'dump','badging',str(apk)],text=True)
-assert "name='com.d2plus.companion' versionCode='100' versionName='1.0.0-alpha'" in badging
+assert "name='com.d2plus.companion' versionCode='110' versionName='1.1.0-alpha'" in badging
 with zipfile.ZipFile(apk) as z:
  for folder in ['wiki','mobile','d2plus']:
   for p in (R/'docs'/folder).rglob('*'):

@@ -57,3 +57,16 @@
   .skill-panel { break-before: page; }
   .skill-table { overflow: visible; }
 }
+/* Skill reference panels use the same inset basalt as the main portal. */
+.skill-tabs{background:#0d0f10 url('assets/dark-basalt.webp') center/650px;border-color:#404244;padding:10px;box-shadow:inset 0 0 12px #000}
+.skill-tabs a{border:2px ridge #46484a;background:linear-gradient(#151719b8,#090b0ce6),url('assets/dark-basalt.webp') center/420px;color:#c7c4bc;text-shadow:1px 2px #000;box-shadow:inset 0 0 6px #000}
+.skill-tabs a:hover{background:linear-gradient(#282b2dcc,#121416e8),url('assets/dark-basalt.webp') center/420px;color:#eee6d7}
+.tabs-ready .skill-tabs a[aria-selected="true"]{border-color:#717575;background:linear-gradient(#303437c9,#111517d9),url('assets/dark-basalt.webp') center/420px;color:#ede5d5;box-shadow:inset 0 -2px #7b7b72,inset 0 0 10px #000}
+.skill-table,.skill-shared,.skill-shared:last-child,.skill-shared[open] summary{border-color:#424547}
+.skill-table th{background:linear-gradient(#151719b5,#111315ce),url('assets/dark-basalt.webp') center/540px;color:#ded8ca}
+.skill-table td{background:#111315a8;color:#c9c9c3;border-color:#35383a}
+.skill-table td:first-child{color:#d8cdb8}
+.skill-table tr:nth-child(even) td{background:#1a1c1db0}
+.skill-shared{background:linear-gradient(#101214e3,#101214e3),url('assets/dark-basalt.webp') center/540px}
+.skill-panel h3,.skill-panel strong{color:#d5cbb7}
+@media(max-width:600px){.skill-table tbody tr{background:#111315d9;border-color:#424547}.skill-table td:first-child,.skill-table tr:nth-child(even) td:first-child{background:linear-gradient(#17191ac2,#101213dc),url('assets/dark-basalt.webp') center/480px}.skill-table td::before,.skill-table td:first-child::before{color:#aaa99f}}

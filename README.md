@@ -1,6 +1,6 @@
-# D2PLUS Alpha V1.0 — More trouble in Sanctuary
+# D2PLUS Alpha V1.1 — More trouble in Sanctuary
 
-Alpha V1.0 is here! This update gives you a couple of new reasons to watch your back, and a fresh look for more of Sanctuary.
+Alpha V1.1 is here! This update gives you a couple of new reasons to watch your back, and a fresh look for more of Sanctuary.
 
 Azmodan the Lord of Sin joins Baal in all three difficulties, replacing the Act V Warden. He has a custom four-legged model, his own attacks, and Diablo-style loot with a higher chance of no drop.
 
@@ -18,14 +18,14 @@ The Butcher's normal loot matches Griswold. In Nightmare he uses Normal Andariel
 
 ## Getting the update
 
-Use the new Windows launcher installer or portable download, then choose **Install AlphaV1.0** in Setup to update the game files. Updating the launcher alone does not install the gameplay update.
+Use the new Windows launcher installer or portable download, then choose **Install AlphaV1.1** in Setup to update the game files. Updating the launcher alone does not install the gameplay update.
 
-For D2RMM, extract **D2PLUS_AlphaV1.0_Complete_D2RMM.zip** into your D2RMM application's `mods` folder. Enable **D2PLUS - Alpha V1.0 Complete** and disable older D2PLUS complete bundles and the included test/visual addons. Click Install Mods. This is one complete fixed-settings mod; no older D2PLUS version or separate addon is required.
+For D2RMM, extract **D2PLUS_AlphaV1.1_Complete_D2RMM.zip** into your D2RMM application's `mods` folder. Enable **D2PLUS - Alpha V1.1 Complete** and disable older D2PLUS complete bundles and the included test/visual addons. Click Install Mods. This is one complete fixed-settings mod; no older D2PLUS version or separate addon is required.
 
 Close D2R before installing. Keep your existing output name and save path (normally D2RMM), and start a new game for the new monster spawns. Character saves are not included or changed. Requires your own Diablo II: Resurrected with Reign of the Warlock.
 
-The Android download is the offline companion, not the game. It retains the existing signing identity and updates to versionCode 100 / 1.0.0-alpha.
+The Android download is the offline companion, not the game. It retains the existing signing identity and updates to versionCode 100 / 1.1.0-alpha.
 
-This release uses the supplied, user-confirmed working D2PLUSAlphaV1.0.zip. Only loading-screen/version branding is changed during packaging. Automated package and app checks are separate from testing every encounter or Android device. Let us know what feels good and what still needs a tweak!
+This release uses the supplied, user-confirmed working D2PLUSAlphaV1.1.zip. Only loading-screen/version branding is changed during packaging. Automated package and app checks are separate from testing every encounter or Android device. Let us know what feels good and what still needs a tweak!
 
 Website: https://d2plus-d2r.github.io/D2PLUS-Launcher/

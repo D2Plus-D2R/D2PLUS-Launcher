@@ -3,7 +3,7 @@ import zipfile,io,hashlib
 root=Path(__file__).resolve().parents[1]
 parts=sorted((root/'vendor').glob('offline-suite.zip.part*'))
 data=b''.join(p.read_bytes() for p in parts)
-if hashlib.sha256(data).hexdigest() != "8811c47631c9d57bec1b1d171d9dcfcc11b6520d23f2f544d47a7938ed360088":
+if hashlib.sha256(data).hexdigest() != "55e6f77bbd301589b3a6dc796775184888dde267afe9776a9e3beb979b5b2f50":
  raise SystemExit('Offline suite bundle missing or checksum mismatch')
 with zipfile.ZipFile(io.BytesIO(data)) as z:
  for name in z.namelist():

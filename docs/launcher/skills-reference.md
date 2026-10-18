@@ -1,4 +1,4 @@
-# AlphaV1.0 skill reference
+# AlphaV1.1 skill reference
 
 Generated from the compiled skill descriptions. See the offline wiki for current formulas and revised build plans.
 

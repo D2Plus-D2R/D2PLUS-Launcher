@@ -1,4 +1,4 @@
-name: Build AlphaV1.0 packages
+name: Build AlphaV1.1 packages
 on:
   push:
     branches: [main]
@@ -6,11 +6,11 @@ on:
 permissions:
   contents: write
 concurrency:
-  group: alpha-v10-build
+  group: alpha-v11-build
   cancel-in-progress: true
 jobs:
   package:
-    if: github.event_name == 'workflow_dispatch' || contains(github.event.head_commit.message, '[publish-v10]')
+    if: github.event_name == 'workflow_dispatch' || contains(github.event.head_commit.message, '[publish-v11]')
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v6
@@ -49,7 +49,7 @@ jobs:
         run: python build/package.py --makensis 'C:/Program Files (x86)/NSIS/makensis.exe'
       - uses: actions/upload-artifact@v4
         with:
-          name: D2PLUS-AlphaV1.0-Windows
+          name: D2PLUS-AlphaV1.1-Windows
           path: |
             dist/*.exe
             dist/D2PLUS_Launcher_Portable_*.zip
@@ -62,7 +62,7 @@ jobs:
         run: python build/fetch-signed-apk.py
       - name: Package references and release source
         run: python build/package-release-extras.py
-      - name: Publish the verified AlphaV1.0 prerelease
+      - name: Publish the verified AlphaV1.1 prerelease
         env:
           GH_TOKEN: ${{ github.token }}
           GH_REPO: ${{ github.repository }}

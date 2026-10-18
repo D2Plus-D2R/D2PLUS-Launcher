@@ -14,14 +14,14 @@ InstallDir "$LOCALAPPDATA\Programs\D2PLUS Launcher"
 RequestExecutionLevel user
 SetCompressor /SOLID lzma
 SetCompressorDictSize 32
-VIProductVersion "1.0.0.0"
+VIProductVersion "1.1.0.0"
 VIAddVersionKey /LANG=1033 "ProductName" "D2PLUS Launcher Setup"
-VIAddVersionKey /LANG=1033 "FileDescription" "D2PLUS Launcher AlphaV1.0 Installer"
-VIAddVersionKey /LANG=1033 "FileVersion" "1.0.0.0"
+VIAddVersionKey /LANG=1033 "FileDescription" "D2PLUS Launcher AlphaV1.1 Installer"
+VIAddVersionKey /LANG=1033 "FileVersion" "1.1.0.0"
 VIAddVersionKey /LANG=1033 "LegalCopyright" "D2PLUS contributors"
 !define MUI_ABORTWARNING
 !define MUI_WELCOMEPAGE_TITLE "Welcome to D2PLUS Launcher"
-!define MUI_WELCOMEPAGE_TEXT "Install the D2PLUS desktop launcher, offline wiki, hero editor and optional damage companion.$\r$\n$\r$\nComplete AlphaV1.0 gameplay is bundled. After opening the launcher, choose D2R.exe and click Install AlphaV1.0. Existing mod output is backed up; character saves remain in place.$\r$\n$\r$\nDestination: your Windows user's local Programs folder. Close any running D2PLUS Launcher before continuing."
+!define MUI_WELCOMEPAGE_TEXT "Install the D2PLUS desktop launcher, offline wiki, hero editor and optional damage companion.$\r$\n$\r$\nComplete AlphaV1.1 gameplay is bundled. After opening the launcher, choose D2R.exe and click Install AlphaV1.1. Existing mod output is backed up; character saves remain in place.$\r$\n$\r$\nDestination: your Windows user's local Programs folder. Close any running D2PLUS Launcher before continuing."
 !insertmacro MUI_PAGE_WELCOME
 !insertmacro MUI_PAGE_INSTFILES
 !define MUI_FINISHPAGE_RUN "$INSTDIR\D2PLUS Launcher.exe"
@@ -51,7 +51,7 @@ Section "D2PLUS Launcher"
  CreateShortcut "$SMPROGRAMS\D2PLUS\D2PLUS Launcher.lnk" "$INSTDIR\D2PLUS Launcher.exe"
  CreateShortcut "$DESKTOP\D2PLUS Launcher.lnk" "$INSTDIR\D2PLUS Launcher.exe"
  WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\D2PLUSLauncher" "DisplayName" "D2PLUS Launcher"
- WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\D2PLUSLauncher" "DisplayVersion" "1.0.0-alpha"
+ WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\D2PLUSLauncher" "DisplayVersion" "1.1.0-alpha"
  WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\D2PLUSLauncher" "Publisher" "D2PLUS"
  WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\D2PLUSLauncher" "InstallLocation" "$INSTDIR"
  WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\D2PLUSLauncher" "UninstallString" '$\"$INSTDIR\Uninstall D2PLUS Launcher.exe$\"'
