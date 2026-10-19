@@ -18,7 +18,7 @@ class SetupService {
   if(this.job?.state==='Downloading')throw Error('Wait for the current download to finish first.');
   const {installSnapshot}=require('./guided-install.cjs');
   const manifest=JSON.parse(fs.readFileSync(path.join(this.launcher.suiteRoot,'gameplay/manifest.json'),'utf8'));
-  this.job={name:'D2PLUS AlphaV1.1',state:'Installing',message:'Checking files and installing. Existing mod output is kept as a backup.',bytes:0};
+  this.job={name:'D2PLUS Alpha V1.1.2',state:'Installing',message:'Checking files and installing. Existing mod output is kept as a backup.',bytes:0};
   try{
    const result=await installSnapshot({launcher:this.launcher,stateDir:this.stateDir,archive:path.join(this.launcher.suiteRoot,'gameplay',manifest.name),sha256:manifest.sha256});
    this.job.state='Complete';this.job.message='Installed. Ready to launch.'+(result.backup?' Previous mod backup: '+result.backup:'');return result;
@@ -32,7 +32,7 @@ class SetupService {
  if(!CATALOG[kind])throw Error('Unknown component.');return powershell("Start-Process -FilePath $d.url; '{}'",{url:CATALOG[kind].page});}
  startDownload(id){const item=CATALOG[id];if(!item?.url)throw Error('This component is obtained from its official page.');if(this.job?.state==='Downloading')return this.snapshot();this.controller=new AbortController();this.job={id,name:item.name,state:'Downloading',bytes:0,total:0,message:'Connecting to the official release…'};this.task=this.download(item,this.controller.signal).catch(e=>{this.job.state='Error';this.job.message=e.name==='AbortError'?'Download cancelled.':e.message;});return this.snapshot();}
  async download(item,signal){const dir=path.join(this.stateDir,'downloads');fs.mkdirSync(dir,{recursive:true});const dest=path.join(dir,item.file),temp=dest+'.partial';const hash=crypto.createHash('sha256');const timer=setTimeout(()=>this.controller.abort(),20*60*1000);
- try{const response=await this.fetchImpl(item.url,{signal,headers:{'User-Agent':'D2PLUS-Launcher/1.1.1-alpha'}});if(!response.ok||!response.body)throw Error('Download failed (HTTP '+response.status+'). Use the official download page.');this.job.total=Number(response.headers.get('content-length'))||0;this.job.message='Downloading official ZIP; it will not run automatically.';
+ try{const response=await this.fetchImpl(item.url,{signal,headers:{'User-Agent':'D2PLUS-Launcher/1.1.2-alpha'}});if(!response.ok||!response.body)throw Error('Download failed (HTTP '+response.status+'). Use the official download page.');this.job.total=Number(response.headers.get('content-length'))||0;this.job.message='Downloading official ZIP; it will not run automatically.';
  const body=Readable.fromWeb(response.body);body.on('data',chunk=>{hash.update(chunk);this.job.bytes+=chunk.length;if(this.job.bytes>1024*1024*1024)this.controller.abort();});await pipeline(body,fs.createWriteStream(temp),{signal});
  if(hash.digest('hex')!==item.sha256)throw Error('Checksum mismatch. Download discarded; use the official release page.');if(fs.existsSync(dest))fs.unlinkSync(dest);fs.renameSync(temp,dest);this.job.state='Complete';this.job.path=dest;this.job.message=item.instructions||'Verified ZIP downloaded. Open Downloads, extract it to your chosen folder, then Browse for D2RMM.exe.';
  }finally{clearTimeout(timer);if(fs.existsSync(temp))fs.unlinkSync(temp);}}

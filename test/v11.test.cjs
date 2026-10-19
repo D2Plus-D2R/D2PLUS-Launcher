@@ -1,5 +1,15 @@
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),vm=require('node:vm');
 const root=path.join(__dirname,'..'),read=p=>JSON.parse(fs.readFileSync(path.join(root,p),'utf8'));
+test('V1.1.2 editor supports all saved Accursed annotations and material sigils',()=>{
+ const d=read('docs/d2plus/v105_data.json'),c=read('docs/d2plus/constants_105.json');
+ for(let id=375;id<=422;id++){
+  const s=Object.values(d.itemStatCost).find(s=>s.id===id);assert(s,'missing saved stat '+id);
+  assert.equal(s.savebits,6);assert.equal(c.magical_properties[id].s,s.stat);assert.equal(c.magical_properties[id].sB,6);
+ }
+ assert.equal(Object.keys(d.properties).filter(k=>k.startsWith('d2plus_ac_boon_')).length,48);
+ assert.equal(Object.keys(c.properties).filter(k=>k.startsWith('d2plus_ac_boon_')).length,48);
+ assert.equal(d.misc.acs.advancedstashstackable,1);
+});
 test('V1.1 reviewed unique ranges agree with both editor and wiki',()=>{
  const edits=read('release-inputs/unique-balance-v11.json'),d=read('docs/d2plus/v105_data.json'),w=read('docs/wiki/database.json');
  assert(Object.keys(edits).length>=250);

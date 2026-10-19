@@ -12,7 +12,7 @@ test('AlphaV1.1 wiki renders new content offline and preserves unique records',(
  for(const file of ['data.js','item-presentation.js','trinkets.js','app.js'])w.eval(fs.readFileSync(path.join(root,file),'utf8'));
  const text=w.document.querySelector('#content').textContent;
  assert.ok(!fs.readFileSync(path.join(root,'app.js'),'utf8').includes('alpha-v112'));
- assert.ok(fs.readFileSync(path.join(root,'../launcher/index.html'),'utf8').includes('One complete Alpha V1.1 gameplay package'));
+ assert.ok(fs.readFileSync(path.join(root,'../launcher/index.html'),'utf8').includes('One complete Alpha V1.1.2 gameplay package'));
  for(const term of ['October 17, 2026','A little luck. A little danger.','Accursed','Elder Gems','Azmodan','25%'])assert.ok(text.includes(term),term);
  assert.ok(d.records.some(r=>r.name==='Token of Regret'));
  w.location.hash='#companions';w.dispatchEvent(new w.HashChangeEvent('hashchange'));

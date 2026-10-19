@@ -59,7 +59,7 @@ try {
  if(Test-Path -LiteralPath $target){Move-Item -LiteralPath $target -Destination $backup;$backedUp=$true}
  try{Move-Item -LiteralPath $stage -Destination $target;$promoted=$true}
  catch{if($backedUp -and !(Test-Path -LiteralPath $target)){Move-Item -LiteralPath $backup -Destination $target};throw}
- @{installed=$true;directory=$target;backup=$(if($backedUp){$backup}else{''});savepath=$savepath;version='1.1.1-alpha'} | ConvertTo-Json -Compress
+ @{installed=$true;directory=$target;backup=$(if($backedUp){$backup}else{''});savepath=$savepath;version='1.1.2-alpha'} | ConvertTo-Json -Compress
 } finally {
  if(!$promoted -and (Test-Path -LiteralPath $stage)){
   $resolved=[IO.Path]::GetFullPath($stage)
