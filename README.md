@@ -6,6 +6,8 @@ This update fixes clipped equipment icons and missing equipped models, improves 
 
 [Read the short update notes](release-notes/v1.1.2-alpha.md).
 
+The standalone D2RMM package and full Windows launcher are available on the [1.1.2 release page](https://github.com/D2Plus-D2R/D2PLUS-Launcher/releases/tag/v1.1.2-alpha). For D2RMM, choose `D2PLUS_AlphaV1.1.2_Complete_D2RMM.zip`. The original `D2PLUSAlphaV1.1.2.zip` is an installed snapshot and is not a D2RMM input mod.
+
 D2PLUS is an offline overhaul for Diablo II: Resurrected that gives you more to build, more to hunt, and more to do after the campaign.
 
 It grew out of wanting to keep playing Diablo II without every character ending up on the same equipment path. The familiar campaign and item hunt are still here, but there are more skills worth trying, new uniques and sets to chase, additional bosses, and a crafting system that gives spare loot a purpose.
