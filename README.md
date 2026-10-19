@@ -16,6 +16,8 @@ Sanctuary has also had quite a makeover. Dark stone, worn gold, weathered roses,
 
 More ways to build your character
 
+Want melee splash damage? Buy the optional melee splash charm from Gheed in Act I and keep it in your character’s inventory to enable the effect. Move it to your stash to turn it off.
+
 All eight classes have skill changes, including the Warlock. Reworked attacks, adjusted scaling and synergies, and three additional five-rank passives per class open up different ways to spend your points.
 
 The Amazon's Storm Lance launches lightning bolts that chain on impact. The Sorceress has Arcane Tempest, the Necromancer can recover life and mana through Soul Harvest, and the Barbarian gains options such as Storm Cry and Ancestral Standard. Paladin, Druid, Assassin, and Warlock builds have their own changes, with the wiki explaining how each skill works.
