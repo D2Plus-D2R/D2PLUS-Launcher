@@ -1,0 +1,14 @@
+D2PLUS Alpha V1.2
+
+Lilith, Daughter of Hatred now joins Mephisto on Normal, Nightmare and Hell.
+This update also cleans up Azmodan's attack, walking and death animations and
+fixes mouse targeting for Mephisto and the Memory of Mephisto. The splash screen
+has been updated to Alpha V1.2. Mephisto trophies still drop only from Mephisto.
+
+Updating with D2RMM: Close the game and back up your saves. Extract the new full
+mod into D2RMM's mods folder, disable the old D2PLUS package and included test
+addons, enable Alpha V1.2, and click Install Mods. Keep your existing output mod
+name and save path. No new character or earlier version is required.
+
+Launcher users: Update to the Alpha V1.2 launcher, keep your current game/mod
+paths, and install the bundled Alpha V1.2 gameplay files from Setup.

@@ -1,12 +1,8 @@
-D2PLUS Alpha V1.1.2
+D2PLUS Alpha V1.2
 
-### Alpha V1.1.2 update
+Lilith now joins Mephisto on all three difficulties, alongside Azmodan animation improvements and the Mephisto targeting fix.
 
-This update fixes clipped equipment icons and missing equipped models, improves Accursed names and bonus tooltips, adds Ritual Sigil storage, and includes a little more UI polish with an updated loading splash. Existing equipment keeps its saved stats and rolls.
-
-[Read the short update notes](release-notes/v1.1.2-alpha.md).
-
-The standalone D2RMM package and full Windows launcher are available on the [1.1.2 release page](https://github.com/D2Plus-D2R/D2PLUS-Launcher/releases/tag/v1.1.2-alpha). For D2RMM, choose `D2PLUS_AlphaV1.1.2_Complete_D2RMM.zip`. The original `D2PLUSAlphaV1.1.2.zip` is an installed snapshot and is not a D2RMM input mod.
+[Read the update and upgrade instructions](release-notes/v1.2-alpha.md). Download the [complete D2RMM mod or Windows launcher](https://github.com/D2Plus-D2R/D2PLUS-Launcher/releases/tag/v1.2-alpha).
 
 D2PLUS is an offline overhaul for Diablo II: Resurrected that gives you more to build, more to hunt, and more to do after the campaign.
 
