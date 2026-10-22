@@ -171,3 +171,25 @@ for page in (out/'wiki').glob('*.html'):
 assert data['patchNotes'][0]['version']=='Alpha V1.2'
 assert len({r['id'] for r in data['records']})==len(data['records'])
 print('Current release notes and references refreshed;',label_count[0],'stat labels normalized')
+
+# The standalone guide and the wiki's guide share the same practice chamber.
+# Relative resource paths support both the custom domain and project Pages URLs.
+subprocess.run([sys.executable,str(root/'build/ritual_lab_data.py'),
+                '--wiki',str(out/'wiki/database.json'),
+                '--output',str(out/'ritual-lab-catalog.json')],check=True)
+practice=(root/'site/ritual-lab-fragment.html').read_text(encoding='utf8')
+for relative in ['accursed.html','wiki/accursed.html']:
+    page=out/relative
+    html=page.read_text(encoding='utf8')
+    prefix='../' if relative.startswith('wiki/') else ''
+    if 'id="ritual-lab"' not in html:
+        if '<h2 id="ritual">' not in html:raise SystemExit('Missing ritual guide insertion point: '+relative)
+        html=html.replace('<h2 id="ritual">',practice+'\n<h2 id="ritual">',1)
+    if 'ritual-lab.css' not in html:
+        html=html.replace('</head>','<link rel="stylesheet" href="'+prefix+'ritual-lab.css"></head>',1)
+    if 'ritual-lab.mjs' not in html:
+        html=html.replace('</body>','<script type="module" src="'+prefix+'ritual-lab.mjs"></script></body>',1)
+    if 'href="#ritual-lab"' not in html:
+        html=html.replace('<a href="#ritual">','<a href="#ritual-lab">Try the ritual</a><a href="#ritual">',1)
+    page.write_text(html,encoding='utf8')
+print('Accursed practice chamber included in both public guide routes')
