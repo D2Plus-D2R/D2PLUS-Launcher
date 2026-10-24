@@ -132,3 +132,7 @@ Back up your characters and shared stash before updating, and keep your existing
 This is an active alpha. Package checks, item limits, and save-format tests have passed, but the newest Accursed gameplay, rose-bush placement, and Azmodan sound timing still need further in-game testing. Balance and visual polish will continue to change as people play.
 
 D2PLUS is for anyone who still enjoys making one more run, finding one more upgrade, and seeing how far a favorite character can go.
+
+## Getting started and save backups
+
+See [Getting Started](GETTING_STARTED.md) for installation, updates, save-folder controls, material storage and Accursed basics. Launcher Alpha V1.2.2 shows the exact configured save folder and adds verified character/shared-stash backups. Read the [short update](CHANGELOG-1.2.2-alpha.txt).

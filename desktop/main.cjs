@@ -20,10 +20,10 @@ function protect(w,isMain=false){w.webContents.on('will-navigate',(event,url)=>{
  if(isMain)w.on('close',e=>{if(!closed){e.preventDefault();shutdown();}});
 }
 function openTool(url){for(const c of children){if(c.webContents.getURL().split('#')[0]===url.split('#')[0]){c.show();c.focus();return;}}
- const child=new BrowserWindow({width:1280,height:900,minWidth:800,minHeight:600,autoHideMenuBar:true,title:url.includes('/wiki/')?'D2PLUS Offline Wiki':'D2PLUS Hero Editor',backgroundColor:'#101211',webPreferences:preferences(false)});child.setMenu(null);children.add(child);protect(child);child.on('closed',()=>children.delete(child));child.loadURL(url);}
+ const child=new BrowserWindow({width:1280,height:900,minWidth:800,minHeight:600,autoHideMenuBar:true,title:url.includes('getting-started.html')?'D2PLUS Getting Started':url.includes('/wiki/')?'D2PLUS Offline Wiki':'D2PLUS Hero Editor',backgroundColor:'#101211',webPreferences:preferences(false)});child.setMenu(null);children.add(child);protect(child);child.on('closed',()=>children.delete(child));child.loadURL(url);}
 async function start(){
  session.defaultSession.setPermissionRequestHandler((_wc,_permission,cb)=>cb(false));session.defaultSession.setPermissionCheckHandler(()=>false);
- suite=createSuite({suiteRoot:path.resolve(__dirname,'..'),port:8080,monitor:true,onQuit:()=>shutdown()});
+ suite=createSuite({suiteRoot:path.resolve(__dirname,'..'),port:8080,monitor:true,onQuit:()=>shutdown(),openPath:async p=>{const error=await shell.openPath(p);if(error)throw Error(error)}});
  await new Promise((resolve,reject)=>{suite.server.once('error',e=>reject(Error(e.code==='EADDRINUSE'?'Port 8080 is in use. Close the previous Offline Suite or launcher console, then open D2PLUS Launcher.exe again.':e.message)));suite.server.listen(8080,'127.0.0.1',resolve);});
  const area=screen.getPrimaryDisplay().workAreaSize;const scale=Math.min(1,area.width/1536,(area.height-30)/961);const width=Math.round(1536*scale),height=Math.round(961*scale);
  win=new BrowserWindow({width,height,minWidth:960,minHeight:601,useContentSize:true,frame:false,show:false,autoHideMenuBar:true,title:'D2PLUS Launcher',icon:path.join(__dirname,'../docs/img/icons/favicon.png'),backgroundColor:'#070908',webPreferences:preferences(true)});win.setMenu(null);protect(win,true);

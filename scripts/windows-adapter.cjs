@@ -29,6 +29,21 @@ foreach($p in @(Get-CimInstance Win32_Process | Where-Object { $_.Name -in $name
 `;
 class WindowsAdapter {
   constructor({suiteRoot,stateDir}){this.platform=process.platform;this.suiteRoot=suiteRoot;this.stateDir=stateDir;}
+  async savedGamesFolder(){
+    if(this._savedGames)return this._savedGames;
+    const r=await powershell(`$key='HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\User Shell Folders'; $v=[Microsoft.Win32.Registry]::GetValue($key,'{4C5C32FF-BB9D-43B0-B5B4-2D72E54EAAA4}',$null); if(!$v){$v=Join-Path $env:USERPROFILE 'Saved Games'}; @{path=[Environment]::ExpandEnvironmentVariables($v)} | ConvertTo-Json -Compress`,{});
+    if(!r?.path||!path.win32.isAbsolute(r.path))throw Error('Windows Saved Games folder could not be resolved.');
+    this._savedGames=r.path;return r.path;
+  }
+  async saveProcesses(){
+    const run=require('node:util').promisify(require('node:child_process').execFile);
+    const r=await run(path.join(process.env.SystemRoot||'C:\\Windows','System32','tasklist.exe'),['/FO','CSV','/NH'],{windowsHide:true,encoding:'utf8',maxBuffer:8*1024*1024});
+    return r.stdout.split(/\r?\n/).filter(line=>/^"(?:D2R|Diablo II Resurrected)\.exe"/i.test(line));
+  }
+  async openSaveFolder(folder){
+    const child=spawn(path.join(process.env.SystemRoot||'C:\\Windows','explorer.exe'),[folder],{windowsHide:true,stdio:'ignore'});
+    await new Promise((resolve,reject)=>{child.once('spawn',resolve);child.once('error',reject);});child.unref();
+  }
   async validateFiles(c,mpq){
     for(const [file,kind]of [[c.gameExe,'file'],[mpq,'directory'],[c.workingDirectory||path.win32.dirname(c.gameExe),'directory']]) {
       const stat=await fs.promises.stat(file).catch(()=>null);

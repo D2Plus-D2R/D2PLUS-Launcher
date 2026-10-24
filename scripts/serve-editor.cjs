@@ -3,11 +3,12 @@ const http=require('node:http'),fs=require('node:fs'),path=require('node:path'),
 const {Launcher,VERSION,modName}=require('./launcher-core.cjs');
 const {WindowsAdapter,powershell}=require('./windows-adapter.cjs');
 const {SetupService}=require('./setup-service.cjs');
-function createSuite({suiteRoot=path.resolve(__dirname,'..'),stateDir=path.join(process.env.LOCALAPPDATA||path.join(os.homedir(),'.local','share'),'D2PLUS','OfflineSuite'),adapter,port=8080,monitor=true,onQuit=null}={}) {
+function createSuite({suiteRoot=path.resolve(__dirname,'..'),stateDir=path.join(process.env.LOCALAPPDATA||path.join(os.homedir(),'.local','share'),'D2PLUS','OfflineSuite'),adapter,port=8080,monitor=true,onQuit=null,openPath=null}={}) {
   const root=path.join(suiteRoot,'docs'),token=crypto.randomBytes(32).toString('hex');
   adapter=adapter||new WindowsAdapter({suiteRoot,stateDir});
   const launcher=new Launcher({adapter,suiteRoot,settingsFile:path.join(stateDir,'settings.json')});
   const setup=new SetupService({launcher,adapter,stateDir});
+  const saves=new (require('./save-service.cjs').SaveService)({launcher,adapter,stateDir,openPath:openPath||((p)=>adapter.openSaveFolder(p))});
   const mime={'.html':'text/html; charset=utf-8','.js':'text/javascript','.css':'text/css','.json':'application/json','.webp':'image/webp','.png':'image/png','.svg':'image/svg+xml','.woff':'font/woff','.woff2':'font/woff2','.ttf':'font/ttf','.jpg':'image/jpeg','.ico':'image/x-icon'};
   const reply=(res,code,data)=>{res.writeHead(code,{'Content-Type':'application/json','Cache-Control':'no-store','X-Content-Type-Options':'nosniff','Cross-Origin-Resource-Policy':'same-origin'});res.end(JSON.stringify(data));};
   const server=http.createServer(async(req,res)=>{
@@ -20,7 +21,7 @@ function createSuite({suiteRoot=path.resolve(__dirname,'..'),stateDir=path.join(
     if(pathname.startsWith('/api/')){
       try{
         if(req.method==='GET' && pathname==='/api/health'){reply(res,200,{app:'D2PLUS Offline Suite',version:VERSION});return;}
-        if(req.method==='GET' && pathname==='/api/status'){reply(res,200,{...launcher.snapshot(),setup:setup.snapshot(),token});return;}
+        if(req.method==='GET' && pathname==='/api/status'){reply(res,200,{...launcher.snapshot(),setup:setup.snapshot(),saves:await saves.status(),token});return;}
         if(req.method!=='POST'){reply(res,405,{error:'POST required.'});return;}
         if(req.headers['x-d2plus-token']!==token){reply(res,403,{error:'Missing launcher session token. Reload this page.'});return;}
         if(!String(req.headers['content-type']).startsWith('application/json')){reply(res,415,{error:'JSON required.'});return;}
@@ -33,6 +34,9 @@ function createSuite({suiteRoot=path.resolve(__dirname,'..'),stateDir=path.join(
               return launcher.save(data);
             }
             case '/api/build-arguments': return require('./arguments-helper.cjs').buildArguments(data.directory,data.arguments);
+            case '/api/open-saves': return saves.open();
+            case '/api/backup-saves': return saves.backup();
+            case '/api/open-save-backups': return saves.openBackup();
             case '/api/setup-check': return setup.check();
             case '/api/install-gameplay': return setup.install();
             case '/api/scan-mods': return setup.scanMods(data.gameExe);

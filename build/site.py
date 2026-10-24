@@ -3,6 +3,8 @@
 from pathlib import Path
 import json,os,re,shutil
 root=Path(__file__).resolve().parents[1]
+import subprocess,sys
+subprocess.run([sys.executable,str(root/'build/getting-started.py')],check=True)
 cfg=json.loads((root/'site/config.json').read_text())
 repo=os.environ.get('GITHUB_REPOSITORY') or cfg['repository']
 if repo and not re.fullmatch(r'[A-Za-z0-9-]+/[A-Za-z0-9._-]+',repo):raise SystemExit('Invalid owner/repository')

@@ -1,6 +1,6 @@
-Alpha V1.2, launcher 1.2.0-alpha. After updating, use Setup > Install Alpha V1.2 to reinstall the corrected game files. Keep the existing mod folder and save path.
+Alpha V1.2.2, launcher 1.2.2-alpha. After updating, use Setup > Install Alpha V1.2.2 to reinstall the corrected game files. Keep the existing mod folder and save path.
 
-D2PLUS Launcher Alpha V1.2 - Windows x64
+D2PLUS Launcher Alpha V1.2.2 - Windows x64
 
 Run the Setup EXE, or extract the complete portable ZIP and open D2PLUS Launcher.exe.
 The launcher includes the complete gameplay snapshot, offline wiki, hero editor,
@@ -35,3 +35,5 @@ mod backups, saved characters or settings. Launching uses local port 8080.
 These alpha packages pass automated checks; live gameplay and Android device
 validation remain separate. The Windows installer has no code-signing certificate.
 
+
+Character saves: Open Saves opens the configured mod savepath. Close D2R, then Back Up Saves creates a timestamped, verified copy including the shared stash. Open Backups opens the latest copy. Backups live under %LOCALAPPDATA%/D2PLUS/OfflineSuite/save-backups. Getting Started opens the included guide.

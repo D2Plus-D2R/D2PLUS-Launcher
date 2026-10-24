@@ -1,0 +1,145 @@
+{
+  "version": "0.3.0",
+  "checks": [
+    "Removed only the added inventory outer frame in classic and expansion, standard and low-end assets.",
+    "Original inventory artwork restored byte-for-byte.",
+    "Dark gothic stone background, stash border and controller layout fixes retained."
+  ],
+  "files": [
+    {
+      "path": "global/ui/layouts/controller/bankexpansionlayouthd.json",
+      "sha256": "5e49f556890e30c66158c1f5e5933dbf7ce279c851f45eab82734979c95e48eb",
+      "bytes": 47393
+    },
+    {
+      "path": "global/ui/layouts/controller/hudpanelhd.json",
+      "sha256": "da481ea23dc7233dd3b2e5e470ee09d9a598012b756cf55279cb9f71e8451967",
+      "bytes": 12486
+    },
+    {
+      "path": "global/ui/layouts/controller/playerinventoryoriginallayouthd.json",
+      "sha256": "e8f204396db0f2d4e9f832232d75767e38d32e3385f5197f6986d7b388076e7f",
+      "bytes": 10393
+    },
+    {
+      "path": "hd/global/ui/controller/panel/inventorypanel/v2/d2plus_inventorybg_classic_expanded.lowend.sprite",
+      "sha256": "a841b025156122044f47bafc212a0647f1eab2839d49c3c21d4d380d0065aabf",
+      "bytes": 2183200
+    },
+    {
+      "path": "hd/global/ui/controller/panel/inventorypanel/v2/d2plus_inventorybg_classic_expanded.sprite",
+      "sha256": "0b506fc0392ed1d9654f6e2613e1101cdcfd27f98721145c4777350fea481ba9",
+      "bytes": 8739008
+    },
+    {
+      "path": "hd/global/ui/controller/panel/inventorypanel/v2/d2plus_inventorybg_expanded.lowend.sprite",
+      "sha256": "98995cc358b688448f136cf3765abe5c2093eab58f13f339bcf4b90fffcb965c",
+      "bytes": 2183200
+    },
+    {
+      "path": "hd/global/ui/controller/panel/inventorypanel/v2/d2plus_inventorybg_expanded.sprite",
+      "sha256": "a7b9710ee3bb7a0533d9f33e4d8ce42d675c98260dd105855b333ba62035d75c",
+      "bytes": 8739008
+    },
+    {
+      "path": "hd/global/ui/controller/panel/mainpanelbg.lowend.sprite",
+      "sha256": "e41a77c85c41f6a7fcdd7bb34fc57d54d80ddb4ac04ea9efac856501c845f64c",
+      "bytes": 10163256
+    },
+    {
+      "path": "hd/global/ui/controller/panel/mainpanelbg.sprite",
+      "sha256": "b676704336e0f318f98294e708195211736db7f6583fe6357cfff621fb6027cf",
+      "bytes": 40647768
+    },
+    {
+      "path": "hd/global/ui/controller/panel/stash/v2/additionalstash/advancedstash_gems_console.lowend.sprite",
+      "sha256": "243e0fbe7b05bf8b5c78462e547e3c9aed1015fdedbd7c084e5ec463360188b9",
+      "bytes": 1692632
+    },
+    {
+      "path": "hd/global/ui/controller/panel/stash/v2/additionalstash/advancedstash_gems_console.sprite",
+      "sha256": "6d7585232aafe98e6447235612083e0951b0269ccc8aba204076b7c9ea0734f9",
+      "bytes": 6770408
+    },
+    {
+      "path": "hd/global/ui/controller/panel/stash/v2/stashpanelbgpersonal.lowend.sprite",
+      "sha256": "a67ddf65187f42fb24e1a8768396ab7ac9701c1aeceeb87a1d30cc847a85cf71",
+      "bytes": 1692632
+    },
+    {
+      "path": "hd/global/ui/controller/panel/stash/v2/stashpanelbgpersonal.sprite",
+      "sha256": "9c006d85ac1e4f9dfba9959aeea8358f9de4b758f19248d0b37ac88aafb8c942",
+      "bytes": 6770408
+    },
+    {
+      "path": "hd/global/ui/controller/panel/stash/v2/stashpanelbgshared.lowend.sprite",
+      "sha256": "0723793d006ea3250c197d8da3fa6d8c649d7153a6f9f3be6e01b9f3b497eea2",
+      "bytes": 1692632
+    },
+    {
+      "path": "hd/global/ui/controller/panel/stash/v2/stashpanelbgshared.sprite",
+      "sha256": "6c76c69af1ffbc3476fc9da410c8ac2a8f1c3f41526fa3f3e8a44802a5259f2c",
+      "bytes": 6770408
+    },
+    {
+      "path": "hd/global/ui/d2plus/controller/belt_cap.lowend.sprite",
+      "sha256": "53847f456641bb7995e1ed67d01514fc72097fb3f42667832660a887b32406eb",
+      "bytes": 8680
+    },
+    {
+      "path": "hd/global/ui/d2plus/controller/belt_cap.sprite",
+      "sha256": "df6e2f8bbcb167533d2632cbc6d9600928788df2982b9d53bcca2bf8aa3c9248",
+      "bytes": 34664
+    },
+    {
+      "path": "hd/global/ui/d2plus/controller/belt_row.lowend.sprite",
+      "sha256": "dca8744520cf0ab107d4c4ce1fcee5050dfecce8bc86874430455e6654777fca",
+      "bytes": 58280
+    },
+    {
+      "path": "hd/global/ui/d2plus/controller/belt_row.sprite",
+      "sha256": "eb22257f8cab6e55f25eb066ccb64d4ccafba3cf451251b5bb6135e07d465be6",
+      "bytes": 235080
+    },
+    {
+      "path": "hd/global/ui/d2plus/controller/hud.lowend.sprite",
+      "sha256": "7a74ebd5242cedaa4b61b80ae0c4e0097661bc3eec43e632bbb2e57fede3816a",
+      "bytes": 1303608
+    },
+    {
+      "path": "hd/global/ui/d2plus/controller/hud.sprite",
+      "sha256": "965f9531e97986c8e517af40a3ba0e96960963e2b2cc748412614030ff564016",
+      "bytes": 5226968
+    },
+    {
+      "path": "hd/global/ui/d2plus/controller/stash_frame.lowend.sprite",
+      "sha256": "70966ca281df0651c1d0311c43c27e4742e08cbdcf021c9af8be000e6fb462a2",
+      "bytes": 1401880
+    },
+    {
+      "path": "hd/global/ui/d2plus/controller/stash_frame.sprite",
+      "sha256": "18573d95997d97f835198f8d39f68a0d25547a64291f8d4e26810836df418635",
+      "bytes": 5607400
+    },
+    {
+      "path": "hd/global/ui/d2plus/materialstashtest2/materialscontroller.lowend.sprite",
+      "sha256": "35ecfcf678ffbc87fad2466bddc3facc14d0affe4c2195a25a7c3ee82e7cda84",
+      "bytes": 1692632
+    },
+    {
+      "path": "hd/global/ui/d2plus/materialstashtest2/materialscontroller.sprite",
+      "sha256": "9effda9ac9f9a65f41f9287eb31291507c48691e61ff00505aac817ba5720342",
+      "bytes": 6770408
+    },
+    {
+      "path": "hd/global/ui/d2plus/runestashtest3/runescontroller.lowend.sprite",
+      "sha256": "931a180a41a62164f654bce1f70036f5b66f8e5eb9f6da3ef88cacfa9bd48504",
+      "bytes": 1692632
+    },
+    {
+      "path": "hd/global/ui/d2plus/runestashtest3/runescontroller.sprite",
+      "sha256": "5eb74f606d49ceedfd722f8adfd707aeaf986bcc327a9bb63dd7cc304f2adc7d",
+      "bytes": 6770408
+    }
+  ]
+}
