@@ -21,7 +21,7 @@ VIAddVersionKey /LANG=1033 "FileVersion" "1.2.2.0"
 VIAddVersionKey /LANG=1033 "LegalCopyright" "D2PLUS contributors"
 !define MUI_ABORTWARNING
 !define MUI_WELCOMEPAGE_TITLE "Welcome to D2PLUS Launcher"
-!define MUI_WELCOMEPAGE_TEXT "Install the D2PLUS desktop launcher, offline wiki, hero editor and optional damage companion.$\r$\n$\r$\nComplete Alpha V1.2.2 gameplay is bundled. After opening the launcher, choose D2R.exe and click Install Alpha V1.2. Existing mod output is backed up; character saves remain in place.$\r$\n$\r$\nDestination: your Windows user's local Programs folder. Close any running D2PLUS Launcher before continuing."
+!define MUI_WELCOMEPAGE_TEXT "Install the D2PLUS desktop launcher, offline wiki, hero editor and optional damage companion.$\r$\n$\r$\nComplete Alpha V1.2.2 gameplay is bundled. After opening the launcher, choose D2R.exe and click Install Alpha V1.2.2. Existing mod output is backed up; character saves remain in place.$\r$\n$\r$\nDestination: your Windows user's local Programs folder. Close any running D2PLUS Launcher before continuing."
 !insertmacro MUI_PAGE_WELCOME
 !insertmacro MUI_PAGE_INSTFILES
 !define MUI_FINISHPAGE_RUN "$INSTDIR\D2PLUS Launcher.exe"

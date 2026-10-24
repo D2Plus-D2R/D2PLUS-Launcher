@@ -7,3 +7,16 @@ dialog{width:min(850px,94vw);max-height:94vh;padding:0;color:#d6c9ae;background:
 #releaseSplash{position:fixed;inset:0;z-index:9999;background:#050504;display:grid;place-items:center;pointer-events:none;animation:releaseFade .4s 1.4s forwards}#releaseSplash img{width:100%;height:100%;object-fit:contain}@keyframes releaseFade{to{opacity:0;visibility:hidden}}
 
 .save-tools{position:absolute;left:1166px;top:640px;width:330px;height:153px;padding:8px 10px;background:#111410;border:1px solid #66543a;overflow:auto}.save-tools h2{font-size:16px;font-weight:normal;color:#dec194;margin:0 0 3px}.save-path{font:12px/1.35 Arial,sans-serif;overflow-wrap:anywhere;user-select:text;margin:0 0 6px;color:#ded8c8}.save-actions{display:flex;gap:5px;flex-wrap:wrap}.save-actions button{font-size:11px;padding:6px}.save-tools #saveNote,.save-tools #backupNote{font:10px/1.3 Arial,sans-serif;color:#b4ac9b;margin:5px 0 0}.getting-started-link{position:absolute;left:48px;top:664px;width:193px;text-align:center;border:1px solid #806641;background:#10130f;padding:12px;font-size:16px}
+
+/* Launcher refresh: keep map rerolling separate from character save tools. */
+.save-tools{left:850px;top:461px;width:270px;height:149px;padding:9px 11px;background:linear-gradient(#181a17f5,#0a0d0bf5),url('assets/dark-basalt.webp') center/400px;border:2px solid #8b7048;box-shadow:inset 0 0 0 2px #060807,inset 0 0 0 3px #514530,0 3px 10px #000;scrollbar-width:thin;scrollbar-color:#756044 #111}
+.save-tools h2{font-size:18px;line-height:1.2;margin:0 0 5px;color:#e0c59b;letter-spacing:.4px}
+.save-path{font-size:11px;line-height:1.3;max-height:43px;overflow:auto;margin:0 0 7px;scrollbar-width:thin}
+.save-actions{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:5px}
+.save-actions button{min-height:34px;font-size:11px;line-height:1.15;padding:5px 3px}
+.save-tools #saveNote,.save-tools #backupNote{margin:4px 0 0;font-size:10px;line-height:1.2}
+.map-reset-control{left:1170px;top:657px;width:322px;min-height:117px;padding:14px;background:linear-gradient(#1c201bf2,#0b0e0cf5),url('assets/dark-basalt.webp') center/420px;border:2px solid #8b7048;box-shadow:inset 0 0 0 2px #070908,inset 0 0 0 3px #514530,0 3px 8px #0009}
+.map-reset-control .toggle{font-size:17px;color:#dfc49a}.map-reset-control p{font-size:12px;line-height:1.4;color:#b9b09c;margin:9px 0 0}
+.save-actions button,.getting-started-link{border:2px solid #92764b;background:linear-gradient(180deg,#ffffff0a,#0008),url('assets/dark-basalt.webp') center/360px;box-shadow:inset 0 0 0 2px #080a08,inset 0 0 0 3px #8b74484d,inset 0 3px 3px #c7a26122,0 2px 4px #000;color:#e0c89f;text-shadow:0 2px #000}
+.save-actions button:hover:not(:disabled),.getting-started-link:hover{border-color:#d0ae70;color:#fff0ce;filter:brightness(1.18)}
+.getting-started-link{padding:11px 8px;min-height:48px;font-size:16px;letter-spacing:.4px}
