@@ -9,7 +9,7 @@ and optional damage companion. No separate runtime installation is required.
 EASIEST SETUP
 1. Close Diablo II: Resurrected.
 2. In launcher Setup, Browse to your installed D2R.exe.
-3. Choose Install Alpha V1.2. The launcher verifies and installs its bundled files,
+3. Choose Install Alpha V1.3. The launcher verifies and installs its bundled files,
    retains previous mod output as a backup, and sets the launch arguments.
 4. Click Launch D2PLUS. Select an offline character in the game.
 

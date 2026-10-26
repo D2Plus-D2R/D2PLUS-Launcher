@@ -1,8 +1,10 @@
-D2PLUS Alpha V1.2
+D2PLUS Alpha V1.3
 
-Lilith now joins Mephisto on all three difficulties, alongside Azmodan animation improvements and the Mephisto targeting fix.
+Charm weight and seven craftable Oaths are here. Your character can carry 50 charm weight before taking an overburden penalty. Check Advanced Character Stats for your total; each charm shows its own weight. Oaths share an aura with you and nearby allies, including your mercenary.
 
-[Read the update and upgrade instructions](release-notes/v1.2-alpha.md). Download the [complete D2RMM mod or Windows launcher](https://github.com/D2Plus-D2R/D2PLUS-Launcher/releases/tag/v1.2-alpha).
+Unique Grand Charms can now be Accursed, crafting materials have orange names, and the launcher, Hero Editor, and both wikis include the new charm system.
+
+[Read the announcement and update instructions](https://d2-plus.net/news-alpha-v13.html) · [Charm and Oath guide](https://d2-plus.net/wiki/charms.html) · [Complete D2RMM mod and Windows launcher](https://github.com/D2Plus-D2R/D2PLUS-Launcher/releases/tag/v1.3-alpha)
 
 D2PLUS is an offline overhaul for Diablo II: Resurrected that gives you more to build, more to hunt, and more to do after the campaign.
 
