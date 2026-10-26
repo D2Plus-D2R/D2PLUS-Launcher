@@ -109,7 +109,7 @@ Custom potion graphics make health, mana, and rejuvenation potions easier to dis
 
 The stash includes support for custom runes and crafting materials. Shared storage remains at five tabs. The complete package does not require D2RLoader.
 
-Character selection, introductory artwork, and the loading splash have been updated to fit the D2PLUS theme, with the splash showing Alpha V1.1.2.
+Character selection, introductory artwork, and the loading splash have been updated to fit the D2PLUS theme, with the splash showing Alpha V1.3.
 
 Tools that come with the mod
 
@@ -123,7 +123,7 @@ Four separate practice characters are available with Cubes, Elder Gems, sigils, 
 
 Installation and current status
 
-D2PLUS Alpha V1.1 requires your own Diablo II: Resurrected installation with Reign of the Warlock and is intended for offline single-player.
+D2PLUS requires your own Diablo II: Resurrected installation with Reign of the Warlock and is intended for offline single-player.
 
 Use the Windows launcher for guided installation, or install the Complete D2RMM package as one mod. The complete package includes the accumulated D2PLUS content and does not need an older release or the separate test addons. Disable overlapping D2PLUS packages before installing it.
 
@@ -135,4 +135,4 @@ D2PLUS is for anyone who still enjoys making one more run, finding one more upgr
 
 ## Getting started and save backups
 
-See [Getting Started](GETTING_STARTED.md) for installation, updates, save-folder controls, material storage and Accursed basics. Launcher Alpha V1.2.2 shows the exact configured save folder and adds verified character/shared-stash backups. Read the [short update](CHANGELOG-1.2.2-alpha.txt).
+See [Getting Started](GETTING_STARTED.md) for installation, updates, save-folder controls, material storage and Accursed basics. Launcher Alpha V1.3 shows the exact configured save folder and adds verified character/shared-stash backups. Read the [short update](CHANGELOG-1.3.0-alpha.txt).

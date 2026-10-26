@@ -1,0 +1,37 @@
+D2PLUS Alpha V1.3 — Charm Weight and Oaths
+October 26, 2026
+
+CHOOSE YOUR CHARMS
+- Charm capacity is 50. Every point above 50 applies a 15% penalty to maximum life and mana, capped at 90%.
+- Magic Small / Large / Grand Charms weigh 1 / 2 / 3. Unique and Sunder charms weigh 5. The optional melee-splash charm weighs 1. Crafted Oaths weigh 7.
+- Each charm tooltip shows that item's weight. Advanced Character Stats shows your total and limit.
+- Existing charms missing a weight line can be updated in the Cube with one Scroll of Identify, without rerolling their existing bonuses.
+
+SEVEN CRAFTABLE OATHS
+- Combine one magic Grand Charm, three matching Elder Gems and one Worldforge Shard. Transmute twice to complete the Oath.
+- Guardian's / Warlord's / Oracle's / Wayfarer's / Winter's / Stormcaller's / Gravekeeper's Oath: Diamond / Ruby / Amethyst / Emerald / Sapphire / Topaz / Skull respectively.
+- Oaths require character level 75 and roll an aura level from 1 to 20. Each tooltip shows the exact bonuses for its rolled level.
+- The aura benefits you and nearby allies, including your mercenary. Only one Oath can be carried at a time, across all seven types. Keep spare Oaths in shared storage.
+
+ACCURSED GRAND CHARMS
+- Unique Grand Charms, including Oaths, are now eligible for the one-attempt Accursed ritual.
+- Success adds one charm weight: an Oath goes from 7 to 8. A brick returns a magic charm of the same base and removes the unique powers.
+- Small and large unique charms remain ineligible. The ritual does not reroll the original Oath aura level.
+
+TOOLS AND PRESENTATION
+- Elder Gems and supported crafting materials have orange names.
+- Launcher and game splashes now read Alpha V1.3.
+- Hero Editor understands the new charm stats, seven Oaths and exact aura templates.
+- Offline and online wikis include the weight rules, recipes and all 20 aura levels.
+- Existing controller HUD improvements, save tools and offline-map rerolling remain included.
+
+HOW TO UPDATE
+1. Close D2R and back up your characters and shared stash.
+2. D2RMM users: extract D2PLUS_Alpha_v13_Complete into D2RMM/mods, disable the older complete D2PLUS package and overlapping addons, enable D2PLUS - Alpha V1.3 Complete, then click Install Mods.
+3. Launcher users: install the new launcher, open Setup, confirm D2R.exe and the existing mod output, then click Install Alpha V1.3.
+4. Keep the same output mod name and save path. Existing characters can continue. Check your charm total before heading out.
+
+This is a complete standalone D2RMM package; no earlier D2PLUS version, runtime plugin or extra loader is required. The Installed_Snapshot ZIP is for the launcher, not a D2RMM mod folder. No personal saves are included.
+
+COMING UP
+We are working on three brand-new dungeons: one for early game, one for mid game, and a mythic endgame dungeon. These are in development and are not part of Alpha V1.3.

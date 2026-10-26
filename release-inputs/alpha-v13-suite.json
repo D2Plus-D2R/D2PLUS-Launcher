@@ -1,0 +1,16 @@
+{
+  "sha256": "bf971b5e231b959cc27a3c0deb771c360081770c27a1c356f05843a2853257c5",
+  "files": [
+    "docs/index.html",
+    "docs/d2plus/accursed-editor.js",
+    "docs/d2plus/constants_105.bundle.js",
+    "docs/d2plus/constants_105.json",
+    "docs/d2plus/constants_105.manifest.json",
+    "docs/d2plus/native-v13.bundle.js",
+    "docs/d2plus/v105_data.json",
+    "docs/d2plus/v105_data.manifest.json",
+    "docs/d2plus/v105_strings.json",
+    "docs/js/app.bafc4d91.js",
+    "docs/wiki/charms.html"
+  ]
+}

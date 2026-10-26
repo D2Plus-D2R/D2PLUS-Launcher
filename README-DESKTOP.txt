@@ -1,6 +1,6 @@
-Alpha V1.2.2, launcher 1.2.2-alpha. After updating, use Setup > Install Alpha V1.2.2 to reinstall the corrected game files. Keep the existing mod folder and save path.
+Alpha V1.3, launcher 1.3.0-alpha. After updating, use Setup > Install Alpha V1.3 to reinstall the corrected game files. Keep the existing mod folder and save path.
 
-D2PLUS Launcher Alpha V1.2.2 - Windows x64
+D2PLUS Launcher Alpha V1.3 - Windows x64
 
 Run the Setup EXE, or extract the complete portable ZIP and open D2PLUS Launcher.exe.
 The launcher includes the complete gameplay snapshot, offline wiki, hero editor,

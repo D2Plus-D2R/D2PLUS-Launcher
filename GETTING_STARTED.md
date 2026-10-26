@@ -12,7 +12,7 @@ For either method, close D2R before installing. Keep your existing output mod na
 
 ## Find and protect your characters
 
-Launcher Alpha V1.2.2 shows the full save-folder path under **Character saves**. It reads the installed mod's savepath, so your folder may still be called D2RMM.
+Launcher Alpha V1.3 shows the full save-folder path under **Character saves**. It reads the installed mod's savepath, so your folder may still be called D2RMM.
 
 - **Open Saves** opens that exact folder.
 - **Back Up Saves** copies its contents, including characters and the shared stash, into a separate timestamped folder. Close D2R and finish any hero-editor exports first.

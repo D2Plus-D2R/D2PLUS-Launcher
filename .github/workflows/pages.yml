@@ -16,7 +16,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   deploy:
-    if: (github.event_name == 'push' && !contains(github.event.head_commit.message, '[publish-v11-hotfix1]') && !contains(github.event.head_commit.message, '[publish-android-v08]') && !contains(github.event.head_commit.message, '[publish-v122]')) || github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
+    if: (github.event_name == 'push' && !contains(github.event.head_commit.message, '[publish-v11-hotfix1]') && !contains(github.event.head_commit.message, '[publish-android-v08]') && !contains(github.event.head_commit.message, '[publish-v122]') && !contains(github.event.head_commit.message, '[publish-v13]')) || github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     environment:
       name: github-pages

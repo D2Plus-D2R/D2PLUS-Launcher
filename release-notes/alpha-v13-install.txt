@@ -1,0 +1,13 @@
+D2PLUS Alpha V1.3 — D2RMM installation
+
+1. Close Diablo II: Resurrected. Back up your characters and shared stash.
+2. Extract this ZIP. Put the D2PLUS_Alpha_v13_Complete folder inside D2RMM's mods folder. That folder must directly contain mod.json and mod.js.
+3. In D2RMM, disable your older complete D2PLUS package and overlapping addons. Enable D2PLUS - Alpha V1.3 Complete.
+4. Click Install Mods, then launch with your usual D2RMM settings.
+
+Keep the same output mod name and save path when updating. Do not delete or replace your save folder. No earlier D2PLUS installation or extra loader is needed.
+
+Before playing, open Advanced Character Stats and check your charm weight. Capacity is 50. Move excess charms into storage to clear the overburden penalty.
+For an older charm missing its weight line, put that charm and one Scroll of Identify in the Cube and transmute; existing rolls are preserved.
+
+Oath recipe: one magic Grand Charm + three matching Elder Gems + one Worldforge Shard. Transmute twice. Only one Oath may be carried; keep spare Oaths in shared storage.

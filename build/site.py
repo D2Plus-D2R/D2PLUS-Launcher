@@ -195,3 +195,6 @@ for relative in ['accursed.html','wiki/accursed.html']:
         html=html.replace('<a href="#ritual">','<a href="#ritual-lab">Try the ritual</a><a href="#ritual">',1)
     page.write_text(html,encoding='utf8')
 print('Accursed practice chamber included in both public guide routes')
+
+# Current release patch runs after historical normalization and preserves stable record IDs.
+subprocess.run([sys.executable,str(root/'build/apply-reference-v13.py')],check=True)
