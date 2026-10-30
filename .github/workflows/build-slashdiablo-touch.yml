@@ -27,17 +27,18 @@ jobs:
         with:
           distribution: temurin
           java-version: '17'
-      - name: Locate preinstalled Android SDK
+      - name: Install Android command line SDK and native compilers
         run: |
-          echo "ANDROID_HOME=${ANDROID_HOME:-$ANDROID_SDK_ROOT}"
-          test -d "${ANDROID_HOME:-$ANDROID_SDK_ROOT}"
-          command -v sdkmanager
-      - name: Install SDK and native compiler dependencies
-        run: |
-          yes | sdkmanager --licenses >/dev/null || true
-          sdkmanager 'platforms;android-35' 'build-tools;34.0.0' 'ndk;24.0.8215888' 'cmake;3.22.1'
           sudo apt-get update -q
-          sudo apt-get install -y -q gcc-aarch64-linux-gnu libasound2-dev gcc-mingw-w64-i686 binutils-mingw-w64-i686 curl unzip xz-utils zstd python3
+          sudo apt-get install -y -q wget unzip gcc-aarch64-linux-gnu libasound2-dev gcc-mingw-w64-i686 binutils-mingw-w64-i686 curl xz-utils zstd python3
+          mkdir -p "$HOME/android-sdk/cmdline-tools"
+          curl -fsSL https://dl.google.com/android/repository/commandlinetools-linux-11076708_latest.zip -o /tmp/cmdline-tools.zip
+          unzip -q /tmp/cmdline-tools.zip -d /tmp/android-cmdline
+          mv /tmp/android-cmdline/cmdline-tools "$HOME/android-sdk/cmdline-tools/latest"
+          echo "ANDROID_HOME=$HOME/android-sdk" >> "$GITHUB_ENV"
+          echo "$HOME/android-sdk/cmdline-tools/latest/bin" >> "$GITHUB_PATH"
+          yes | "$HOME/android-sdk/cmdline-tools/latest/bin/sdkmanager" --sdk_root="$HOME/android-sdk" --licenses >/dev/null || true
+          "$HOME/android-sdk/cmdline-tools/latest/bin/sdkmanager" --sdk_root="$HOME/android-sdk" 'platforms;android-35' 'build-tools;34.0.0' 'ndk;24.0.8215888' 'cmake;3.22.1'
       - name: Patch D2Android source (fail closed on changes)
         run: python3 work/online_patch.py upstream/source
       - name: Build runtime and Windows game module
