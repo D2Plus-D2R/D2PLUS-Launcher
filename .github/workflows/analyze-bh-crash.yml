@@ -1,0 +1,47 @@
+name: Analyze BH 1.9.9 runtime crash
+on:
+  push:
+    branches: [slashdiablo-bh-crash-analysis]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  disassemble-crash:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Inspect exact BH release DLL at RVA 0x95CE9
+        run: |
+          set -euo pipefail
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq binutils-mingw-w64-i686
+          curl -fL --retry 3 -o BH.dll https://github.com/planqi/slashdiablo-maphack/releases/download/1.9.9/BH.dll
+          sha256sum BH.dll
+          python3 - <<'PY'
+          import struct
+          data=open('BH.dll','rb').read()
+          pe=struct.unpack_from('<I',data,0x3c)[0]
+          opt=pe+24
+          base=struct.unpack_from('<I',data,opt+28)[0]
+          nsec=struct.unpack_from('<H',data,pe+6)[0]
+          section=opt+struct.unpack_from('<H',data,pe+20)[0]
+          rva=0x95CE9
+          print(f'BH DLL image base 0x{base:08X}; failing RVA 0x{rva:X}; virtual address 0x{base+rva:X}')
+          for i in range(nsec):
+              ent=section+40*i
+              name=data[ent:ent+8].split(b'\0')[0].decode()
+              virtual_size, virtual_addr, raw_size, raw_offset=struct.unpack_from('<IIII',data,ent+8)
+              print(f'section {name}: RVA 0x{virtual_addr:08X} size {virtual_size}; file 0x{raw_offset:X} size {raw_size}')
+              if virtual_addr<=rva<virtual_addr+max(virtual_size,raw_size):
+                  off=raw_offset+rva-virtual_addr
+                  print(f'ERROR_SITE: file offset 0x{off:X}; context hex {data[off-36:off+48].hex(" ")}')
+                  # The binary slice includes a little extra; disassemble from multiple preceding offsets
+                  # to avoid an invalid first-instruction boundary.
+                  st=off-0x200
+                  open('crash_slice.bin','wb').write(data[st:off+0x180])
+                  open('crash_address.txt','w').write(str(rva-0x200))
+          PY
+          printf 'Disassembly near the crash site (RVA):\n'
+          objdump -D -b binary -m i386 -M intel --adjust-vma=$((0x95CE9-0x200)) crash_slice.bin | tail -n 220
