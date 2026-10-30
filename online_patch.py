@@ -79,7 +79,7 @@ replace("winlator/app/src/main/java/com/winlator/d2/D2Saves.java",
 'public static final String BACKUP_FOLDER = "D2Android/Sicherungen";',
 'public static final String BACKUP_FOLDER = "SlashDiabloMobile/Backups";')
 replace("winlator/app/build.gradle",
-"applicationId 'at.d2android'","applicationId 'at.slashdiablo.touch'")
+"applicationId 'at.d2android'","applicationId 'at.slashmobi'")
 replace("winlator/app/build.gradle",
 "resValue 'string', 'app_name', 'D2Android'",
 "resValue 'string', 'app_name', 'SlashDiablo Touch Alpha'")
@@ -87,6 +87,6 @@ replace("winlator/app/build.gradle",
 "resValue 'string', 'd2launch_label', 'D2Android'",
 "resValue 'string', 'd2launch_label', 'SlashDiablo Touch Alpha'")
 replace("winlator/gradle.properties",
-"d2PublicPackage=at.d2andrpub","d2PublicPackage=at.slashdiablo.touch")
+"d2PublicPackage=at.d2andrpub","d2PublicPackage=at.slashmobi")
 for path,value in changes.items(): path.write_text(value,encoding="utf-8")
 print("Patched",len(changes),"upstream source files")
