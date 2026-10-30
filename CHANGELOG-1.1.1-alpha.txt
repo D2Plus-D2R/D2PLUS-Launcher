@@ -1,3 +1,0 @@
-D2PLUS Alpha V1.1 Hotfix 1
-
-Restores Ritual Sigil names and the violet Accursed label, and slims the character-selection frames with the side figures removed. The complete mod and Windows launcher include the corrected files. Close D2R, reinstall using the same mod folder and save path, then start a new game. Existing characters are retained. The Android companion remains the signed Alpha V1.1 version.

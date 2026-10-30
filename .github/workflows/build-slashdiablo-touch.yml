@@ -1,0 +1,62 @@
+name: Build SlashDiablo Touch experimental APK
+on:
+  push:
+    branches: [slashdiablo-touch-build-01]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  android-apk:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    steps:
+      - name: Checkout isolated build harness
+        uses: actions/checkout@v4
+        with:
+          path: work
+      - name: Checkout public D2Android 1.5.0 sources
+        uses: actions/checkout@v4
+        with:
+          repository: N1v0k/D2Android-Releases
+          ref: f0856d0fcdb85cddf04cc874c102b47eb4b905f4
+          path: upstream
+      - name: Set up Java 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v3
+      - name: Install SDK and native compiler dependencies
+        run: |
+          yes | sdkmanager --licenses >/dev/null || true
+          sdkmanager 'platforms;android-35' 'build-tools;34.0.0' 'ndk;24.0.8215888' 'cmake;3.22.1'
+          sudo apt-get update -q
+          sudo apt-get install -y -q gcc-aarch64-linux-gnu libasound2-dev gcc-mingw-w64-i686 binutils-mingw-w64-i686 curl unzip xz-utils zstd python3
+      - name: Patch D2Android source (fail closed on changes)
+        run: python3 work/online_patch.py upstream/source
+      - name: Build runtime and Windows game module
+        working-directory: upstream/source
+        env:
+          CI: '1'
+        run: |
+          bash tools/fetch-winlator101.sh
+          bash tools/collect-licenses.sh
+          bash tools/build-runtime.sh --public
+          bash tools/build-mod.sh
+      - name: Assemble experimental signed APK
+        working-directory: upstream/source/winlator
+        run: |
+          KEYFILE="$RUNNER_TEMP/alpha-key.p12"
+          keytool -genkeypair -storetype PKCS12 -keystore "$KEYFILE" -alias d2android -keyalg RSA -keysize 3072 -validity 3650 -dname 'CN=SlashDiablo Touch Alpha' -storepass alpha123456 -keypass alpha123456 -noprompt
+          echo "sdk.dir=$ANDROID_HOME" > local.properties
+          chmod +x gradlew
+          ./gradlew --no-daemon assembleRelease -Pd2VersionName=1.5.0-slash-alpha01 -Pd2VersionCode=1001 -Pd2ReleaseKeystore="$KEYFILE" -Pd2ReleaseKeystorePassword=alpha123456
+      - name: Upload APK artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: SlashDiablo-Touch-Alpha01-APK-UNTESTED
+          path: upstream/source/winlator/app/build/outputs/apk/release/*.apk
+          if-no-files-found: error

@@ -1,7 +1,0 @@
-D2PLUS Alpha V1.1.2
-
-Includes the current working gameplay snapshot and a proper standalone D2RMM package.
-Fixes clipped item artwork and missing equipped models, improves Accursed tooltips,
-adds Ritual Sigil storage and updates the loading splash and character-selection UI.
-The bundled editor understands the additional Accursed tooltip stats.
-Keep your existing output mod name and back up saves before installing.
