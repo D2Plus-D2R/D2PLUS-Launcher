@@ -43,5 +43,37 @@ jobs:
                   open('crash_slice.bin','wb').write(data[st:off+0x180])
                   open('crash_address.txt','w').write(str(rva-0x200))
           PY
+          printf 'Relevant static strings and nearby bytes:\\n'
+          python3 - <<'PY'
+          import struct
+          d=open("BH.dll","rb").read()
+          pe=struct.unpack_from("<I",d,0x3c)[0];opt=pe+24
+          n=struct.unpack_from("<H",d,pe+6)[0]
+          start=opt+struct.unpack_from("<H",d,pe+20)[0]
+          def off(rva):
+              for i in range(n):
+                  b=start+40*i
+                  size,va,rawsize,rawoff=struct.unpack_from("<IIII",d,b+8)
+                  if va<=rva<va+max(size,rawsize): return rawoff+rva-va
+              return -1
+          for addr in [0x107B3C,0x107B44,0x95CB3,0x99260,0x3A910]:
+              p=off(addr)
+              print(f'RVA 0x{addr:X}, file offset 0x{p:X}:', repr(d[p:p+64]))
+          PY
+          printf 'Disassembly near called function 0x99260 (RVA):\\n'
+          python3 - <<'PY'
+          import struct
+          d=open("BH.dll","rb").read(); pe=struct.unpack_from("<I",d,0x3c)[0];o=pe+24
+          n=struct.unpack_from("<H",d,pe+6)[0];start=o+struct.unpack_from("<H",d,pe+20)[0]
+          for addr in [0x99260,0x3A910]:
+              for i in range(n):
+                  b=start+40*i;sz,va,rs,off=struct.unpack_from("<IIII",d,b+8)
+                  if va<=addr<va+max(sz,rs):
+                      p=off+addr-va
+                      open(f"fn_{addr:x}.bin","wb").write(d[p-0x20:p+0x150])
+                      break
+          PY
+          objdump -D -b binary -m i386 -M intel --adjust-vma=$((0x99260-0x20)) fn_99260.bin | head -n 100
+          objdump -D -b binary -m i386 -M intel --adjust-vma=$((0x3A910-0x20)) fn_3a910.bin | head -n 90
           printf 'Disassembly near the crash site (RVA):\n'
           objdump -D -b binary -m i386 -M intel --adjust-vma=$((0x95CE9-0x200)) crash_slice.bin | tail -n 220
