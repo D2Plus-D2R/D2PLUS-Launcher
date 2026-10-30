@@ -1,7 +1,7 @@
-name: Build SlashDiablo Touch experimental APK
+name: Build SlashDiablo Touch BH test APK
 on:
   push:
-    branches: [slashdiablo-touch-build-01]
+    branches: [slashdiablo-touch-bh-test-01]
   workflow_dispatch:
 
 permissions:
@@ -50,17 +50,30 @@ jobs:
           bash tools/collect-licenses.sh
           bash tools/build-runtime.sh --public
           bash tools/build-mod.sh
+      - name: Add BH 1.9.9 DLL and map-only configuration
+        run: |
+          DEST=upstream/source/winlator/app/src/main/assets/d2/bh
+          mkdir -p "$DEST"
+          curl -fL --retry 3 --connect-timeout 20 -o "$DEST/BH.dll" 'https://github.com/planqi/slashdiablo-maphack/releases/download/1.9.9/BH.dll'
+          test "$(stat -c%s "$DEST/BH.dll")" = 1329152
+          file "$DEST/BH.dll"
+          file "$DEST/BH.dll" | grep -q 'PE32.*DLL'
+          sha256sum "$DEST/BH.dll"
+          cp work/BH_settings.cfg "$DEST/BH_settings.cfg"
+          cp work/BH.cfg "$DEST/BH.cfg"
+          curl -fL --retry 3 -o "$DEST/LICENSE.md" 'https://raw.githubusercontent.com/planqi/slashdiablo-maphack/master/LICENSE.md'
+          i686-w64-mingw32-objdump -p "$DEST/BH.dll" | grep 'DLL Name' || true
       - name: Assemble experimental signed APK
         working-directory: upstream/source/winlator
         run: |
           KEYFILE="$RUNNER_TEMP/alpha-key.p12"
-          keytool -genkeypair -storetype PKCS12 -keystore "$KEYFILE" -alias d2android -keyalg RSA -keysize 3072 -validity 3650 -dname 'CN=SlashDiablo Touch Alpha' -storepass alpha123456 -keypass alpha123456 -noprompt
+          keytool -genkeypair -storetype PKCS12 -keystore "$KEYFILE" -alias d2android -keyalg RSA -keysize 3072 -validity 3650 -dname 'CN=SlashDiablo Touch BH Test' -storepass alpha123456 -keypass alpha123456 -noprompt
           echo "sdk.dir=$ANDROID_HOME" > local.properties
           chmod +x gradlew
-          ./gradlew --no-daemon assembleRelease -Pd2VersionName=1.5.0-slash-alpha01 -Pd2VersionCode=1001 -Pd2ReleaseKeystore="$KEYFILE" -Pd2ReleaseKeystorePassword=alpha123456
+          ./gradlew --no-daemon assembleRelease -Pd2VersionName=1.5.0-slash-bh-test01 -Pd2VersionCode=1002 -Pd2ReleaseKeystore="$KEYFILE" -Pd2ReleaseKeystorePassword=alpha123456
       - name: Upload APK artifact
         uses: actions/upload-artifact@v4
         with:
-          name: SlashDiablo-Touch-Alpha01-APK-UNTESTED
+          name: SlashDiablo-Touch-BH-Test01-APK-UNTESTED
           path: upstream/source/winlator/app/build/outputs/apk/release/*.apk
           if-no-files-found: error
