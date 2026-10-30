@@ -1,7 +1,7 @@
-name: Build SlashDiablo Touch BH Retry 03 APK
+name: Build SlashDiablo Touch BH Retry 04 APK
 on:
   push:
-    branches: [slashdiablo-touch-bh-retry-03]
+    branches: [slashdiablo-touch-bh-retry-04]
   workflow_dispatch:
 
 permissions:
@@ -67,13 +67,13 @@ jobs:
         working-directory: upstream/source/winlator
         run: |
           KEYFILE="$RUNNER_TEMP/alpha-key.p12"
-          keytool -genkeypair -storetype PKCS12 -keystore "$KEYFILE" -alias d2android -keyalg RSA -keysize 3072 -validity 3650 -dname 'CN=SlashDiablo Touch BH Retry 03' -storepass alpha123456 -keypass alpha123456 -noprompt
+          keytool -genkeypair -storetype PKCS12 -keystore "$KEYFILE" -alias d2android -keyalg RSA -keysize 3072 -validity 3650 -dname 'CN=SlashDiablo Touch BH Retry 04' -storepass alpha123456 -keypass alpha123456 -noprompt
           echo "sdk.dir=$ANDROID_HOME" > local.properties
           chmod +x gradlew
-          ./gradlew --no-daemon assembleRelease -Pd2VersionName=1.5.0-slash-bh-retry03 -Pd2VersionCode=1004 -Pd2ReleaseKeystore="$KEYFILE" -Pd2ReleaseKeystorePassword=alpha123456
+          ./gradlew --no-daemon assembleRelease -Pd2VersionName=1.5.0-slash-bh-retry04 -Pd2VersionCode=1005 -Pd2ReleaseKeystore="$KEYFILE" -Pd2ReleaseKeystorePassword=alpha123456
       - name: Upload APK artifact
         uses: actions/upload-artifact@v4
         with:
-          name: SlashDiablo-Touch-BH-Retry03-APK-UNTESTED
+          name: SlashDiablo-Touch-BH-Retry04-APK-UNTESTED
           path: upstream/source/winlator/app/build/outputs/apk/release/*.apk
           if-no-files-found: error
