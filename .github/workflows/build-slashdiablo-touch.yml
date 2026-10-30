@@ -1,7 +1,7 @@
-name: Build SlashDiablo Touch BH Retry 04 APK
+name: Build SlashDiablo Touch BH Retry 05 APK
 on:
   push:
-    branches: [slashdiablo-touch-bh-retry-04]
+    branches: [slashdiablo-touch-bh-retry-05]
   workflow_dispatch:
 
 permissions:
@@ -55,6 +55,11 @@ jobs:
           DEST=upstream/source/winlator/app/src/main/assets/d2/bh
           mkdir -p "$DEST"
           curl -fL --retry 3 --connect-timeout 20 -o "$DEST/BH.dll" 'https://github.com/planqi/slashdiablo-maphack/releases/download/1.9.9/BH.dll'
+          curl -fL --retry 3 --connect-timeout 20 -o "$DEST/StormLib.dll" 'https://raw.githubusercontent.com/planqi/slashdiablo-maphack/master/ThirdParty/StormLib.dll'
+          test "$(stat -c%s "$DEST/StormLib.dll")" = 1251840
+          file "$DEST/StormLib.dll" | grep -q 'PE32.*DLL'
+          sha256sum "$DEST/StormLib.dll"
+          i686-w64-mingw32-objdump -p "$DEST/StormLib.dll" | grep -E 'SFileOpenArchive|SFileOpenFileEx|SFileReadFile' || true
           test "$(stat -c%s "$DEST/BH.dll")" = 1329152
           file "$DEST/BH.dll"
           file "$DEST/BH.dll" | grep -q 'PE32.*DLL'
@@ -67,13 +72,13 @@ jobs:
         working-directory: upstream/source/winlator
         run: |
           KEYFILE="$RUNNER_TEMP/alpha-key.p12"
-          keytool -genkeypair -storetype PKCS12 -keystore "$KEYFILE" -alias d2android -keyalg RSA -keysize 3072 -validity 3650 -dname 'CN=SlashDiablo Touch BH Retry 04' -storepass alpha123456 -keypass alpha123456 -noprompt
+          keytool -genkeypair -storetype PKCS12 -keystore "$KEYFILE" -alias d2android -keyalg RSA -keysize 3072 -validity 3650 -dname 'CN=SlashDiablo Touch BH Retry 05' -storepass alpha123456 -keypass alpha123456 -noprompt
           echo "sdk.dir=$ANDROID_HOME" > local.properties
           chmod +x gradlew
-          ./gradlew --no-daemon assembleRelease -Pd2VersionName=1.5.0-slash-bh-retry04 -Pd2VersionCode=1005 -Pd2ReleaseKeystore="$KEYFILE" -Pd2ReleaseKeystorePassword=alpha123456
+          ./gradlew --no-daemon assembleRelease -Pd2VersionName=1.5.0-slash-bh-retry05 -Pd2VersionCode=1006 -Pd2ReleaseKeystore="$KEYFILE" -Pd2ReleaseKeystorePassword=alpha123456
       - name: Upload APK artifact
         uses: actions/upload-artifact@v4
         with:
-          name: SlashDiablo-Touch-BH-Retry04-APK-UNTESTED
+          name: SlashDiablo-Touch-BH-Retry05-APK-UNTESTED
           path: upstream/source/winlator/app/build/outputs/apk/release/*.apk
           if-no-files-found: error
