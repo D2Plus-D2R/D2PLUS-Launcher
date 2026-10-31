@@ -5,13 +5,13 @@
   "files": [
     {
       "name": "D2PLUS_AlphaV1.4_Complete_D2RMM.zip",
-      "size": 875776597,
-      "sha256": "15bfe481b03b393278d81db7f58c8ff0d179441d1291e38177b79a63a8a11287"
+      "size": 875781601,
+      "sha256": "d3e8925fa0bc6b8bfd89232e9f738b70da6a9aa6b816c83cc36d0f974bbfdecd"
     },
     {
       "name": "D2PLUS_AlphaV1.4_Installed_Snapshot.zip",
       "size": 875655332,
-      "sha256": "21a60de7f5e320fee40cd6b5f4de13d9e49d548f96d15e06e62fae56c606dc34"
+      "sha256": "9a4cf37b83810ed2e4c24e1e3d7440e8b1b6171cfac57cfec65a86baf9ff33ea"
     }
   ]
 }
