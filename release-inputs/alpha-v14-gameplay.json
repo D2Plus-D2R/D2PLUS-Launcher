@@ -1,0 +1,2940 @@
+{
+  "version": "1.4.0-alpha",
+  "archiveSha256": "9b196424d5850461d1728edc6e6f4600a2e2ddd05f0013f6f5522a31064e2b90",
+  "files": [
+    {
+      "path": "data/d2plus/accursed-system.json",
+      "size": 14146,
+      "sha256": "918566a6de14a9ef746ef04cf04a3c45d846b883dba8d962808fa41de39d4c10"
+    },
+    {
+      "path": "data/global/excel/armor.txt",
+      "size": 81695,
+      "sha256": "345e8aeb862b39c1ad99cda7295b9794655f6cf956c9ad35b11d7c81865244ce"
+    },
+    {
+      "path": "data/global/excel/automagic.txt",
+      "size": 4513,
+      "sha256": "88080dc69e63fee03ac15a27f96bb835b101d3a686e0faf7ea371f02c6aa8acf"
+    },
+    {
+      "path": "data/global/excel/cubemain.txt",
+      "size": 1311288,
+      "sha256": "56d2bd2b53373a545df30e36274833cb70c96e7bbb4bd919af6bef124b765e74"
+    },
+    {
+      "path": "data/global/excel/itemstatcost.txt",
+      "size": 52364,
+      "sha256": "5a8a52d5676e67ee0db9e206ca4a4268d301f7da8d1916c0b58d4182ee41b4ca"
+    },
+    {
+      "path": "data/global/excel/itemtypes.txt",
+      "size": 10943,
+      "sha256": "5d29933f407b5476a15ec2da10f3e95c318119670829a7a893634aba26dbcc06"
+    },
+    {
+      "path": "data/global/excel/levels.txt",
+      "size": 83731,
+      "sha256": "3255f3e2a1a6eb7788caeb0bf612742a0c8a44d2cd8a81300a81888378e419d4"
+    },
+    {
+      "path": "data/global/excel/lvlprest.txt",
+      "size": 130656,
+      "sha256": "00012570cdf15e309b629db62877b70f44ac5ff54248f2c0fb761ba823ffdbd5"
+    },
+    {
+      "path": "data/global/excel/lvlwarp.txt",
+      "size": 5661,
+      "sha256": "dd2ef83982bb4fa9a8bff0fd8234c42acb25d6230ee6fb0519c2f7332537b97f"
+    },
+    {
+      "path": "data/global/excel/misc.txt",
+      "size": 114829,
+      "sha256": "501c3c902c85babeda3eda2a205a9f71ae25815e8d6b98e571bb62770f338425"
+    },
+    {
+      "path": "data/global/excel/monpreset.txt",
+      "size": 3768,
+      "sha256": "1388e3fab672aa6793101e18e4479cbb59ab4b8a1f96c6c40e1de4b631615552"
+    },
+    {
+      "path": "data/global/excel/monprop.txt",
+      "size": 2759,
+      "sha256": "c8171169289a53d8be603de2577994e777d4f3988913bbfb4b570dd38304f3f6"
+    },
+    {
+      "path": "data/global/excel/monsounds.txt",
+      "size": 25889,
+      "sha256": "6f737701ce5f99e8e46adcf82e6891f67d30fba83466f53b45a70251c64ee12b"
+    },
+    {
+      "path": "data/global/excel/monstats.txt",
+      "size": 515720,
+      "sha256": "c16f4a03756f6106f02b492fc48ef5328182050140eaa4956c3ab5597d6d2a36"
+    },
+    {
+      "path": "data/global/excel/monstats2.txt",
+      "size": 139743,
+      "sha256": "df079c9823d59e69735dbe175ca1fbfcf1edc89d353fa3c0208dcdf83fafdfcd"
+    },
+    {
+      "path": "data/global/excel/objects.txt",
+      "size": 210410,
+      "sha256": "511214310ac8c9820a3e2916fbf14f3ecf2dff74507f502ae6fe4fe93011c823"
+    },
+    {
+      "path": "data/global/excel/objpreset.txt",
+      "size": 13409,
+      "sha256": "450cd0e24aff8baa2ce136cb45fd1c6d2461d6c84369d3b442300994fe5d3beb"
+    },
+    {
+      "path": "data/global/excel/overlay.txt",
+      "size": 33116,
+      "sha256": "0752c0d0a9705891eeae78b12e3b8c5f969314e20ebe0db7846fd7d007d7f0eb"
+    },
+    {
+      "path": "data/global/excel/properties.txt",
+      "size": 48553,
+      "sha256": "4304c9a07c48b9f97ee6b20da495382004c4c7c4954c404e0362aad0ad1c9433"
+    },
+    {
+      "path": "data/global/excel/runes.txt",
+      "size": 35805,
+      "sha256": "3367ae39366296b302f34b8cde9258d47419e1322ffd64219c6c1efbef103224"
+    },
+    {
+      "path": "data/global/excel/setitems.txt",
+      "size": 65234,
+      "sha256": "3dc53b0bcda8f870e0210437bcf2f9e12d779c3843eafc27a54001cfd7a70f32"
+    },
+    {
+      "path": "data/global/excel/sets.txt",
+      "size": 16558,
+      "sha256": "3c33b727bd3ed6a9382dd505a282733e5a2e44c9fa2f854006bfc196e2819a7e"
+    },
+    {
+      "path": "data/global/excel/skilldesc.txt",
+      "size": 107254,
+      "sha256": "8d73481656d8c705b21ffc682c9d9bb32a1cbbbe316dbf556f65c8b3b524b1ed"
+    },
+    {
+      "path": "data/global/excel/skills.txt",
+      "size": 303635,
+      "sha256": "aa67d87151603d2ac3aee08f3de769ca6dd68830f56c659ed3c1b7d0f5f6fb48"
+    },
+    {
+      "path": "data/global/excel/sounds.txt",
+      "size": 2025598,
+      "sha256": "0314fe8eb599ad8d5051af8100f58af1ae8eec2d4b5af100a1a8cb1e5a54a061"
+    },
+    {
+      "path": "data/global/excel/states.txt",
+      "size": 32774,
+      "sha256": "4af76fae96eaffb8d6ec777cf115ae449230f61c412634bfe93c0ee9e75dcd05"
+    },
+    {
+      "path": "data/global/excel/superuniques.txt",
+      "size": 11498,
+      "sha256": "da2be35fe46f5bc46b330da2118d9c54995f72bb6aa759f2ee5850a8f0dcee5f"
+    },
+    {
+      "path": "data/global/excel/treasureclassex.txt",
+      "size": 183594,
+      "sha256": "14184e79f439fa549e9b852fe934a0fda5b720cbfa94ab35c5f770fff7958852"
+    },
+    {
+      "path": "data/global/excel/uniqueitems.txt",
+      "size": 144964,
+      "sha256": "4251ee36c889a24083a4ed3ea315ef71c988cbda2b2aa26d9550cd7d064536e6"
+    },
+    {
+      "path": "data/global/excel/weapons.txt",
+      "size": 119724,
+      "sha256": "3b13c4dfe852df675503cc277b0361f8b8af6387e89a06e1d26f08e025ace33e"
+    },
+    {
+      "path": "data/global/items/invdbag.dc6",
+      "size": 1594,
+      "sha256": "0109b2b8f47aabf64589dfe5883d7729c66c6047ce4a69bf209e1154e7141009"
+    },
+    {
+      "path": "data/global/sfx/monster/d2plus_sunkeeper/sunkeeper_soulstone.wav",
+      "size": 498714,
+      "sha256": "8ca6d76b777a9b9234f56deae1b97833b36d7924200d94fd7ae57543eb6ec669"
+    },
+    {
+      "path": "data/global/sfx/monster/d2plus_sunkeeper/sunkeeper_sun.wav",
+      "size": 406554,
+      "sha256": "96f1ef8dae3576096d53beb891195c99a1a9e2d0732604aba62850668fd0ce34"
+    },
+    {
+      "path": "data/global/tiles/act3/combined_ds1.bin",
+      "size": 6577124,
+      "sha256": "03664953f585c0db620473670fa62a635b6f3e34d20fb5072f74874783adfb98"
+    },
+    {
+      "path": "data/global/tiles/act3/docktown/docktown3.ds1",
+      "size": 118210,
+      "sha256": "b4cba5fe14bc74499329a03f38d0f793141660e934cbe2833a03bf64721f466f"
+    },
+    {
+      "path": "data/global/tiles/act3/temple/temple11.ds1",
+      "size": 68480,
+      "sha256": "e479e382916b7a59df992e85c9b53ca23a443ab907b771ee1a901a0745f5cf28"
+    },
+    {
+      "path": "data/hd/character/enemy/d2plus_sunkeeper/animation/attack1.animation",
+      "size": 85596,
+      "sha256": "4389f17e97d5964a3e1ee649e90e112fbe11b70bc7b1bc41497b22c5ae648657"
+    },
+    {
+      "path": "data/hd/character/enemy/d2plus_sunkeeper/animation/attack2.animation",
+      "size": 98330,
+      "sha256": "b999f069ffcbcd007102701e634c6d378f2210a1b30364ec69285aa0613f32fa"
+    },
+    {
+      "path": "data/hd/character/enemy/d2plus_sunkeeper/animation/block.animation",
+      "size": 20746,
+      "sha256": "08a047e9fcadaedf30d3f40f17b2d00cbdd4eb08db502b16c4fbc5b9ab093da1"
+    },
+    {
+      "path": "data/hd/character/enemy/d2plus_sunkeeper/animation/cast.animation",
+      "size": 28772,
+      "sha256": "40079a287dbc9a6db74177b6eb0c6e843c70e788d97ddaa9addb6670e7fedb35"
+    },
+    {
+      "path": "data/hd/character/enemy/d2plus_sunkeeper/animation/combined.animations",
+      "size": 498458,
+      "sha256": "3914abbb56def0a986c7c504bc403d3e11239138cece22aa8c9c10f3b233a264"
+    },
+    {
+      "path": "data/hd/character/enemy/d2plus_sunkeeper/animation/combined.timelines",
+      "size": 8596,
+      "sha256": "f90d8b083757824c0f03c1e8416d3421e56e37900b7b874013def2a4a86727f8"
+    },
+    {
+      "path": "data/hd/character/enemy/d2plus_sunkeeper/animation/dead.animation",
+      "size": 7320,
+      "sha256": "4e8e9541e8b13acf2ed8b33957ba37a298b934acfc38e8a430657e42c32f9d6c"
+    },
+    {
+      "path": "data/hd/character/enemy/d2plus_sunkeeper/animation/death.animation",
+      "size": 114122,
+      "sha256": "9c579d5b5327bc1264a9790573aefac2b9c6b5532682286e013c44504f3ede2f"
+    },
+    {
+      "path": "data/hd/character/enemy/d2plus_sunkeeper/animation/gethit.animation",
+      "size": 19014,
+      "sha256": "f88ebc4667058c03f783986cdac5a69dce302b40e33d20f32012e11e6122e2fd"
+    },
+    {
+      "path": "data/hd/character/enemy/d2plus_sunkeeper/animation/knockback.animation",
+      "size": 19010,
+      "sha256": "994538a40f8cb4f3dd9fb8e61e4a1615c47d90a1178e467b0d42b5a24f4f14bb"
+    },
+    {
+      "path": "data/hd/character/enemy/d2plus_sunkeeper/animation/neutral.animation",
+      "size": 83710,
+      "sha256": "aa574cfba9435c948f3220ef0b29ace1adc7da38b8d149cd262e4bbf3c51271b"
+    },
+    {
+      "path": "data/hd/character/enemy/d2plus_sunkeeper/animation/skill1.animation",
+      "size": 25806,
+      "sha256": "1a5106a17a2c7bd2d6b4f1f1ee03090f93cf7281cd59d9b59a0eaf68c8a0ee9e"
+    },
+    {
+      "path": "data/hd/character/enemy/d2plus_sunkeeper/animation/skill2.animation",
+      "size": 28776,
+      "sha256": "bd39a31aeb24bc341c2955315567396103cec2bd56862543e9d245e860645d57"
+    },
+    {
+      "path": "data/hd/character/enemy/d2plus_sunkeeper/animation/skill3.animation",
+      "size": 28776,
+      "sha256": "cf2b0efbc50149926bd31cdd5d69aaff0d37eb6310c3a7a681c19c878a3e9c15"
+    },
+    {
+      "path": "data/hd/character/enemy/d2plus_sunkeeper/animation/skill4.animation",
+      "size": 31684,
+      "sha256": "1cd4823e97b334a05e567b95f099b81a393b4d2aebea6a5a3677e964429fbc61"
+    },
+    {
+      "path": "data/hd/character/enemy/d2plus_sunkeeper/animation/walk.animation",
+      "size": 54712,
+      "sha256": "3898c9158e1bfa22e885db3e0c2d4f325bf68fd2efbcae0cd75764707e7a3ed0"
+    },
+    {
+      "path": "data/hd/character/enemy/d2plus_sunkeeper/skeleton/sunkeeper.skeleton",
+      "size": 4468,
+      "sha256": "0d47b371d359cb18ced5f8e6a7b29046be71b2ab46a83ae6b71458e618f61bd2"
+    },
+    {
+      "path": "data/hd/character/enemy/d2plus_sunkeeper/state_machine.json",
+      "size": 58542,
+      "sha256": "176cce58fdea199c20641457db07952e30104a276097770c13ed0a89166a210c"
+    },
+    {
+      "path": "data/hd/character/enemy/d2plus_sunkeeper/textures/sunkeeper_alb.texture",
+      "size": 5592564,
+      "sha256": "f3caee0ee96582bf194abfbf3e24ba0fb517f5bf46a737689101ed0446cc88b7"
+    },
+    {
+      "path": "data/hd/character/enemy/d2plus_sunkeeper/textures/sunkeeper_nrm.texture",
+      "size": 5592564,
+      "sha256": "9ceada01dad5e1f892b720275141aff4c6905ad203770efdff531a3b5970a636"
+    },
+    {
+      "path": "data/hd/character/enemy/d2plus_sunkeeper/textures/sunkeeper_orm.texture",
+      "size": 5592564,
+      "sha256": "2edbd81a81a6048e5a60af96db945179b708447815243c14daefb60c7f06c3b9"
+    },
+    {
+      "path": "data/hd/character/enemy/d2plus_sunkeeper/torso.model",
+      "size": 388880,
+      "sha256": "06bb6cb96a6066b06d8e46bf84b49d8c6d1a3765f0950080b33978bdaeb094df"
+    },
+    {
+      "path": "data/hd/character/enemy/d2plus_sunkeeper/torso_lod0.model",
+      "size": 388880,
+      "sha256": "06bb6cb96a6066b06d8e46bf84b49d8c6d1a3765f0950080b33978bdaeb094df"
+    },
+    {
+      "path": "data/hd/character/enemy/d2plus_sunkeeper/torso_lod1.model",
+      "size": 286316,
+      "sha256": "d71c3242ca32ac5ee549b1fe86339fc1f5bd438dee81bebd56b6e9978857b5f2"
+    },
+    {
+      "path": "data/hd/character/enemy/d2plus_sunkeeper/torso_lod2.model",
+      "size": 200792,
+      "sha256": "d8333e41c1dba596b829982ee47f62555fd9088fbae1d5e78a591f577b9788b1"
+    },
+    {
+      "path": "data/hd/character/enemy/d2plus_sunkeeper/torso_lod3.model",
+      "size": 127132,
+      "sha256": "628fb281cdef986a41fe280619d6d0d68d75189c92b8d817eac11d91cb932f46"
+    },
+    {
+      "path": "data/hd/character/enemy/d2plus_sunkeeper/torso_lod4.model",
+      "size": 64864,
+      "sha256": "3e719f2de52668813c8b01322b91bbc9b99b5f035e4d123d6905e9bfb4c40f55"
+    },
+    {
+      "path": "data/hd/character/enemy/d2plus_sunkeeper.json",
+      "size": 10159,
+      "sha256": "a01a5304eb28acb2888be91c627481fc78afef0b6be3e9157bf3d8d97985ba9e"
+    },
+    {
+      "path": "data/hd/character/monsters.json",
+      "size": 22973,
+      "sha256": "b2d2763b1091ff8513cb829eacc67f9636dffa75dfbbc9fcd8dfe6725417a6da"
+    },
+    {
+      "path": "data/hd/env/model/d2plus/shattered_sun/sun_altar_lod0.model",
+      "size": 211368,
+      "sha256": "7ffeae9ac75014bf36299f062ddf9f267aea2b31805167a9c274dfde11f71b92"
+    },
+    {
+      "path": "data/hd/env/model/d2plus/shattered_sun/sun_altar_lod1.model",
+      "size": 126464,
+      "sha256": "66e657bf080f6b887c71bfdd6c9699410aba8453da86a976eacc714f0611824b"
+    },
+    {
+      "path": "data/hd/env/model/d2plus/shattered_sun/sun_altar_lod2.model",
+      "size": 78820,
+      "sha256": "0ceccf3ed6ee656444371512be9b7f6e65d08a3dd417ba42ae474246702989a9"
+    },
+    {
+      "path": "data/hd/env/model/d2plus/shattered_sun/sun_altar_lod3.model",
+      "size": 43572,
+      "sha256": "1bb111db612209f28bc00c5dfc4331c7333fadc0c09d8b5c6b97a31e748f1df2"
+    },
+    {
+      "path": "data/hd/env/model/d2plus/shattered_sun/sun_altar_lod4.model",
+      "size": 25220,
+      "sha256": "bcf1154db0b07dcc2603204e1a5e4a1f6f27eaa361400efc4139ca04a3e94762"
+    },
+    {
+      "path": "data/hd/env/model/d2plus/shattered_sun/sun_floor_lod0.model",
+      "size": 24532,
+      "sha256": "b41fa205095e5c395af01b6dd1cb771442f1ca546fe7ecab4112ba8c3b45061d"
+    },
+    {
+      "path": "data/hd/env/model/d2plus/shattered_sun/sun_floor_lod1.model",
+      "size": 24544,
+      "sha256": "27d788f7102034f0ed0de531e40c28150ff69988c4a79b1abad4d2f1c3c2c652"
+    },
+    {
+      "path": "data/hd/env/model/d2plus/shattered_sun/sun_floor_lod2.model",
+      "size": 24544,
+      "sha256": "494be5a3dc2458c1f8d7d5882e3918a62d370bdb83a75225845c3aa1f29b3c28"
+    },
+    {
+      "path": "data/hd/env/model/d2plus/shattered_sun/sun_floor_lod3.model",
+      "size": 24544,
+      "sha256": "dc10e514781b4382b5376b43ddeabe2d3cf162cea109dacac70cce3720672fb9"
+    },
+    {
+      "path": "data/hd/env/model/d2plus/shattered_sun/sun_floor_lod4.model",
+      "size": 19124,
+      "sha256": "7dc04526bf13716a26658440b210c02768179253770eb0fc768948af561a6c9a"
+    },
+    {
+      "path": "data/hd/env/model/d2plus/shattered_sun/sun_fragment_lod0.model",
+      "size": 75200,
+      "sha256": "4e342bd655825b6888f1d6d9cdaedb0be053344618299b1b8fa891dc42aec23a"
+    },
+    {
+      "path": "data/hd/env/model/d2plus/shattered_sun/sun_fragment_lod1.model",
+      "size": 64584,
+      "sha256": "9451fd9488bcac7129c0694e00f19eba330d049f06fd49dcf73f3062d62dc601"
+    },
+    {
+      "path": "data/hd/env/model/d2plus/shattered_sun/sun_fragment_lod2.model",
+      "size": 41688,
+      "sha256": "efe3d609cc75a58fd64d41f05b697843095f28421084980f79a46e09a5270a2c"
+    },
+    {
+      "path": "data/hd/env/model/d2plus/shattered_sun/sun_fragment_lod3.model",
+      "size": 26428,
+      "sha256": "b47a814c59c5ac3d021e66f77262c91195cad143a3441b762c6efb1a4e3efae2"
+    },
+    {
+      "path": "data/hd/env/model/d2plus/shattered_sun/sun_fragment_lod4.model",
+      "size": 17696,
+      "sha256": "90757ed60ac2538baaf2eebf0d3833b65b513e4485bd93b28c56d36156665f9c"
+    },
+    {
+      "path": "data/hd/env/model/d2plus/shattered_sun/sun_relief_lod0.model",
+      "size": 109516,
+      "sha256": "fd98417b6c5981e75350b29a1b7a4bfbb7791751a8f6cc73b72c8aabdbae22be"
+    },
+    {
+      "path": "data/hd/env/model/d2plus/shattered_sun/sun_relief_lod1.model",
+      "size": 67952,
+      "sha256": "1041e33e9f70e5689f073a3c13a162d13f6b8889cace9874eb9adaf33d3da1f2"
+    },
+    {
+      "path": "data/hd/env/model/d2plus/shattered_sun/sun_relief_lod2.model",
+      "size": 43308,
+      "sha256": "6629d0cf8635c7f5dd14d82ac161e2cff8724e9eb006b37b612233658800205a"
+    },
+    {
+      "path": "data/hd/env/model/d2plus/shattered_sun/sun_relief_lod3.model",
+      "size": 27392,
+      "sha256": "0647b1bc108cdfa3d441d77fe52bda873b5b410c5c6521456a1d454208986363"
+    },
+    {
+      "path": "data/hd/env/model/d2plus/shattered_sun/sun_relief_lod4.model",
+      "size": 18012,
+      "sha256": "afd96f0370f648fb442cbeca76b04d9b10fff077bb4e2827dfcc2e84a2dfa563"
+    },
+    {
+      "path": "data/hd/env/preset/act3/docktown/docktown3.json",
+      "size": 7687320,
+      "sha256": "c92a825e42838b972d0c1199a0d22f8ca94a6d75c488589fd6ff3847e4e29b9e"
+    },
+    {
+      "path": "data/hd/env/preset/act3/temple/temple11.json",
+      "size": 2356995,
+      "sha256": "236f087c734dcaacc08625b8d4131052bb1a52a8aa213bc66dd6018ace8a3e35"
+    },
+    {
+      "path": "data/hd/env/texture/d2plus/shattered_sun/reliquary_alb.texture",
+      "size": 5592564,
+      "sha256": "859463917ed5bc0b717f912ef1a6f7366760c9bf427b3ea31fec3b529828c0f5"
+    },
+    {
+      "path": "data/hd/env/texture/d2plus/shattered_sun/reliquary_nrm.texture",
+      "size": 5592564,
+      "sha256": "e54de58faeeb4236beb65505fef8c68ca89199397563d8aae5dbb0c88dab7346"
+    },
+    {
+      "path": "data/hd/env/texture/d2plus/shattered_sun/reliquary_orm.texture",
+      "size": 5592564,
+      "sha256": "926f5c7b37ccd55f0e94d90f99a0aebeb97a6485d74671375d7021f08a3064fc"
+    },
+    {
+      "path": "data/hd/global/sfx/monster/d2plus_sunkeeper/sunkeeper_soulstone.flac",
+      "size": 242488,
+      "sha256": "356fd5751b51c1038a125f030822ed37366b34bbea2c2f3215399015548e19d9"
+    },
+    {
+      "path": "data/hd/global/sfx/monster/d2plus_sunkeeper/sunkeeper_sun.flac",
+      "size": 210423,
+      "sha256": "19ab63ab822fe0c2390c3970acfe28058a7da80959621daf0c46aa7b692d9a93"
+    },
+    {
+      "path": "data/hd/global/ui/d2plus/loading/d2plus_alpha11.lowend.sprite",
+      "size": 2073640,
+      "sha256": "cd54796ac14bd508ba8d26f5fdfd8eabef8870ef11f8096f5cb513140228aeb5"
+    },
+    {
+      "path": "data/hd/global/ui/d2plus/loading/d2plus_alpha11.sprite",
+      "size": 8294440,
+      "sha256": "75f7e4a30e654e70450da910d0801f1277601dd44abff6c87a577bfe6c38255b"
+    },
+    {
+      "path": "data/hd/global/ui/items/armor/d2plus/alpha11/breath_of_the_first_winter.lowend.sprite",
+      "size": 38456,
+      "sha256": "5df137a275e186d9bf52beef615cc9f3a631f90444383d9f71189ceecfe3bb2f"
+    },
+    {
+      "path": "data/hd/global/ui/items/armor/d2plus/alpha11/breath_of_the_first_winter.sprite",
+      "size": 153704,
+      "sha256": "4875eae3c686416ce0e0172e20f9ddcb178647f20d25d40373684021b237150b"
+    },
+    {
+      "path": "data/hd/global/ui/items/armor/d2plus/alpha11/crown_of_the_worldfire.lowend.sprite",
+      "size": 38456,
+      "sha256": "d631d8f16f91bd78b29e98d6fa3e51c376270badd614433c16a54e00c2872397"
+    },
+    {
+      "path": "data/hd/global/ui/items/armor/d2plus/alpha11/crown_of_the_worldfire.sprite",
+      "size": 153704,
+      "sha256": "82677c9f52a7343c7d4b335dc3772633070e332ab42fdc100e84858e79b32d08"
+    },
+    {
+      "path": "data/hd/global/ui/items/armor/d2plus/alpha11/visage_of_the_worldroot.lowend.sprite",
+      "size": 38456,
+      "sha256": "03db4217cc17c1f5736eb67a3d7c62a3d40d7d7aa852232a7d65715236012802"
+    },
+    {
+      "path": "data/hd/global/ui/items/armor/d2plus/alpha11/visage_of_the_worldroot.sprite",
+      "size": 153704,
+      "sha256": "99cced383c32963eeed5f8d4579d8d2c866851a55b7c60b7bb4f71affc4bdc3f"
+    },
+    {
+      "path": "data/hd/global/ui/items/armor/d2plus/blackstar_dominion/crown.lowend.sprite",
+      "size": 38456,
+      "sha256": "64e66419ed8c1cfdde9fb24371ac25ca921ce3dd7551660e540291351f00ba1d"
+    },
+    {
+      "path": "data/hd/global/ui/items/armor/d2plus/blackstar_dominion/crown.sprite",
+      "size": 153704,
+      "sha256": "3d5072bd9f1474c503a4c139a51e290ee5e8d88b188366d78e7641577abad71e"
+    },
+    {
+      "path": "data/hd/global/ui/items/armor/d2plus/blackstar_dominion/keepsake.lowend.sprite",
+      "size": 38456,
+      "sha256": "b05cf3257e987c555edee4348eac393491d739ab181884852e0b655f3706edf1"
+    },
+    {
+      "path": "data/hd/global/ui/items/armor/d2plus/blackstar_dominion/keepsake.sprite",
+      "size": 153704,
+      "sha256": "e0b7586e3079ce3e020a6f882cf1fb6b8316062e761b655be125b77f2321cf9a"
+    },
+    {
+      "path": "data/hd/global/ui/items/armor/d2plus/blackstar_dominion/raiment.lowend.sprite",
+      "size": 57664,
+      "sha256": "8a939e13b65426529b95ceaf3a43fd505e6cd5d08092832e39b43bfb2c8cc6cf"
+    },
+    {
+      "path": "data/hd/global/ui/items/armor/d2plus/blackstar_dominion/raiment.sprite",
+      "size": 230536,
+      "sha256": "45787ed72d3e19865e5d933d52ce45f5415b99a4c74a691376ab8a16e62c3f41"
+    },
+    {
+      "path": "data/hd/global/ui/items/misc/quest/d2plus_reward_bag.lowend.sprite",
+      "size": 38456,
+      "sha256": "3fb4e0f4512bad4ef12f9a61a715a6f3c8486cd17f45dab418195c328d491ede"
+    },
+    {
+      "path": "data/hd/global/ui/items/misc/quest/d2plus_reward_bag.sprite",
+      "size": 153704,
+      "sha256": "ffcaa40e59f3937b703ebc71d2c75869ceea7ba4dfed780819989f8765deb33f"
+    },
+    {
+      "path": "data/hd/global/ui/items/weapon/d2plus/blackstar_dominion/armament.lowend.sprite",
+      "size": 57664,
+      "sha256": "e2ae515c60db8118c019233758435a8cda1793b0bd65ffa1cc7b1fe1a1e8a30f"
+    },
+    {
+      "path": "data/hd/global/ui/items/weapon/d2plus/blackstar_dominion/armament.sprite",
+      "size": 230536,
+      "sha256": "0401d7f9d197d9c4fb9d6e09e7ee8bab91b770cc7350f6481af3f42b86131593"
+    },
+    {
+      "path": "data/hd/global/ui/items/weapon/d2plus/set082/necromancer_armament.lowend.sprite",
+      "size": 19248,
+      "sha256": "12c0e7188db261a964ba2e5f596d31d1b0ac23d80968e2355b0dcdba19e3750a"
+    },
+    {
+      "path": "data/hd/global/ui/items/weapon/d2plus/set082/necromancer_armament.sprite",
+      "size": 76872,
+      "sha256": "512c95fef9807d1454b9bb623d0ac738526ecc9126a4dd700daa03b8951ca593"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/alpha11/breath_of_the_first_winter.json",
+      "size": 4362,
+      "sha256": "a0d34c6b20cc3611b60fe0069479db76f970fe57e30187aab39de453ffad2f3e"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/alpha11/crown_of_the_worldfire.json",
+      "size": 4336,
+      "sha256": "0ce8e4333d9fe365173e8a56044271432e7a4edd98aa62f6650f15ef895a7f7c"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/alpha11/echo_of_the_first_war.json",
+      "size": 4300,
+      "sha256": "d213e614570e0dea0253121304153884f774953b39da0dc838601860945c2ab0"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/alpha11/testament_of_the_black_sun.json",
+      "size": 4307,
+      "sha256": "41543d117e11e9b9c0cc459edf43c60346537ee9b04dfc3a4cc85c9b41b4a249"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/alpha11/the_unbroken_heaven.json",
+      "size": 3683,
+      "sha256": "5766fdf0647612f29590327df0e7760d8ab55e3c41309565eefa84033f40c9ff"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/alpha11/visage_of_the_worldroot.json",
+      "size": 4342,
+      "sha256": "a233ef8c8f2a3d2cf3aa84793bc6b8e989ea2d3ca8f1f2b26cbda4db926bc696"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/archmagus/crown/model_lod0.model",
+      "size": 131392,
+      "sha256": "dd5f52fa8d9f9bee42d73969917eb1082ae440e1a6c46c7ab852c2f2996c9416"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/archmagus/crown/model_lod1.model",
+      "size": 114700,
+      "sha256": "127ead3677d20c34f5058d86a531faf2543d1026aab8a4c61aab44ecfeb60887"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/archmagus/crown/model_lod2.model",
+      "size": 88656,
+      "sha256": "e2ed1253fe31635c872bc5ae82b9abc9c976cc8f962e7e5e52aa59f25c86e3f8"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/archmagus/crown/model_lod3.model",
+      "size": 62764,
+      "sha256": "4084a2a09c7140e06cfa8dcf308ce3d3ccfd6beadc0020c7ac7acfb5b8444990"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/archmagus/crown/model_lod4.model",
+      "size": 42288,
+      "sha256": "5dcc5cffb28f02d3520c7f414157f79f034600c3d4262d11dffe526212f30fbc"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/blackstar_dominion/crown/model_lod0.model",
+      "size": 63724,
+      "sha256": "637536b6cf09c6a2b3201304ef308570945df45ed50cc1cbf991c467a6168058"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/blackstar_dominion/crown/model_lod1.model",
+      "size": 57256,
+      "sha256": "6960221d9351e170792d92c886b56800c314a0e12f4cf4fab9b079e973d26b05"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/blackstar_dominion/crown/model_lod2.model",
+      "size": 46752,
+      "sha256": "7db501c7f24b76cffe96984970056bbd91b403930a96c62901b71630429ca95f"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/blackstar_dominion/crown/model_lod3.model",
+      "size": 34340,
+      "sha256": "649ea97999f54a31fdeff7b53eb62957f5db6ad98fb2af8ffff53ec235d43215"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/blackstar_dominion/crown/model_lod4.model",
+      "size": 24608,
+      "sha256": "8b65d4739762a99aed5c3f017472eaa2b8d2a378ff59965cc20bf47080f905cc"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/blackstar_dominion/crown.json",
+      "size": 7407,
+      "sha256": "d8d82babd36ea69fe0f9805622111d25160a3b339e784ca2c80d7459aa8ee196"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/blackstar_dominion/keepsake/model_lod0.model",
+      "size": 74308,
+      "sha256": "a9f3e209293d1e4e03121248b8d36ecf2fde002ce7d102b97b2aca54e1c4a574"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/blackstar_dominion/keepsake/model_lod1.model",
+      "size": 65462,
+      "sha256": "437f28bddf88e5e282ced56b53688d77f5923641593428b7e162a86b57170756"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/blackstar_dominion/keepsake/model_lod2.model",
+      "size": 54154,
+      "sha256": "a802f28a0e05b6be91fa2409b39cc56fa078e2f2c4b38039cb8d70b8548db0e5"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/blackstar_dominion/keepsake/model_lod3.model",
+      "size": 43482,
+      "sha256": "3dfa9b2a2aa8815082768c8811920e78695547fbd18f8cce1431ad539de1067a"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/blackstar_dominion/keepsake/model_lod4.model",
+      "size": 34534,
+      "sha256": "0b0a62db1161bf7178b806f4157aad1478d33161a35dec23a68693a870bb9bee"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/blackstar_dominion/keepsake.json",
+      "size": 4187,
+      "sha256": "830fc2fa96e4fcb7c2349f7d16cdedda8c63b5c133335a8e2cd64605961eff53"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/blackstar_dominion/raiment/model_lod0.model",
+      "size": 72008,
+      "sha256": "39964c4904983147774c293ce4ac64255e62a22e623d7a292b57d5b2211ed50d"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/blackstar_dominion/raiment/model_lod1.model",
+      "size": 61980,
+      "sha256": "2d1cc2a3745a779226a8140e02cd2adfaea6f9edb9059dba07c3d04dcf16626b"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/blackstar_dominion/raiment/model_lod2.model",
+      "size": 50340,
+      "sha256": "d211ba72b7fa3b8be5e062d5f5878d74d37de6f5008b75e3e3b870d21bc3e741"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/blackstar_dominion/raiment/model_lod3.model",
+      "size": 37304,
+      "sha256": "3a974345552a0a7e4142f75507f9a3e5b2296a504e98bbc67ef8b22e462fc093"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/blackstar_dominion/raiment/model_lod4.model",
+      "size": 27320,
+      "sha256": "8a94d2a0495215c917dc514564b5afaaf5dde3c9883fac2bcc25862777549f38"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/blackstar_dominion/raiment.json",
+      "size": 3114,
+      "sha256": "61fff7a5123d25606d7a235da7f277edba4e64ab9ddfeafb3810cf4603b746f5"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/d1_082/d1_gotterdamerung.json",
+      "size": 6977,
+      "sha256": "a0271afc5c9f2639ed54e34a9617214a05599d75b4d843fe063a4060da678eb7"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/d1_082/d1_holy_defender.json",
+      "size": 6886,
+      "sha256": "77b2be848ecc921bd3fb06b97c7eed4525b7374c1f8d434cd98dfe11f9db8a03"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/d1_082/d1_royal_circlet.json",
+      "size": 8046,
+      "sha256": "9d5eab96602f41ea85365caa7a005c9cd3e408f97168d6c40c82824541929107"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/druid_headpieces/breath_of_the_first_winter/model_lod0.model",
+      "size": 150652,
+      "sha256": "9d4bb474099fc7be19c52406c6f19a38804b94fd974d20f238f50122a1868c77"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/druid_headpieces/breath_of_the_first_winter/model_lod1.model",
+      "size": 130180,
+      "sha256": "b5dda2b3bbc7c06d2694d7d17e6b9564189f1467ecf8fcf99a65c356a4aade36"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/druid_headpieces/breath_of_the_first_winter/model_lod2.model",
+      "size": 104188,
+      "sha256": "65daa65e749f8b3857fc708126609872f5af6800e7cdbd251f81383dbabdff95"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/druid_headpieces/breath_of_the_first_winter/model_lod3.model",
+      "size": 74904,
+      "sha256": "90f15e9ea963361b6fbc20ffc2fc4ff08207fc94d975593be9a0b73e3ee0394f"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/druid_headpieces/breath_of_the_first_winter/model_lod4.model",
+      "size": 48284,
+      "sha256": "13366a8acc906123347080d912149ac6fd99b7f3d90eff0b8536e129ab64042f"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/druid_headpieces/crown_of_the_worldfire/model_lod0.model",
+      "size": 208400,
+      "sha256": "d600e134be99ab3684299caed5430a8e619254663fe1fa07d3f0c3d85fa9995e"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/druid_headpieces/crown_of_the_worldfire/model_lod1.model",
+      "size": 167312,
+      "sha256": "2e2e5d49d4ee8c285cece2f0cb654bb61d35ba49fed55995f37603a5218a4041"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/druid_headpieces/crown_of_the_worldfire/model_lod2.model",
+      "size": 116580,
+      "sha256": "f9ef1829fa4d24d2bdc560cac2a91957bc1672a9f15e8efb599bf4b759a67d46"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/druid_headpieces/crown_of_the_worldfire/model_lod3.model",
+      "size": 80160,
+      "sha256": "63a1dac16b0b698796d8c093f7b7b72c8a5fc5b1ddd862447e0caa5cfc8060e5"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/druid_headpieces/crown_of_the_worldfire/model_lod4.model",
+      "size": 53784,
+      "sha256": "9d7d19b21df7e66fe3e5791f7e700081d463eec569e43e2aa1a6295d9c90c2c6"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/druid_headpieces/visage_of_the_worldroot/model_lod0.model",
+      "size": 184212,
+      "sha256": "a3384dfa98ec010f54b830745ec79857713f1886f453013a0bf0b2f0f24c5dcf"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/druid_headpieces/visage_of_the_worldroot/model_lod1.model",
+      "size": 143992,
+      "sha256": "729b190168f55b0e3a390f9d11d7d5b6a7724c36c50c2337e092064f1d747aa3"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/druid_headpieces/visage_of_the_worldroot/model_lod2.model",
+      "size": 105096,
+      "sha256": "73d1dd30a0ac3ee95430ef59f6b4b800cc672f66d73a7ddafed45d81fb816a7a"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/druid_headpieces/visage_of_the_worldroot/model_lod3.model",
+      "size": 70812,
+      "sha256": "b7e2ed07165ad6ef49192011ae791808c48f5d89cb1450d389d279dcbf5c2481"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/druid_headpieces/visage_of_the_worldroot/model_lod4.model",
+      "size": 47608,
+      "sha256": "bb9dfde3b495b423f5738a845eb8b4eb50f5c74b8845b422dc9ba34684159fec"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/eclipse_grandmaster/crown/model_lod0.model",
+      "size": 111044,
+      "sha256": "8b215e77b319b84029227a192ddec4df3b746e94b510c591db177ef143b41540"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/eclipse_grandmaster/crown/model_lod1.model",
+      "size": 93100,
+      "sha256": "a8cb35e166aff9d2a50739a78bbf1024e056b6bb2241ee84eabd018dfd2c77e7"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/eclipse_grandmaster/crown/model_lod2.model",
+      "size": 72668,
+      "sha256": "4711727502c15862d790d24761136d3c9d10ef087a23176774eb21bf8fa3e9bf"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/eclipse_grandmaster/crown/model_lod3.model",
+      "size": 50984,
+      "sha256": "567d80b833e004f5233fcdc7f4b50a043fc64bf79247ade17e6e6dd0a70fb4a0"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/eclipse_grandmaster/crown/model_lod4.model",
+      "size": 34972,
+      "sha256": "9f48667a4ab578f8b1788f5ef59c3d69ddbb72c0fb5fa125818220f018964a69"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/eclipse_grandmaster/keepsake/model_lod0.model",
+      "size": 107524,
+      "sha256": "fe42d191e357535abaceaade3c75fa5f28aa18ca6d38cd12abc884412752a5fc"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/eclipse_grandmaster/keepsake/model_lod1.model",
+      "size": 91612,
+      "sha256": "d2029506161bb1deadbe16cc8c0e409bb4de9d06b2800462485bf74011baf762"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/eclipse_grandmaster/keepsake/model_lod2.model",
+      "size": 71672,
+      "sha256": "7e85cfd309ccebd09a164b14a71762fa1ed5e183297f55b46901d40db1a6d29f"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/eclipse_grandmaster/keepsake/model_lod3.model",
+      "size": 55116,
+      "sha256": "bdb9a5150a6e614ccf5a256304fa5f26758bf09e63a00b6e9bcb02ba2de3b1a5"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/eclipse_grandmaster/keepsake/model_lod4.model",
+      "size": 39900,
+      "sha256": "51c0f49978ac22c36f77cf14d8426d9a9025fc6cd26113ad6031f7fa799503c1"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/eclipse_grandmaster/raiment/model_lod0.model",
+      "size": 54388,
+      "sha256": "92dc08ebdaf8a88ac01c4c77ebc6ea9573e1011b0eb17cae291176941135f047"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/eclipse_grandmaster/raiment/model_lod1.model",
+      "size": 49208,
+      "sha256": "740695d2877a880757dbfd94f9c91aaf48339a96da103701dbdea5ca016f29a6"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/eclipse_grandmaster/raiment/model_lod2.model",
+      "size": 40116,
+      "sha256": "a5e28d4a45810d3b78b0d288d809a24cfda05d2a6ec992563403828b41467889"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/eclipse_grandmaster/raiment/model_lod3.model",
+      "size": 30592,
+      "sha256": "dd000ad989a72136c2aafbb07b7caed5cbbd98fe83b85128ca45e74bd7f7c6d4"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/eclipse_grandmaster/raiment/model_lod4.model",
+      "size": 25252,
+      "sha256": "d2fa33ee2ba0d93b120f27584b400971cb712a75f8f1339766383113c181da65"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/empyrean_highlord/crown/model_lod0.model",
+      "size": 212388,
+      "sha256": "487f0bccdd59fc56519782098af8474bea15bc9e4026e4b6821796cbf8330b61"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/empyrean_highlord/crown/model_lod1.model",
+      "size": 185212,
+      "sha256": "71569c189bd165a7e0ae5b2312e4375e23d043e4f8160a9c6a345a8d591f4d83"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/empyrean_highlord/crown/model_lod2.model",
+      "size": 141440,
+      "sha256": "053dd0f890452970044ea76ac321dc3586dfc037bc24a59a1ad60294d819043b"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/empyrean_highlord/crown/model_lod3.model",
+      "size": 96184,
+      "sha256": "13d9375d2d3c614eeb31654bdc5da3e3acf7e20eea2bfa4cb708cda8863c386f"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/empyrean_highlord/crown/model_lod4.model",
+      "size": 65680,
+      "sha256": "325ef68e73bf9305cd5a185a47c6527ead94b812682b2ff51b5467a48e4b2002"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/empyrean_highlord/keepsake/model_lod0.model",
+      "size": 137416,
+      "sha256": "aea967dd6e2fe117f00fc34f8a97781a19897899c626d3376e19a9e2b5fe4530"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/empyrean_highlord/keepsake/model_lod1.model",
+      "size": 112532,
+      "sha256": "ac7dec42b76a6e7533c82a9ed2636a11b84d5a7d6c124e7ffe76fb88c5d3ddc0"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/empyrean_highlord/keepsake/model_lod2.model",
+      "size": 90068,
+      "sha256": "7e8bf18f62f26ff3756c6e52bd63ce8f9bf3a4417ccf40cee17b7379f5899d67"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/empyrean_highlord/keepsake/model_lod3.model",
+      "size": 67240,
+      "sha256": "edac94a95291a9a6690586ca98f6007c61eeb18358a06b8b8e5864d798b61d55"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/empyrean_highlord/keepsake/model_lod4.model",
+      "size": 48732,
+      "sha256": "5a53cd9197b3eda69a6f652c5c0041a803957d9d8800c82afa4f8d570c1531a6"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/empyrean_highlord/raiment/model_lod0.model",
+      "size": 164656,
+      "sha256": "82059dd00a8f5e30c1c2a64674456c7b83ca88bbaaeb1bf7ed408831366d0911"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/empyrean_highlord/raiment/model_lod1.model",
+      "size": 140448,
+      "sha256": "615cff65213d548ae43efea920061860776c46f58d9d909e4183f7be569a6a57"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/empyrean_highlord/raiment/model_lod2.model",
+      "size": 106060,
+      "sha256": "d8d77aa70ee3ab177679ca59d0169036f242cfc3366d404f4eba11c7f31fe672"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/empyrean_highlord/raiment/model_lod3.model",
+      "size": 75780,
+      "sha256": "6e892e21e85f5fb1040dafccb6682f8683c4931aabc232691b1b6f822fd223a6"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/empyrean_highlord/raiment/model_lod4.model",
+      "size": 53036,
+      "sha256": "647bf5fe08111c2b81b286844e42eba30b882459934c6c49194b34d2c0aa5c2a"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/immortal_warfather/crown/model_lod0.model",
+      "size": 86472,
+      "sha256": "42c87ba65c7cae0da0a43edd4fa6a84fb339feaa6c5d3b8ee3eb4b591caea039"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/immortal_warfather/crown/model_lod1.model",
+      "size": 75176,
+      "sha256": "00eaadfe5a29b7bcce6154c4a4b65a97c81daf0113c66c76341b51cb0f4ece45"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/immortal_warfather/crown/model_lod2.model",
+      "size": 59016,
+      "sha256": "8450d511ade860c8b0dc1cdce9397c02821db1f687b6c1dfa20349be97b7f51e"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/immortal_warfather/crown/model_lod3.model",
+      "size": 43316,
+      "sha256": "10f2ddf8d2574026a464bd880a42ea61cbd68971b447f920136471bfab18fb91"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/immortal_warfather/crown/model_lod4.model",
+      "size": 31200,
+      "sha256": "11fe5aea52e10accd2e88943a7f2f142b15c1d3e9171c99465d5e6d1a3244446"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/immortal_warfather/keepsake/model_lod0.model",
+      "size": 120000,
+      "sha256": "c80dfd21ff8394a874c957f44f6e557e2ffb60893e7ad6feae377bb032081ba0"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/immortal_warfather/keepsake/model_lod1.model",
+      "size": 101552,
+      "sha256": "53f937515dc27214f681d92cec17d529063f7bf4fe4c9dd30db7e4cd752447be"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/immortal_warfather/keepsake/model_lod2.model",
+      "size": 86240,
+      "sha256": "c115ef5bb5a14bdcc0b6d6080899d4ee749ea1016ff449f4bf2f45d18bc0531a"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/immortal_warfather/keepsake/model_lod3.model",
+      "size": 63140,
+      "sha256": "ec726bfdf0f431d773b0ce14747c9973113bcce84cdfa79fd84c64c0c1cbde86"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/immortal_warfather/keepsake/model_lod4.model",
+      "size": 46048,
+      "sha256": "7e75b1f7a3e19eecbc6cc0af9d573e6184a0997e662952a9d1239f76be8190c7"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/immortal_warfather/raiment/model_lod0.model",
+      "size": 101948,
+      "sha256": "3551c998f58112055a6725a5fa74c6cdd30bb45494426cae68548aaa8c9aa960"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/immortal_warfather/raiment/model_lod1.model",
+      "size": 84856,
+      "sha256": "38d748cfe4cc2c0fb32eab0989d876b97db63fecf606fcef13e534f6108db171"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/immortal_warfather/raiment/model_lod2.model",
+      "size": 68388,
+      "sha256": "1099f6c7c19300158d11f447795851741273bd5fc0923b4ff1b2accc6d54a0b1"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/immortal_warfather/raiment/model_lod3.model",
+      "size": 49224,
+      "sha256": "bfb78f54501b35b87f375953ec52a83c04d581bc497557d085a8e5a8640d7725"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/immortal_warfather/raiment/model_lod4.model",
+      "size": 35816,
+      "sha256": "b16f7dc8b56b258dba70ca77c35b9c88727f3afb3a33cf01e89ce8e6e91e1754"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/primal_heart/crown/model_lod0.model",
+      "size": 53056,
+      "sha256": "de3829ce03e04ecac19ed47dd710a774a0de7231ebc34e5084d40f4f65a71544"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/primal_heart/crown/model_lod1.model",
+      "size": 44484,
+      "sha256": "a3f066196fb1e8cdc2dbbdb7e2a2c24d5e9d2205583ca7a6e8cf28d6282793ae"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/primal_heart/crown/model_lod2.model",
+      "size": 35760,
+      "sha256": "ad9b1d18ea046b2cd266ac4f51a0f1f961dc989d5c842ebe94421607e77eee83"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/primal_heart/crown/model_lod3.model",
+      "size": 26672,
+      "sha256": "5ec41a95ca7a1bb7fea8fc97abe39899bd3780da9daacc212be63995163aa99c"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/primal_heart/crown/model_lod4.model",
+      "size": 20576,
+      "sha256": "696e2b2cd3c2551ad362d2afbdad2faad3052d7eafa6b1e6f05a78f6332aa33b"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/primal_heart/keepsake/model_lod0.model",
+      "size": 111520,
+      "sha256": "730f2046ef2385e53ff2aa00a55a14ebfaaa64a2e5c9804329efec9cd6861428"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/primal_heart/keepsake/model_lod1.model",
+      "size": 91316,
+      "sha256": "7423215c07b542ea6e0a9e5e56a7dddbf9b1848473fdcdf580e0a512e9db63b9"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/primal_heart/keepsake/model_lod2.model",
+      "size": 70228,
+      "sha256": "958e297e2db0cb3ecb2aac55f00dd17244bc43d695236e92423f8b949106f704"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/primal_heart/keepsake/model_lod3.model",
+      "size": 53848,
+      "sha256": "b90206117d94d26a544767ef3c36620e8f760e86fe59cba906107cc403776bcd"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/primal_heart/keepsake/model_lod4.model",
+      "size": 39140,
+      "sha256": "b6d44849267ea575e38c77617935e660814c2c1283a4e285a6a8c9c102552dae"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/primal_heart/raiment/model_lod0.model",
+      "size": 75928,
+      "sha256": "57554a65f8b03bacd7a967006dfbb2af374c4d39114b79eeeae9145911d1db40"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/primal_heart/raiment/model_lod1.model",
+      "size": 64920,
+      "sha256": "251ca168367930ce3e135b3a0c9540233b20401c4426076d4ed50d6dc53a25af"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/primal_heart/raiment/model_lod2.model",
+      "size": 52456,
+      "sha256": "6155cbe35741e6ae8c53cb62d80ce93b5feb3810a29fcf851febb6cb4d23b5ec"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/primal_heart/raiment/model_lod3.model",
+      "size": 39052,
+      "sha256": "6bb151847ee7ee9821ef57228588a541c7693d30f73bbb98723c7c90e1f57b89"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/primal_heart/raiment/model_lod4.model",
+      "size": 29464,
+      "sha256": "0f77544d3861ddc334d9c955aaa0848845a53479a6778eb81a5e5077954359ea"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/relic_wave2/the_unbroken_heaven/model_lod0.model",
+      "size": 119588,
+      "sha256": "2b895d0b49adb93fd5af9d65e5f0fdaca9b604586fbf46dd9bc45ed38e17b0f8"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/relic_wave2/the_unbroken_heaven/model_lod1.model",
+      "size": 103120,
+      "sha256": "33a7a36dd9261cccd09744d399af335cf3b14b9739d30cc117a11d389168b027"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/relic_wave2/the_unbroken_heaven/model_lod2.model",
+      "size": 80220,
+      "sha256": "2880ad0f5dcb076d163a7641c9234075f42272b32260714a7445d329ce8bb1f5"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/relic_wave2/the_unbroken_heaven/model_lod3.model",
+      "size": 57812,
+      "sha256": "aab82e8a6f162afdaf6fa30abaeef11ea7b5daae4635774e3b8674e3aa62c426"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/relic_wave2/the_unbroken_heaven/model_lod4.model",
+      "size": 39412,
+      "sha256": "f84360ff711adcb5fefc26690706770d119c7f69a18355f982fc32aba6756f9b"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/relic_wave3/echo_of_the_first_war/model_lod0.model",
+      "size": 185020,
+      "sha256": "20f605e3f0cd18b6867191962eddbdc0f684cc4852d8a28763532cfac0463490"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/relic_wave3/echo_of_the_first_war/model_lod1.model",
+      "size": 150236,
+      "sha256": "6952176525d4b75f56225d033d2e9c20240d99a85208b815e31826e5241e5747"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/relic_wave3/echo_of_the_first_war/model_lod2.model",
+      "size": 107324,
+      "sha256": "6e160d9668f878bc364211e722b4dda4275399fcf977ec58f4733951fdde0bbe"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/relic_wave3/echo_of_the_first_war/model_lod3.model",
+      "size": 73360,
+      "sha256": "5e9230a5190cee72ef7c47fc1fb0412b720dda801c45169f4b651e5d0085c551"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/relic_wave3/echo_of_the_first_war/model_lod4.model",
+      "size": 48956,
+      "sha256": "e37d01de640e99ce893d52f2d67835bd720433ab7268f3176b223b988d4bc21c"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/relic_wave4/gotterdamerung/model_lod0.model",
+      "size": 161280,
+      "sha256": "d9a9acb183fa490f85f51d74f4036e5dac4c0fdeb08a70ab207a115e4a72bf9a"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/relic_wave4/gotterdamerung/model_lod1.model",
+      "size": 125512,
+      "sha256": "693451a377a9da15c2584096f6c338fc3bb0226ba4d7b2f0a85c1274b91f61c6"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/relic_wave4/gotterdamerung/model_lod2.model",
+      "size": 87640,
+      "sha256": "7713e0c4a306f229700540c178a6e49d90e3426237a11bfd65d9ea4753a0a09c"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/relic_wave4/gotterdamerung/model_lod3.model",
+      "size": 60192,
+      "sha256": "dfb5d5b8c6aa6e0b3f79b4f76c7fac1c07719ade3cf65cb6ab65f2db0bc6864e"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/relic_wave4/gotterdamerung/model_lod4.model",
+      "size": 40172,
+      "sha256": "dbe26db71c654e7fba4eb8916e2bd5f721b9b2a401daf3992df7d1eeaed42bd7"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/relic_wave4/royal_circlet/model_lod0.model",
+      "size": 169136,
+      "sha256": "4f107f0e5e523c15be92f5836d90b9832ede258446005608040795e0a0963343"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/relic_wave4/royal_circlet/model_lod1.model",
+      "size": 141416,
+      "sha256": "166cb620cd039ae915d24c2e721dd34f206ea42c0caadae991f6bc705560cdcc"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/relic_wave4/royal_circlet/model_lod2.model",
+      "size": 104800,
+      "sha256": "b30aff564fa4d3ae0990808dee31b33b5c5d379aec2c9f4069b4ebb8f545f124"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/relic_wave4/royal_circlet/model_lod3.model",
+      "size": 72864,
+      "sha256": "5f5f74e3ba5cc75622423a1b900d9c20eb6a0678f5525ae6223fa9d83c4f5acd"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/relic_wave4/royal_circlet/model_lod4.model",
+      "size": 49140,
+      "sha256": "b2e909c381dca70ce38a7921452cbb778f37926868399a27d335b876ad3a64c9"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/relic_wave5/holy_defender/model_lod0.model",
+      "size": 111484,
+      "sha256": "ff0f44e2dcdbe58c8b562c50e2996b55fe89d4d6ef122697b367dd6dfa76ab4f"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/relic_wave5/holy_defender/model_lod1.model",
+      "size": 91852,
+      "sha256": "cfe78902ce890f4e9a36d7248419dbea62a29c61f55ff6b39b7460ceb8037820"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/relic_wave5/holy_defender/model_lod2.model",
+      "size": 65404,
+      "sha256": "d77650c06f42db6eaefe6c4015f34134d18cbdb0741b99a0a8921136a7f2dda2"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/relic_wave5/holy_defender/model_lod3.model",
+      "size": 43944,
+      "sha256": "8ecaa8d34f606fb11ae9460360d2dcf9bd15e33bae504b3dd268bef655e3c687"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/relic_wave5/holy_defender/model_lod4.model",
+      "size": 29024,
+      "sha256": "3d982cc314078ec77982ef2927865f611c6f7e11313a2b5735267c8e9c03fe76"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/relic_wave5/testament_of_the_black_sun/model_lod0.model",
+      "size": 351420,
+      "sha256": "9c67c0847a9aeb275e17d5bfc322c80806e015144b3ce7d33c5ab6c2ea33458b"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/relic_wave5/testament_of_the_black_sun/model_lod1.model",
+      "size": 253700,
+      "sha256": "9efcb68a00628da2a3dad69f0544695a1a02881c7d80690542b6a738b52c0955"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/relic_wave5/testament_of_the_black_sun/model_lod2.model",
+      "size": 172224,
+      "sha256": "09bb2ff76c4862041c2e2edc104566d598982f3a38cbefe1e5f74becfa7fa4e9"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/relic_wave5/testament_of_the_black_sun/model_lod3.model",
+      "size": 107608,
+      "sha256": "d1a11979c38531afa3676a1dd716f1464579beb6a08f854ea9dd6a7fef133d10"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/relic_wave5/testament_of_the_black_sun/model_lod4.model",
+      "size": 60964,
+      "sha256": "6fa65c5060ba0989d13bc6de0f80acc9015ea3afba67480c35cac27eb66ccf51"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/set082/amazon_crown.json",
+      "size": 7337,
+      "sha256": "a7ec6468f574ecbc72c1ac966a71bd99bcad0a782013d563825237632d968b69"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/set082/amazon_keepsake.json",
+      "size": 3055,
+      "sha256": "c20099814c9504e8639c0d36ffbf0c6118fb61f2e1d8cf3b04ed4fc86cfd5948"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/set082/amazon_raiment.json",
+      "size": 3089,
+      "sha256": "61d68828f4a1351e4f75bf97380034c1860831d24895e1472475004d31f92d38"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/set082/assassin_crown.json",
+      "size": 7357,
+      "sha256": "65a052712aba997434af9f205261c0068648bf271d48a2d9c0e3302d29a41ce1"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/set082/assassin_keepsake.json",
+      "size": 3075,
+      "sha256": "001dc51d969af939f8e481de618b86dca41fd5add38ad9faaaf5bb79297deefc"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/set082/assassin_raiment.json",
+      "size": 3109,
+      "sha256": "8f43411b897ae0cb99d040a39df9f6edb76d0e7ca9b7aea8b0e03be8cbc7aa38"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/set082/barbarian_crown.json",
+      "size": 4208,
+      "sha256": "8988bfe88141ffee27eebf5450798e0176568864170594ec61c4c048cd8ecf66"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/set082/barbarian_keepsake.json",
+      "size": 3063,
+      "sha256": "0e681bb03a724bfd82948d295b164bcd456e18baf9b31a27d31b600adb5de013"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/set082/barbarian_raiment.json",
+      "size": 3104,
+      "sha256": "504f9a4dfbfdb8f697bd36964e8b16a5ef57adc32a27a655ecfaa9e12e9fe195"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/set082/druid_crown.json",
+      "size": 4158,
+      "sha256": "ed64ae97925df2273e32a6d03ec41966017c44b1b86de3e712acd78b46ce3bd9"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/set082/druid_keepsake.json",
+      "size": 3009,
+      "sha256": "110e0acf483d3f5a20e5442b727c4b79b6fb11660efc49b7b53f0e58765f9990"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/set082/druid_raiment.json",
+      "size": 3064,
+      "sha256": "957bcbac04023f6a076111b0a8eae33a63d874804275c1f0282acc43ab34ab14"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/set082/necromancer_crown.json",
+      "size": 4904,
+      "sha256": "eca14cb63321077d3e53b8a8c9f7fd84b31219544cf24321888f758be62c875f"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/set082/necromancer_keepsake.json",
+      "size": 3039,
+      "sha256": "5fb9f34ec2b4a6483399e60c5dae24084aef9a16837993e1f77d18d768d8a298"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/set082/necromancer_raiment.json",
+      "size": 3094,
+      "sha256": "c93f1d124b3bda12edc3b579f03e6aeff6240b52a066da1cd320201e7e9a10c9"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/set082/paladin_crown.json",
+      "size": 3594,
+      "sha256": "7a73e6129e18c0f0cf288378d88a711391db7760c964ec8b1823f13553747ebc"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/set082/paladin_keepsake.json",
+      "size": 3062,
+      "sha256": "a2b4ddae9d2f93b1fc97589adb82c50b5187fdd8d3f557abebf6fab2bc8e50ce"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/set082/paladin_raiment.json",
+      "size": 3096,
+      "sha256": "a5191dcc729f5d4552be125947549ce589f70cace47921600b06bd5a7aa8a647"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/set082/sorceress_crown.json",
+      "size": 7298,
+      "sha256": "fbc1f9fba327076620334c1506f272b7dabcf964afb1e6eb40dabe23c3a3251f"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/throne_deathless/crown/model_lod0.model",
+      "size": 102124,
+      "sha256": "7440ebba65b75319a523e9d6c264aa12660756f4397abc0250e0783fff1efa73"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/throne_deathless/crown/model_lod1.model",
+      "size": 87536,
+      "sha256": "b16e7440264386e3da0807dbde22bb7b219ef7162867fa662fb7aa876f3cf426"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/throne_deathless/crown/model_lod2.model",
+      "size": 71288,
+      "sha256": "f33ebbff595263013b8074a7a063396f2f221fe666807db80b185e35d5fd3cf9"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/throne_deathless/crown/model_lod3.model",
+      "size": 52576,
+      "sha256": "a908d27d84bf6057ab548dca69eb02fe612bc6805813354a643d2b15da9e0b1b"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/throne_deathless/crown/model_lod4.model",
+      "size": 36980,
+      "sha256": "4f1bab9129bbcae3a838851e57676a678b481336807e83f43579fe9b756dd100"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/throne_deathless/keepsake/model_lod0.model",
+      "size": 164992,
+      "sha256": "e807825ae0ebd94e727804ec8a09041c7a91825dd08ccab384b5a5de5c909150"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/throne_deathless/keepsake/model_lod1.model",
+      "size": 137484,
+      "sha256": "21476cd67311016238be17e5b22865a019f903b5f2a9d9dad8521914e5d294fb"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/throne_deathless/keepsake/model_lod2.model",
+      "size": 108500,
+      "sha256": "13040504bc99a8539aa15e6769e7f8e8e63da90e4f1b4d7e4ea214abf8131a4f"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/throne_deathless/keepsake/model_lod3.model",
+      "size": 78052,
+      "sha256": "5861c93e64abf67064f50dca90aa742d3ad1ce9c5382b4d62c6faec5e04b89e9"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/throne_deathless/keepsake/model_lod4.model",
+      "size": 54520,
+      "sha256": "0d0a65df3ff0a793deddad4c39a797e7cc44ee45bdfc31fab3fa90ff16173cd6"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/throne_deathless/raiment/model_lod0.model",
+      "size": 243708,
+      "sha256": "d46dc5ded3de766dbd83c56c74d382fb0348d0863c8cdee89442fe910b5b19dd"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/throne_deathless/raiment/model_lod1.model",
+      "size": 211456,
+      "sha256": "0a97ca0734305182e5cc2a25b31240d965cfbe02562f4e41ceedaca4619d2efc"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/throne_deathless/raiment/model_lod2.model",
+      "size": 167224,
+      "sha256": "93d2cd377b32bfb50a28e416ae5cd55f03bfd6f99db9798fe4885609b34e4984"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/throne_deathless/raiment/model_lod3.model",
+      "size": 120060,
+      "sha256": "7679a2bdda57dc03eb969a884500783da1d272ec4288bc416d3768d402d4674c"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/throne_deathless/raiment/model_lod4.model",
+      "size": 78928,
+      "sha256": "0dba987a4fde25512a6982d40b74e0cfd22bdbb1d3d4b2e09dc0d5e70cae25c7"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/throne_deathless_polish/crown/model_lod0.model",
+      "size": 106476,
+      "sha256": "984e129d314e70c81850b522821455d46624efe7836b301c2d9ace9d95cc554f"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/throne_deathless_polish/crown/model_lod1.model",
+      "size": 79388,
+      "sha256": "35608585059302f34e8777b8e7ca91d8aff881c99c65b4fa1a7ca0b31eb8f970"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/throne_deathless_polish/crown/model_lod2.model",
+      "size": 56512,
+      "sha256": "2bd5283cb7518e59da840c1571296ab66d1dd8efddec918903138f64c45c9f1c"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/throne_deathless_polish/crown/model_lod3.model",
+      "size": 39900,
+      "sha256": "6019128b616211bd9d707ca808fac99ccc9b3bc52ea00a69b5caf3b248635329"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/throne_deathless_polish/crown/model_lod4.model",
+      "size": 27692,
+      "sha256": "f11a0bf625fdd4a2e3df46f0badf04a57876e5aa601d93bfe6af4e0d0b48cb26"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/zenith_sky_queen/crown/model_lod0.model",
+      "size": 81680,
+      "sha256": "c5c7f59044dbf28415f270b94bf67f2ecc4a6071876fbaa349e57ba09c157d30"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/zenith_sky_queen/crown/model_lod1.model",
+      "size": 74036,
+      "sha256": "2763fbd174403779455487b54ee75fa47f8687c19fb4a010011fb44cd2a5ce08"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/zenith_sky_queen/crown/model_lod2.model",
+      "size": 59216,
+      "sha256": "71eaf1e1fc18fb0840f1d454ea00b510a062059a41aa8e674ca24f375eca36df"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/zenith_sky_queen/crown/model_lod3.model",
+      "size": 42540,
+      "sha256": "4ff7a82a59f65a201090fdd19642a319cb4be3f4bce535ff0c13d5fc07994585"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/zenith_sky_queen/crown/model_lod4.model",
+      "size": 29136,
+      "sha256": "8361a41d9e4f1a2b356f34309764071a16fb56ee6e283a563afcd17589426990"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/zenith_sky_queen/keepsake/model_lod0.model",
+      "size": 108968,
+      "sha256": "58cf03fc3985d4163d2d59f7eff6afc8949dd73baeb4b8a0c2dfd1c25b7393c6"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/zenith_sky_queen/keepsake/model_lod1.model",
+      "size": 93804,
+      "sha256": "156e59ae1cc15c096981ffa22c3248aaef14c4099657da120beff903aa90d3b3"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/zenith_sky_queen/keepsake/model_lod2.model",
+      "size": 74092,
+      "sha256": "78ea841cc16efb8ec15b71413a8ee5a9a5d66456823f5b25dcd08757db0ac056"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/zenith_sky_queen/keepsake/model_lod3.model",
+      "size": 55996,
+      "sha256": "35ae0359156bc98a402c3664d32a14cc50410acd42bf207bae52aa6b6fa6bf29"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/zenith_sky_queen/keepsake/model_lod4.model",
+      "size": 40600,
+      "sha256": "323fc241be42698a50980c659e9a8d8ad1ca3437f4bbcf8112afa9180174c096"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/zenith_sky_queen/raiment/model_lod0.model",
+      "size": 88220,
+      "sha256": "6f612e87e8d56f6152d269124a30477169e82a31e8932ae1e987af869b8ef408"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/zenith_sky_queen/raiment/model_lod1.model",
+      "size": 79236,
+      "sha256": "f86fdfdcc11b39a0881a3b3ac83f55c9ec2ee95f2cc93228abe108420a478d29"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/zenith_sky_queen/raiment/model_lod2.model",
+      "size": 62884,
+      "sha256": "84db4898acc1973413c91794086924ebb20a06cd8890f3e61e7071ac80b300da"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/zenith_sky_queen/raiment/model_lod3.model",
+      "size": 44836,
+      "sha256": "cb503089546fb82d6635c054e532d90353fc7a4d0f6b8b6a01129f07472a9f07"
+    },
+    {
+      "path": "data/hd/items/armor/d2plus/zenith_sky_queen/raiment/model_lod4.model",
+      "size": 32376,
+      "sha256": "8dc371774eda05def9a8949edb30104394c2daf9d8afe50c9fc0d2c9aa5cd6e2"
+    },
+    {
+      "path": "data/hd/items/d2plus/archmagus/textures/alb.texture",
+      "size": 5592564,
+      "sha256": "467243f9c4c33a5eb5986ceb6ce0e9d691e1ef9033bc166d2a524f19c21f72fa"
+    },
+    {
+      "path": "data/hd/items/d2plus/archmagus/textures/mask.texture",
+      "size": 5592564,
+      "sha256": "3f6be338341d2ed0efa57335625ed6be0a7cda0f05b4c9125ac1279e0dc5fabe"
+    },
+    {
+      "path": "data/hd/items/d2plus/archmagus/textures/nrm.texture",
+      "size": 5592564,
+      "sha256": "3768edcfd06741d50ae56545c5cab146866b738e81f1491151adc86724773a53"
+    },
+    {
+      "path": "data/hd/items/d2plus/archmagus/textures/orm.texture",
+      "size": 5592564,
+      "sha256": "577e7ec1e51f2b55dec5d203f438e4b816b2ef5894b5f16af8a4ae6299a4a468"
+    },
+    {
+      "path": "data/hd/items/d2plus/blackstar_dominion/textures/alb.texture",
+      "size": 5592564,
+      "sha256": "6bbd8c7d5ca650112861fe3c2370d1324920e88ba495e2568fe57f505ae91fad"
+    },
+    {
+      "path": "data/hd/items/d2plus/blackstar_dominion/textures/mask.texture",
+      "size": 5592564,
+      "sha256": "3f6be338341d2ed0efa57335625ed6be0a7cda0f05b4c9125ac1279e0dc5fabe"
+    },
+    {
+      "path": "data/hd/items/d2plus/blackstar_dominion/textures/nrm.texture",
+      "size": 5592564,
+      "sha256": "387ac7ae623bdc835d14d9e37b85fa520798294e8934197507fdb8e7d08aaeb5"
+    },
+    {
+      "path": "data/hd/items/d2plus/blackstar_dominion/textures/orm.texture",
+      "size": 5592564,
+      "sha256": "0c210704c7ea73462b84efbc08985568ba636e6e5a70f4254f0bdbfe4fd39897"
+    },
+    {
+      "path": "data/hd/items/d2plus/druid_headpieces/breath_of_the_first_winter/textures/alb.texture",
+      "size": 5592564,
+      "sha256": "5acac299816fb261d8e7420c165f44a8fd1ae6a6e037aba00c95b4579c69d88e"
+    },
+    {
+      "path": "data/hd/items/d2plus/druid_headpieces/breath_of_the_first_winter/textures/mask.texture",
+      "size": 5592564,
+      "sha256": "3f6be338341d2ed0efa57335625ed6be0a7cda0f05b4c9125ac1279e0dc5fabe"
+    },
+    {
+      "path": "data/hd/items/d2plus/druid_headpieces/breath_of_the_first_winter/textures/nrm.texture",
+      "size": 5592564,
+      "sha256": "72178c9a197918581e673f888cea063922da1cdf1d9942467ae57a363fc9f2fc"
+    },
+    {
+      "path": "data/hd/items/d2plus/druid_headpieces/breath_of_the_first_winter/textures/orm.texture",
+      "size": 5592564,
+      "sha256": "533c135f0caeaab31acdee35a1b7fe56e147c30cb584fc204f5551a3975f247f"
+    },
+    {
+      "path": "data/hd/items/d2plus/druid_headpieces/crown_of_the_worldfire/textures/alb.texture",
+      "size": 5592564,
+      "sha256": "1cbd937c60b4f903c93036ec4c3da77f148038ca6de3d1c44648c69147da589e"
+    },
+    {
+      "path": "data/hd/items/d2plus/druid_headpieces/crown_of_the_worldfire/textures/mask.texture",
+      "size": 5592564,
+      "sha256": "3f6be338341d2ed0efa57335625ed6be0a7cda0f05b4c9125ac1279e0dc5fabe"
+    },
+    {
+      "path": "data/hd/items/d2plus/druid_headpieces/crown_of_the_worldfire/textures/nrm.texture",
+      "size": 5592564,
+      "sha256": "a36503904501ae10e6872779170e716b8968dacb1f5ebe3ca7787b7fb8333d89"
+    },
+    {
+      "path": "data/hd/items/d2plus/druid_headpieces/crown_of_the_worldfire/textures/orm.texture",
+      "size": 5592564,
+      "sha256": "e32faf95d87f4a5e6f5a5370d054e1586a947e569764947450f6417c664f4b6e"
+    },
+    {
+      "path": "data/hd/items/d2plus/druid_headpieces/visage_of_the_worldroot/textures/alb.texture",
+      "size": 5592564,
+      "sha256": "8b9d0aee2a5eb654c342614a77ac7f150e151daac3a8207a7359b73ec494bdaf"
+    },
+    {
+      "path": "data/hd/items/d2plus/druid_headpieces/visage_of_the_worldroot/textures/mask.texture",
+      "size": 5592564,
+      "sha256": "3f6be338341d2ed0efa57335625ed6be0a7cda0f05b4c9125ac1279e0dc5fabe"
+    },
+    {
+      "path": "data/hd/items/d2plus/druid_headpieces/visage_of_the_worldroot/textures/nrm.texture",
+      "size": 5592564,
+      "sha256": "ba7378925ab3c4962eba5e1b123be18b6278665da5164eacc815f8020b6e9eb5"
+    },
+    {
+      "path": "data/hd/items/d2plus/druid_headpieces/visage_of_the_worldroot/textures/orm.texture",
+      "size": 5592564,
+      "sha256": "378abe0dc5ad34f3a6a586cb6236ba7bfc79baa5da422570af16a7f5b302c4cc"
+    },
+    {
+      "path": "data/hd/items/d2plus/eclipse_grandmaster/textures/alb.texture",
+      "size": 5592564,
+      "sha256": "0e56f309e1a5f1f29345518ddea9a31813de11e9836242bbd3a42b9acb2e30c1"
+    },
+    {
+      "path": "data/hd/items/d2plus/eclipse_grandmaster/textures/mask.texture",
+      "size": 5592564,
+      "sha256": "3f6be338341d2ed0efa57335625ed6be0a7cda0f05b4c9125ac1279e0dc5fabe"
+    },
+    {
+      "path": "data/hd/items/d2plus/eclipse_grandmaster/textures/nrm.texture",
+      "size": 5592564,
+      "sha256": "3768edcfd06741d50ae56545c5cab146866b738e81f1491151adc86724773a53"
+    },
+    {
+      "path": "data/hd/items/d2plus/eclipse_grandmaster/textures/orm.texture",
+      "size": 5592564,
+      "sha256": "cd86a6275c4befd9819e3ef722f067bfd3e1f0414e57fb124cbe2cb8ea659ec4"
+    },
+    {
+      "path": "data/hd/items/d2plus/empyrean_highlord/textures/alb.texture",
+      "size": 5592564,
+      "sha256": "cd22433e6d8e67274e63aef78990c20acca0555fb458c24cee422fd9979e21d4"
+    },
+    {
+      "path": "data/hd/items/d2plus/empyrean_highlord/textures/mask.texture",
+      "size": 5592564,
+      "sha256": "3f6be338341d2ed0efa57335625ed6be0a7cda0f05b4c9125ac1279e0dc5fabe"
+    },
+    {
+      "path": "data/hd/items/d2plus/empyrean_highlord/textures/nrm.texture",
+      "size": 5592564,
+      "sha256": "890891cad2014e94ffc78a46ed772464bca0d6858056d8c822a1bdbd8aa989f7"
+    },
+    {
+      "path": "data/hd/items/d2plus/empyrean_highlord/textures/orm.texture",
+      "size": 5592564,
+      "sha256": "a34eda8afc84610254d5b62d4bedc602babbf96f9c2be1ff9f0431176da3d991"
+    },
+    {
+      "path": "data/hd/items/d2plus/heavenpiercer/textures/alb.texture",
+      "size": 5592564,
+      "sha256": "631f8be45ba8752b275417c0bb529a23d74d9272c24cacf35342ae0a17ca7249"
+    },
+    {
+      "path": "data/hd/items/d2plus/heavenpiercer/textures/mask.texture",
+      "size": 5592564,
+      "sha256": "3f6be338341d2ed0efa57335625ed6be0a7cda0f05b4c9125ac1279e0dc5fabe"
+    },
+    {
+      "path": "data/hd/items/d2plus/heavenpiercer/textures/nrm.texture",
+      "size": 5592564,
+      "sha256": "69efbf90905b5b24378908599dcd92728f5fe0902643738ecb983a26d8469cc5"
+    },
+    {
+      "path": "data/hd/items/d2plus/heavenpiercer/textures/orm.texture",
+      "size": 5592564,
+      "sha256": "3a0cfebfc285d59aa93fb5990b8d35203f17b58c295217b796b0a0d63ffb2599"
+    },
+    {
+      "path": "data/hd/items/d2plus/immortal_warfather/textures/alb.texture",
+      "size": 5592564,
+      "sha256": "4e8fd558d8367db398429d5a067da78db4053c136a4f822bfd52bf2cd899fe01"
+    },
+    {
+      "path": "data/hd/items/d2plus/immortal_warfather/textures/mask.texture",
+      "size": 5592564,
+      "sha256": "3f6be338341d2ed0efa57335625ed6be0a7cda0f05b4c9125ac1279e0dc5fabe"
+    },
+    {
+      "path": "data/hd/items/d2plus/immortal_warfather/textures/nrm.texture",
+      "size": 5592564,
+      "sha256": "9dbfabcf20a3e87a21af1cfbf37117718ed7164f09f9eabe2b81ef61656e11ff"
+    },
+    {
+      "path": "data/hd/items/d2plus/immortal_warfather/textures/orm.texture",
+      "size": 5592564,
+      "sha256": "a34eda8afc84610254d5b62d4bedc602babbf96f9c2be1ff9f0431176da3d991"
+    },
+    {
+      "path": "data/hd/items/d2plus/primal_heart/textures/alb.texture",
+      "size": 5592564,
+      "sha256": "395c49c9fefc4f2f72a3ca5a67a5d1358cf41d5daba56ded2f003dd467295aba"
+    },
+    {
+      "path": "data/hd/items/d2plus/primal_heart/textures/mask.texture",
+      "size": 5592564,
+      "sha256": "3f6be338341d2ed0efa57335625ed6be0a7cda0f05b4c9125ac1279e0dc5fabe"
+    },
+    {
+      "path": "data/hd/items/d2plus/primal_heart/textures/nrm.texture",
+      "size": 5592564,
+      "sha256": "3768edcfd06741d50ae56545c5cab146866b738e81f1491151adc86724773a53"
+    },
+    {
+      "path": "data/hd/items/d2plus/primal_heart/textures/orm.texture",
+      "size": 5592564,
+      "sha256": "c7783dd9a415f760c0b3d99ac3d583fee605f6b3b1d4b0f4aad0151d83afeb6b"
+    },
+    {
+      "path": "data/hd/items/d2plus/relic_wave2/heart_of_a_dying_sun/textures/alb.texture",
+      "size": 5592564,
+      "sha256": "8a4a77d12b8139976813bc9f3c3e8446ab2891224027322108dd082e6c7184d7"
+    },
+    {
+      "path": "data/hd/items/d2plus/relic_wave2/heart_of_a_dying_sun/textures/mask.texture",
+      "size": 5592564,
+      "sha256": "3f6be338341d2ed0efa57335625ed6be0a7cda0f05b4c9125ac1279e0dc5fabe"
+    },
+    {
+      "path": "data/hd/items/d2plus/relic_wave2/heart_of_a_dying_sun/textures/nrm.texture",
+      "size": 5592564,
+      "sha256": "f98fadc0ccecbbbb83c227e22ac35c844baa8c90dbb6f7fccca491f06b4b3814"
+    },
+    {
+      "path": "data/hd/items/d2plus/relic_wave2/heart_of_a_dying_sun/textures/orm.texture",
+      "size": 5592564,
+      "sha256": "0b8ad14db3a04a3f20b12e26debe3cf528477ac822ea12f112df52339ff73804"
+    },
+    {
+      "path": "data/hd/items/d2plus/relic_wave2/the_unbroken_heaven/textures/alb.texture",
+      "size": 5592564,
+      "sha256": "3bff000b213118a538b012e0714e17e2a09d12a6abdc0ebf473f2bf14901b962"
+    },
+    {
+      "path": "data/hd/items/d2plus/relic_wave2/the_unbroken_heaven/textures/mask.texture",
+      "size": 5592564,
+      "sha256": "3f6be338341d2ed0efa57335625ed6be0a7cda0f05b4c9125ac1279e0dc5fabe"
+    },
+    {
+      "path": "data/hd/items/d2plus/relic_wave2/the_unbroken_heaven/textures/nrm.texture",
+      "size": 5592564,
+      "sha256": "878d036e4db24c9c89b97fca741eaa25e25d046e03256e1f4a3416f8b1cf750e"
+    },
+    {
+      "path": "data/hd/items/d2plus/relic_wave2/the_unbroken_heaven/textures/orm.texture",
+      "size": 5592564,
+      "sha256": "3d7f684a36fc72e3832819c4afeb007b0c5a40c36597e14090c01135baedb886"
+    },
+    {
+      "path": "data/hd/items/d2plus/relic_wave2/verdict_of_the_seraphim/textures/alb.texture",
+      "size": 5592564,
+      "sha256": "a7f8ec02cd9048dba7c14dfe7a1e279f6f3bebf6a9599b0cf4c6841c5e6d0a11"
+    },
+    {
+      "path": "data/hd/items/d2plus/relic_wave2/verdict_of_the_seraphim/textures/mask.texture",
+      "size": 5592564,
+      "sha256": "3f6be338341d2ed0efa57335625ed6be0a7cda0f05b4c9125ac1279e0dc5fabe"
+    },
+    {
+      "path": "data/hd/items/d2plus/relic_wave2/verdict_of_the_seraphim/textures/nrm.texture",
+      "size": 5592564,
+      "sha256": "15b9b0a9fdb98916232fc5d95370ca7ff133d790242986953f36d58f03d71059"
+    },
+    {
+      "path": "data/hd/items/d2plus/relic_wave2/verdict_of_the_seraphim/textures/orm.texture",
+      "size": 5592564,
+      "sha256": "597e6f6ee7b8aec5df0de03728db7a961eaa2f0209a78452ec7a40b030b77b52"
+    },
+    {
+      "path": "data/hd/items/d2plus/relic_wave3/echo_of_the_first_war/textures/alb.texture",
+      "size": 5592564,
+      "sha256": "5bdb68c74da1cc34b31aedafba8066cdf56e0d03cd73b7c07e9715d3f2ef7b87"
+    },
+    {
+      "path": "data/hd/items/d2plus/relic_wave3/echo_of_the_first_war/textures/mask.texture",
+      "size": 5592564,
+      "sha256": "3f6be338341d2ed0efa57335625ed6be0a7cda0f05b4c9125ac1279e0dc5fabe"
+    },
+    {
+      "path": "data/hd/items/d2plus/relic_wave3/echo_of_the_first_war/textures/nrm.texture",
+      "size": 5592564,
+      "sha256": "075d16a9bc6b275b9f592aa707d615cf776965c3ad356a1f42831c2044e2346d"
+    },
+    {
+      "path": "data/hd/items/d2plus/relic_wave3/echo_of_the_first_war/textures/orm.texture",
+      "size": 5592564,
+      "sha256": "9aeb248e0e87bde1b727c114d83c6b4ff134c4cf61f72b04566dd2278c0e9f87"
+    },
+    {
+      "path": "data/hd/items/d2plus/relic_wave3/sunderer_of_the_firmament/textures/alb.texture",
+      "size": 5592564,
+      "sha256": "d9ab894bf515d91faed716b2705dfe70a2c8a78b9833258d89f04c5919094a8f"
+    },
+    {
+      "path": "data/hd/items/d2plus/relic_wave3/sunderer_of_the_firmament/textures/mask.texture",
+      "size": 5592564,
+      "sha256": "3f6be338341d2ed0efa57335625ed6be0a7cda0f05b4c9125ac1279e0dc5fabe"
+    },
+    {
+      "path": "data/hd/items/d2plus/relic_wave3/sunderer_of_the_firmament/textures/nrm.texture",
+      "size": 5592564,
+      "sha256": "e61f3577f89fc6dd7e05d7a2c424526e821c6cb74a53de031f1f63e8a3242d9e"
+    },
+    {
+      "path": "data/hd/items/d2plus/relic_wave3/sunderer_of_the_firmament/textures/orm.texture",
+      "size": 5592564,
+      "sha256": "6e3952c0b747f0a640922886cfd9d8f89c2025bb7122d0f6e24e156287355734"
+    },
+    {
+      "path": "data/hd/items/d2plus/relic_wave3/the_final_pestilence/textures/alb.texture",
+      "size": 5592564,
+      "sha256": "e0f9fb27a22c41e583e171b3326c37c39bc57e7c2fb22e0783fb41266ddc420a"
+    },
+    {
+      "path": "data/hd/items/d2plus/relic_wave3/the_final_pestilence/textures/mask.texture",
+      "size": 5592564,
+      "sha256": "3f6be338341d2ed0efa57335625ed6be0a7cda0f05b4c9125ac1279e0dc5fabe"
+    },
+    {
+      "path": "data/hd/items/d2plus/relic_wave3/the_final_pestilence/textures/nrm.texture",
+      "size": 5592564,
+      "sha256": "76d93072a9af546ecf9740631a57053a067937ce1a2069bc4128c21f1eb46c3b"
+    },
+    {
+      "path": "data/hd/items/d2plus/relic_wave3/the_final_pestilence/textures/orm.texture",
+      "size": 5592564,
+      "sha256": "dca6b9e0bbb22f01b10220ac90d250af87e78957cf04ef2fd48ec20c360ec737"
+    },
+    {
+      "path": "data/hd/items/d2plus/relic_wave4/dreamflange/textures/alb.texture",
+      "size": 5592564,
+      "sha256": "6fc5f5696ff681e089f8e57c106e285736bf03cef4b35b8231cf26293f96e282"
+    },
+    {
+      "path": "data/hd/items/d2plus/relic_wave4/dreamflange/textures/mask.texture",
+      "size": 5592564,
+      "sha256": "3f6be338341d2ed0efa57335625ed6be0a7cda0f05b4c9125ac1279e0dc5fabe"
+    },
+    {
+      "path": "data/hd/items/d2plus/relic_wave4/dreamflange/textures/nrm.texture",
+      "size": 5592564,
+      "sha256": "584cc77762b6d11d8291c77806882bc08a04405dcf04c7d299e143ed165bc475"
+    },
+    {
+      "path": "data/hd/items/d2plus/relic_wave4/dreamflange/textures/orm.texture",
+      "size": 5592564,
+      "sha256": "a500644dc2564542d4ebc251930379c0f616f7364b694b293d530aa2c08a9c92"
+    },
+    {
+      "path": "data/hd/items/d2plus/relic_wave4/gotterdamerung/textures/alb.texture",
+      "size": 5592564,
+      "sha256": "827896fcd83651c1dd277b761ca8f41ca6a681ba9f9a8ffefd8a974c608f0e32"
+    },
+    {
+      "path": "data/hd/items/d2plus/relic_wave4/gotterdamerung/textures/mask.texture",
+      "size": 5592564,
+      "sha256": "3f6be338341d2ed0efa57335625ed6be0a7cda0f05b4c9125ac1279e0dc5fabe"
+    },
+    {
+      "path": "data/hd/items/d2plus/relic_wave4/gotterdamerung/textures/nrm.texture",
+      "size": 5592564,
+      "sha256": "a95781a0aeee55f6c4f71d821cfbd36fce04e84c225ef8c2ed840566a4f6bcb9"
+    },
+    {
+      "path": "data/hd/items/d2plus/relic_wave4/gotterdamerung/textures/orm.texture",
+      "size": 5592564,
+      "sha256": "9ae04bf9687c183828ce623f4af90ff09b9426b97679d65afa550ef72c5dd6cf"
+    },
+    {
+      "path": "data/hd/items/d2plus/relic_wave4/royal_circlet/textures/alb.texture",
+      "size": 5592564,
+      "sha256": "14d88887994762a872d0d1767eeb4e79c940d372626a810d3ed46aee110c45e2"
+    },
+    {
+      "path": "data/hd/items/d2plus/relic_wave4/royal_circlet/textures/mask.texture",
+      "size": 5592564,
+      "sha256": "3f6be338341d2ed0efa57335625ed6be0a7cda0f05b4c9125ac1279e0dc5fabe"
+    },
+    {
+      "path": "data/hd/items/d2plus/relic_wave4/royal_circlet/textures/nrm.texture",
+      "size": 5592564,
+      "sha256": "6a1feecc9403c31b1dd40f2bddc9fb85ab05111efe7aaf1d0dfcbc46edf01619"
+    },
+    {
+      "path": "data/hd/items/d2plus/relic_wave4/royal_circlet/textures/orm.texture",
+      "size": 5592564,
+      "sha256": "5edd16d4a2d3e2ec205704c4f179f5bb3c68182c082420ab1952efe3292da05d"
+    },
+    {
+      "path": "data/hd/items/d2plus/relic_wave5/edict_of_the_eternal_light/textures/alb.texture",
+      "size": 5592564,
+      "sha256": "e035dfc0587f2aa588651789f7b06e38557c6dd8d2fdd1c1428e65fd6906f5c1"
+    },
+    {
+      "path": "data/hd/items/d2plus/relic_wave5/edict_of_the_eternal_light/textures/mask.texture",
+      "size": 5592564,
+      "sha256": "3f6be338341d2ed0efa57335625ed6be0a7cda0f05b4c9125ac1279e0dc5fabe"
+    },
+    {
+      "path": "data/hd/items/d2plus/relic_wave5/edict_of_the_eternal_light/textures/nrm.texture",
+      "size": 5592564,
+      "sha256": "e84536fd8f018014f1f47984f54958787aa026a57f27322154a4d4ae30014cbc"
+    },
+    {
+      "path": "data/hd/items/d2plus/relic_wave5/edict_of_the_eternal_light/textures/orm.texture",
+      "size": 5592564,
+      "sha256": "430e12f532bba9f68f7e02b599541f7cdff4972a087960cb21e6c62f0d91f581"
+    },
+    {
+      "path": "data/hd/items/d2plus/relic_wave5/holy_defender/textures/alb.texture",
+      "size": 5592564,
+      "sha256": "5e6467c1f522dcc1ea85458a5b8a52b1d055132b7210bbcf78df7d7387e9c4b8"
+    },
+    {
+      "path": "data/hd/items/d2plus/relic_wave5/holy_defender/textures/mask.texture",
+      "size": 5592564,
+      "sha256": "3f6be338341d2ed0efa57335625ed6be0a7cda0f05b4c9125ac1279e0dc5fabe"
+    },
+    {
+      "path": "data/hd/items/d2plus/relic_wave5/holy_defender/textures/nrm.texture",
+      "size": 5592564,
+      "sha256": "46eb3bf9154bcb361e29492c4a111dc0d8efbe1c8554490575300df6e7415ba5"
+    },
+    {
+      "path": "data/hd/items/d2plus/relic_wave5/holy_defender/textures/orm.texture",
+      "size": 5592564,
+      "sha256": "f19647dff7ff28119346f1e22c29f517f6fdfa24c6aa166c81426d55c9f390cb"
+    },
+    {
+      "path": "data/hd/items/d2plus/relic_wave5/testament_of_the_black_sun/textures/alb.texture",
+      "size": 5592564,
+      "sha256": "632201db74138191adbe4ad17604d61f7ce861f816f20bba0d27abb3d7ab3c60"
+    },
+    {
+      "path": "data/hd/items/d2plus/relic_wave5/testament_of_the_black_sun/textures/mask.texture",
+      "size": 5592564,
+      "sha256": "3f6be338341d2ed0efa57335625ed6be0a7cda0f05b4c9125ac1279e0dc5fabe"
+    },
+    {
+      "path": "data/hd/items/d2plus/relic_wave5/testament_of_the_black_sun/textures/nrm.texture",
+      "size": 5592564,
+      "sha256": "91dfbc600c598bc1aec0eac4940d98f171f6d3b77807d6e7d1b417f346f26695"
+    },
+    {
+      "path": "data/hd/items/d2plus/relic_wave5/testament_of_the_black_sun/textures/orm.texture",
+      "size": 5592564,
+      "sha256": "87157f62f755f1a8c9f52652b998c6afb3026ac6b56c5bafd065ad0ad5e90c15"
+    },
+    {
+      "path": "data/hd/items/d2plus/relic_wave5/the_final_tribunal/textures/alb.texture",
+      "size": 5592564,
+      "sha256": "c69b5269b79383859a0c01c1bb56f200bbdbc0cfc451fdcd7ee957e0f00d4eeb"
+    },
+    {
+      "path": "data/hd/items/d2plus/relic_wave5/the_final_tribunal/textures/mask.texture",
+      "size": 5592564,
+      "sha256": "3f6be338341d2ed0efa57335625ed6be0a7cda0f05b4c9125ac1279e0dc5fabe"
+    },
+    {
+      "path": "data/hd/items/d2plus/relic_wave5/the_final_tribunal/textures/nrm.texture",
+      "size": 5592564,
+      "sha256": "8c9914eaa5e32a3e4e0be52f9859c27f02fac38289687d84e7700dae0567a07e"
+    },
+    {
+      "path": "data/hd/items/d2plus/relic_wave5/the_final_tribunal/textures/orm.texture",
+      "size": 5592564,
+      "sha256": "b633cb880fe7f4d2b1be40bc693653ed7710de17d592bf25196fa62c945868d6"
+    },
+    {
+      "path": "data/hd/items/d2plus/relic_wave5/the_first_blasphemy/textures/alb.texture",
+      "size": 5592564,
+      "sha256": "dd7b295b8566ad9db414a7c23ca6f7ec02056167c367a34fc98072c4e26c3e17"
+    },
+    {
+      "path": "data/hd/items/d2plus/relic_wave5/the_first_blasphemy/textures/mask.texture",
+      "size": 5592564,
+      "sha256": "3f6be338341d2ed0efa57335625ed6be0a7cda0f05b4c9125ac1279e0dc5fabe"
+    },
+    {
+      "path": "data/hd/items/d2plus/relic_wave5/the_first_blasphemy/textures/nrm.texture",
+      "size": 5592564,
+      "sha256": "338a95d9490e594fd4f0b8cba1f533833de682d69bd4ada294c8b15ea44cf4bc"
+    },
+    {
+      "path": "data/hd/items/d2plus/relic_wave5/the_first_blasphemy/textures/orm.texture",
+      "size": 5592564,
+      "sha256": "a105f5f42be79e250dc781e0dccd2cf6cb321fb976ff60c02d48b2a206423853"
+    },
+    {
+      "path": "data/hd/items/d2plus/relic_wave5/the_last_warfather/textures/alb.texture",
+      "size": 5592564,
+      "sha256": "aee4c45cd979874a401ad2606eefa6622144b0291c531273b072b68e96664e09"
+    },
+    {
+      "path": "data/hd/items/d2plus/relic_wave5/the_last_warfather/textures/mask.texture",
+      "size": 5592564,
+      "sha256": "3f6be338341d2ed0efa57335625ed6be0a7cda0f05b4c9125ac1279e0dc5fabe"
+    },
+    {
+      "path": "data/hd/items/d2plus/relic_wave5/the_last_warfather/textures/nrm.texture",
+      "size": 5592564,
+      "sha256": "861c9a54a93e47cdc686f929ddbd34dbd34b23e37adce98df2989922e905dc05"
+    },
+    {
+      "path": "data/hd/items/d2plus/relic_wave5/the_last_warfather/textures/orm.texture",
+      "size": 5592564,
+      "sha256": "649043c22a7fa86e0a87ccf8e6c6e4237db2cb176d29b43d667c8c9ada13a222"
+    },
+    {
+      "path": "data/hd/items/d2plus/relic_wave5/the_mountain_s_last_roar/textures/alb.texture",
+      "size": 5592564,
+      "sha256": "6ff2cc49f52de95c64084c5d33956575fc5bf6086931485773ff248ee1d5e762"
+    },
+    {
+      "path": "data/hd/items/d2plus/relic_wave5/the_mountain_s_last_roar/textures/mask.texture",
+      "size": 5592564,
+      "sha256": "3f6be338341d2ed0efa57335625ed6be0a7cda0f05b4c9125ac1279e0dc5fabe"
+    },
+    {
+      "path": "data/hd/items/d2plus/relic_wave5/the_mountain_s_last_roar/textures/nrm.texture",
+      "size": 5592564,
+      "sha256": "93ab86315a759acc48a790d6a92addd8354c91eca0d47cf7d612d7017d75a3ea"
+    },
+    {
+      "path": "data/hd/items/d2plus/relic_wave5/the_mountain_s_last_roar/textures/orm.texture",
+      "size": 5592564,
+      "sha256": "0e9351cadd79fe30254b6d726479d1ef9aab59f22a79b85be3c27853a201e569"
+    },
+    {
+      "path": "data/hd/items/d2plus/relic_wave5/the_silent_thunder/textures/alb.texture",
+      "size": 5592564,
+      "sha256": "358ecc7a6c0e7ba65bc958dd35bacf132b3dd8119cb50ae4add3a80a9b887b91"
+    },
+    {
+      "path": "data/hd/items/d2plus/relic_wave5/the_silent_thunder/textures/mask.texture",
+      "size": 5592564,
+      "sha256": "3f6be338341d2ed0efa57335625ed6be0a7cda0f05b4c9125ac1279e0dc5fabe"
+    },
+    {
+      "path": "data/hd/items/d2plus/relic_wave5/the_silent_thunder/textures/nrm.texture",
+      "size": 5592564,
+      "sha256": "6b72df1ea600b4f5d672f918b4780451935f15776882989cbfa89285d738fbb5"
+    },
+    {
+      "path": "data/hd/items/d2plus/relic_wave5/the_silent_thunder/textures/orm.texture",
+      "size": 5592564,
+      "sha256": "9a2af7aaee0fb079be2f09d7806d3c030ef57ca1521d8681245420ce0cf234bf"
+    },
+    {
+      "path": "data/hd/items/d2plus/spell_ends_worlds/textures/alb.texture",
+      "size": 5592564,
+      "sha256": "19f26f64ee31ce4c590888b16ca9555cef0dbed02050aa2fa7c9022497ab7851"
+    },
+    {
+      "path": "data/hd/items/d2plus/spell_ends_worlds/textures/mask.texture",
+      "size": 5592564,
+      "sha256": "3f6be338341d2ed0efa57335625ed6be0a7cda0f05b4c9125ac1279e0dc5fabe"
+    },
+    {
+      "path": "data/hd/items/d2plus/spell_ends_worlds/textures/nrm.texture",
+      "size": 5592564,
+      "sha256": "3768edcfd06741d50ae56545c5cab146866b738e81f1491151adc86724773a53"
+    },
+    {
+      "path": "data/hd/items/d2plus/spell_ends_worlds/textures/orm.texture",
+      "size": 5592564,
+      "sha256": "577e7ec1e51f2b55dec5d203f438e4b816b2ef5894b5f16af8a4ae6299a4a468"
+    },
+    {
+      "path": "data/hd/items/d2plus/throne_deathless/textures/alb.texture",
+      "size": 5592564,
+      "sha256": "ddc25d6efd4fccd6f5df6e743dd18995ba1f445abcdf8b956c804f9e5973d7d8"
+    },
+    {
+      "path": "data/hd/items/d2plus/throne_deathless/textures/mask.texture",
+      "size": 5592564,
+      "sha256": "3f6be338341d2ed0efa57335625ed6be0a7cda0f05b4c9125ac1279e0dc5fabe"
+    },
+    {
+      "path": "data/hd/items/d2plus/throne_deathless/textures/nrm.texture",
+      "size": 5592564,
+      "sha256": "16c8f8f636c35a43bcb17d9834fee3967cef019f00e3240c009bcba53e438bc5"
+    },
+    {
+      "path": "data/hd/items/d2plus/throne_deathless/textures/orm.texture",
+      "size": 5592564,
+      "sha256": "da8197d860999edbe7338985be1dd43b09e512b8fb614eb494299d87d2d1d5d8"
+    },
+    {
+      "path": "data/hd/items/d2plus/throne_deathless_polish/textures/alb.texture",
+      "size": 5592564,
+      "sha256": "a2c2537f1f4eabeb3b290c9996fcf98c04a73db128fdfcd8208872c9e3a3b6bb"
+    },
+    {
+      "path": "data/hd/items/d2plus/throne_deathless_polish/textures/mask.texture",
+      "size": 5592564,
+      "sha256": "3f6be338341d2ed0efa57335625ed6be0a7cda0f05b4c9125ac1279e0dc5fabe"
+    },
+    {
+      "path": "data/hd/items/d2plus/throne_deathless_polish/textures/nrm.texture",
+      "size": 5592564,
+      "sha256": "54d4c76d30769f60273f79b03338f07b5d51d59117f59fafbc6bf3ebb84f0ed6"
+    },
+    {
+      "path": "data/hd/items/d2plus/throne_deathless_polish/textures/orm.texture",
+      "size": 5592564,
+      "sha256": "2efa5d7d7c8f37297667ef821aa478568339b35fea54b7821d35e0dc7ca9e0c5"
+    },
+    {
+      "path": "data/hd/items/d2plus/zenith_sky_queen/textures/alb.texture",
+      "size": 5592564,
+      "sha256": "d0168c7e968b59b787821568cc4d171e528e8602956c32157e63c9e816c89989"
+    },
+    {
+      "path": "data/hd/items/d2plus/zenith_sky_queen/textures/mask.texture",
+      "size": 5592564,
+      "sha256": "3f6be338341d2ed0efa57335625ed6be0a7cda0f05b4c9125ac1279e0dc5fabe"
+    },
+    {
+      "path": "data/hd/items/d2plus/zenith_sky_queen/textures/nrm.texture",
+      "size": 5592564,
+      "sha256": "3b632c3cadbca6d93ba6fbad4f2e827fa51bad9180c6d8600c7e1a477aab4557"
+    },
+    {
+      "path": "data/hd/items/d2plus/zenith_sky_queen/textures/orm.texture",
+      "size": 5592564,
+      "sha256": "a34eda8afc84610254d5b62d4bedc602babbf96f9c2be1ff9f0431176da3d991"
+    },
+    {
+      "path": "data/hd/items/items.json",
+      "size": 55336,
+      "sha256": "b74e75d06e688b171d1b3d96cebb94a4be0caa042b98b8a65efdf2ca0e78df4b"
+    },
+    {
+      "path": "data/hd/items/misc/quest/d2plus_reward_bag.json",
+      "size": 1854,
+      "sha256": "8dfe63dbae778b3446235fd316af85f4ae258b81e28913a226378950beae227f"
+    },
+    {
+      "path": "data/hd/items/sets.json",
+      "size": 48918,
+      "sha256": "3f2a81eae0fc164d1203ecc8df12cf911508f5675f94c2f8ad4cd718c220d6d1"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/alpha11/edict_of_the_eternal_light.json",
+      "size": 8275,
+      "sha256": "37b4e1d94dc9075c6b57bb7a0cdbb80b708e38037a9fc37a9a85114b3ed225f7"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/alpha11/heart_of_a_dying_sun.json",
+      "size": 3095,
+      "sha256": "c76b19453689b8774e2aa954c84b737f144815986320aa51ff17fe32625b78c9"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/alpha11/heavenpiercer.json",
+      "size": 10147,
+      "sha256": "176a070dc6dd223abb557207306ec3408b96c3f504115f221561741baaebbb26"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/alpha11/sunderer_of_the_firmament.json",
+      "size": 4177,
+      "sha256": "3cec581f585b2c9a2ac96e21a7e9c73a1c3c716a5bdcd79977ddbb978c0d7ab7"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/alpha11/the_final_pestilence.json",
+      "size": 7662,
+      "sha256": "5483a5c9dda164204f96e92922b36512acd3cc60ab282ab2f395f72de59b2a4b"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/alpha11/the_final_tribunal.json",
+      "size": 8239,
+      "sha256": "ad4b3bd50b1a4bb0957f6bc8b050bb388bb09227e4baa23406edf83708cce789"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/alpha11/the_first_blasphemy.json",
+      "size": 8199,
+      "sha256": "b5df5ab66b349f16d2657be241feeeb00e7563a3b7e1c0cf191f26650084a593"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/alpha11/the_last_warfather.json",
+      "size": 8207,
+      "sha256": "eecfcada67c0957b920eb6d0c8f07ff305033cdc76edc7cde0bf9d8fbdfa954c"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/alpha11/the_last_winter.json",
+      "size": 14838,
+      "sha256": "01351c000e085ea9d3dace58bc53f5abec637de47db6c4cff62f2412de187248"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/alpha11/the_mountain_s_last_roar.json",
+      "size": 7727,
+      "sha256": "4b36114f33efa6ba3241430616fe1585c4e52938a5bd6aa319bec601d4e650aa"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/alpha11/the_silent_thunder.json",
+      "size": 3084,
+      "sha256": "411db41a853f6d8d352f37ceedfee9e3f6c6d54db7d675095c6392ba7452e698"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/alpha11/the_spell_that_ends_worlds.json",
+      "size": 8151,
+      "sha256": "4134d37b6aaaf54b42948080f52b03d2b95be0fc36436b9149d980fee3a99f4e"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/alpha11/verdict_of_the_seraphim.json",
+      "size": 8269,
+      "sha256": "03a542526b1c7fac36287fcdead41e5eaa30c71d6fdcce52f10c892ca09ad8f3"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/archmagus/armament/model_lod0.model",
+      "size": 114036,
+      "sha256": "8afbfa61501bb8e150febd37b23b1f9fb8a815c16cd5fa61b0d5ce3ec5f871ba"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/archmagus/armament/model_lod1.model",
+      "size": 96348,
+      "sha256": "183d843c5711e171d7383b8eefe0feefc81ae1e90752082568d10f26ce8b5bb2"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/archmagus/armament/model_lod2.model",
+      "size": 77704,
+      "sha256": "f700e1261259ebf5a77dd23a80b959afad89f62638e9c5c81e89feefbcdc20dd"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/archmagus/armament/model_lod3.model",
+      "size": 55928,
+      "sha256": "45d861aa9d249838dc01af9ebcd27ce6f360be2002f43a51d84a5e490be0f0b8"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/archmagus/armament/model_lod4.model",
+      "size": 39904,
+      "sha256": "c4706c2ae01daae86995bc0b1a525edd8e0d5e8026b819dd094630712dbcb69e"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/blackstar_dominion/armament/model_lod0.model",
+      "size": 42796,
+      "sha256": "1648a597000b4548ded18bce380f9b57103260ad552c9d8943147fe4f44f22f4"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/blackstar_dominion/armament/model_lod1.model",
+      "size": 39204,
+      "sha256": "3382aaaf181d6ed1575d6335446c34753946fd46519665d234e36f0ef568843d"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/blackstar_dominion/armament/model_lod2.model",
+      "size": 32880,
+      "sha256": "81ad2ca5d1e91f5cc57fec69fc576c3340181b943b2b1706a41173090bf23a38"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/blackstar_dominion/armament/model_lod3.model",
+      "size": 25852,
+      "sha256": "6189e75c569306049e783f1e0530902a610fea971f3a726c436eecfad99679d3"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/blackstar_dominion/armament/model_lod4.model",
+      "size": 19652,
+      "sha256": "c8b1dfba440cc00127f501589567d469ca5993f7669e9d1169f67b6ff38991f7"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/blackstar_dominion/armament.json",
+      "size": 8163,
+      "sha256": "80a7fecf228ca3e137ffd714579fc0a5064016707742eb2c3b2157c7234b79c3"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/d1_082/d1_dreamflange.json",
+      "size": 8021,
+      "sha256": "93cb4ee09b5ffdf49f4fea8e4e7c770f0d22e4305adffec6ddcab39dfe43b72b"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/eclipse_grandmaster/armament/model_lod0.model",
+      "size": 33280,
+      "sha256": "2b3f4601dfa5b5752cbdb3c94b77cd7c5e28ffd9636f221f091f0b6898e0cd25"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/eclipse_grandmaster/armament/model_lod1.model",
+      "size": 30000,
+      "sha256": "a686e61f12db6fd2fc87e888635624b97511a73a714d1ffb8941ea76467ea4bc"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/eclipse_grandmaster/armament/model_lod2.model",
+      "size": 27064,
+      "sha256": "fd7c95b3a142a9978d28c1ec94659516d1d405d1d0147a9a15df6ad2612c9883"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/eclipse_grandmaster/armament/model_lod3.model",
+      "size": 22436,
+      "sha256": "cca238f78ffdfee8ebaa54971076e5be63d0957a5976cfe58d07dffd3bc8c86e"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/eclipse_grandmaster/armament/model_lod4.model",
+      "size": 19008,
+      "sha256": "520cb528588a39e0b1c907fb26eee396e17ace280bc933f17df89422543de353"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/empyrean_highlord/armament/model_lod0.model",
+      "size": 112184,
+      "sha256": "3308ff13e17aed7cae8ae324c34f5fbd5a980ac95f80e721739bb0924844a644"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/empyrean_highlord/armament/model_lod1.model",
+      "size": 94696,
+      "sha256": "292fd37a93659f3f9b13e523f52a692926bc8931108eeea80fcbb9156edb5f21"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/empyrean_highlord/armament/model_lod2.model",
+      "size": 75612,
+      "sha256": "602633603e4df14b01817a468175002edb0fdcb646090276c971ee8ab9119883"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/empyrean_highlord/armament/model_lod3.model",
+      "size": 53848,
+      "sha256": "6fc662b9f565c6a0f5b18d3054d3fc29af14c4b3c936139d702304bc19097d45"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/empyrean_highlord/armament/model_lod4.model",
+      "size": 39360,
+      "sha256": "2a5c45e97a906c864214de95f9521e487291694e4daae0e1a6f24dcb2a881b7b"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/heavenpiercer/bow/model_lod0.model",
+      "size": 455716,
+      "sha256": "6ebe03bc732f3f849e6e312e88c2767d4affc542877ab4ac653d9fd151eda081"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/heavenpiercer/bow/model_lod1.model",
+      "size": 380812,
+      "sha256": "426d68a500357a5f6b30c61a5fa10378f71e65d9f157bede936605e3e0dea5e4"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/heavenpiercer/bow/model_lod2.model",
+      "size": 293800,
+      "sha256": "1a87e87025037f4527dc13d6e25f3b309911fafbe113d0acbe9f5d42edc4781b"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/heavenpiercer/bow/model_lod3.model",
+      "size": 208604,
+      "sha256": "14dcc719ab450d11050185b7e23b6bc0cefc34ddecbc0b6e1df7ad78731005da"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/heavenpiercer/bow/model_lod4.model",
+      "size": 148372,
+      "sha256": "b75153ec6bad63b9f4b8a3dc01ccc3faa2665b42975b3263fa3b9982518cf21a"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/immortal_warfather/armament/model_lod0.model",
+      "size": 249504,
+      "sha256": "a814ff8b28c9844f15a64d9e211c6bc0668dc06b63abcc71c170cbb692f2dc97"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/immortal_warfather/armament/model_lod1.model",
+      "size": 212312,
+      "sha256": "57bc9d71bd0de657cde0ca533639fb890209f67f6467aa36e0d091be0c7d6a78"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/immortal_warfather/armament/model_lod2.model",
+      "size": 165116,
+      "sha256": "c7a6a2f2d1017edcac0c5e7831f17781cf6f58cc3b46782bd442815fb4c65eb5"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/immortal_warfather/armament/model_lod3.model",
+      "size": 115720,
+      "sha256": "8ca534018e276bdc8f4e0a968d6480d72e16f83059b9f1406b776e9e8aa01fff"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/immortal_warfather/armament/model_lod4.model",
+      "size": 76452,
+      "sha256": "83da50cbc89f11ea0b2c0c7dab0e6ad239eed8a4990bcaa0c0b3a922c5494912"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/last_winter/last_winter_lod0.model",
+      "size": 283496,
+      "sha256": "35d7003daab4013f623690ed578234f49feb3b0c13e653cd56439d72623036ae"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/last_winter/last_winter_lod1.model",
+      "size": 244248,
+      "sha256": "9634479b9c0db1a99b6cace96456e38154f4f10ef4b07670aeeab84f42b5edd0"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/last_winter/last_winter_lod2.model",
+      "size": 181904,
+      "sha256": "4b7c0cdbc94c4d34e225234f5e42fc7df72ea86664d1aae5bbb932db13bb03b6"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/last_winter/last_winter_lod3.model",
+      "size": 133844,
+      "sha256": "993861df6a1bf36c1c19a9312f79030aaecfdcae7705129d43441dfb253434b7"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/last_winter/last_winter_lod4.model",
+      "size": 91908,
+      "sha256": "139e802f8bb1e78c11e71c7ce9d8cbbdec7f22c96a077357b13098b6a79b5b09"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/last_winter/textures/last_winter_alb.texture",
+      "size": 5592564,
+      "sha256": "c9868404c692b4437bdd96e1f335b100f959b708d02449e1e0ea6d81f2c19e20"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/last_winter/textures/last_winter_mask.texture",
+      "size": 5592564,
+      "sha256": "3f6be338341d2ed0efa57335625ed6be0a7cda0f05b4c9125ac1279e0dc5fabe"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/last_winter/textures/last_winter_nrm.texture",
+      "size": 5592564,
+      "sha256": "3768edcfd06741d50ae56545c5cab146866b738e81f1491151adc86724773a53"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/last_winter/textures/last_winter_orm.texture",
+      "size": 5592564,
+      "sha256": "c5c6af80a8f657012c581739dcad1eb7dbd93d22e4f50b72a813645f4381a3fb"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/primal_heart/armament/model_lod0.model",
+      "size": 194300,
+      "sha256": "aaaf4f0aed86dac88121fb4c43da68f931db8af543bae48248d2e15951e9c27d"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/primal_heart/armament/model_lod1.model",
+      "size": 165456,
+      "sha256": "aaa978896366ec62fcb3b92a3e325c1801d5d858687f2ba174a4dcf01e909960"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/primal_heart/armament/model_lod2.model",
+      "size": 129636,
+      "sha256": "400af589ee1d15e56c62ad6e552bc3e78c6d0cb08827367b0d4aaf73d365c516"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/primal_heart/armament/model_lod3.model",
+      "size": 92288,
+      "sha256": "b8cdaad4ac0a77b4315d64a673344278b3187f14376296498775a18f199a4ee2"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/primal_heart/armament/model_lod4.model",
+      "size": 66740,
+      "sha256": "cdff14492478687dfa043e81e226cd31084c4a73c5e5a0f2ec2346bc9f7be244"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/relic_wave2/heart_of_a_dying_sun/model_lod0.model",
+      "size": 330700,
+      "sha256": "69278c8361f2b9e634cfbeeae1659c99bc45b882935431ead8afa5fcc466e9f5"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/relic_wave2/heart_of_a_dying_sun/model_lod1.model",
+      "size": 295172,
+      "sha256": "beb52aba50243f813092e4a221e94520a4b21f10f60b8201193977f44b6bbf9d"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/relic_wave2/heart_of_a_dying_sun/model_lod2.model",
+      "size": 236372,
+      "sha256": "e999bd0e14eccbffbb105b18a21db33db424289a2d55d494e6cd841509573d28"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/relic_wave2/heart_of_a_dying_sun/model_lod3.model",
+      "size": 164316,
+      "sha256": "ea628a054947f11be4fa1db951d2ff8e05d8598d91903b3d2851c19a035bf47e"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/relic_wave2/heart_of_a_dying_sun/model_lod4.model",
+      "size": 112592,
+      "sha256": "23f3d36a60cff44a6484a136cc3892508e77b5bc89afa60283086e8c61146d3a"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/relic_wave2/verdict_of_the_seraphim/model_lod0.model",
+      "size": 222944,
+      "sha256": "6d4aa16ed1760144bdd9ac64e0dcc23ee7b27769ce0a2787dc335b4e200f3362"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/relic_wave2/verdict_of_the_seraphim/model_lod1.model",
+      "size": 187208,
+      "sha256": "a8a997d2ea32bf0cd5e2a647cf5590cf59067c919c96f2cdd6b76cd724445a5b"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/relic_wave2/verdict_of_the_seraphim/model_lod2.model",
+      "size": 143740,
+      "sha256": "2ccd7f4a24c3466aa0e14d394b259f65da2d3f2ee060f0169d06c4210f1455a2"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/relic_wave2/verdict_of_the_seraphim/model_lod3.model",
+      "size": 106220,
+      "sha256": "4758ccf29a5739973350706498fe424451d7e3a71f6813de41c3817655e0c440"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/relic_wave2/verdict_of_the_seraphim/model_lod4.model",
+      "size": 77256,
+      "sha256": "cfc5c82b289588bf440887c31f33efa021f444fc62d165bb9c3747b31a53241e"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/relic_wave3/sunderer_of_the_firmament/model_lod0.model",
+      "size": 284236,
+      "sha256": "55d73335a9330ef84c8e720cdc3d3fd81d56cd8b0d198b94ed7ecacb2da59445"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/relic_wave3/sunderer_of_the_firmament/model_lod1.model",
+      "size": 239252,
+      "sha256": "25d7617f0c7a893b221ad62f3af1b094ae505982bc66b163c5dbed147eb65568"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/relic_wave3/sunderer_of_the_firmament/model_lod2.model",
+      "size": 183964,
+      "sha256": "863657406d96895b1c8e75ef482e6d8afc3e5a805b1fef2a200b281410513eca"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/relic_wave3/sunderer_of_the_firmament/model_lod3.model",
+      "size": 133732,
+      "sha256": "c0147cc9a25ce5d7c8923ad9dfc9ec8a106801581fdea84d363036e69a712e06"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/relic_wave3/sunderer_of_the_firmament/model_lod4.model",
+      "size": 96276,
+      "sha256": "99f3cc1a756070297464e6a1723b0ad892802d804799b4cd9362e2adb02a4b86"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/relic_wave3/the_final_pestilence/model_lod0.model",
+      "size": 227932,
+      "sha256": "5634be8af46dfcd4fc8f6dd5cf3d5d3f97adac7d228bc44e854433803aceb0d2"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/relic_wave3/the_final_pestilence/model_lod1.model",
+      "size": 173604,
+      "sha256": "71a273bd40369961b8b7bd79fd1f4c4d1083cf83f65f3565578b8795b892a69d"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/relic_wave3/the_final_pestilence/model_lod2.model",
+      "size": 119376,
+      "sha256": "8d962d50e7474c83d40e218c465c0d3e5ae2df6a1bf1df81b8eb8e11f1d180ab"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/relic_wave3/the_final_pestilence/model_lod3.model",
+      "size": 77752,
+      "sha256": "3c38a2fc0a07b4e8a5cb783769e1fe2c037489fd4bd66a2aa717be0487597e89"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/relic_wave3/the_final_pestilence/model_lod4.model",
+      "size": 45920,
+      "sha256": "75da9172dfd7dc98882a75300711b9ead23b884547a37933a9b6a729fc8e3878"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/relic_wave4/dreamflange/model_lod0.model",
+      "size": 206260,
+      "sha256": "93ee1c951298ce25d15dacb885a0d73bee3b0943e76bfe8aa394852047440d26"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/relic_wave4/dreamflange/model_lod1.model",
+      "size": 176864,
+      "sha256": "1af3d11aa71f28bb8d7412c48d806c05d4308d7a680fe9f4680cf7aa25a7fa96"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/relic_wave4/dreamflange/model_lod2.model",
+      "size": 132592,
+      "sha256": "0e5ce2a66cab5ca88aef71b8129d1928a691111d87305d5de549a8fbbb7df329"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/relic_wave4/dreamflange/model_lod3.model",
+      "size": 93076,
+      "sha256": "9e7d62179484ad6574113f7b7d1b738e95445ce8c2e532cc3926449bf2876ba3"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/relic_wave4/dreamflange/model_lod4.model",
+      "size": 69776,
+      "sha256": "71fe809b932311ed2d19805f53f20f7f7f430701442ea2f269d874a3e33940d6"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/relic_wave5/edict_of_the_eternal_light/model_lod0.model",
+      "size": 93452,
+      "sha256": "b2c7f9d56e042865e40f1770fe073d1fa323dadc2d19509d756f532a76f2680a"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/relic_wave5/edict_of_the_eternal_light/model_lod1.model",
+      "size": 76548,
+      "sha256": "f8eac853eb46861dae47e4a69a22126cd207eeaff44550bea12d459b9b622d4b"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/relic_wave5/edict_of_the_eternal_light/model_lod2.model",
+      "size": 60692,
+      "sha256": "52326649b4095ab0e295f4a71b7dafceb83a62ad69c066e14e97d89c3f27e2fe"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/relic_wave5/edict_of_the_eternal_light/model_lod3.model",
+      "size": 43428,
+      "sha256": "eb1f8e932cffb645c722281dfb9fe59ae818d215125e3994cffbe3ccc0647bf5"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/relic_wave5/edict_of_the_eternal_light/model_lod4.model",
+      "size": 31976,
+      "sha256": "d99e380b7144b4a12a2670d96c13213db630498c2e21078fd2ac391bcf6c8481"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/relic_wave5/the_final_tribunal/model_lod0.model",
+      "size": 222260,
+      "sha256": "5c5b36966f5f0d44eefdb07591b9f6a09e369cb2e186dd184ffc6f26c362b083"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/relic_wave5/the_final_tribunal/model_lod1.model",
+      "size": 192020,
+      "sha256": "1d5b66b0b66f9eaa71eb29a5caa55445d3c48da3645afc51fa1f94487b077bae"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/relic_wave5/the_final_tribunal/model_lod2.model",
+      "size": 149900,
+      "sha256": "baf83a3351fff6ee6b10feee5d8d1ea2e145f43216aaf2ba7ce55dae4aee249c"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/relic_wave5/the_final_tribunal/model_lod3.model",
+      "size": 111848,
+      "sha256": "fff8735aac88eda786624fdc9156fff6f1eef3519cf5d887530b947eec4c3865"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/relic_wave5/the_final_tribunal/model_lod4.model",
+      "size": 80788,
+      "sha256": "a7627f6623e804f85f93f42544428c3802cfba8b79f73fb47b138bc0ff9026ae"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/relic_wave5/the_first_blasphemy/model_lod0.model",
+      "size": 105384,
+      "sha256": "a95a158a846a0c3266c7d67e5917a927c827a7f115509d10f8c2295149e6b5f9"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/relic_wave5/the_first_blasphemy/model_lod1.model",
+      "size": 86304,
+      "sha256": "3d1e0aa8d10649e89c26701711a798fd0375af6d82c426baae9c3d3af6a9635e"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/relic_wave5/the_first_blasphemy/model_lod2.model",
+      "size": 60620,
+      "sha256": "6a99e6b182464fc7c85d3cd5fded6941e1388b14f1b27c878f6c57fb0781cb57"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/relic_wave5/the_first_blasphemy/model_lod3.model",
+      "size": 42792,
+      "sha256": "1bd77542fd3ff86650e639439a7551e57d68ec7c07bb218b006ce52e3486aff3"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/relic_wave5/the_first_blasphemy/model_lod4.model",
+      "size": 29160,
+      "sha256": "e3e7a3e5cfa5c47f5237539f76a452994da48110963de6dc3beabe945f46b8fc"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/relic_wave5/the_last_warfather/model_lod0.model",
+      "size": 197864,
+      "sha256": "a3b4249f2a04a18a84c5f535b87f1145f10c3da21dc49517cf0ea7b1b4552818"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/relic_wave5/the_last_warfather/model_lod1.model",
+      "size": 172076,
+      "sha256": "bac7823ebf36faace4c7e41a48427c6810e031e6d915105ae21f18092bf03f68"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/relic_wave5/the_last_warfather/model_lod2.model",
+      "size": 130336,
+      "sha256": "8ff4b27beddf52eab719aecdb24cd785b531a76e9b71f9c16238ab706ccc17e5"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/relic_wave5/the_last_warfather/model_lod3.model",
+      "size": 98724,
+      "sha256": "9cdbc927f8cc504954a73611a36eb5cc0f01ceaeb50c92e8309d5370fdcdd7c3"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/relic_wave5/the_last_warfather/model_lod4.model",
+      "size": 73080,
+      "sha256": "497edb2a50b888a5f4742ca469e6db8b5c1835419239e36ec1870122e727318f"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/relic_wave5/the_mountain_s_last_roar/model_lod0.model",
+      "size": 340468,
+      "sha256": "6846f5eb283ca3d669833b869479d676c86eec192d73a422a1f563bde209a3c0"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/relic_wave5/the_mountain_s_last_roar/model_lod1.model",
+      "size": 275600,
+      "sha256": "03442e234d85568e1c4d942e73404f68b19d9a2c113635e65c3f01364fa55e33"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/relic_wave5/the_mountain_s_last_roar/model_lod2.model",
+      "size": 208868,
+      "sha256": "44bd7c7fd5a308e045c3c1def94b788a66e716b32087095e451073bdaa47ed02"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/relic_wave5/the_mountain_s_last_roar/model_lod3.model",
+      "size": 137604,
+      "sha256": "a42b3acd4142ff0b69c78609538217bdfb5b470053290ab9341b6f14d31856af"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/relic_wave5/the_mountain_s_last_roar/model_lod4.model",
+      "size": 89416,
+      "sha256": "ba92d5c72b765de00a02a872d6b7f3f57599309968a7ce90668532332008e730"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/relic_wave5/the_silent_thunder/model_lod0.model",
+      "size": 150968,
+      "sha256": "b73a171296598f2d6189c38ea26f0762101f6b5465c4eda7130f769b568fd75f"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/relic_wave5/the_silent_thunder/model_lod1.model",
+      "size": 122416,
+      "sha256": "efe2286c1bb2f3935ff7f5285833fc6944fd3b1163b70a14ae4224c46f1d104d"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/relic_wave5/the_silent_thunder/model_lod2.model",
+      "size": 97220,
+      "sha256": "232db49e7d55a4f09c4176567efb049e90bbf3adf9d8d4a79459ec4aa86313c5"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/relic_wave5/the_silent_thunder/model_lod3.model",
+      "size": 70744,
+      "sha256": "05a2c57c242eceb1c115cf0a2cafaca3c8596fc6d16c4347aa357c1ed6b078af"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/relic_wave5/the_silent_thunder/model_lod4.model",
+      "size": 54880,
+      "sha256": "d75f19a04196d112665a095abb07bae3ef0fb989c16126ba3600c57d6e0b93ba"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/set082/amazon_armament.json",
+      "size": 4376,
+      "sha256": "7774904f4d71c1cef002c8873768d55af8f1170ebc767db040ea0a1101d784bc"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/set082/assassin_armament.json",
+      "size": 3028,
+      "sha256": "4c573ccda26deaa29a4636fb0306501a07b00554bfa2ca80ba2b3fba8f43a3f0"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/set082/barbarian_armament.json",
+      "size": 8046,
+      "sha256": "297842754b396299e5b3d5c198a21ea79dbbcadc1d67d377fc26612e3f53c8a2"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/set082/druid_armament.json",
+      "size": 15285,
+      "sha256": "83c3410475f190c483ababd988118f42907c571c2e08e7097d8c4d06eac320bf"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/set082/necromancer_armament.json",
+      "size": 7485,
+      "sha256": "d3fdbe7a3032c4d753763a5e38cf1f4f52583cf4eb1770020ec711ab3e3e82f6"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/set082/paladin_armament.json",
+      "size": 8058,
+      "sha256": "edcc5b5027fa1d2efe51002b452215a8ff114a7823e2a1f568c0dc8e127e15eb"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/set082/sorceress_armament.json",
+      "size": 3002,
+      "sha256": "ba03a046980c823715cc7d59d9bdd8219ae36981fb336e4366925cc86646a5c4"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/spell_ends_worlds/sword/model_lod0.model",
+      "size": 236404,
+      "sha256": "6db4f2290ef86c7b411c1a80e9af566e342a5f8e9bcb4cc024a90f782b4bda8a"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/spell_ends_worlds/sword/model_lod1.model",
+      "size": 196204,
+      "sha256": "80443127b93aed3840922baafeca31d2ee6c155297fb76eaf00cf347ae1d98c2"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/spell_ends_worlds/sword/model_lod2.model",
+      "size": 149160,
+      "sha256": "007043993d2cf416af0401e885dd6a71f3f4103a2849818995398116c8d33f10"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/spell_ends_worlds/sword/model_lod3.model",
+      "size": 101848,
+      "sha256": "d0a68cbb2b3a7633a0979d68f1645e9c7ae40c839e7e91c8b3279152d9ecd80c"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/spell_ends_worlds/sword/model_lod4.model",
+      "size": 67508,
+      "sha256": "4c5bb1646d17f1ba96d9a5ac01d55b32ca6b8cc00b9dde1575d4bc9e24317dcd"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/throne_deathless/armament/model_lod0.model",
+      "size": 129580,
+      "sha256": "196aae7f8bd2b5b64f3257753413846427c090577b9b774d726b82cd7d2e1813"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/throne_deathless/armament/model_lod1.model",
+      "size": 110792,
+      "sha256": "f263021ef0c02f4b516e2a02ebb5e520d910bd7eed14a94a63caa33e437aba5b"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/throne_deathless/armament/model_lod2.model",
+      "size": 84484,
+      "sha256": "cccadcd90cc54dbd3236fe1643302f182fa0cf4b44ad23a742ff146daf51d2c3"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/throne_deathless/armament/model_lod3.model",
+      "size": 61592,
+      "sha256": "1f2c42c505370335d8de4ee4cf8cbe7df2c150bfe20b7de5233198da8c360ff2"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/throne_deathless/armament/model_lod4.model",
+      "size": 43600,
+      "sha256": "c746906d027e856e2c427173342f1a54f7c130152a74d6a05473798d0123cfba"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/zenith_sky_queen/armament/model_lod0.model",
+      "size": 109512,
+      "sha256": "9834983fb993f6d58d4d3c1660952caa39e39519c8d0bf248da8d9b1d1df04a8"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/zenith_sky_queen/armament/model_lod1.model",
+      "size": 96780,
+      "sha256": "036c6c8fad4df4ff4a677b27a8dc2521b305fbb4776b915eb250096859d6b88d"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/zenith_sky_queen/armament/model_lod2.model",
+      "size": 75136,
+      "sha256": "f19d1b602af3eefdefe5989175ec2b95d791196c48e220aa030ad1e5e15db167"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/zenith_sky_queen/armament/model_lod3.model",
+      "size": 53068,
+      "sha256": "bef2fa12e8d1cb923d2a9b3ad7616f37e5d98f32466e355b02048f7c62501955"
+    },
+    {
+      "path": "data/hd/items/weapon/d2plus/zenith_sky_queen/armament/model_lod4.model",
+      "size": 37756,
+      "sha256": "e4818ef02ae951ff4aad4ab460876a64b81dfe82435782ee3647090bab99cbe6"
+    },
+    {
+      "path": "data/hd/model_lod_desc.bin",
+      "size": 5593548,
+      "sha256": "528922b4d25da796da9f182d4e7c91b8bdd3201dbfc02f389514784afc07f452"
+    },
+    {
+      "path": "data/hd/overlays/common/blackstar_glow.json",
+      "size": 3175,
+      "sha256": "b504e7d3196832a4e7328d183b43e08480fd6d43e5a8d14575536148fa1c858c"
+    },
+    {
+      "path": "data/hd/texture_desc_cache.json",
+      "size": 22519847,
+      "sha256": "1f63da3ecbf6608be45a2d7f8ee7e5d28111a895f68f73882595216928c40bf6"
+    },
+    {
+      "path": "data/hd/vfx/particles/d2plus/blackstar_dominion/arcglow.particles",
+      "size": 65658,
+      "sha256": "d68a8fee1a4b9e9e250c5e8df886ce07669b3bb1d51a964c5a1dc3188629ae12"
+    },
+    {
+      "path": "data/hd/vfx/particles/d2plus/blackstar_dominion/setglow.particles",
+      "size": 382817,
+      "sha256": "1c74f3536322be80039ed05eae0d5c8477d9251808fd525de2f53f4bb6865bf2"
+    },
+    {
+      "path": "data/hd/vfx/textures/gradient/d2p_bstar_arcviolet____.texture",
+      "size": 349632,
+      "sha256": "d20f1e0c0d30bb1d3671469233cf3b6401151a7338204a916321b6d3737a7bcb"
+    },
+    {
+      "path": "data/hd/vfx/textures/gradient/d2p_bstar_darkmist_________.texture",
+      "size": 21992,
+      "sha256": "34069cd142529030c308476e2a78c19df4067b08b612eaf95f905196399929b8"
+    },
+    {
+      "path": "data/local/lng/next_string_id.txt",
+      "size": 654,
+      "sha256": "5f7f0d77f819e7f8cac8a02151fc1271d1d68b97eb8cdb5d5a4e8a4ac0f57f94"
+    },
+    {
+      "path": "data/local/lng/strings/item-modifiers.json",
+      "size": 324610,
+      "sha256": "83928a935b22083ad5e70ff4fec65dd2718e51d472818489ecff95ef6249fd83"
+    },
+    {
+      "path": "data/local/lng/strings/item-names.json",
+      "size": 1231678,
+      "sha256": "0075765fc2eac00662269b17911435fa8cf23aa4913bc49b08dd3f3bfc36d71e"
+    },
+    {
+      "path": "data/local/lng/strings/item-runes.json",
+      "size": 121070,
+      "sha256": "dfa97523e016993e16da3e9d3f8b55b06f7229bde53948a733e310f34a5b45f2"
+    },
+    {
+      "path": "data/local/lng/strings/mercenaries.json",
+      "size": 50775,
+      "sha256": "bef8edb2ed318a87a4157c29266c2f3142cf3a35ca173e485816c421dde815ac"
+    },
+    {
+      "path": "data/local/lng/strings/skills.json",
+      "size": 1427478,
+      "sha256": "c6d4cabee2b8e329f67bda84d5a4bcb8ee644236014e0273dff435ab8864a918"
+    },
+    {
+      "path": "data/local/lng/strings/ui.json",
+      "size": 1613505,
+      "sha256": "a8a186bece5c200f667f58da562ba17839d47da38b5730dd628f642b09f3b3ba"
+    }
+  ],
+  "removeCompiled": [
+    "data/global/excel/armor.bin",
+    "data/global/excel/automagic.bin",
+    "data/global/excel/cubemain.bin",
+    "data/global/excel/itemstatcost.bin",
+    "data/global/excel/itemtypes.bin",
+    "data/global/excel/levels.bin",
+    "data/global/excel/lvlprest.bin",
+    "data/global/excel/lvlwarp.bin",
+    "data/global/excel/misc.bin",
+    "data/global/excel/monpreset.bin",
+    "data/global/excel/monprop.bin",
+    "data/global/excel/monsounds.bin",
+    "data/global/excel/monstats.bin",
+    "data/global/excel/monstats2.bin",
+    "data/global/excel/objects.bin",
+    "data/global/excel/objpreset.bin",
+    "data/global/excel/overlay.bin",
+    "data/global/excel/properties.bin",
+    "data/global/excel/runes.bin",
+    "data/global/excel/setitems.bin",
+    "data/global/excel/sets.bin",
+    "data/global/excel/skilldesc.bin",
+    "data/global/excel/skills.bin",
+    "data/global/excel/sounds.bin",
+    "data/global/excel/states.bin",
+    "data/global/excel/superuniques.bin",
+    "data/global/excel/treasureclassex.bin",
+    "data/global/excel/uniqueitems.bin",
+    "data/global/excel/weapons.bin"
+  ],
+  "exactRemovedFiles": [],
+  "expectedSnapshotFiles": 2906,
+  "privateProjectsIncluded": false
+}

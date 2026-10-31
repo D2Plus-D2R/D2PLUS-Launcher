@@ -1,6 +1,6 @@
-Alpha V1.3, launcher 1.3.0-alpha. After updating, use Setup > Install Alpha V1.3 to reinstall the corrected game files. Keep the existing mod folder and save path.
+Alpha V1.4, launcher 1.4.0-alpha. After updating, use Setup > Install Alpha V1.4 to reinstall the corrected game files. Keep the existing mod folder and save path.
 
-D2PLUS Launcher Alpha V1.3 - Windows x64
+D2PLUS Launcher Alpha V1.4 - Windows x64
 
 Run the Setup EXE, or extract the complete portable ZIP and open D2PLUS Launcher.exe.
 The launcher includes the complete gameplay snapshot, offline wiki, hero editor,
@@ -9,7 +9,7 @@ and optional damage companion. No separate runtime installation is required.
 EASIEST SETUP
 1. Close Diablo II: Resurrected.
 2. In launcher Setup, Browse to your installed D2R.exe.
-3. Choose Install Alpha V1.3. The launcher verifies and installs its bundled files,
+3. Choose Install Alpha V1.4. The launcher verifies and installs its bundled files,
    retains previous mod output as a backup, and sets the launch arguments.
 4. Click Launch D2PLUS. Select an offline character in the game.
 

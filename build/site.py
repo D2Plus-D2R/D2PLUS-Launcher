@@ -198,3 +198,6 @@ print('Accursed practice chamber included in both public guide routes')
 
 # Current release patch runs after historical normalization and preserves stable record IDs.
 subprocess.run([sys.executable,str(root/'build/apply-reference-v13.py')],check=True)
+
+# Final V1.4 snapshot overrides historical reference normalization.
+subprocess.run([sys.executable,str(root/'build/apply-reference-v14.py')],check=True)

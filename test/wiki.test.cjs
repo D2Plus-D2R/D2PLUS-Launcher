@@ -3,7 +3,7 @@ const {JSDOM}=require('jsdom');
 const root=path.join(__dirname,'../docs/wiki');
 test('AlphaV1.1 wiki renders new content offline and preserves unique records',()=>{
  const d=JSON.parse(fs.readFileSync(path.join(root,'database.json')));
- assert.equal(d.version,'D2PLUS Alpha V1.3');assert.equal(new Set(d.records.map(r=>r.id)).size,d.records.length);
+ assert.equal(d.version,'D2PLUS Alpha V1.4');assert.equal(new Set(d.records.map(r=>r.id)).size,d.records.length);
  assert.equal(d.records.filter(r=>r.kind==='Mercenary').length,135);
  assert.equal(d.records.filter(r=>r.id.startsWith('alpha-v05-potion-')).length,6);
  assert.equal(d.records.find(r=>r.name==='Worldforge Shard').art.src,'../wiki/assets/worldstone-shard.png');
@@ -11,7 +11,7 @@ test('AlphaV1.1 wiki renders new content offline and preserves unique records',(
  const w=dom.window;w.scrollTo=()=>{};
  for(const file of ['data.js','item-presentation.js','trinkets.js','app.js'])w.eval(fs.readFileSync(path.join(root,file),'utf8'));
  const text=w.document.querySelector('#content').textContent;
- assert.equal(d.patchNotes[0].version,'Alpha V1.3');
+ assert.equal(d.patchNotes[0].version,'Alpha V1.4');
  assert.ok(fs.readFileSync(path.join(root,'../launcher/index.html'),'utf8').includes('Back Up Saves'));
  for(const term of ['October 17, 2026','A little luck. A little danger.','Accursed','Elder Gems','Azmodan','25%'])assert.ok(text.includes(term),term);
  assert.ok(d.records.some(r=>r.name==='Token of Regret'));

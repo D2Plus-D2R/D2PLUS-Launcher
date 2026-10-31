@@ -1,0 +1,73 @@
+D2PLUS Alpha V1.4 — Happy Halloween!
+October 31, 2026
+
+A new Act III dungeon, Reward Bags, stronger custom runewords and new equipment looks.
+
+A new dungeon in Act III
+- Explore the Sanctum of the Shattered Sun: three connected temple wings on one floor, with ancient ruins, six superunique encounters and more champion packs.
+- Enter through the marked hut in Kurast Docks or the Kurast Causeway entrance. Available on Normal, Nightmare and Hell.
+- Face The Last Sunkeeper, with a massive sword, overhead attacks, stronger boss-only Twisters, skeleton summons and custom voice lines.
+- Four superchests await in the final encounter area. The boss makes five regular loot rolls plus a separate Reward Bag attempt; five rolls do not guarantee five items. Hell can drop TC87 equipment.
+
+Dungeon Reward Bags
+- Normal, Nightmare and Hell bags are orange and take 2×2 inventory slots. They can drop from eligible Act bosses and custom bosses, including Lilith, Azmodan and the Butcher.
+- Bag chance starts at 1% on Players 1–2 on every difficulty, scaling to 2% on Players 3–4, about 3.03% on Players 5–6 and 4% on Players 7–8. Native drop limits still apply.
+- To open: cube one bag + one Sovereign Seal + one Artisan’s Ember. Transmute twice.
+- Receive one to three rewards from its difficulty pool. Elder Gems and Runes are possible; Ritual Sigils and eligible uniques are very rare. High runes remain rare.
+- To upgrade: cube two Normal bags + any Elder Gem for one Nightmare bag, or two Nightmare bags + any Elder Gem for one Hell bag.
+
+Runewords worth saving for
+- Rebalanced 31 higher-tier custom runewords, giving expensive recipes stronger rewards and clearer build roles.
+- More options for poison and lightning casters, magic-damage casters, elemental weapon builds, physical class weapons and mercenaries.
+- Final Hour now rolls level 12–15 Conviction. Infinite Word gains +4 all skills, 65–75% faster cast rate and 10–15% fire, cold, lightning, poison and magic skill damage.
+- Expanded socket limits on compatible bases that already have room. Small wands, small orbs and throwing javelins keep their restrictions; inventory sizes and existing item positions are unchanged.
+- Rune orders and item identities are preserved. Existing runewords keep their saved rolls; craft new ones for the revised bonuses.
+
+New equipment looks
+- Added and refined item-specific equipped models and inventory artwork across the level-95 class sets, including the new four-piece Warlock set, Blackstar Dominion.
+- Blackstar’s full-set effect uses dark-purple energy with lightning accents.
+- Dedicated models for 23 high-end uniques, including Heavenpiercer, The Last Winter and several Diablo I-inspired relics. Improved materials, weapon proportions, shield size and helmet placement.
+- Crown of the Worldfire, Breath of the First Winter and Visage of the Worldroot now have proper Druid headpiece sprites and matching equipped models. Their stats and slots are unchanged.
+
+Inspired by D2R Ladder Season 16
+- We liked the item improvements Blizzard announced for D2R Ladder Season 16, arriving November 13, and decided to bring these selected changes into D2PLUS Alpha V1.4. They give overlooked equipment more reasons to make it into a build. These are adaptations of the announced item changes, not a new set of D2PLUS seasonal items.
+- Dimoak’s Hew: 100–150% Enhanced Damage; +20 Strength replaces +15 Dexterity.
+- Serpent Lord: 40–80% Enhanced Damage, 15% Increased Attack Speed and +5 minimum damage.
+- Griswold’s Edge: 100–160% Enhanced Damage, 25% target slow, and a 4% chance to cast level 1 Amplify Damage on striking instead of Knockback.
+- The Salamander: +3 Fire Skills, +4 Fire Ball and 10% Faster Cast Rate.
+- The Tannr Gorerod: 200–220% Enhanced Damage and 5–9% life stolen per hit.
+- The Grim Reaper: 80–120% Enhanced Damage and 5–9% mana stolen per hit.
+- Silks of the Victor: adds 20% Faster Run/Walk, 30% Increased Attack Speed, 50–100% off-weapon Enhanced Damage and 15% Magic Find.
+- The Impaler: 170–240% Enhanced Damage and repairs one durability every four seconds.
+- Coldkill: 160–200% Enhanced Damage and 80–100 added cold damage.
+- The Atlantean: 250–300% Enhanced Damage, +2–5 Zeal (Paladin only), +100–125 Attack Rating and requirements reduced by 20%; required level drops to 35.
+- Lava Gout: the level-10 Enchant proc rises to 5% on striking; Cannot Be Frozen replaces Half Freeze Duration.
+- Earthshaker: adds +3–5 Fire Claws (Druid only).
+- Grim’s Burning Dead: +4 Necromancer Skills. Its announced archer reanimation and ambiguously named Fire Golem addition are deferred until their native definitions can be confirmed; this is a partial adoption.
+- Swordguard: 180–230% Enhanced Damage, 20–30 All Resistances, +10–15 Replenish Life and 15–25 damage returned to attackers. Its level-based defense increases to the native 63/8-per-level scaling (rounded down).
+- Demonhorn’s Edge: 20% Increased Attack Speed and an additional +1 Barbarian Skills.
+- Veil of Steel: +2 All Skills, 15–25% physical damage reduction and 20–40% magic resistance.
+- Ethereal Edge: 220–260% Enhanced Damage, 40% Increased Attack Speed and +2 maximum damage per character level.
+- Executioner’s Justice: 260–300% Enhanced Damage, 40% Increased Attack Speed, +15 Life and +5 Mana after each kill. Its kill proc becomes a 25% chance for level 13 Amplify Damage, replacing Decrepify.
+- Isenhart’s Armory: the full set now gives 30% Faster Run/Walk and 25% Faster Hit Recovery. Lightbrand gains 40% Increased Attack Speed and level-based Attack Rating as a normal property; its three-piece bonus adds +2 maximum damage per level. Parry gains 15% fire and cold resistance at two pieces, Case gains 25% magic resistance, and Horns gains 5% life leech. Existing unrelated D2PLUS bonuses are retained.
+- Eternity: now works in eligible five-socket melee and missile weapons; 300–390% word Enhanced Damage, 30% Increased Attack Speed, +3 maximum damage per level and +5 Revive as an oskill replace the old Revive charges. Its other retained properties and rune bonuses still apply.
+- These changes affect newly generated equipment. Existing saved rolls are preserved. Online Ladder policies and executable/server bug fixes are not part of this data-mod update.
+
+Build guides brought up to date
+- Reviewed all 33 existing wiki builds against Alpha V1.4, with build-specific advice for revised runewords, sockets, charm weight and the new Warlock set. Removed misleading caster/attack equipment recommendations.
+- Added eight complete specialist builds to both wikis, including gem farming and an endgame Warlock comparison. All 41 guides include current equipment advice, skill budgets and progression notes.
+- Build recommendations are data-checked theorycraft, with legal skill budgets and practical testing checklists. Gameplay damage and clear-speed benchmarks are still pending.
+
+Items and reference tools
+- Included selected announced Season 16 revisions to 18 existing uniques, Isenhart’s Armory and Eternity. Unrelated D2PLUS bonuses are preserved; ambiguous unreleased additions remain deferred.
+- Updated item sprites, item ranges, runewords, reward bags and socket guidance in the Hero Editor and offline/online wiki.
+- Updated the launcher and game loading splash to Alpha V1.4. Save backups, Open Saves and offline map rerolling remain available.
+- All earlier D2PLUS content is included, including the charm-weight and Oath systems. No extra runtime plugin is required.
+
+How to update
+- Back up your characters and shared stash, then close D2R.
+- D2RMM: extract the complete Alpha V1.4 mod into D2RMM/mods. Disable the old complete D2PLUS package and superseded test addons, enable the new complete package and click Install Mods. No earlier download is needed.
+- Keep your existing D2RMM output mod name and save path to continue your characters. Start a fresh game session after installing.
+- Launcher: install the updated full launcher, then use its bundled Install Alpha V1.4 option. Updating the launcher alone does not replace gameplay until you run the install step.
+
+Season 16 announcement: https://news.blizzard.com/en-us/article/24316567/diablo-ii-resurrected-ladder-season-16

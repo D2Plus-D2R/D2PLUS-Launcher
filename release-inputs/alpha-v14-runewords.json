@@ -1,0 +1,4119 @@
+{
+  "roles": {
+    "Nightreaver": "Poison/bleed physical progression",
+    "Gloamshot": "Poison physical bow",
+    "Black Scripture": "Poison spellcaster",
+    "Umbral Shroud": "Poison caster armor",
+    "Dusk Crown": "Poison specialist helm",
+    "Eclipse Ward": "Poison caster block shield",
+    "Shadowdance": "Venom/poison hybrid weapon",
+    "Grave March": "Thorns/reflect mercenary",
+    "Stormedge": "Lightning/physical hybrid melee",
+    "Thunderwing": "Lightning physical bow",
+    "Tempest Rod": "Lightning caster",
+    "Cloudskin": "Lightning caster armor",
+    "Storm Crown": "Lightning caster/MF specialist",
+    "Skywall": "Blocking lightning caster shield",
+    "Lightning Hand": "Lightning hybrid claw/bow/spear",
+    "Thunderstride": "Holy Shock mercenary/elemental spear",
+    "Lionflight": "Demon/undead physical bow",
+    "Royal Decree": "Magic-damage caster: FoH/Holy Bolt/magic Warlock",
+    "Sovereign Plate": "Demon/undead hybrid attack armor",
+    "High Crown": "Physical attack crown",
+    "Monarch's Will": "Physical hybrid block shield",
+    "Champion's Rite": "Physical class-weapon hybrid",
+    "Imperial March": "Fanaticism physical mercenary",
+    "Last Horizon": "Premium ethereal physical melee",
+    "Worldpiercer": "Premium physical bow/specialist alternative to Faith",
+    "Infinite Word": "Premium universal caster staff/scepter",
+    "Timeless Form": "Premium defensive caster armor",
+    "Crown Beyond": "Premium defensive caster/MF crown",
+    "Eventide": "Premium defensive caster block shield",
+    "Paradox": "Premium physical hybrid claw/bow/spear",
+    "Final Hour": "Premium Conviction mercenary/elemental spear"
+  },
+  "changedRunewords": 31,
+  "retainedHighEndWords": [
+    "Kingmaker"
+  ],
+  "socketBaseChanges": [
+    {
+      "table": "weapons",
+      "code": "hax",
+      "name": "Hand Axe",
+      "old": "2",
+      "new": "3",
+      "area": 3
+    },
+    {
+      "table": "weapons",
+      "code": "scp",
+      "name": "Scepter",
+      "old": "2",
+      "new": "3",
+      "area": 3
+    },
+    {
+      "table": "weapons",
+      "code": "mac",
+      "name": "Mace",
+      "old": "2",
+      "new": "3",
+      "area": 3
+    },
+    {
+      "table": "weapons",
+      "code": "ssd",
+      "name": "Short Sword",
+      "old": "2",
+      "new": "3",
+      "area": 3
+    },
+    {
+      "table": "weapons",
+      "code": "scm",
+      "name": "Scimitar",
+      "old": "2",
+      "new": "3",
+      "area": 3
+    },
+    {
+      "table": "weapons",
+      "code": "sbr",
+      "name": "Saber",
+      "old": "2",
+      "new": "3",
+      "area": 3
+    },
+    {
+      "table": "weapons",
+      "code": "flc",
+      "name": "Falchion",
+      "old": "2",
+      "new": "3",
+      "area": 3
+    },
+    {
+      "table": "weapons",
+      "code": "2hs",
+      "name": "Two-Handed Sword",
+      "old": "3",
+      "new": "4",
+      "area": 4
+    },
+    {
+      "table": "weapons",
+      "code": "spr",
+      "name": "Spear",
+      "old": "3",
+      "new": "6",
+      "area": 8
+    },
+    {
+      "table": "weapons",
+      "code": "tri",
+      "name": "Trident",
+      "old": "4",
+      "new": "6",
+      "area": 8
+    },
+    {
+      "table": "weapons",
+      "code": "brn",
+      "name": "Brandistock",
+      "old": "5",
+      "new": "6",
+      "area": 8
+    },
+    {
+      "table": "weapons",
+      "code": "bar",
+      "name": "Bardiche",
+      "old": "3",
+      "new": "6",
+      "area": 8
+    },
+    {
+      "table": "weapons",
+      "code": "vou",
+      "name": "Voulge",
+      "old": "4",
+      "new": "6",
+      "area": 8
+    },
+    {
+      "table": "weapons",
+      "code": "scy",
+      "name": "Scythe",
+      "old": "5",
+      "new": "6",
+      "area": 8
+    },
+    {
+      "table": "weapons",
+      "code": "pax",
+      "name": "Poleaxe",
+      "old": "5",
+      "new": "6",
+      "area": 8
+    },
+    {
+      "table": "weapons",
+      "code": "sst",
+      "name": "Short Staff",
+      "old": "2",
+      "new": "3",
+      "area": 3
+    },
+    {
+      "table": "weapons",
+      "code": "lst",
+      "name": "Long Staff",
+      "old": "3",
+      "new": "4",
+      "area": 4
+    },
+    {
+      "table": "weapons",
+      "code": "sbw",
+      "name": "Short Bow",
+      "old": "3",
+      "new": "4",
+      "area": 6
+    },
+    {
+      "table": "weapons",
+      "code": "lxb",
+      "name": "Light Crossbow",
+      "old": "3",
+      "new": "4",
+      "area": 6
+    },
+    {
+      "table": "weapons",
+      "code": "hdm",
+      "name": "Horadric Malus",
+      "old": "",
+      "new": "2",
+      "area": 2
+    },
+    {
+      "table": "weapons",
+      "code": "hst",
+      "name": "Horadric Staff",
+      "old": "",
+      "new": "4",
+      "area": 4
+    },
+    {
+      "table": "weapons",
+      "code": "msf",
+      "name": "Staff of Kings",
+      "old": "",
+      "new": "3",
+      "area": 3
+    },
+    {
+      "table": "weapons",
+      "code": "9ha",
+      "name": "Hatchet",
+      "old": "2",
+      "new": "3",
+      "area": 3
+    },
+    {
+      "table": "weapons",
+      "code": "9sc",
+      "name": "Rune Scepter",
+      "old": "2",
+      "new": "3",
+      "area": 3
+    },
+    {
+      "table": "weapons",
+      "code": "9ma",
+      "name": "Flanged Mace",
+      "old": "2",
+      "new": "3",
+      "area": 3
+    },
+    {
+      "table": "weapons",
+      "code": "9ss",
+      "name": "Gladius",
+      "old": "2",
+      "new": "3",
+      "area": 3
+    },
+    {
+      "table": "weapons",
+      "code": "9sm",
+      "name": "Cutlass",
+      "old": "2",
+      "new": "3",
+      "area": 3
+    },
+    {
+      "table": "weapons",
+      "code": "9sb",
+      "name": "Shamshir",
+      "old": "2",
+      "new": "3",
+      "area": 3
+    },
+    {
+      "table": "weapons",
+      "code": "9fc",
+      "name": "Tulwar",
+      "old": "2",
+      "new": "3",
+      "area": 3
+    },
+    {
+      "table": "weapons",
+      "code": "92h",
+      "name": "Espandon",
+      "old": "3",
+      "new": "4",
+      "area": 4
+    },
+    {
+      "table": "weapons",
+      "code": "9sr",
+      "name": "War Spear",
+      "old": "3",
+      "new": "6",
+      "area": 8
+    },
+    {
+      "table": "weapons",
+      "code": "9tr",
+      "name": "Fuscina",
+      "old": "4",
+      "new": "6",
+      "area": 8
+    },
+    {
+      "table": "weapons",
+      "code": "9br",
+      "name": "War Fork",
+      "old": "5",
+      "new": "6",
+      "area": 8
+    },
+    {
+      "table": "weapons",
+      "code": "9b7",
+      "name": "Lochaber Axe",
+      "old": "3",
+      "new": "6",
+      "area": 8
+    },
+    {
+      "table": "weapons",
+      "code": "9vo",
+      "name": "Bill",
+      "old": "4",
+      "new": "6",
+      "area": 8
+    },
+    {
+      "table": "weapons",
+      "code": "9s8",
+      "name": "Battle Scythe",
+      "old": "5",
+      "new": "6",
+      "area": 8
+    },
+    {
+      "table": "weapons",
+      "code": "9pa",
+      "name": "Partizan",
+      "old": "5",
+      "new": "6",
+      "area": 8
+    },
+    {
+      "table": "weapons",
+      "code": "8ss",
+      "name": "Jo Staff",
+      "old": "2",
+      "new": "3",
+      "area": 3
+    },
+    {
+      "table": "weapons",
+      "code": "8ls",
+      "name": "Quarterstaff",
+      "old": "3",
+      "new": "4",
+      "area": 4
+    },
+    {
+      "table": "weapons",
+      "code": "8sb",
+      "name": "Edge Bow",
+      "old": "3",
+      "new": "4",
+      "area": 6
+    },
+    {
+      "table": "weapons",
+      "code": "8lx",
+      "name": "Arbalest",
+      "old": "3",
+      "new": "4",
+      "area": 6
+    },
+    {
+      "table": "weapons",
+      "code": "qf1",
+      "name": "Khalim's Flail",
+      "old": "3",
+      "new": "4",
+      "area": 6
+    },
+    {
+      "table": "weapons",
+      "code": "qf2",
+      "name": "Khalim's Will",
+      "old": "3",
+      "new": "4",
+      "area": 6
+    },
+    {
+      "table": "weapons",
+      "code": "ktr",
+      "name": "Katar",
+      "old": "2",
+      "new": "3",
+      "area": 3
+    },
+    {
+      "table": "weapons",
+      "code": "wrb",
+      "name": "Wrist Blade",
+      "old": "2",
+      "new": "3",
+      "area": 3
+    },
+    {
+      "table": "weapons",
+      "code": "axf",
+      "name": "Hatchet Hands",
+      "old": "2",
+      "new": "3",
+      "area": 3
+    },
+    {
+      "table": "weapons",
+      "code": "ces",
+      "name": "Cestus",
+      "old": "2",
+      "new": "3",
+      "area": 3
+    },
+    {
+      "table": "weapons",
+      "code": "9wb",
+      "name": "Wrist Spike",
+      "old": "2",
+      "new": "3",
+      "area": 3
+    },
+    {
+      "table": "weapons",
+      "code": "9xf",
+      "name": "Fascia",
+      "old": "2",
+      "new": "3",
+      "area": 3
+    },
+    {
+      "table": "weapons",
+      "code": "9cs",
+      "name": "Hand Scythe",
+      "old": "2",
+      "new": "3",
+      "area": 3
+    },
+    {
+      "table": "weapons",
+      "code": "7xf",
+      "name": "War Fist",
+      "old": "2",
+      "new": "3",
+      "area": 3
+    },
+    {
+      "table": "weapons",
+      "code": "7cs",
+      "name": "Battle Cestus",
+      "old": "2",
+      "new": "3",
+      "area": 3
+    },
+    {
+      "table": "weapons",
+      "code": "7ha",
+      "name": "Tomahawk",
+      "old": "2",
+      "new": "3",
+      "area": 3
+    },
+    {
+      "table": "weapons",
+      "code": "7sc",
+      "name": "Mighty Scepter",
+      "old": "2",
+      "new": "3",
+      "area": 3
+    },
+    {
+      "table": "weapons",
+      "code": "7ma",
+      "name": "Reinforced Mace",
+      "old": "2",
+      "new": "3",
+      "area": 3
+    },
+    {
+      "table": "weapons",
+      "code": "7ss",
+      "name": "Falcata",
+      "old": "2",
+      "new": "3",
+      "area": 3
+    },
+    {
+      "table": "weapons",
+      "code": "7sm",
+      "name": "Ataghan",
+      "old": "2",
+      "new": "3",
+      "area": 3
+    },
+    {
+      "table": "weapons",
+      "code": "7sb",
+      "name": "Elegant Blade",
+      "old": "2",
+      "new": "3",
+      "area": 3
+    },
+    {
+      "table": "weapons",
+      "code": "7fc",
+      "name": "Hydra Edge",
+      "old": "2",
+      "new": "3",
+      "area": 3
+    },
+    {
+      "table": "weapons",
+      "code": "72h",
+      "name": "Legend Sword",
+      "old": "3",
+      "new": "4",
+      "area": 4
+    },
+    {
+      "table": "weapons",
+      "code": "7sr",
+      "name": "Hyperion Spear",
+      "old": "3",
+      "new": "6",
+      "area": 8
+    },
+    {
+      "table": "weapons",
+      "code": "7tr",
+      "name": "Stygian Pike",
+      "old": "4",
+      "new": "6",
+      "area": 8
+    },
+    {
+      "table": "weapons",
+      "code": "7br",
+      "name": "Mancatcher",
+      "old": "5",
+      "new": "6",
+      "area": 8
+    },
+    {
+      "table": "weapons",
+      "code": "7o7",
+      "name": "Ogre Axe",
+      "old": "3",
+      "new": "6",
+      "area": 8
+    },
+    {
+      "table": "weapons",
+      "code": "7vo",
+      "name": "Colossus Voulge",
+      "old": "4",
+      "new": "6",
+      "area": 8
+    },
+    {
+      "table": "weapons",
+      "code": "7s8",
+      "name": "Thresher",
+      "old": "5",
+      "new": "6",
+      "area": 8
+    },
+    {
+      "table": "weapons",
+      "code": "7pa",
+      "name": "Cryptic Axe",
+      "old": "5",
+      "new": "6",
+      "area": 8
+    },
+    {
+      "table": "weapons",
+      "code": "6ss",
+      "name": "Walking Stick",
+      "old": "2",
+      "new": "3",
+      "area": 3
+    },
+    {
+      "table": "weapons",
+      "code": "6ls",
+      "name": "Stalagmite",
+      "old": "3",
+      "new": "4",
+      "area": 4
+    },
+    {
+      "table": "weapons",
+      "code": "6sb",
+      "name": "Spider Bow",
+      "old": "3",
+      "new": "4",
+      "area": 6
+    },
+    {
+      "table": "weapons",
+      "code": "6lx",
+      "name": "Pellet Bow",
+      "old": "3",
+      "new": "4",
+      "area": 6
+    },
+    {
+      "table": "armor",
+      "code": "cap",
+      "name": "Cap",
+      "old": "2",
+      "new": "3",
+      "area": 4
+    },
+    {
+      "table": "armor",
+      "code": "skp",
+      "name": "Skull Cap",
+      "old": "2",
+      "new": "3",
+      "area": 4
+    },
+    {
+      "table": "armor",
+      "code": "hlm",
+      "name": "Helm",
+      "old": "2",
+      "new": "3",
+      "area": 4
+    },
+    {
+      "table": "armor",
+      "code": "fhl",
+      "name": "Full Helm",
+      "old": "2",
+      "new": "3",
+      "area": 4
+    },
+    {
+      "table": "armor",
+      "code": "qui",
+      "name": "Quilted Armor",
+      "old": "2",
+      "new": "4",
+      "area": 6
+    },
+    {
+      "table": "armor",
+      "code": "lea",
+      "name": "Leather Armor",
+      "old": "2",
+      "new": "4",
+      "area": 6
+    },
+    {
+      "table": "armor",
+      "code": "hla",
+      "name": "Hard Leather Armor",
+      "old": "2",
+      "new": "4",
+      "area": 6
+    },
+    {
+      "table": "armor",
+      "code": "stu",
+      "name": "Studded Leather ",
+      "old": "2",
+      "new": "4",
+      "area": 6
+    },
+    {
+      "table": "armor",
+      "code": "rng",
+      "name": "Ring Mail",
+      "old": "3",
+      "new": "4",
+      "area": 6
+    },
+    {
+      "table": "armor",
+      "code": "scl",
+      "name": "Scale Mail",
+      "old": "2",
+      "new": "4",
+      "area": 6
+    },
+    {
+      "table": "armor",
+      "code": "chn",
+      "name": "Chain Mail",
+      "old": "2",
+      "new": "4",
+      "area": 6
+    },
+    {
+      "table": "armor",
+      "code": "brs",
+      "name": "Breast Plate",
+      "old": "3",
+      "new": "4",
+      "area": 6
+    },
+    {
+      "table": "armor",
+      "code": "spl",
+      "name": "Splint Mail",
+      "old": "2",
+      "new": "4",
+      "area": 6
+    },
+    {
+      "table": "armor",
+      "code": "plt",
+      "name": "Plate Mail",
+      "old": "2",
+      "new": "4",
+      "area": 6
+    },
+    {
+      "table": "armor",
+      "code": "fld",
+      "name": "Field Plate",
+      "old": "2",
+      "new": "4",
+      "area": 6
+    },
+    {
+      "table": "armor",
+      "code": "ltp",
+      "name": "Light Plate",
+      "old": "3",
+      "new": "4",
+      "area": 6
+    },
+    {
+      "table": "armor",
+      "code": "buc",
+      "name": "Buckler",
+      "old": "1",
+      "new": "4",
+      "area": 4
+    },
+    {
+      "table": "armor",
+      "code": "sml",
+      "name": "Small Shield",
+      "old": "2",
+      "new": "4",
+      "area": 4
+    },
+    {
+      "table": "armor",
+      "code": "lrg",
+      "name": "Large Shield",
+      "old": "3",
+      "new": "4",
+      "area": 6
+    },
+    {
+      "table": "armor",
+      "code": "kit",
+      "name": "Kite Shield",
+      "old": "3",
+      "new": "4",
+      "area": 6
+    },
+    {
+      "table": "armor",
+      "code": "tow",
+      "name": "Tower Shield",
+      "old": "3",
+      "new": "4",
+      "area": 6
+    },
+    {
+      "table": "armor",
+      "code": "gts",
+      "name": "Gothic Shield",
+      "old": "3",
+      "new": "4",
+      "area": 8
+    },
+    {
+      "table": "armor",
+      "code": "bhm",
+      "name": "Bone Helm",
+      "old": "2",
+      "new": "3",
+      "area": 4
+    },
+    {
+      "table": "armor",
+      "code": "bsh",
+      "name": "Bone Shield",
+      "old": "2",
+      "new": "4",
+      "area": 6
+    },
+    {
+      "table": "armor",
+      "code": "spk",
+      "name": "Spiked Shield",
+      "old": "2",
+      "new": "4",
+      "area": 6
+    },
+    {
+      "table": "armor",
+      "code": "xap",
+      "name": "War Hat",
+      "old": "2",
+      "new": "3",
+      "area": 4
+    },
+    {
+      "table": "armor",
+      "code": "xkp",
+      "name": "Sallet",
+      "old": "2",
+      "new": "3",
+      "area": 4
+    },
+    {
+      "table": "armor",
+      "code": "xlm",
+      "name": "Casque",
+      "old": "2",
+      "new": "3",
+      "area": 4
+    },
+    {
+      "table": "armor",
+      "code": "xhl",
+      "name": "Basinet",
+      "old": "2",
+      "new": "3",
+      "area": 4
+    },
+    {
+      "table": "armor",
+      "code": "xui",
+      "name": "Ghost Armor",
+      "old": "2",
+      "new": "4",
+      "area": 6
+    },
+    {
+      "table": "armor",
+      "code": "xea",
+      "name": "Serpentskin Armor",
+      "old": "2",
+      "new": "4",
+      "area": 6
+    },
+    {
+      "table": "armor",
+      "code": "xla",
+      "name": "Demonhide Armor",
+      "old": "2",
+      "new": "4",
+      "area": 6
+    },
+    {
+      "table": "armor",
+      "code": "xtu",
+      "name": "Trellised Armor",
+      "old": "2",
+      "new": "4",
+      "area": 6
+    },
+    {
+      "table": "armor",
+      "code": "xng",
+      "name": "Linked Mail",
+      "old": "3",
+      "new": "4",
+      "area": 6
+    },
+    {
+      "table": "armor",
+      "code": "xcl",
+      "name": "Tigulated Mail",
+      "old": "3",
+      "new": "4",
+      "area": 6
+    },
+    {
+      "table": "armor",
+      "code": "xhn",
+      "name": "Mesh Armor",
+      "old": "3",
+      "new": "4",
+      "area": 6
+    },
+    {
+      "table": "armor",
+      "code": "xrs",
+      "name": "Cuirass",
+      "old": "3",
+      "new": "4",
+      "area": 6
+    },
+    {
+      "table": "armor",
+      "code": "xpl",
+      "name": "Russet Armor",
+      "old": "3",
+      "new": "4",
+      "area": 6
+    },
+    {
+      "table": "armor",
+      "code": "xlt",
+      "name": "Templar Coat",
+      "old": "3",
+      "new": "4",
+      "area": 6
+    },
+    {
+      "table": "armor",
+      "code": "xld",
+      "name": "Sharktooth Armor",
+      "old": "3",
+      "new": "4",
+      "area": 6
+    },
+    {
+      "table": "armor",
+      "code": "xtp",
+      "name": "Mage Plate",
+      "old": "3",
+      "new": "4",
+      "area": 6
+    },
+    {
+      "table": "armor",
+      "code": "xuc",
+      "name": "Defender",
+      "old": "1",
+      "new": "4",
+      "area": 4
+    },
+    {
+      "table": "armor",
+      "code": "xml",
+      "name": "Round Shield",
+      "old": "2",
+      "new": "4",
+      "area": 4
+    },
+    {
+      "table": "armor",
+      "code": "xrg",
+      "name": "Scutum",
+      "old": "3",
+      "new": "4",
+      "area": 6
+    },
+    {
+      "table": "armor",
+      "code": "xit",
+      "name": "Dragon Shield",
+      "old": "3",
+      "new": "4",
+      "area": 6
+    },
+    {
+      "table": "armor",
+      "code": "xow",
+      "name": "Pavise",
+      "old": "3",
+      "new": "4",
+      "area": 6
+    },
+    {
+      "table": "armor",
+      "code": "xts",
+      "name": "Ancient Shield",
+      "old": "3",
+      "new": "4",
+      "area": 8
+    },
+    {
+      "table": "armor",
+      "code": "xh9",
+      "name": "Grim Helm",
+      "old": "2",
+      "new": "3",
+      "area": 4
+    },
+    {
+      "table": "armor",
+      "code": "xsh",
+      "name": "Grim Shield",
+      "old": "2",
+      "new": "4",
+      "area": 6
+    },
+    {
+      "table": "armor",
+      "code": "xpk",
+      "name": "Barbed Shield",
+      "old": "2",
+      "new": "4",
+      "area": 6
+    },
+    {
+      "table": "armor",
+      "code": "ne1",
+      "name": "Preserved Head",
+      "old": "2",
+      "new": "4",
+      "area": 4
+    },
+    {
+      "table": "armor",
+      "code": "ne2",
+      "name": "Zombie Head",
+      "old": "2",
+      "new": "4",
+      "area": 4
+    },
+    {
+      "table": "armor",
+      "code": "ne3",
+      "name": "Unraveller Head",
+      "old": "2",
+      "new": "4",
+      "area": 4
+    },
+    {
+      "table": "armor",
+      "code": "ne4",
+      "name": "Gargoyle Head",
+      "old": "2",
+      "new": "4",
+      "area": 4
+    },
+    {
+      "table": "armor",
+      "code": "ne5",
+      "name": "Demon Head",
+      "old": "2",
+      "new": "4",
+      "area": 4
+    },
+    {
+      "table": "armor",
+      "code": "ci0",
+      "name": "Circlet",
+      "old": "2",
+      "new": "3",
+      "area": 4
+    },
+    {
+      "table": "armor",
+      "code": "ci1",
+      "name": "Coronet",
+      "old": "2",
+      "new": "3",
+      "area": 4
+    },
+    {
+      "table": "armor",
+      "code": "uap",
+      "name": "Shako",
+      "old": "2",
+      "new": "3",
+      "area": 4
+    },
+    {
+      "table": "armor",
+      "code": "ukp",
+      "name": "Hydraskull",
+      "old": "2",
+      "new": "3",
+      "area": 4
+    },
+    {
+      "table": "armor",
+      "code": "ulm",
+      "name": "Armet",
+      "old": "2",
+      "new": "3",
+      "area": 4
+    },
+    {
+      "table": "armor",
+      "code": "uhl",
+      "name": "Giant Conch",
+      "old": "2",
+      "new": "3",
+      "area": 4
+    },
+    {
+      "table": "armor",
+      "code": "uuc",
+      "name": "Heater",
+      "old": "2",
+      "new": "4",
+      "area": 4
+    },
+    {
+      "table": "armor",
+      "code": "uml",
+      "name": "Luna",
+      "old": "2",
+      "new": "4",
+      "area": 4
+    },
+    {
+      "table": "armor",
+      "code": "urg",
+      "name": "Hyperion",
+      "old": "3",
+      "new": "4",
+      "area": 6
+    },
+    {
+      "table": "armor",
+      "code": "ush",
+      "name": "Troll Nest",
+      "old": "3",
+      "new": "4",
+      "area": 6
+    },
+    {
+      "table": "armor",
+      "code": "upk",
+      "name": "Blade Barrier",
+      "old": "3",
+      "new": "4",
+      "area": 6
+    },
+    {
+      "table": "armor",
+      "code": "ne6",
+      "name": "Mummified Trophy",
+      "old": "2",
+      "new": "4",
+      "area": 4
+    },
+    {
+      "table": "armor",
+      "code": "ne7",
+      "name": "Fetish Trophy",
+      "old": "2",
+      "new": "4",
+      "area": 4
+    },
+    {
+      "table": "armor",
+      "code": "ne8",
+      "name": "Sexton Trophy",
+      "old": "2",
+      "new": "4",
+      "area": 4
+    },
+    {
+      "table": "armor",
+      "code": "ne9",
+      "name": "Cantor Trophy",
+      "old": "2",
+      "new": "4",
+      "area": 4
+    },
+    {
+      "table": "armor",
+      "code": "nea",
+      "name": "Heirophant Trophy",
+      "old": "2",
+      "new": "4",
+      "area": 4
+    },
+    {
+      "table": "armor",
+      "code": "neb",
+      "name": "Minion Skull",
+      "old": "2",
+      "new": "4",
+      "area": 4
+    },
+    {
+      "table": "armor",
+      "code": "neg",
+      "name": "Hellspawn Skull",
+      "old": "2",
+      "new": "4",
+      "area": 4
+    },
+    {
+      "table": "armor",
+      "code": "ned",
+      "name": "Overseer Skull",
+      "old": "2",
+      "new": "4",
+      "area": 4
+    },
+    {
+      "table": "armor",
+      "code": "nee",
+      "name": "Succubus Skull",
+      "old": "2",
+      "new": "4",
+      "area": 4
+    },
+    {
+      "table": "armor",
+      "code": "nef",
+      "name": "Bloodlord Skull",
+      "old": "2",
+      "new": "4",
+      "area": 4
+    },
+    {
+      "table": "armor",
+      "code": "wa1",
+      "name": "Old Book",
+      "old": "2",
+      "new": "4",
+      "area": 4
+    },
+    {
+      "table": "armor",
+      "code": "wa2",
+      "name": "Tome",
+      "old": "2",
+      "new": "4",
+      "area": 4
+    },
+    {
+      "table": "armor",
+      "code": "wa3",
+      "name": "Codex",
+      "old": "2",
+      "new": "4",
+      "area": 4
+    },
+    {
+      "table": "armor",
+      "code": "wa4",
+      "name": "Compendium",
+      "old": "2",
+      "new": "4",
+      "area": 4
+    },
+    {
+      "table": "armor",
+      "code": "wa5",
+      "name": "Grimoire ",
+      "old": "2",
+      "new": "4",
+      "area": 4
+    },
+    {
+      "table": "armor",
+      "code": "wa6",
+      "name": "Burnt Text",
+      "old": "2",
+      "new": "4",
+      "area": 4
+    },
+    {
+      "table": "armor",
+      "code": "wa7",
+      "name": "Dark Tome",
+      "old": "2",
+      "new": "4",
+      "area": 4
+    },
+    {
+      "table": "armor",
+      "code": "wa8",
+      "name": "Dark Codex",
+      "old": "2",
+      "new": "4",
+      "area": 4
+    },
+    {
+      "table": "armor",
+      "code": "wa9",
+      "name": "Possessed Compendium",
+      "old": "2",
+      "new": "4",
+      "area": 4
+    },
+    {
+      "table": "armor",
+      "code": "waa",
+      "name": "Possessed Grimoire ",
+      "old": "2",
+      "new": "4",
+      "area": 4
+    },
+    {
+      "table": "armor",
+      "code": "wab",
+      "name": "Forgotten Volume",
+      "old": "2",
+      "new": "4",
+      "area": 4
+    },
+    {
+      "table": "armor",
+      "code": "wac",
+      "name": "Occult Tome",
+      "old": "2",
+      "new": "4",
+      "area": 4
+    },
+    {
+      "table": "armor",
+      "code": "wad",
+      "name": "Occult Codex",
+      "old": "2",
+      "new": "4",
+      "area": 4
+    },
+    {
+      "table": "armor",
+      "code": "wae",
+      "name": "Blasphemous Compendium",
+      "old": "2",
+      "new": "4",
+      "area": 4
+    },
+    {
+      "table": "armor",
+      "code": "waf",
+      "name": "Blasphemous Grimoire ",
+      "old": "2",
+      "new": "4",
+      "area": 4
+    }
+  ],
+  "newPropertyCodes": [
+    "d2p_rw_demon_undead",
+    "d2p_rw_spellpower",
+    "d2p_rw_castskills"
+  ],
+  "newItemStatCostIds": 0,
+  "footprintsChanged": 0,
+  "recipesOrRunewordIdsChanged": 0,
+  "changes": [
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword033",
+      "field": "T1Min1",
+      "before": "192",
+      "after": "260"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword033",
+      "field": "T1Max1",
+      "before": "238",
+      "after": "310"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword034",
+      "field": "T1Min1",
+      "before": "178",
+      "after": "280"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword034",
+      "field": "T1Max1",
+      "before": "224",
+      "after": "330"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword034",
+      "field": "T1Min2",
+      "before": "36",
+      "after": "35"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword034",
+      "field": "T1Max2",
+      "before": "36",
+      "after": "35"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword034",
+      "field": "T1Min3",
+      "before": "36",
+      "after": "45"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword034",
+      "field": "T1Max3",
+      "before": "36",
+      "after": "45"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword034",
+      "field": "T1Min6",
+      "before": "320",
+      "after": "480"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword034",
+      "field": "T1Max6",
+      "before": "560",
+      "after": "720"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword035",
+      "field": "T1Min1",
+      "before": "2",
+      "after": "3"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword035",
+      "field": "T1Max1",
+      "before": "2",
+      "after": "3"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword035",
+      "field": "T1Min2",
+      "before": "36",
+      "after": "40"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword035",
+      "field": "T1Max2",
+      "before": "45",
+      "after": "50"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword035",
+      "field": "T1Code5",
+      "before": "mana-kill",
+      "after": "extra-pois"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword035",
+      "field": "T1Min5",
+      "before": "4",
+      "after": "10"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword035",
+      "field": "T1Max5",
+      "before": "4",
+      "after": "15"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword035",
+      "field": "T1Min6",
+      "before": "16",
+      "after": "18"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword035",
+      "field": "T1Max6",
+      "before": "16",
+      "after": "22"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword035",
+      "field": "T1Code7",
+      "before": "openwounds",
+      "after": "res-pois"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword035",
+      "field": "T1Min7",
+      "before": "31",
+      "after": "40"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword035",
+      "field": "T1Max7",
+      "before": "31",
+      "after": "40"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword036",
+      "field": "T1Code6",
+      "before": "dmg-pois",
+      "after": "allskills"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword036",
+      "field": "T1Param6",
+      "before": "100",
+      "after": ""
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword036",
+      "field": "T1Min6",
+      "before": "320",
+      "after": "2"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword036",
+      "field": "T1Max6",
+      "before": "560",
+      "after": "2"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword036",
+      "field": "T1Code7",
+      "before": "openwounds",
+      "after": "extra-pois"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword036",
+      "field": "T1Min7",
+      "before": "31",
+      "after": "15"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword036",
+      "field": "T1Max7",
+      "before": "31",
+      "after": "25"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword037",
+      "field": "T1Code6",
+      "before": "dmg-pois",
+      "after": "pierce-pois"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword037",
+      "field": "T1Param6",
+      "before": "100",
+      "after": ""
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword037",
+      "field": "T1Min6",
+      "before": "320",
+      "after": "15"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword037",
+      "field": "T1Max6",
+      "before": "560",
+      "after": "20"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword037",
+      "field": "T1Code7",
+      "before": "openwounds",
+      "after": "cast3"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword037",
+      "field": "T1Min7",
+      "before": "31",
+      "after": "15"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword037",
+      "field": "T1Max7",
+      "before": "31",
+      "after": "20"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword038",
+      "field": "T1Code6",
+      "before": "dmg-pois",
+      "after": "allskills"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword038",
+      "field": "T1Param6",
+      "before": "100",
+      "after": ""
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword038",
+      "field": "T1Min6",
+      "before": "320",
+      "after": "2"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword038",
+      "field": "T1Max6",
+      "before": "560",
+      "after": "2"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword038",
+      "field": "T1Code7",
+      "before": "openwounds",
+      "after": "cast3"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword038",
+      "field": "T1Min7",
+      "before": "31",
+      "after": "15"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword038",
+      "field": "T1Max7",
+      "before": "31",
+      "after": "20"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword039",
+      "field": "T1Min2",
+      "before": "31",
+      "after": "35"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword039",
+      "field": "T1Max2",
+      "before": "31",
+      "after": "35"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword039",
+      "field": "T1Code3",
+      "before": "cast3",
+      "after": "dmg%"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword039",
+      "field": "T1Min3",
+      "before": "27",
+      "after": "240"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword039",
+      "field": "T1Max3",
+      "before": "27",
+      "after": "300"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword039",
+      "field": "T1Min6",
+      "before": "320",
+      "after": "480"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword039",
+      "field": "T1Max6",
+      "before": "560",
+      "after": "720"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword039",
+      "field": "T1Code7",
+      "before": "openwounds",
+      "after": "pierce-pois"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword039",
+      "field": "T1Min7",
+      "before": "31",
+      "after": "15"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword039",
+      "field": "T1Max7",
+      "before": "31",
+      "after": "20"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword040",
+      "field": "T1Min1",
+      "before": "210",
+      "after": "250"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword040",
+      "field": "T1Max1",
+      "before": "261",
+      "after": "300"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword040",
+      "field": "T1Min2",
+      "before": "6",
+      "after": "14"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword040",
+      "field": "T1Max2",
+      "before": "6",
+      "after": "18"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword040",
+      "field": "T1Min5",
+      "before": "31",
+      "after": "35"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword040",
+      "field": "T1Max5",
+      "before": "31",
+      "after": "35"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword041",
+      "field": "T1Min1",
+      "before": "220",
+      "after": "280"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword041",
+      "field": "T1Max1",
+      "before": "270",
+      "after": "330"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword041",
+      "field": "T1Min6",
+      "before": "80",
+      "after": "1"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword041",
+      "field": "T1Max6",
+      "before": "275",
+      "after": "600"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword042",
+      "field": "T1Min1",
+      "before": "205",
+      "after": "340"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword042",
+      "field": "T1Max1",
+      "before": "255",
+      "after": "390"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword042",
+      "field": "T1Min2",
+      "before": "40",
+      "after": "50"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword042",
+      "field": "T1Max2",
+      "before": "40",
+      "after": "50"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword042",
+      "field": "T1Min3",
+      "before": "40",
+      "after": "60"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword042",
+      "field": "T1Max3",
+      "before": "40",
+      "after": "60"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword042",
+      "field": "T1Min6",
+      "before": "80",
+      "after": "1"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword042",
+      "field": "T1Max6",
+      "before": "275",
+      "after": "600"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword042",
+      "field": "T1Code7",
+      "before": "res-ltng",
+      "after": "pierce-ltng"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword042",
+      "field": "T1Min7",
+      "before": "45",
+      "after": "15"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword042",
+      "field": "T1Max7",
+      "before": "45",
+      "after": "20"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword043",
+      "field": "T1Min1",
+      "before": "2",
+      "after": "3"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword043",
+      "field": "T1Max1",
+      "before": "2",
+      "after": "3"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword043",
+      "field": "T1Min2",
+      "before": "40",
+      "after": "45"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword043",
+      "field": "T1Max2",
+      "before": "50",
+      "after": "55"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword043",
+      "field": "T1Min6",
+      "before": "18",
+      "after": "20"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword043",
+      "field": "T1Max6",
+      "before": "18",
+      "after": "25"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword044",
+      "field": "T1Code6",
+      "before": "dmg-ltng",
+      "after": "cast3"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword044",
+      "field": "T1Min6",
+      "before": "80",
+      "after": "20"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword044",
+      "field": "T1Max6",
+      "before": "275",
+      "after": "30"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword044",
+      "field": "T1Code7",
+      "before": "res-ltng",
+      "after": "extra-ltng"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword044",
+      "field": "T1Min7",
+      "before": "45",
+      "after": "10"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword044",
+      "field": "T1Max7",
+      "before": "45",
+      "after": "15"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword045",
+      "field": "T1Code6",
+      "before": "dmg-ltng",
+      "after": "pierce-ltng"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword045",
+      "field": "T1Min6",
+      "before": "80",
+      "after": "10"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword045",
+      "field": "T1Max6",
+      "before": "275",
+      "after": "15"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword046",
+      "field": "T1Code6",
+      "before": "dmg-ltng",
+      "after": "cast3"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword046",
+      "field": "T1Min6",
+      "before": "80",
+      "after": "15"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword046",
+      "field": "T1Max6",
+      "before": "275",
+      "after": "20"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword047",
+      "field": "T1Min2",
+      "before": "35",
+      "after": "40"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword047",
+      "field": "T1Max2",
+      "before": "35",
+      "after": "40"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword047",
+      "field": "T1Code3",
+      "before": "cast3",
+      "after": "dmg%"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword047",
+      "field": "T1Min3",
+      "before": "30",
+      "after": "300"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword047",
+      "field": "T1Max3",
+      "before": "30",
+      "after": "360"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword047",
+      "field": "T1Min6",
+      "before": "80",
+      "after": "1"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword047",
+      "field": "T1Max6",
+      "before": "275",
+      "after": "600"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword047",
+      "field": "T1Code7",
+      "before": "res-ltng",
+      "after": "pierce-ltng"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword047",
+      "field": "T1Min7",
+      "before": "45",
+      "after": "15"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword047",
+      "field": "T1Max7",
+      "before": "45",
+      "after": "20"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword048",
+      "field": "T1Min1",
+      "before": "240",
+      "after": "300"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword048",
+      "field": "T1Max1",
+      "before": "295",
+      "after": "350"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword048",
+      "field": "T1Min2",
+      "before": "7",
+      "after": "12"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword048",
+      "field": "T1Max2",
+      "before": "7",
+      "after": "15"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword048",
+      "field": "T1Min5",
+      "before": "35",
+      "after": "40"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword048",
+      "field": "T1Max5",
+      "before": "35",
+      "after": "40"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword048",
+      "field": "T1Min6",
+      "before": "80",
+      "after": "1"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword048",
+      "field": "T1Max6",
+      "before": "275",
+      "after": "600"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword050",
+      "field": "T1Min1",
+      "before": "232",
+      "after": "320"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword050",
+      "field": "T1Max1",
+      "before": "286",
+      "after": "370"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword050",
+      "field": "T1Min2",
+      "before": "44",
+      "after": "50"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword050",
+      "field": "T1Max2",
+      "before": "44",
+      "after": "50"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword050",
+      "field": "T1Min3",
+      "before": "44",
+      "after": "70"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword050",
+      "field": "T1Max3",
+      "before": "44",
+      "after": "70"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword050",
+      "field": "T1Code4",
+      "before": "dex",
+      "after": "allskills"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword050",
+      "field": "T1Min4",
+      "before": "26",
+      "after": "2"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword050",
+      "field": "T1Max4",
+      "before": "26",
+      "after": "2"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword050",
+      "field": "T1Min5",
+      "before": "26",
+      "after": "30"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword050",
+      "field": "T1Max5",
+      "before": "26",
+      "after": "30"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword050",
+      "field": "T1Min6",
+      "before": "195",
+      "after": "225"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword050",
+      "field": "T1Max6",
+      "before": "195",
+      "after": "225"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword050",
+      "field": "T1Min7",
+      "before": "195",
+      "after": "225"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword050",
+      "field": "T1Max7",
+      "before": "195",
+      "after": "225"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword051",
+      "field": "T1Min1",
+      "before": "2",
+      "after": "3"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword051",
+      "field": "T1Max1",
+      "before": "2",
+      "after": "3"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword051",
+      "field": "T1Min2",
+      "before": "44",
+      "after": "50"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword051",
+      "field": "T1Max2",
+      "before": "55",
+      "after": "60"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword051",
+      "field": "T1Code6",
+      "before": "dmg-demon",
+      "after": "res-all"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword051",
+      "field": "T1Min6",
+      "before": "195",
+      "after": "30"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword051",
+      "field": "T1Max6",
+      "before": "195",
+      "after": "40"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword051",
+      "field": "T1Code7",
+      "before": "dmg-undead",
+      "after": "extra-mag"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword051",
+      "field": "T1Min7",
+      "before": "195",
+      "after": "15"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword051",
+      "field": "T1Max7",
+      "before": "195",
+      "after": "20"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword052",
+      "field": "T1Code6",
+      "before": "dmg-demon",
+      "after": "dmg%"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword052",
+      "field": "T1Min6",
+      "before": "195",
+      "after": "175"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword052",
+      "field": "T1Max6",
+      "before": "195",
+      "after": "225"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword052",
+      "field": "T1Code7",
+      "before": "dmg-undead",
+      "after": "d2p_rw_demon_undead"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword053",
+      "field": "T1Code5",
+      "before": "mana",
+      "after": "swing2"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword053",
+      "field": "T1Min5",
+      "before": "80",
+      "after": "20"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword053",
+      "field": "T1Max5",
+      "before": "80",
+      "after": "25"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword054",
+      "field": "T1Code5",
+      "before": "red-dmg",
+      "after": "allskills"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword054",
+      "field": "T1Min5",
+      "before": "9",
+      "after": "2"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword054",
+      "field": "T1Max5",
+      "before": "9",
+      "after": "2"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword055",
+      "field": "T1Min1",
+      "before": "2",
+      "after": "3"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword055",
+      "field": "T1Max1",
+      "before": "2",
+      "after": "3"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword055",
+      "field": "T1Min2",
+      "before": "39",
+      "after": "45"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword055",
+      "field": "T1Max2",
+      "before": "39",
+      "after": "45"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword055",
+      "field": "T1Code3",
+      "before": "cast3",
+      "after": "dmg%"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword055",
+      "field": "T1Min3",
+      "before": "33",
+      "after": "300"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword055",
+      "field": "T1Max3",
+      "before": "33",
+      "after": "360"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword056",
+      "field": "T1Min2",
+      "before": "8",
+      "after": "12"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword056",
+      "field": "T1Max2",
+      "before": "8",
+      "after": "15"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword056",
+      "field": "T1Min5",
+      "before": "39",
+      "after": "45"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword056",
+      "field": "T1Max5",
+      "before": "39",
+      "after": "45"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword057",
+      "field": "T1Min1",
+      "before": "276",
+      "after": "350"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword057",
+      "field": "T1Max1",
+      "before": "334",
+      "after": "400"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword058",
+      "field": "T1Min1",
+      "before": "259",
+      "after": "350"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword058",
+      "field": "T1Max1",
+      "before": "317",
+      "after": "400"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword058",
+      "field": "T1Min2",
+      "before": "48",
+      "after": "60"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword058",
+      "field": "T1Max2",
+      "before": "48",
+      "after": "60"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword058",
+      "field": "T1Min3",
+      "before": "48",
+      "after": "70"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword058",
+      "field": "T1Max3",
+      "before": "48",
+      "after": "70"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword058",
+      "field": "T1Code4",
+      "before": "dex",
+      "after": "allskills"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword058",
+      "field": "T1Min4",
+      "before": "29",
+      "after": "2"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword058",
+      "field": "T1Max4",
+      "before": "29",
+      "after": "2"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword058",
+      "field": "T1Min5",
+      "before": "29",
+      "after": "35"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword058",
+      "field": "T1Max5",
+      "before": "29",
+      "after": "35"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword059",
+      "field": "T1Min1",
+      "before": "3",
+      "after": "4"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword059",
+      "field": "T1Max1",
+      "before": "3",
+      "after": "4"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword059",
+      "field": "T1Min2",
+      "before": "48",
+      "after": "65"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword059",
+      "field": "T1Max2",
+      "before": "60",
+      "after": "75"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword059",
+      "field": "T1Code5",
+      "before": "mana-kill",
+      "after": "d2p_rw_spellpower"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword059",
+      "field": "T1Min5",
+      "before": "5",
+      "after": "10"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword059",
+      "field": "T1Max5",
+      "before": "5",
+      "after": "15"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword060",
+      "field": "T1Code4",
+      "before": "balance3",
+      "after": "d2p_rw_castskills"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword060",
+      "field": "T1Param4",
+      "before": "",
+      "after": "25"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword060",
+      "field": "T1Min4",
+      "before": "48",
+      "after": "2"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword060",
+      "field": "T1Max4",
+      "before": "48",
+      "after": "2"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword061",
+      "field": "T1Code5",
+      "before": "mana",
+      "after": "cast3"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword061",
+      "field": "T1Min5",
+      "before": "90",
+      "after": "20"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword061",
+      "field": "T1Max5",
+      "before": "90",
+      "after": "25"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword062",
+      "field": "T1Code5",
+      "before": "red-dmg",
+      "after": "d2p_rw_castskills"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword062",
+      "field": "T1Param5",
+      "before": "",
+      "after": "20"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword062",
+      "field": "T1Min5",
+      "before": "10",
+      "after": "2"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword062",
+      "field": "T1Max5",
+      "before": "10",
+      "after": "2"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword063",
+      "field": "T1Min1",
+      "before": "2",
+      "after": "3"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword063",
+      "field": "T1Max1",
+      "before": "2",
+      "after": "3"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword063",
+      "field": "T1Min2",
+      "before": "43",
+      "after": "45"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword063",
+      "field": "T1Max2",
+      "before": "43",
+      "after": "45"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword063",
+      "field": "T1Code3",
+      "before": "cast3",
+      "after": "dmg%"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword063",
+      "field": "T1Min3",
+      "before": "36",
+      "after": "300"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword063",
+      "field": "T1Max3",
+      "before": "36",
+      "after": "350"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword064",
+      "field": "T1Min1",
+      "before": "300",
+      "after": "350"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword064",
+      "field": "T1Max1",
+      "before": "363",
+      "after": "400"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword064",
+      "field": "T1Min2",
+      "before": "9",
+      "after": "12"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword064",
+      "field": "T1Max2",
+      "before": "9",
+      "after": "15"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword064",
+      "field": "T1Min5",
+      "before": "43",
+      "after": "50"
+    },
+    {
+      "table": "runes",
+      "row": "D2PlusRuneword064",
+      "field": "T1Max5",
+      "before": "43",
+      "after": "50"
+    },
+    {
+      "table": "properties",
+      "row": "d2p_rw_demon_undead",
+      "field": "code",
+      "before": "",
+      "after": "d2p_rw_demon_undead"
+    },
+    {
+      "table": "properties",
+      "row": "d2p_rw_demon_undead",
+      "field": "*Id",
+      "before": "",
+      "after": "367"
+    },
+    {
+      "table": "properties",
+      "row": "d2p_rw_demon_undead",
+      "field": "*Enabled",
+      "before": "",
+      "after": "1"
+    },
+    {
+      "table": "properties",
+      "row": "d2p_rw_demon_undead",
+      "field": "func1",
+      "before": "",
+      "after": "1"
+    },
+    {
+      "table": "properties",
+      "row": "d2p_rw_demon_undead",
+      "field": "stat1",
+      "before": "",
+      "after": "item_demondamage_percent"
+    },
+    {
+      "table": "properties",
+      "row": "d2p_rw_demon_undead",
+      "field": "func2",
+      "before": "",
+      "after": "3"
+    },
+    {
+      "table": "properties",
+      "row": "d2p_rw_demon_undead",
+      "field": "stat2",
+      "before": "",
+      "after": "item_undeaddamage_percent"
+    },
+    {
+      "table": "properties",
+      "row": "d2p_rw_demon_undead",
+      "field": "*Notes",
+      "before": "",
+      "after": "D2PLUS Alpha V1.4 native compound property; existing saved stat IDs only."
+    },
+    {
+      "table": "properties",
+      "row": "d2p_rw_spellpower",
+      "field": "code",
+      "before": "",
+      "after": "d2p_rw_spellpower"
+    },
+    {
+      "table": "properties",
+      "row": "d2p_rw_spellpower",
+      "field": "*Id",
+      "before": "",
+      "after": "368"
+    },
+    {
+      "table": "properties",
+      "row": "d2p_rw_spellpower",
+      "field": "*Enabled",
+      "before": "",
+      "after": "1"
+    },
+    {
+      "table": "properties",
+      "row": "d2p_rw_spellpower",
+      "field": "func1",
+      "before": "",
+      "after": "1"
+    },
+    {
+      "table": "properties",
+      "row": "d2p_rw_spellpower",
+      "field": "stat1",
+      "before": "",
+      "after": "passive_fire_mastery"
+    },
+    {
+      "table": "properties",
+      "row": "d2p_rw_spellpower",
+      "field": "func2",
+      "before": "",
+      "after": "3"
+    },
+    {
+      "table": "properties",
+      "row": "d2p_rw_spellpower",
+      "field": "stat2",
+      "before": "",
+      "after": "passive_ltng_mastery"
+    },
+    {
+      "table": "properties",
+      "row": "d2p_rw_spellpower",
+      "field": "func3",
+      "before": "",
+      "after": "3"
+    },
+    {
+      "table": "properties",
+      "row": "d2p_rw_spellpower",
+      "field": "stat3",
+      "before": "",
+      "after": "passive_cold_mastery"
+    },
+    {
+      "table": "properties",
+      "row": "d2p_rw_spellpower",
+      "field": "func4",
+      "before": "",
+      "after": "3"
+    },
+    {
+      "table": "properties",
+      "row": "d2p_rw_spellpower",
+      "field": "stat4",
+      "before": "",
+      "after": "passive_pois_mastery"
+    },
+    {
+      "table": "properties",
+      "row": "d2p_rw_spellpower",
+      "field": "func5",
+      "before": "",
+      "after": "3"
+    },
+    {
+      "table": "properties",
+      "row": "d2p_rw_spellpower",
+      "field": "stat5",
+      "before": "",
+      "after": "passive_mag_mastery"
+    },
+    {
+      "table": "properties",
+      "row": "d2p_rw_spellpower",
+      "field": "*Notes",
+      "before": "",
+      "after": "D2PLUS Alpha V1.4 native compound property; existing saved stat IDs only."
+    },
+    {
+      "table": "properties",
+      "row": "d2p_rw_castskills",
+      "field": "code",
+      "before": "",
+      "after": "d2p_rw_castskills"
+    },
+    {
+      "table": "properties",
+      "row": "d2p_rw_castskills",
+      "field": "*Id",
+      "before": "",
+      "after": "369"
+    },
+    {
+      "table": "properties",
+      "row": "d2p_rw_castskills",
+      "field": "*Enabled",
+      "before": "",
+      "after": "1"
+    },
+    {
+      "table": "properties",
+      "row": "d2p_rw_castskills",
+      "field": "func1",
+      "before": "",
+      "after": "1"
+    },
+    {
+      "table": "properties",
+      "row": "d2p_rw_castskills",
+      "field": "stat1",
+      "before": "",
+      "after": "item_allskills"
+    },
+    {
+      "table": "properties",
+      "row": "d2p_rw_castskills",
+      "field": "func2",
+      "before": "",
+      "after": "17"
+    },
+    {
+      "table": "properties",
+      "row": "d2p_rw_castskills",
+      "field": "stat2",
+      "before": "",
+      "after": "item_fastercastrate"
+    },
+    {
+      "table": "properties",
+      "row": "d2p_rw_castskills",
+      "field": "*Notes",
+      "before": "",
+      "after": "D2PLUS Alpha V1.4 native compound property; existing saved stat IDs only."
+    },
+    {
+      "table": "weapons",
+      "row": "hax",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "3"
+    },
+    {
+      "table": "weapons",
+      "row": "scp",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "3"
+    },
+    {
+      "table": "weapons",
+      "row": "mac",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "3"
+    },
+    {
+      "table": "weapons",
+      "row": "ssd",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "3"
+    },
+    {
+      "table": "weapons",
+      "row": "scm",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "3"
+    },
+    {
+      "table": "weapons",
+      "row": "sbr",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "3"
+    },
+    {
+      "table": "weapons",
+      "row": "flc",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "3"
+    },
+    {
+      "table": "weapons",
+      "row": "2hs",
+      "field": "gemsockets",
+      "before": "3",
+      "after": "4"
+    },
+    {
+      "table": "weapons",
+      "row": "spr",
+      "field": "gemsockets",
+      "before": "3",
+      "after": "6"
+    },
+    {
+      "table": "weapons",
+      "row": "tri",
+      "field": "gemsockets",
+      "before": "4",
+      "after": "6"
+    },
+    {
+      "table": "weapons",
+      "row": "brn",
+      "field": "gemsockets",
+      "before": "5",
+      "after": "6"
+    },
+    {
+      "table": "weapons",
+      "row": "bar",
+      "field": "gemsockets",
+      "before": "3",
+      "after": "6"
+    },
+    {
+      "table": "weapons",
+      "row": "vou",
+      "field": "gemsockets",
+      "before": "4",
+      "after": "6"
+    },
+    {
+      "table": "weapons",
+      "row": "scy",
+      "field": "gemsockets",
+      "before": "5",
+      "after": "6"
+    },
+    {
+      "table": "weapons",
+      "row": "pax",
+      "field": "gemsockets",
+      "before": "5",
+      "after": "6"
+    },
+    {
+      "table": "weapons",
+      "row": "sst",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "3"
+    },
+    {
+      "table": "weapons",
+      "row": "lst",
+      "field": "gemsockets",
+      "before": "3",
+      "after": "4"
+    },
+    {
+      "table": "weapons",
+      "row": "sbw",
+      "field": "gemsockets",
+      "before": "3",
+      "after": "4"
+    },
+    {
+      "table": "weapons",
+      "row": "lxb",
+      "field": "gemsockets",
+      "before": "3",
+      "after": "4"
+    },
+    {
+      "table": "weapons",
+      "row": "hdm",
+      "field": "gemsockets",
+      "before": "",
+      "after": "2"
+    },
+    {
+      "table": "weapons",
+      "row": "hst",
+      "field": "gemsockets",
+      "before": "",
+      "after": "4"
+    },
+    {
+      "table": "weapons",
+      "row": "msf",
+      "field": "gemsockets",
+      "before": "",
+      "after": "3"
+    },
+    {
+      "table": "weapons",
+      "row": "9ha",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "3"
+    },
+    {
+      "table": "weapons",
+      "row": "9sc",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "3"
+    },
+    {
+      "table": "weapons",
+      "row": "9ma",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "3"
+    },
+    {
+      "table": "weapons",
+      "row": "9ss",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "3"
+    },
+    {
+      "table": "weapons",
+      "row": "9sm",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "3"
+    },
+    {
+      "table": "weapons",
+      "row": "9sb",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "3"
+    },
+    {
+      "table": "weapons",
+      "row": "9fc",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "3"
+    },
+    {
+      "table": "weapons",
+      "row": "92h",
+      "field": "gemsockets",
+      "before": "3",
+      "after": "4"
+    },
+    {
+      "table": "weapons",
+      "row": "9sr",
+      "field": "gemsockets",
+      "before": "3",
+      "after": "6"
+    },
+    {
+      "table": "weapons",
+      "row": "9tr",
+      "field": "gemsockets",
+      "before": "4",
+      "after": "6"
+    },
+    {
+      "table": "weapons",
+      "row": "9br",
+      "field": "gemsockets",
+      "before": "5",
+      "after": "6"
+    },
+    {
+      "table": "weapons",
+      "row": "9b7",
+      "field": "gemsockets",
+      "before": "3",
+      "after": "6"
+    },
+    {
+      "table": "weapons",
+      "row": "9vo",
+      "field": "gemsockets",
+      "before": "4",
+      "after": "6"
+    },
+    {
+      "table": "weapons",
+      "row": "9s8",
+      "field": "gemsockets",
+      "before": "5",
+      "after": "6"
+    },
+    {
+      "table": "weapons",
+      "row": "9pa",
+      "field": "gemsockets",
+      "before": "5",
+      "after": "6"
+    },
+    {
+      "table": "weapons",
+      "row": "8ss",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "3"
+    },
+    {
+      "table": "weapons",
+      "row": "8ls",
+      "field": "gemsockets",
+      "before": "3",
+      "after": "4"
+    },
+    {
+      "table": "weapons",
+      "row": "8sb",
+      "field": "gemsockets",
+      "before": "3",
+      "after": "4"
+    },
+    {
+      "table": "weapons",
+      "row": "8lx",
+      "field": "gemsockets",
+      "before": "3",
+      "after": "4"
+    },
+    {
+      "table": "weapons",
+      "row": "qf1",
+      "field": "gemsockets",
+      "before": "3",
+      "after": "4"
+    },
+    {
+      "table": "weapons",
+      "row": "qf2",
+      "field": "gemsockets",
+      "before": "3",
+      "after": "4"
+    },
+    {
+      "table": "weapons",
+      "row": "ktr",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "3"
+    },
+    {
+      "table": "weapons",
+      "row": "wrb",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "3"
+    },
+    {
+      "table": "weapons",
+      "row": "axf",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "3"
+    },
+    {
+      "table": "weapons",
+      "row": "ces",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "3"
+    },
+    {
+      "table": "weapons",
+      "row": "9wb",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "3"
+    },
+    {
+      "table": "weapons",
+      "row": "9xf",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "3"
+    },
+    {
+      "table": "weapons",
+      "row": "9cs",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "3"
+    },
+    {
+      "table": "weapons",
+      "row": "7xf",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "3"
+    },
+    {
+      "table": "weapons",
+      "row": "7cs",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "3"
+    },
+    {
+      "table": "weapons",
+      "row": "7ha",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "3"
+    },
+    {
+      "table": "weapons",
+      "row": "7sc",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "3"
+    },
+    {
+      "table": "weapons",
+      "row": "7ma",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "3"
+    },
+    {
+      "table": "weapons",
+      "row": "7ss",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "3"
+    },
+    {
+      "table": "weapons",
+      "row": "7sm",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "3"
+    },
+    {
+      "table": "weapons",
+      "row": "7sb",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "3"
+    },
+    {
+      "table": "weapons",
+      "row": "7fc",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "3"
+    },
+    {
+      "table": "weapons",
+      "row": "72h",
+      "field": "gemsockets",
+      "before": "3",
+      "after": "4"
+    },
+    {
+      "table": "weapons",
+      "row": "7sr",
+      "field": "gemsockets",
+      "before": "3",
+      "after": "6"
+    },
+    {
+      "table": "weapons",
+      "row": "7tr",
+      "field": "gemsockets",
+      "before": "4",
+      "after": "6"
+    },
+    {
+      "table": "weapons",
+      "row": "7br",
+      "field": "gemsockets",
+      "before": "5",
+      "after": "6"
+    },
+    {
+      "table": "weapons",
+      "row": "7o7",
+      "field": "gemsockets",
+      "before": "3",
+      "after": "6"
+    },
+    {
+      "table": "weapons",
+      "row": "7vo",
+      "field": "gemsockets",
+      "before": "4",
+      "after": "6"
+    },
+    {
+      "table": "weapons",
+      "row": "7s8",
+      "field": "gemsockets",
+      "before": "5",
+      "after": "6"
+    },
+    {
+      "table": "weapons",
+      "row": "7pa",
+      "field": "gemsockets",
+      "before": "5",
+      "after": "6"
+    },
+    {
+      "table": "weapons",
+      "row": "6ss",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "3"
+    },
+    {
+      "table": "weapons",
+      "row": "6ls",
+      "field": "gemsockets",
+      "before": "3",
+      "after": "4"
+    },
+    {
+      "table": "weapons",
+      "row": "6sb",
+      "field": "gemsockets",
+      "before": "3",
+      "after": "4"
+    },
+    {
+      "table": "weapons",
+      "row": "6lx",
+      "field": "gemsockets",
+      "before": "3",
+      "after": "4"
+    },
+    {
+      "table": "armor",
+      "row": "cap",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "3"
+    },
+    {
+      "table": "armor",
+      "row": "skp",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "3"
+    },
+    {
+      "table": "armor",
+      "row": "hlm",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "3"
+    },
+    {
+      "table": "armor",
+      "row": "fhl",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "3"
+    },
+    {
+      "table": "armor",
+      "row": "qui",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "4"
+    },
+    {
+      "table": "armor",
+      "row": "lea",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "4"
+    },
+    {
+      "table": "armor",
+      "row": "hla",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "4"
+    },
+    {
+      "table": "armor",
+      "row": "stu",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "4"
+    },
+    {
+      "table": "armor",
+      "row": "rng",
+      "field": "gemsockets",
+      "before": "3",
+      "after": "4"
+    },
+    {
+      "table": "armor",
+      "row": "scl",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "4"
+    },
+    {
+      "table": "armor",
+      "row": "chn",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "4"
+    },
+    {
+      "table": "armor",
+      "row": "brs",
+      "field": "gemsockets",
+      "before": "3",
+      "after": "4"
+    },
+    {
+      "table": "armor",
+      "row": "spl",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "4"
+    },
+    {
+      "table": "armor",
+      "row": "plt",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "4"
+    },
+    {
+      "table": "armor",
+      "row": "fld",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "4"
+    },
+    {
+      "table": "armor",
+      "row": "ltp",
+      "field": "gemsockets",
+      "before": "3",
+      "after": "4"
+    },
+    {
+      "table": "armor",
+      "row": "buc",
+      "field": "gemsockets",
+      "before": "1",
+      "after": "4"
+    },
+    {
+      "table": "armor",
+      "row": "sml",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "4"
+    },
+    {
+      "table": "armor",
+      "row": "lrg",
+      "field": "gemsockets",
+      "before": "3",
+      "after": "4"
+    },
+    {
+      "table": "armor",
+      "row": "kit",
+      "field": "gemsockets",
+      "before": "3",
+      "after": "4"
+    },
+    {
+      "table": "armor",
+      "row": "tow",
+      "field": "gemsockets",
+      "before": "3",
+      "after": "4"
+    },
+    {
+      "table": "armor",
+      "row": "gts",
+      "field": "gemsockets",
+      "before": "3",
+      "after": "4"
+    },
+    {
+      "table": "armor",
+      "row": "bhm",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "3"
+    },
+    {
+      "table": "armor",
+      "row": "bsh",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "4"
+    },
+    {
+      "table": "armor",
+      "row": "spk",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "4"
+    },
+    {
+      "table": "armor",
+      "row": "xap",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "3"
+    },
+    {
+      "table": "armor",
+      "row": "xkp",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "3"
+    },
+    {
+      "table": "armor",
+      "row": "xlm",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "3"
+    },
+    {
+      "table": "armor",
+      "row": "xhl",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "3"
+    },
+    {
+      "table": "armor",
+      "row": "xui",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "4"
+    },
+    {
+      "table": "armor",
+      "row": "xea",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "4"
+    },
+    {
+      "table": "armor",
+      "row": "xla",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "4"
+    },
+    {
+      "table": "armor",
+      "row": "xtu",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "4"
+    },
+    {
+      "table": "armor",
+      "row": "xng",
+      "field": "gemsockets",
+      "before": "3",
+      "after": "4"
+    },
+    {
+      "table": "armor",
+      "row": "xcl",
+      "field": "gemsockets",
+      "before": "3",
+      "after": "4"
+    },
+    {
+      "table": "armor",
+      "row": "xhn",
+      "field": "gemsockets",
+      "before": "3",
+      "after": "4"
+    },
+    {
+      "table": "armor",
+      "row": "xrs",
+      "field": "gemsockets",
+      "before": "3",
+      "after": "4"
+    },
+    {
+      "table": "armor",
+      "row": "xpl",
+      "field": "gemsockets",
+      "before": "3",
+      "after": "4"
+    },
+    {
+      "table": "armor",
+      "row": "xlt",
+      "field": "gemsockets",
+      "before": "3",
+      "after": "4"
+    },
+    {
+      "table": "armor",
+      "row": "xld",
+      "field": "gemsockets",
+      "before": "3",
+      "after": "4"
+    },
+    {
+      "table": "armor",
+      "row": "xtp",
+      "field": "gemsockets",
+      "before": "3",
+      "after": "4"
+    },
+    {
+      "table": "armor",
+      "row": "xuc",
+      "field": "gemsockets",
+      "before": "1",
+      "after": "4"
+    },
+    {
+      "table": "armor",
+      "row": "xml",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "4"
+    },
+    {
+      "table": "armor",
+      "row": "xrg",
+      "field": "gemsockets",
+      "before": "3",
+      "after": "4"
+    },
+    {
+      "table": "armor",
+      "row": "xit",
+      "field": "gemsockets",
+      "before": "3",
+      "after": "4"
+    },
+    {
+      "table": "armor",
+      "row": "xow",
+      "field": "gemsockets",
+      "before": "3",
+      "after": "4"
+    },
+    {
+      "table": "armor",
+      "row": "xts",
+      "field": "gemsockets",
+      "before": "3",
+      "after": "4"
+    },
+    {
+      "table": "armor",
+      "row": "xh9",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "3"
+    },
+    {
+      "table": "armor",
+      "row": "xsh",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "4"
+    },
+    {
+      "table": "armor",
+      "row": "xpk",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "4"
+    },
+    {
+      "table": "armor",
+      "row": "ne1",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "4"
+    },
+    {
+      "table": "armor",
+      "row": "ne2",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "4"
+    },
+    {
+      "table": "armor",
+      "row": "ne3",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "4"
+    },
+    {
+      "table": "armor",
+      "row": "ne4",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "4"
+    },
+    {
+      "table": "armor",
+      "row": "ne5",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "4"
+    },
+    {
+      "table": "armor",
+      "row": "ci0",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "3"
+    },
+    {
+      "table": "armor",
+      "row": "ci1",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "3"
+    },
+    {
+      "table": "armor",
+      "row": "uap",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "3"
+    },
+    {
+      "table": "armor",
+      "row": "ukp",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "3"
+    },
+    {
+      "table": "armor",
+      "row": "ulm",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "3"
+    },
+    {
+      "table": "armor",
+      "row": "uhl",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "3"
+    },
+    {
+      "table": "armor",
+      "row": "uuc",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "4"
+    },
+    {
+      "table": "armor",
+      "row": "uml",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "4"
+    },
+    {
+      "table": "armor",
+      "row": "urg",
+      "field": "gemsockets",
+      "before": "3",
+      "after": "4"
+    },
+    {
+      "table": "armor",
+      "row": "ush",
+      "field": "gemsockets",
+      "before": "3",
+      "after": "4"
+    },
+    {
+      "table": "armor",
+      "row": "upk",
+      "field": "gemsockets",
+      "before": "3",
+      "after": "4"
+    },
+    {
+      "table": "armor",
+      "row": "ne6",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "4"
+    },
+    {
+      "table": "armor",
+      "row": "ne7",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "4"
+    },
+    {
+      "table": "armor",
+      "row": "ne8",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "4"
+    },
+    {
+      "table": "armor",
+      "row": "ne9",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "4"
+    },
+    {
+      "table": "armor",
+      "row": "nea",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "4"
+    },
+    {
+      "table": "armor",
+      "row": "neb",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "4"
+    },
+    {
+      "table": "armor",
+      "row": "neg",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "4"
+    },
+    {
+      "table": "armor",
+      "row": "ned",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "4"
+    },
+    {
+      "table": "armor",
+      "row": "nee",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "4"
+    },
+    {
+      "table": "armor",
+      "row": "nef",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "4"
+    },
+    {
+      "table": "armor",
+      "row": "wa1",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "4"
+    },
+    {
+      "table": "armor",
+      "row": "wa2",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "4"
+    },
+    {
+      "table": "armor",
+      "row": "wa3",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "4"
+    },
+    {
+      "table": "armor",
+      "row": "wa4",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "4"
+    },
+    {
+      "table": "armor",
+      "row": "wa5",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "4"
+    },
+    {
+      "table": "armor",
+      "row": "wa6",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "4"
+    },
+    {
+      "table": "armor",
+      "row": "wa7",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "4"
+    },
+    {
+      "table": "armor",
+      "row": "wa8",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "4"
+    },
+    {
+      "table": "armor",
+      "row": "wa9",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "4"
+    },
+    {
+      "table": "armor",
+      "row": "waa",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "4"
+    },
+    {
+      "table": "armor",
+      "row": "wab",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "4"
+    },
+    {
+      "table": "armor",
+      "row": "wac",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "4"
+    },
+    {
+      "table": "armor",
+      "row": "wad",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "4"
+    },
+    {
+      "table": "armor",
+      "row": "wae",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "4"
+    },
+    {
+      "table": "armor",
+      "row": "waf",
+      "field": "gemsockets",
+      "before": "2",
+      "after": "4"
+    },
+    {
+      "table": "itemtypes",
+      "row": "head",
+      "field": "MaxSockets3",
+      "before": "3",
+      "after": "4"
+    },
+    {
+      "table": "itemtypes",
+      "row": "circ",
+      "field": "MaxSockets2",
+      "before": "2",
+      "after": "3"
+    },
+    {
+      "table": "itemtypes",
+      "row": "grim",
+      "field": "MaxSockets3",
+      "before": "3",
+      "after": "4"
+    },
+    {
+      "table": "itemtypes",
+      "row": "helm",
+      "field": "MaxSockets2",
+      "before": "2",
+      "after": "3"
+    }
+  ]
+}

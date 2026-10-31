@@ -1,3 +1,9 @@
+# D2PLUS Alpha V1.4 — Happy Halloween!
+
+Complete D2RMM mod, Windows launcher, Hero Editor and offline/online wiki. This release includes Shattered Sun, The Last Sunkeeper, Dungeon Reward Bags, revised high-end custom runewords and new item visuals.
+
+Read [the patch notes](CHANGELOG-1.4.0-alpha.txt) and [installation steps](release-notes/alpha-v14-install.txt). No previous D2PLUS download is required.
+
 D2PLUS Alpha V1.3
 
 Charm weight and seven craftable Oaths are here. Your character can carry 50 charm weight before taking an overburden penalty. Check Advanced Character Stats for your total; each charm shows its own weight. Oaths share an aura with you and nearby allies, including your mercenary.
@@ -138,3 +144,11 @@ D2PLUS is for anyone who still enjoys making one more run, finding one more upgr
 ## Getting started and save backups
 
 See [Getting Started](GETTING_STARTED.md) for installation, updates, save-folder controls, material storage and Accursed basics. Launcher Alpha V1.3 shows the exact configured save folder and adds verified character/shared-stash backups. Read the [short update](CHANGELOG-1.3.0-alpha.txt).
+
+## Halloween V1.4: Season 16 inspiration and build guides
+
+We liked Blizzard’s announced Season 16 item improvements and brought the selected changes listed in our [full Alpha V1.4 patch notes](CHANGELOG-1.4.0-alpha.txt) into D2PLUS. This includes 18 existing unique items (Grim’s Burning Dead partially), Isenhart’s Armory and Eternity. We preserve unrelated D2PLUS bonuses and existing saved rolls. Ambiguous summon additions and executable/server fixes are not claimed.
+
+The online and offline wikis now include 41 reviewed build guides, with updated runeword comparisons, charm budgets and progression. Eight new specialist guides cover gem farming, hybrid builds and an endgame Warlock setup. Recommendations are data-checked theorycraft; gameplay benchmarks are pending.
+
+[Blizzard’s Season 16 announcement](https://news.blizzard.com/en-us/article/24316567/diablo-ii-resurrected-ladder-season-16) · [Our Halloween update](https://www.d2-plus.net/news-alpha-v14.html)
