@@ -1,0 +1,17 @@
+{
+  "sha256": "d452effb72875803bb124c14f6e4ee65f1c22957c8e20ffdb23f4fe291039644",
+  "parts": [
+    "alpha-v20-suite.zip.part000"
+  ],
+  "version": "Alpha V2.0",
+  "bytes": 34103744,
+  "files": 2993,
+  "sourceReadySha256": "2c3a35f609604066f4bce61ff58dcf8ef36973348bcec695381207268a681346",
+  "acceptedSourceMembersVerified": true,
+  "sourceUnchangedDuringPacking": true,
+  "classSkills": 264,
+  "guidePlans": 51,
+  "wikiRecords": 6350,
+  "saveVersion": 105,
+  "launcherAssets": "Tracked separately in docs/launcher"
+}

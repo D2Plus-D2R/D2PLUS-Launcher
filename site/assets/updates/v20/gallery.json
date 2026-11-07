@@ -1,0 +1,103 @@
+{
+  "schema": 1,
+  "images": [
+    {
+      "file": "01-gloamweb-hollows.webp",
+      "title": "Vharzith in Gloamweb Hollows",
+      "alt": "Retouched gameplay view of Vharzith facing an Amazon in Gloamweb Hollows.",
+      "caption": "Vharzith in Gloamweb Hollows — retouched gameplay view.",
+      "width": 1672,
+      "height": 941,
+      "retouched": true,
+      "sha256": "5e4d3a603e5e659672d083c55fdfb61ada5aa94ff4f69c342ae48d3b05ee8736",
+      "webFile": "01-gloamweb-hollows.webp",
+      "webSHA256": "5e4d3a603e5e659672d083c55fdfb61ada5aa94ff4f69c342ae48d3b05ee8736",
+      "webLosslessPixelMatch": true,
+      "sourcePngSha256": "1c05a6581e6d55a04b00778eb2719a9242e31e965236993a9b2fabbca1e19de2"
+    },
+    {
+      "file": "02-sanctum-bonework.webp",
+      "title": "Sanctum of the First Nightmare",
+      "alt": "Retouched gameplay view of the boss and bonework in the Sanctum of the First Nightmare.",
+      "caption": "Sanctum bonework — retouched gameplay view.",
+      "width": 1671,
+      "height": 941,
+      "retouched": true,
+      "sha256": "cd4a416089c2daa7a721324c9a3d1d3f95a61dd647dd7f8bc2e91ae511d167b9",
+      "webFile": "02-sanctum-bonework.webp",
+      "webSHA256": "cd4a416089c2daa7a721324c9a3d1d3f95a61dd647dd7f8bc2e91ae511d167b9",
+      "webLosslessPixelMatch": true,
+      "sourcePngSha256": "83be72938b704a1addef6a06964f39e4e39a32e67f37b03ecdc081871e2082d6"
+    },
+    {
+      "file": "03-butcher-encounter.webp",
+      "title": "The Butcher",
+      "alt": "Gameplay screenshot of a melee encounter with The Butcher and nearby monsters.",
+      "caption": "A close encounter with The Butcher.",
+      "width": 1600,
+      "height": 900,
+      "retouched": false,
+      "sha256": "a0e5cf108a87da45f01fc39405be527ad50c6b331195fe1e48f292bc558a20f1",
+      "webFile": "03-butcher-encounter.webp",
+      "webSHA256": "a0e5cf108a87da45f01fc39405be527ad50c6b331195fe1e48f292bc558a20f1",
+      "webLosslessPixelMatch": true,
+      "sourcePngSha256": "752364edc68358d959b1b3a5f8a2deb2da41d0cd7c26dab7d3c80a8a95274715"
+    },
+    {
+      "file": "04-rogue-encampment.webp",
+      "title": "Rogue Encampment",
+      "alt": "Gameplay screenshot of an Amazon near Charsi and the stone forge in the Rogue Encampment.",
+      "caption": "The Rogue Encampment and Charsi’s forge.",
+      "width": 1600,
+      "height": 900,
+      "retouched": false,
+      "sha256": "e37b23261b80012e629f151a7741b1f729acea102a447bca76c0ef0a2632b7b1",
+      "webFile": "04-rogue-encampment.webp",
+      "webSHA256": "e37b23261b80012e629f151a7741b1f729acea102a447bca76c0ef0a2632b7b1",
+      "webLosslessPixelMatch": true,
+      "sourcePngSha256": "7a4e6b81f72cf3581ba33ce1830f72050e690156eeb683cf472996431b2a21c8"
+    },
+    {
+      "file": "05-material-stash.webp",
+      "title": "Material storage",
+      "alt": "Gameplay screenshot showing the Materials stash tab beside the expanded character inventory.",
+      "caption": "Material storage and the expanded inventory.",
+      "width": 1600,
+      "height": 900,
+      "retouched": false,
+      "sha256": "48eaf2267e8dae17a3d964a899e34d9467ef599534476b6a0cf62b1e4abc75be",
+      "webFile": "05-material-stash.webp",
+      "webSHA256": "48eaf2267e8dae17a3d964a899e34d9467ef599534476b6a0cf62b1e4abc75be",
+      "webLosslessPixelMatch": true,
+      "sourcePngSha256": "00e57a384f1731b1f22dac44c02a18633e88566c1380251f48510a15ea5467d1"
+    },
+    {
+      "file": "06-warlock-selection.webp",
+      "title": "Warlock",
+      "alt": "Gameplay screenshot of the Warlock selected at the character creation camp.",
+      "caption": "Warlock at the character selection camp.",
+      "width": 1600,
+      "height": 900,
+      "retouched": false,
+      "sha256": "23fa0f9382d2a99326a709e4b38027890825e6347e3e819c91937a2f7a17d4e0",
+      "webFile": "06-warlock-selection.webp",
+      "webSHA256": "23fa0f9382d2a99326a709e4b38027890825e6347e3e819c91937a2f7a17d4e0",
+      "webLosslessPixelMatch": true,
+      "sourcePngSha256": "6e159a528aaf40701335ed3ed2c6abdf1e529d5e7aa0e8cd30eacc6d00691748"
+    },
+    {
+      "file": "07-kharvul-cinderwound.webp",
+      "title": "Kharvul in The Cinderwound",
+      "alt": "Development gameplay capture of Kharvul and combatants in The Cinderwound.",
+      "caption": "Kharvul in The Cinderwound — development gameplay capture.",
+      "width": 1280,
+      "height": 720,
+      "retouched": false,
+      "sha256": "f74394435423b5b94dfcc3bf3e6aac355e1a975eff539ffa6d978d6c2cafb8c2",
+      "webFile": "07-kharvul-cinderwound.webp",
+      "webSHA256": "f74394435423b5b94dfcc3bf3e6aac355e1a975eff539ffa6d978d6c2cafb8c2",
+      "webLosslessPixelMatch": true,
+      "sourcePngSha256": "7f1aafc4f52e668c6edbca6874a0e9ab1f70bf5263c70520dc0e7ea745f03b67"
+    }
+  ]
+}

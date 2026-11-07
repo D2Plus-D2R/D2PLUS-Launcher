@@ -1,0 +1,11 @@
+D2PLUS Alpha V2.0 — Complete installation
+
+Requires a licensed Warlock-capable Diablo II: Resurrected installation and D2RMM.
+
+1. Close D2R. Back up your offline saves using your normal backup method.
+2. Disable older complete D2PLUS packages and overlapping included addons.
+3. Extract D2PLUS_Alpha_v20_Complete into D2RMM/mods, enable it and run Install Mods. No earlier D2PLUS download is needed.
+4. Preserve your current D2RMM output mod name and character save path. Launch with the normal D2RMM -mod/-txt configuration.
+5. Alternatively, install the full Windows launcher, choose D2R.exe and use Install Alpha V2.0. Updating the launcher application alone does not install gameplay until this step runs.
+
+The package contains game-data files and reference tools, never your character saves. Existing items keep their saved rolls. A new game session loads updated tables, animations and materials.

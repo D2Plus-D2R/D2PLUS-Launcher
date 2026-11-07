@@ -201,3 +201,6 @@ subprocess.run([sys.executable,str(root/'build/apply-reference-v13.py')],check=T
 
 # Final V1.4 snapshot overrides historical reference normalization.
 subprocess.run([sys.executable,str(root/'build/apply-reference-v14.py')],check=True)
+
+# Apply the current V2.0 reference last, after all historical migrations.
+subprocess.run([sys.executable,str(root/'build/apply-reference-v20.py')],check=True)

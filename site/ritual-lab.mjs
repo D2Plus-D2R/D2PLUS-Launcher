@@ -22,7 +22,7 @@ export function mountRitualLab(root, catalog, rules, pools, random) {
   const lab = new RitualLab(catalog,rules,pools,random);
   let query = '', category = '', hovered = null, announcement = '';
   root.innerHTML = `
-    <div class="rl-topline"><span class="rl-tag">FREE PRACTICE · NO ACCOUNT NEEDED</span><span>Alpha V1.2 reference</span></div>
+    <div class="rl-topline"><span class="rl-tag">FREE PRACTICE · NO ACCOUNT NEEDED</span><span>Controlled equipment examples</span></div>
     <div class="rl-layout">
       <div class="rl-panel rl-arsenal">
         <div class="rl-panel-title"><span aria-hidden="true">◆</span><h3>Example inventory</h3></div>
@@ -30,7 +30,7 @@ export function mountRitualLab(root, catalog, rules, pools, random) {
         <label class="rl-visually-hidden" for="rl-filter">Filter item types</label><select id="rl-filter"><option value="">All item types</option><option value="caster">Caster weapons</option><option value="weap">Other weapons</option><option value="armo">Armor</option><option value="jewelry">Rings &amp; amulets</option><option value="jewl">Jewels</option></select>
         <div class="rl-inventory" id="rl-inventory" aria-label="Example unique items"></div>
         <div class="rl-inventory-footer"><span id="rl-count"></span><span>Hover or focus to inspect</span></div>
-        <button type="button" class="rl-sigil-supply" draggable="true" data-drag="sigil" data-action="sigil"><img src="${asset('assets/accursed_ritual_sigil.png')}" alt=""><span><strong>Ritual Sigil</strong><small>Unlimited practice supply</small></span><b aria-hidden="true">∞</b></button>
+        <button type="button" class="rl-sigil-supply" draggable="true" data-drag="sigil" data-action="sigil"><img src="${asset('wiki/assets/v11/accursed_ritual_sigil.png')}" alt=""><span><strong>Ritual Sigil</strong><small>Unlimited practice supply</small></span><b aria-hidden="true">∞</b></button>
       </div>
       <div class="rl-panel rl-chamber">
         <div class="rl-panel-title"><span aria-hidden="true">✦</span><h3>Horadric Cube</h3></div>
@@ -96,7 +96,7 @@ export function mountRitualLab(root, catalog, rules, pools, random) {
     unique.disabled = locked; unique.setAttribute('aria-label',state.uniquePlaced?'Remove unique from Cube':'Place selected unique in Cube');
     unique.innerHTML = state.uniquePlaced && item ? item.rare ? '<span class="rl-rare-token" aria-hidden="true">?</span><span>Rare base</span>' : `${image(item)}<span>${esc(item.name)}</span>` : '<span class="rl-slot-mark" aria-hidden="true">◇</span><span>Unique</span>';
     const sigil = $('#rl-sigil-slot'); sigil.disabled = locked; sigil.setAttribute('aria-label',state.sigilPlaced?'Remove Ritual Sigil from Cube':'Place Ritual Sigil in Cube');
-    sigil.innerHTML = state.sigilPlaced ? `<img src="${asset('assets/accursed_ritual_sigil.png')}" alt=""><span>Ritual Sigil</span>` : `<span class="rl-slot-mark" aria-hidden="true">✦</span><span>${state.phase==='resolved'?'Consumed':'Ritual Sigil'}</span>`;
+    sigil.innerHTML = state.sigilPlaced ? `<img src="${asset('wiki/assets/v11/accursed_ritual_sigil.png')}" alt=""><span>Ritual Sigil</span>` : `<span class="rl-slot-mark" aria-hidden="true">✦</span><span>${state.phase==='resolved'?'Consumed':'Ritual Sigil'}</span>`;
     for (const [kind, label] of [['unique','unique'],['sigil','Sigil']]) {
       const el = $('#rl-place-'+kind); el.disabled=locked; el.textContent = `${state[kind+'Placed']?'Remove':'Place'} ${label}`;
     }

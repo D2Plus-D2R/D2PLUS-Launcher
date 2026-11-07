@@ -1,8 +1,8 @@
-# D2PLUS Alpha V1.4 — Happy Halloween!
+# D2PLUS Alpha V2.0
 
-Complete D2RMM mod, Windows launcher, Hero Editor and offline/online wiki. This release includes Shattered Sun, The Last Sunkeeper, Dungeon Reward Bags, revised high-end custom runewords and new item visuals.
+The complete offline D2RMM mod, Windows launcher, Hero Editor and online/offline reference. New optional dungeons, polished custom bosses, completed skill roles and interface refinements are included in one package.
 
-Read [the patch notes](CHANGELOG-1.4.0-alpha.txt) and [installation steps](release-notes/alpha-v14-install.txt). No previous D2PLUS download is required.
+Read the [V2.0 patch notes](CHANGELOG-2.0.0-alpha.txt) and [installation steps](release-notes/alpha-v20-install.txt). No earlier D2PLUS download is required.
 
 D2PLUS Alpha V1.3
 

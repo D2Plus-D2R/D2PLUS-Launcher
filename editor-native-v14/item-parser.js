@@ -41,7 +41,7 @@ function mkid(n) {
  */
 const CUSTOM_RUNEWORD_IDS = {
     1396: 325,
-    3749: 211, // D2PlusRuneword004: Shael + Xith + Tal, verified on Tanadyn
+    3749: 211, // D2PlusRuneword004: Shael + Xith + Tal, verified on a local test character
 };
 /**
  * Stats followed by N consecutive stat IDs in the binary stream.

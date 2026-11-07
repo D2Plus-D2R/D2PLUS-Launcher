@@ -1,1 +1,7 @@
 release-inputs/v11-hotfix/files/** -text
+
+# V2 metadata is bound by byte-level SHA256 receipts.
+build/CONTENT-MANIFEST-ANDROID-V2.json -text
+build/android-v20-*.json -text
+release-inputs/alpha-v20-*.json -text
+release-inputs/reference-v20-report.json -text

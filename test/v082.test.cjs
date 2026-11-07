@@ -2,7 +2,7 @@ const test=require('node:test'),assert=require('node:assert/strict'),fs=require(
 const read=p=>JSON.parse(fs.readFileSync(path.join(__dirname,'..',p),'utf8'));
 test('AlphaV1.1 named item identities and all guide prerequisites agree across companions',()=>{
  const d=read('docs/d2plus/v105_data.json'),c=read('docs/d2plus/constants_105.json'),w=read('docs/wiki/database.json'),b=read('docs/d2plus/build-guides.json'),strings=new Map(d.strings);
- assert.equal(w.version,'D2PLUS Alpha V1.4');assert.equal(w.guides.length,33);assert.deepEqual(b.guides,w.guides);
+ assert.equal(w.version,'D2PLUS Alpha V2.0');assert.equal(w.guides.length,33);assert.deepEqual(b.guides,w.guides);
  for(const [kind,table,constant,prefix] of [['Unique',d.uniqueItems,c.unq_items,'unique'],['Set piece',d.setItems,c.set_items,'set']]){
   const items=w.records.filter(x=>x.kind===kind);const eligible=Object.entries(table).filter(([k,r])=>r.enabled!==0&&(r.code||r.item));assert.equal(items.length,eligible.length);
   for(const [key,r] of eligible){const id=Number(key.slice(prefix.length)),name=(strings.get(r.index)||r.index).replace(/ÿc./g,'').trim();assert.equal(constant[id].n,name);const rec=items.find(x=>x.nativeItemId===id);assert.ok(rec,key);assert.equal(rec.name,name);assert.equal(rec.sourceKey,r.index);}
@@ -14,5 +14,5 @@ test('AlphaV1.1 named item identities and all guide prerequisites agree across c
 test('AlphaV1.1 includes all approved unique balance cells and ranged Storm Lance',()=>{
  const d=read('docs/d2plus/v105_data.json'),w=read('docs/wiki/database.json'),patches=read('release-inputs/unique-balance-v082.json'),v11=read('release-inputs/unique-balance-v11.json');assert.equal(patches.length,37);
  for(const p of patches){const row=w.records.find(r=>r.kind==='Unique'&&r.sourceKey===p.index)?.sourceRow;assert.ok(row,p.index);for(const [field,v] of Object.entries(p.cells))assert.equal(row[field],v11[p.index]?.[field]??v.after,p.index+' '+field);}
- assert.equal(d.skills[14].range,'none');assert.equal(d.skills[14].calc1,'min(1+lvl/10,3)');assert.equal(d.skills[14].srcdam,128);
+ assert.equal(d.skills[14].range,'none');assert.equal(d.skills[14].calc1,'min(1+2*(lvl/10),7)');assert.equal(d.skills[14].srcdam,128);
 });

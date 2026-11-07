@@ -1,0 +1,34 @@
+{
+  "version": "Alpha V2.0",
+  "assets": [
+    {
+      "name": "D2PLUS_Companion_AlphaV2.0.apk",
+      "size": 30325376,
+      "sha256": "468e7ab18566e2fdd4f1bd34caf5fcaaf60bfaf0073be287aa9dc5887e35da4b",
+      "parts": [
+        "android-v20/D2PLUS_Companion_AlphaV2.0.apk.part01"
+      ]
+    },
+    {
+      "name": "D2PLUS_Android_AlphaV2.0_Update_Kit.zip",
+      "size": 59522186,
+      "sha256": "28e413d556a38b69acf30b0dc50e69c07068e0deace2ac0e5d75046035be035a",
+      "parts": [
+        "android-v20/D2PLUS_Android_AlphaV2.0_Update_Kit.zip.part01",
+        "android-v20/D2PLUS_Android_AlphaV2.0_Update_Kit.zip.part02"
+      ]
+    }
+  ],
+  "verification": {
+    "path": "build/android-v20-verification.json",
+    "sha256": "defd0e7c973d0debc75a242353189ba10c7a7ca18af9cdf233df98be5049cd2b"
+  },
+  "contentManifest": {
+    "path": "build/CONTENT-MANIFEST-ANDROID-V2.json",
+    "sha256": "7fb3b09247037c4ccca3bda7aecfe8d0192e6d28375ec174a3b18d9c761175f2"
+  },
+  "reproducibility": {
+    "path": "build/android-v20-reproducibility.json",
+    "sha256": "9fc3739c461ea9696aa373710fa4b18aba6f618d8736474cf85bbd7072e4c607"
+  }
+}

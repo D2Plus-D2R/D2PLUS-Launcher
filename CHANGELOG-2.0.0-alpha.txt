@@ -1,0 +1,35 @@
+D2PLUS Alpha V2.0
+
+New depths below Sanctuary
+
+The Gloamweb Hollows brings a separate spider-cavern adventure, with more spider density, champion packs and a final chamber ruled by Vharzith, the Hollow Weaver. The Gloamweb Abyss uses the same route with stronger monsters, better loot and Uber Vharzith.
+
+The Sanctum gains a Nightmare entry led by Azrakek, First Nightmare, alongside the original endgame encounter with Uber Azrakek. The Cinderwound reworks The Hole into an early optional dungeon ruled by Kharvul, the Cindermaw, and grows more dangerous in Nightmare and Hell. Its existing world entrance and connections are retained.
+
+Cube portals are opened in Harrogath. The Perfect Gem entries unlock on Nightmare and also work on Hell; the Elder Gem Uber entries require Hell. Combine two Perfect Emeralds, one Sovereign Seal and one Artisan's Ember for the Gloamweb Hollows; use two Elder Emeralds instead for the Abyss. Two Perfect Amethysts, one seal and one ember open the Nightmare Sanctum; two Elder Amethysts with the same seal and ember open the endgame Sanctum.
+
+Boss presentation and rewards
+
+Custom bosses receive material and animation refinements, with rougher organic surfaces and clearer attack motion. Kharvul is tougher on all three difficulties. Eligible bosses use a flat 10% base Reward Bag roll and the appropriate Normal, Nightmare or Hell bag tier. Ordinary gems receive a distinct cyan name color; Elder Gems stay orange.
+
+Finished skill roles
+
+Storm Lance reaches seven primary bolts at total skill level 30: two more bolts at levels 10, 20 and 30. It has a wider spread, stronger flat lightning, a 50% weapon contribution on primary bolts and brief stun on eligible targets. Impact chains retain their separate skill-lightning component.
+
+Shadow Rift becomes a short-range magic ring around the Assassin with brief control against susceptible enemies. Judgment settles into its targeted magic-spell role, with consistent secondary bolts and no weapon-damage component. Arcane Tempest gains one small lightning splash per strike.
+
+Soul Harvest is a deliberate recovery stance: keep it selected to recover from corpses and improve mana regeneration. Ancestral Standard raises a corpse-anchored ward that supports nearby allies' accuracy, defense and hit recovery. Bloodroot heals its wounded owner and erupts for physical damage when it consumes a corpse. Ravage receives bounded, native life-and-mana recovery rather than its old preview scaling.
+
+The Warlock's specialist passives receive functional final designs. Sigil Lord supports manual casting and permits a second Sigil of each type at five invested ranks. Astral Communion adds capped, additive Enhanced Damage to Cleave and Echoing Strike from total Energy. Demonic Resonance supports the owner and newly summoned or bound demons; recreate them after changing its invested ranks.
+
+Interface and reference
+
+The enemy health bar is twice as wide, centered near the bottom, and appears only for a valid target. A new D2PLUS castle loading screen keeps its opening-door animation and light beyond the gates. The launcher, Hero Editor, online/offline wiki and signed Android reference are refreshed together, with all 264 class skill identities and current descriptions.
+
+Complete installation
+
+The Complete D2RMM package and Windows launcher contain the full mod; no earlier D2PLUS download is required. Disable older complete packages and overlapping addons, preserve the current output/save path, and install with D2R closed. Character saves are not distributed or overwritten.
+
+Validation
+
+Native tables, IDs, references, assets and package integrity are checked. Numerical skill budgets are data-checked; this is not a claim that every encounter and build has completed a gameplay benchmark. Please report the difficulty, skill rank and equipment when sharing feedback.
