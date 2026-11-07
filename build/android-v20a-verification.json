@@ -1,0 +1,32 @@
+{
+  "file": "D2PLUS_Companion_AlphaV2.0a.apk",
+  "bytes": 30329472,
+  "sha256": "94acaedb572bbfe8311053cbc93aacbb353ae658b3c644c2f486a504c48c9605",
+  "certificateSha256": "18b9f6fea79926265b70e61cd2ea4e5fb5382d3236cc5c3fa2208b85531c6144",
+  "signatureVerified": true,
+  "schemes": [
+    "v2",
+    "v3"
+  ],
+  "alignmentVerified": true,
+  "retainedAppCoreSha256": "66bd6e3919df4995403a9ceb86ba849b398d9f7c4b8e7e589c5f443d80fd938a",
+  "retainedAppCoreVerified": true,
+  "package": "com.d2plus.companion",
+  "versionCode": 201,
+  "versionName": "2.0.1-alpha",
+  "minSdk": 26,
+  "targetSdk": 35,
+  "verifiedReferenceFiles": 2954,
+  "sameIdentityAsV08": true,
+  "sameIdentityAsV11": true,
+  "deviceTested": false,
+  "sourceVersion": "D2PLUS Alpha V2.0a",
+  "nativeReferenceProfile": "alpha-v2.0a",
+  "publicContentBoundaryChecked": true,
+  "referenceFileManifestSha256": "b33deff15d5dfbe79478099abc79cf047178f5c73481f30bdacb7d9da1dc8ff8",
+  "completedSkillDescriptionsChecked": 7,
+  "rewardBagTiersChecked": 3,
+  "rewardBagTCOrderValidated": true,
+  "nativeTreasureClassSHA256": "3e70fc4b23b9de49e0b523e56f217a1e4508698e0d1ee1181ed85d2882c2a670",
+  "sourceReadySHA256": "9b0cd1323ea0a7690a00d942555cd480c7ef39cd9a1524ae6b258a94b56ba931"
+}

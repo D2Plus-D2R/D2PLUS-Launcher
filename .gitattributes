@@ -5,3 +5,13 @@ build/CONTENT-MANIFEST-ANDROID-V2.json -text
 build/android-v20-*.json -text
 release-inputs/alpha-v20-*.json -text
 release-inputs/reference-v20-report.json -text
+
+# Alpha V2.0a receipt bytes are checksum-bound.
+build/CONTENT-MANIFEST-ANDROID-V20A.json -text
+build/android-v20a-*.json -text
+release-inputs/alpha-v20a-*.json -text
+release-inputs/reference-v20a-report.json -text
+release-inputs/launcher-v20a.json -text
+release-inputs/v20-base.json -text
+
+release-inputs/v20-base.json -text

@@ -1,10 +1,10 @@
 # Getting Started with D2PLUS
 
-D2PLUS is an offline Diablo II: Resurrected mod. You need your own copy of the game. Start with the current complete package; you do not need to install older releases first.
+D2PLUS is an offline Diablo II: Resurrected mod. You need your own copy of the game. Start with the complete Alpha V2.0a package; you do not need to install older releases first.
 
 ## Install or update
 
-**Launcher:** Install the current Windows launcher, choose your D2R.exe in Setup, and install its bundled gameplay files. Then click **Launch D2PLUS** and choose an offline character.
+**Launcher:** Install the current Windows launcher, choose your D2R.exe in Setup, and use **Install Alpha V2.0a** to install its bundled gameplay files. Then click **Launch D2PLUS** and choose an offline character.
 
 **D2RMM:** Extract the **Complete D2RMM** download into the D2RMM application's `mods` folder. Enable the new complete D2PLUS package, disable the older complete package and overlapping D2PLUS addons, and click **Install Mods**.
 
@@ -12,7 +12,7 @@ For either method, close D2R before installing. Keep your existing output mod na
 
 ## Find and protect your characters
 
-Launcher Alpha V1.3 shows the full save-folder path under **Character saves**. It reads the installed mod's savepath, so your folder may still be called D2RMM.
+The launcher shows the full save-folder path under **Character saves**. It reads the installed mod's savepath, so your folder may still be called D2RMM.
 
 - **Open Saves** opens that exact folder.
 - **Back Up Saves** copies its contents, including characters and the shared stash, into a separate timestamped folder. Close D2R and finish any hero-editor exports first.

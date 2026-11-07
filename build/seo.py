@@ -17,15 +17,16 @@ import xml.etree.ElementTree as ET
 
 ORIGIN = 'https://d2-plus.net'
 START, END = '<!-- D2PLUS SEO: start -->', '<!-- D2PLUS SEO: end -->'
-DEFAULT_IMAGE = '/assets/d2plus-alpha-v20-splash.png'
+DEFAULT_IMAGE = '/assets/d2plus-alpha-v20a-splash.png'
 ALIASES = {'wiki/accursed.html': 'accursed.html',
            'wiki/alpha-v14.html': 'news-alpha-v14.html'}
 TITLES = {'getting-started.html': 'How to Install D2PLUS — D2RMM, Launcher & Save Backups',
+          'news-alpha-v20a.html': 'D2PLUS Alpha V2.0a — Reward Bag Drop Fix for D2R',
           'news-alpha-v20.html': 'D2PLUS Alpha V2.0 — New Dungeons, Bosses & Skills for D2R',
           'wiki/index.html': 'D2PLUS Wiki — Items, Skills, Recipes & Builds',
-          'wiki/dungeon-rewards.html': 'Dungeon Reward Bags · D2PLUS Alpha V2.0'}
+          'wiki/dungeon-rewards.html': 'Dungeon Reward Bags · D2PLUS Alpha V2.0a'}
 DESCRIPTIONS = {
-    'wiki/index.html': 'Explore D2PLUS Alpha V2.0 items, skills, recipes, runewords and build guides for the offline Diablo II: Resurrected mod.',
+    'wiki/index.html': 'Explore D2PLUS Alpha V2.0a items, skills, recipes, runewords and build guides for the offline Diablo II: Resurrected mod.',
     'wiki/charms.html': 'Learn D2PLUS charm weight, the 50-point limit, overburden penalties and the recipes and equipment rules for crafted Oaths.',
     'wiki/dungeon-rewards.html': 'Learn the D2PLUS flat 10% eligible-boss Dungeon Reward Bag rule, difficulty tiers, opening materials and upgrade recipes.',
     'wiki/runeword-changes.html': 'Compare D2PLUS custom runeword roles and socket limits, including legal bases and the difference between new crafts and saved rolls.',
@@ -42,7 +43,8 @@ DESCRIPTIONS = {
 }
 NEWS_DATES = {'news-alpha-v13.html': '2026-10-26',
               'news-alpha-v14.html': '2026-10-31',
-              'news-alpha-v20.html': '2026-11-07'}
+              'news-alpha-v20.html': '2026-11-07',
+              'news-alpha-v20a.html': '2026-11-07'}
 
 
 def plain(value: str) -> str:
@@ -158,7 +160,7 @@ def make_metadata(relative: str, page: Page, output: Path) -> tuple[str, dict]:
     canonical = public_url(ALIASES.get(relative, relative))
     excluded = noindex(relative, page)
     image = local_asset(output, (page.meta('og:image') or [DEFAULT_IMAGE])[0])
-    image_alt = (page.meta('og:image:alt') or ['D2PLUS Alpha V2.0 castle gates with warm light beyond the opening doors'])[0]
+    image_alt = (page.meta('og:image:alt') or ['D2PLUS Alpha V2.0a castle gates with warm light beyond the opening doors'])[0]
     article = relative in NEWS_DATES or relative.startswith('wiki/builds/') or page.meta('seo:type') == ['article']
     entries = [f'<title>{escape(title)}</title>',
                f'<meta name="description" content="{escape(description, quote=True)}">',
@@ -192,7 +194,7 @@ def make_metadata(relative: str, page: Page, output: Path) -> tuple[str, dict]:
                  'name': 'D2PLUS', 'inLanguage': 'en', 'publisher': {'@id': ORIGIN + '/#publisher'}},
                 {'@type': 'SoftwareApplication', '@id': ORIGIN + '/#mod', 'name': 'D2PLUS',
                  'url': ORIGIN + '/', 'applicationCategory': 'GameApplication',
-                 'operatingSystem': 'Windows', 'softwareVersion': '2.0.0-alpha',
+                 'operatingSystem': 'Windows', 'softwareVersion': '2.0.1-alpha',
                  'description': 'An offline mod for Diablo II: Resurrected. Requires the licensed base game; the mod is a separate download.',
                  'isAccessibleForFree': True,
                  'softwareRequirements': 'A licensed, compatible Warlock-capable Diablo II: Resurrected installation. Install through D2RMM or D2PLUS Launcher.',
@@ -223,10 +225,15 @@ def refresh_reward_guide(text: str) -> str:
     This guide is retained inside the pinned V1.4 reference. The current V2
     database and news establish the flat base rule; historical news stays intact.
     """
+    # The current reference generator owns its reviewed encounter-tier wording.
+    page = Page(text)
+    if (page.meta('d2plus-reference-version') == ['Alpha V2.0a']
+            and 'flat 10% base Dungeon Reward Bag roll' in text):
+        return text
     old = 'Bag chance starts at 1% on Players 1–2 on every difficulty, scaling to 2% on Players 3–4, about 3.03% on Players 5–6 and 4% on Players 7–8. Native drop limits still apply.'
     new = 'Eligible bosses have a flat 10% base Dungeon Reward Bag roll on every difficulty. Normal, Nightmare and Hell select the matching bag tier. This base chance does not scale with the Players setting; native drop limits still apply.'
     if old in text:
-        return text.replace(old, new).replace('Dungeon Reward Bags · D2PLUS Alpha V1.4', 'Dungeon Reward Bags · D2PLUS Alpha V2.0')
+        return text.replace(old, new).replace('Dungeon Reward Bags · D2PLUS Alpha V1.4', 'Dungeon Reward Bags · D2PLUS Alpha V2.0a')
     if new not in text: raise ValueError('Unrecognized reward guide; review against current V2 data')
     return text
 

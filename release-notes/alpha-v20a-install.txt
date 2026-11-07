@@ -1,0 +1,17 @@
+D2PLUS Alpha V2.0a - complete installation
+
+Requires your own compatible, Warlock-capable Diablo II: Resurrected installation. Play with offline characters.
+
+Before updating, close D2R and back up the selected character-save folder, including the shared stash. Keep the same output mod name and save path used by your existing installation.
+
+Windows launcher: install the Alpha V2.0a launcher, select D2R.exe in Setup, and use Install Alpha V2.0a to apply the bundled gameplay. The launcher application update alone does not replace the installed gameplay files. Then click Launch D2PLUS.
+
+D2RMM: extract D2PLUS_AlphaV2.0a_Complete_D2RMM.zip into the D2RMM application's mods folder. Enable the new complete package, disable older complete D2PLUS packages and overlapping D2PLUS add-ons, and click Install Mods. No earlier D2PLUS package is required.
+
+Start a fresh game session after installation. The bag-roll fix needs the corrected treasure-class table to load. Existing saved bags and their preparation state are retained.
+
+The installed-snapshot ZIP is for the launcher. Use the Complete D2RMM ZIP with D2RMM. Extract the whole portable launcher ZIP and keep its files together.
+
+The Android APK is an offline reference, not the game. Existing signed v0.8 and later installations update in place; older v0.7 installations use a different signing key. Read the release notes before upgrading those older installations.
+
+No character saves, game executables or account credentials are included. See the release notes and checksums before installing.

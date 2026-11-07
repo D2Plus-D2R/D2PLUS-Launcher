@@ -38,7 +38,7 @@ def render():
 <body><a class="skip" href="#main">Skip to content</a><main class="guide" id="main"><nav class="guide-nav" aria-label="Main navigation"><a href="index.html">D2PLUS Home</a><a href="download.html">Download &amp; install</a><a href="dungeons.html">Dungeons</a><a href="skill-changes.html">Skill changes</a><a href="screenshots.html" aria-current="page">Screenshots</a><a href="wiki/">Online wiki</a></nav>
 <p class="eyebrow">From the latest journeys · Alpha V2.0</p><h1>D2PLUS screenshots</h1><p class="lead">Custom bosses, dark caverns and a familiar Sanctuary with a new face. Explore scenes from the D2PLUS offline Diablo II: Resurrected mod.</p><p>Select an image to open it at full size. Captions identify retouched gameplay views and development captures.</p>
 <div class="gallery-grid">''' + '\n'.join(figures) + '''</div>
-<h2>Make your own descent</h2><p>Read the <a href="dungeons.html">dungeon and portal guide</a>, explore the <a href="skill-changes.html">class skill changes</a> or <a href="download.html">download the complete Alpha V2.0 package</a>.</p>
+<h2>Make your own descent</h2><p>Read the <a href="dungeons.html">dungeon and portal guide</a>, explore the <a href="skill-changes.html">class skill changes</a> or <a href="download.html">download the complete Alpha V2.0a package</a>.</p>
 <footer class="guide-footer">D2PLUS is an unofficial offline Diablo II: Resurrected mod. Not affiliated with or endorsed by Blizzard Entertainment.</footer></main></body></html>
 '''
     (ROOT / 'site/screenshots.html').write_text(html, encoding='utf-8', newline='\n')

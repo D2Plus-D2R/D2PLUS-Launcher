@@ -1,0 +1,132 @@
+{
+  "version": "2.0.1-alpha",
+  "archiveSha256": "c89456226f7a7c715be5a9826cf95dae4b4dc5d2a3e6159d2d113c8a4cabdb25",
+  "archiveBytes": 17292342,
+  "files": [
+    {
+      "path": "data/global/excel/treasureclassex.txt",
+      "size": 218411,
+      "sha256": "3e70fc4b23b9de49e0b523e56f217a1e4508698e0d1ee1181ed85d2882c2a670"
+    },
+    {
+      "path": "data/global/ui/layouts/loadscreenpanelhd.json",
+      "size": 1748,
+      "sha256": "46f0241034f3be1669aac17ba0dae28fea5ad12270dcf6b9f42b37fe8dfe51ec"
+    },
+    {
+      "path": "data/global/ui/layouts/mainmenuloadingpanelhd.json",
+      "size": 726,
+      "sha256": "516b2c9a04e6e166263a050bec6c828063414f45fff360ef216fa196e88d3855"
+    },
+    {
+      "path": "data/global/ui/layouts/titlescreenpanelhd.json",
+      "size": 2377,
+      "sha256": "ab512c43633afab0a53fef102c120e1119ea7bf7500843ec714a52d164ec7e4b"
+    },
+    {
+      "path": "data/hd/global/ui/d2plus/loading/d2plus_alpha11.lowend.sprite",
+      "size": 2073640,
+      "sha256": "63e840c1ff73b5dca72bb4dfc4b33bf93138eec87a5dee213d341899d751ed4f"
+    },
+    {
+      "path": "data/hd/global/ui/d2plus/loading/d2plus_alpha11.sprite",
+      "size": 8294440,
+      "sha256": "f5a3010676784f0e19bdc39edf2022e3b92554f32cb9988a9d7b9ef5884e3d16"
+    },
+    {
+      "path": "data/hd/global/ui/d2plus/loadingcastlev20a/door_open.lowend.sprite",
+      "size": 6240040,
+      "sha256": "36b0fdab28987bd6aafe3b0d332e54cf92dc0338a547d567297baf8849fa173f"
+    },
+    {
+      "path": "data/hd/global/ui/d2plus/loadingcastlev20a/door_open.sprite",
+      "size": 24960040,
+      "sha256": "befc09925cca702e8eeb0b6fb5b74111adccddc1357ee546666348002da85177"
+    },
+    {
+      "path": "data/hd/global/ui/d2plus/loadingcastlev20a/ember_citadel.lowend.sprite",
+      "size": 2073640,
+      "sha256": "63e840c1ff73b5dca72bb4dfc4b33bf93138eec87a5dee213d341899d751ed4f"
+    },
+    {
+      "path": "data/hd/global/ui/d2plus/loadingcastlev20a/ember_citadel.sprite",
+      "size": 8294440,
+      "sha256": "f5a3010676784f0e19bdc39edf2022e3b92554f32cb9988a9d7b9ef5884e3d16"
+    }
+  ],
+  "removeCompiled": [
+    "data/global/excel/actinfo.bin",
+    "data/global/excel/armor.bin",
+    "data/global/excel/automagic.bin",
+    "data/global/excel/base/armor.bin",
+    "data/global/excel/base/cubemain.bin",
+    "data/global/excel/base/difficultylevels.bin",
+    "data/global/excel/base/experience.bin",
+    "data/global/excel/base/gems.bin",
+    "data/global/excel/base/hireling.bin",
+    "data/global/excel/base/inventory.bin",
+    "data/global/excel/base/itemstatcost.bin",
+    "data/global/excel/base/itemtypes.bin",
+    "data/global/excel/base/levels.bin",
+    "data/global/excel/base/misc.bin",
+    "data/global/excel/base/missiles.bin",
+    "data/global/excel/base/monprop.bin",
+    "data/global/excel/base/monstats.bin",
+    "data/global/excel/base/monstats2.bin",
+    "data/global/excel/base/objects.bin",
+    "data/global/excel/base/objpreset.bin",
+    "data/global/excel/base/objtype.bin",
+    "data/global/excel/base/overlay.bin",
+    "data/global/excel/base/properties.bin",
+    "data/global/excel/base/runes.bin",
+    "data/global/excel/base/setitems.bin",
+    "data/global/excel/base/sets.bin",
+    "data/global/excel/base/skilldesc.bin",
+    "data/global/excel/base/skills.bin",
+    "data/global/excel/base/states.bin",
+    "data/global/excel/base/treasureclassex.bin",
+    "data/global/excel/base/uniqueitems.bin",
+    "data/global/excel/base/weapons.bin",
+    "data/global/excel/cubemain.bin",
+    "data/global/excel/difficultylevels.bin",
+    "data/global/excel/experience.bin",
+    "data/global/excel/gems.bin",
+    "data/global/excel/hireling.bin",
+    "data/global/excel/inventory.bin",
+    "data/global/excel/itemstatcost.bin",
+    "data/global/excel/itemtypes.bin",
+    "data/global/excel/levels.bin",
+    "data/global/excel/lvlmaze.bin",
+    "data/global/excel/lvlprest.bin",
+    "data/global/excel/lvlwarp.bin",
+    "data/global/excel/misc.bin",
+    "data/global/excel/missiles.bin",
+    "data/global/excel/monpreset.bin",
+    "data/global/excel/monprop.bin",
+    "data/global/excel/monsounds.bin",
+    "data/global/excel/monstats.bin",
+    "data/global/excel/monstats2.bin",
+    "data/global/excel/objects.bin",
+    "data/global/excel/objpreset.bin",
+    "data/global/excel/objtype.bin",
+    "data/global/excel/overlay.bin",
+    "data/global/excel/properties.bin",
+    "data/global/excel/runes.bin",
+    "data/global/excel/setitems.bin",
+    "data/global/excel/sets.bin",
+    "data/global/excel/skilldesc.bin",
+    "data/global/excel/skills.bin",
+    "data/global/excel/sounds.bin",
+    "data/global/excel/states.bin",
+    "data/global/excel/superuniques.bin",
+    "data/global/excel/treasureclassex.bin",
+    "data/global/excel/uniqueitems.bin",
+    "data/global/excel/weapons.bin"
+  ],
+  "exactRemovedFiles": [],
+  "expectedSnapshotFiles": 3124,
+  "privateProjectsIncluded": false,
+  "noSaveFiles": true,
+  "standaloneFinalOutput": true,
+  "automatedInGameTestPerformed": false
+}

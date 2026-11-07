@@ -1,8 +1,14 @@
-# D2PLUS Alpha V2.0
+# D2PLUS Alpha V2.0a
 
-The complete offline D2RMM mod, Windows launcher, Hero Editor and online/offline reference. New optional dungeons, polished custom bosses, completed skill roles and interface refinements are included in one package.
+Alpha V2.0a fixes Dungeon Reward Bags dropping every time from affected bosses. The intended roll is **10%**, with the existing bag tiers and ordinary boss loot preserved. The issue came from the game loading the reward tables before their no-bag result was defined.
 
-Read the [V2.0 patch notes](CHANGELOG-2.0.0-alpha.txt) and [installation steps](release-notes/alpha-v20-install.txt). No earlier D2PLUS download is required.
+This update also includes the current castle splash with matching opening doors and light, plus refreshed launcher, Hero Editor, online/offline wiki and Android reference. Existing character saves keep their format and saved item rolls.
+
+Read the [plain-English changes](release-notes/alpha-v20a.md) and [installation steps](release-notes/alpha-v20a-install.txt), or [download the complete release](https://github.com/D2Plus-D2R/D2PLUS-Launcher/releases/tag/v2.0a-alpha). No earlier D2PLUS download is required. Close D2R before installing and keep your existing output mod name and save path.
+
+The table-order fix, package contents and native asset formats are checked automatically. Those checks are not a live boss-kill or device test.
+
+## Earlier release highlights
 
 D2PLUS Alpha V1.3
 

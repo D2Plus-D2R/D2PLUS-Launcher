@@ -1,0 +1,35 @@
+D2PLUS Alpha V2.0a
+
+Reward bags roll again
+
+Alpha V2.0a fixes a drop-table loading error that could make eligible bosses drop a Dungeon Reward Bag every time. The intended rule remains a flat 10% base chance per eligible boss kill.
+
+The table listed the empty result after the five bag selectors that needed it. The native loader reads these entries from top to bottom. It skipped that unresolved empty-result reference, leaving the bag as the only valid choice. The fix defines the empty result first, so each selector can choose between the bag at weight 1 and no bag at weight 9.
+
+This is one independent 10% roll. It does not guarantee a bag within ten kills, and it does not rise with the offline Players setting. All existing treasure-class rows and their field values are retained; this is an ordering correction. The regular boss loot definitions, bag tiers, opening recipes and bag contents are unchanged.
+
+The castle gates match
+
+The Alpha V2 castle splash and its opening doors now use matched artwork, including the light and inner hall revealed as the gates open. Both high-resolution and low-end sprite versions are included. The existing opening timing and final open-door hold are retained.
+
+The complete suite moves together
+
+The standalone D2RMM mod, Windows installer and portable launcher, Hero Editor, online and offline wiki, and signed Android reference are updated to Alpha V2.0a. The hotfix retains the Alpha V2.0 dungeons, custom bosses, class skill changes, gem colors and wider enemy health bar. There are no additional skill balance changes in this hotfix.
+
+The website keeps its dedicated Screenshots section, installation and dungeon guides, current skill reference, and search metadata. The seven approved gallery images remain available with their original gameplay, retouched or development captions.
+
+Install or update
+
+This is a complete release. No earlier D2PLUS download is required.
+
+Close D2R and back up your offline characters and shared stash. Launcher users should install the new launcher and then use Install Alpha V2.0a to apply its bundled gameplay. Installing the launcher application alone does not update the installed mod.
+
+D2RMM users should extract the Complete D2RMM package into D2RMM's mods folder, disable older complete D2PLUS packages and overlapping D2PLUS add-ons, enable the new package, and click Install Mods.
+
+Keep your existing output mod name and save path when updating. Start a fresh game session after installation so the corrected drop table is loaded. Existing saved bags and their preparation state are preserved. Character saves and game executables are not distributed.
+
+What was checked
+
+The regression check reproduces the old selector resolving to 100% and the corrected selector resolving to exactly 1/10. All five selectors, their table order, the 1,909 retained rows and the absence of duplicate bag-roll paths are checked. Because the empty-result branch is a normal weighted choice and the selectors have NoDrop set to zero, the 1:9 share remains fixed for Players 1 through 8.
+
+Native sprite headers, all eight door poses, high-resolution and low-end composition, layout references and package integrity are checked. These checks are source-backed validation, not a claim of a measured live-game drop sample or a completed gameplay benchmark for every encounter and device.

@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "kitFile": "D2PLUS_Android_AlphaV2.0a_Update_Kit.zip",
+  "kitSHA256": "49e14e1528388c554fba42590c93e1097d5900521dda284535e5b1f6e6dcdf61",
+  "pinnedApktool": "3.0.2",
+  "extractedPublicHelperUsed": true,
+  "unsignedCanonicalExpectedSHA256": "523382a547d4e340c04cb469c83b5ca0ec6ece34d735c84e346fa1935ffe66b5",
+  "unsignedRebuiltSHA256": "523382a547d4e340c04cb469c83b5ca0ec6ece34d735c84e346fa1935ffe66b5",
+  "byteIdentical": true,
+  "allZipEntryBytesIdentical": true,
+  "signingRequiredForInstall": true,
+  "noSigningMaterialInKit": true,
+  "deviceTested": false
+}

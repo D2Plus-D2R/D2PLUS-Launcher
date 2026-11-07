@@ -1,6 +1,6 @@
 # Public search metadata
 
-`python build/site.py` runs `seo.py` **after** the final Alpha V2.0 reference
+`python build/site.py` runs `seo.py` **after** the final Alpha V2.0a reference
 overlay. It changes only `_site`, so the accepted offline wiki, native data,
 Android content bindings and release archives keep their existing bytes.
 
@@ -27,8 +27,13 @@ crawlable: robots.txt is not an indexing-removal mechanism, and this GitHub Page
 build does not invent unsupported per-file HTTP headers for JSON or images.
 
 The retained static reward-bag guide is corrected in the public output to the
-current V2.0 flat 10% eligible-boss base rule. Historical V1.4 news retains its
+current V2.0a flat 10% eligible-boss base rule. Historical V1.4 news retains its
 historical description. Neither operation changes the pinned reference suite.
+
+The Google Search Console ownership tag in the homepage is preserved by the
+metadata pass. The V2.0a article has its own canonical URL and publication date;
+the V2.0 article remains historical. Software metadata uses `2.0.1-alpha`, while
+public copy uses `Alpha V2.0a`.
 
 The public screenshot section is `site/screenshots.html`, linked from the
 homepage and guide navigation. Its reviewed image list is
