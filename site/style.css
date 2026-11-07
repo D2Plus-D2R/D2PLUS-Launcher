@@ -36,3 +36,7 @@ header{min-height:315px;padding:15px 24px;background:radial-gradient(ellipse,#08
 @media(max-width:980px){.topnav{grid-template-columns:repeat(3,minmax(0,1fr))}.topnav a:last-child{grid-column:1/-1}}
 @media(max-width:560px){.topnav{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;padding:10px}.topnav a,.topnav a:last-child{min-height:54px;font-size:11px;padding:10px 12px}}
 @media(prefers-reduced-motion:reduce){.topnav a{transition:none}}
+
+.banner h1 .hero-game{display:block;font-size:25px;line-height:1.3;margin-top:10px}.discovery-guides .feature-grid a{color:#e4c78f;text-underline-offset:3px}.discovery-guides .feature-grid a:hover{color:#fff0c8}
+
+.screenshot-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:18px 0}.screenshot-grid figure{margin:0;min-width:0}.screenshot-grid img{display:block;width:100%;height:auto;border:1px solid #66553a}.screenshot-grid a:focus-visible{outline:2px solid #e9cc8b;outline-offset:3px}.screenshot-grid figcaption{font:12px/1.6 Arial,sans-serif;color:#b5ad9e;margin:7px 0}.screenshot-preview>.button{margin-top:5px}@media(max-width:650px){.screenshot-grid{grid-template-columns:1fr}}

@@ -2,7 +2,7 @@ name: Publish D2PLUS page
 on:
   push:
     branches: [main]
-    paths: ['site/**', 'build/site.py', '.github/workflows/pages.yml']
+    paths: ['site/**', 'build/site.py', 'build/seo.py', 'build/screenshots.py', 'test/test_seo.py', '.github/workflows/pages.yml']
   workflow_dispatch:
   workflow_run:
     workflows: [Build AlphaV1.1 Hotfix 1 packages, Publish signed Android v0.8]
@@ -26,6 +26,10 @@ jobs:
       - uses: actions/configure-pages@v5
       - name: Build the public landing page
         run: python3 build/site.py
+      - name: Validate public search metadata and discovery
+        run: |
+          python3 -m unittest discover -s test -p "test_seo.py"
+          python3 build/seo.py --check --output _site
       - uses: actions/upload-pages-artifact@v4
         with:
           path: _site

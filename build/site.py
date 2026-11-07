@@ -5,6 +5,7 @@ import json,os,re,shutil
 root=Path(__file__).resolve().parents[1]
 import subprocess,sys
 subprocess.run([sys.executable,str(root/'build/getting-started.py')],check=True)
+subprocess.run([sys.executable,str(root/'build/screenshots.py')],check=True)
 cfg=json.loads((root/'site/config.json').read_text())
 repo=os.environ.get('GITHUB_REPOSITORY') or cfg['repository']
 if repo and not re.fullmatch(r'[A-Za-z0-9-]+/[A-Za-z0-9._-]+',repo):raise SystemExit('Invalid owner/repository')
@@ -204,3 +205,6 @@ subprocess.run([sys.executable,str(root/'build/apply-reference-v14.py')],check=T
 
 # Apply the current V2.0 reference last, after all historical migrations.
 subprocess.run([sys.executable,str(root/'build/apply-reference-v20.py')],check=True)
+
+# Search metadata must describe the final public pages, not a historical overlay.
+subprocess.run([sys.executable,str(root/'build/seo.py'),'--output',str(out)],check=True)
