@@ -23,6 +23,7 @@ def update(root: Path, allow_pending_art=False):
     # Relabel only the launcher, never the pinned wiki's historical patch notes.
     text = re.sub(r'Alpha V2\.0(?![a-zA-Z0-9])', DISPLAY, text)
     text = re.sub(r'ALPHA V2\.0(?![a-zA-Z0-9])', 'ALPHA V2.0a', text)
+    text = text.replace('D2PLUS_Alpha_v20_Complete', 'D2PLUS_Alpha_v20a_Complete')
     text, count = re.subn(r'<article class="updates">.*?</article>', lambda _: NEWS, text, count=1, flags=re.S)
     assert count == 1, 'Launcher news insertion point changed'
     asset_manifest = root / 'release-inputs/launcher-v20a.json'
@@ -52,6 +53,7 @@ def update(root: Path, allow_pending_art=False):
     page.write_text(text, encoding='utf-8', newline='\n')
     app = launcher / 'app.js'
     text = app.read_text(encoding='utf-8')
+    text = re.sub(r'Alpha V2\.0(?![a-zA-Z0-9])', DISPLAY, text)
     text, count = re.subn(r"VERSION='2\.0\.[01]-alpha'", f"VERSION='{VERSION}'", text, count=1)
     assert count == 1, 'Launcher frontend version insertion point changed'
     app.write_text(text, encoding='utf-8', newline='\n')
