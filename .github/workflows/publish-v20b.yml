@@ -39,7 +39,7 @@ jobs:
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
           python build/validate-v20b.py
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
-      - name: Test launcher, full installer and public reference
+      - name: Verify launcher, clean install, upgrade and website
         run: |
           npm test
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }

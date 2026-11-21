@@ -61,7 +61,8 @@ test('real guided install accepts full V2.0b archive above 2 GiB expanded and pr
  fs.writeFileSync(path.join(mpq,'modinfo.json'),JSON.stringify({name:'MyMod',savepath:'Preserved Saves'}));
  fs.writeFileSync(path.join(config.modDirectory,'previous-marker.txt'),'previous output');
  const second=await installSnapshot(options);
- assert.equal(fs.realpathSync(path.dirname(second.backup)).toLowerCase(),fs.realpathSync(path.join(f.root,'mods')).toLowerCase());
+ const actualParent=fs.statSync(path.dirname(second.backup),{bigint:true}),expectedParent=fs.statSync(path.join(f.root,'mods'),{bigint:true});
+ assert.equal(actualParent.dev,expectedParent.dev);assert.equal(actualParent.ino,expectedParent.ino);
  assert(path.basename(second.backup).startsWith('MyMod.before-v20b-'),second.backup);
  assert.equal(second.savepath,'Preserved Saves');assert.equal(fs.readFileSync(path.join(second.backup,'previous-marker.txt'),'utf8'),'previous output');
  assert.equal(JSON.parse(fs.readFileSync(path.join(mpq,'modinfo.json'))).savepath,'Preserved Saves');
