@@ -1,0 +1,240 @@
+{
+  "schemaVersion": 1,
+  "gameplayVersion": "2.0b",
+  "archiveSHA256": "524cf789ece50ac5affa4d975eccc83f50e38eb7a8c648bac5a42d9e1467185c",
+  "installManifestSHA256": "0f0f85fb7b7c248a8cdc9b0940c40f5d949f78b8df84b820d68289bfbfcb51d1",
+  "common": [
+    {
+      "path": "data/global/excel/levels.txt",
+      "size": 85551,
+      "sha256": "397f312ca2e8b5ba5b46bd17bad3ad5fa0b46aac6f9a57e567db6bac34bb49b5"
+    },
+    {
+      "path": "data/global/excel/lvlprest.txt",
+      "size": 131049,
+      "sha256": "a0254689e725adff569766e213251fb2624ca35c2dccb8afb5bfbbc3884e30d2"
+    },
+    {
+      "path": "data/global/excel/monstats.txt",
+      "size": 522614,
+      "sha256": "096f92ea119d902dd6b430d2089fb59b36a5c7cbd05973032380068ab65b2bda"
+    },
+    {
+      "path": "data/global/excel/monstats2.txt",
+      "size": 140420,
+      "sha256": "0bf4d7f18fa1e717e42fb0320c0672a56bb9f9a35a4670902252d271818e7015"
+    },
+    {
+      "path": "data/global/excel/skills.txt",
+      "size": 315373,
+      "sha256": "32642de44d9d217968502659efb0bb1c2e86f09428ccac710f021eba2e86e759"
+    },
+    {
+      "path": "data/hd/character/enemy/d2plus_act3_sorcerer.json",
+      "size": 6058,
+      "sha256": "8839eb9b672214201203674360fd85480861d0bcdf892c25147002ee3f76ca5b"
+    },
+    {
+      "path": "data/hd/character/enemy/d2plus_rodin_sorcerer/animation/combined.animations",
+      "size": 128486,
+      "sha256": "f23d461db321aca82a86de97d3d3e0ea2bdbb447c143bdfab06148643a01d00d"
+    },
+    {
+      "path": "data/hd/character/enemy/d2plus_rodin_sorcerer/animation/combined.timelines",
+      "size": 7595,
+      "sha256": "8f2347dd298ad98621f754e1d41412dd20f8e189a7dd4e8ab5af631cc184e1ff"
+    },
+    {
+      "path": "data/hd/character/enemy/d2plus_rodin_sorcerer/state_machine.json",
+      "size": 53354,
+      "sha256": "a238369527564e64f1f9c314d5858a449fb92c0a23893725ce363f68d45371fa"
+    },
+    {
+      "path": "data/hd/character/enemy/d2plus_rodin_sorcerer/textures/sorcerer_alb.texture",
+      "size": 1398252,
+      "sha256": "71432ffe5b6f0927fe7977772151ffd0de03044e57390ab0b579b72754f21229"
+    },
+    {
+      "path": "data/hd/character/enemy/d2plus_rodin_sorcerer/textures/sorcerer_nrm.texture",
+      "size": 1398252,
+      "sha256": "a764ae9c5fc0981c19343fd3de631b85e9de1b6145dec359a67ce257398aa721"
+    },
+    {
+      "path": "data/hd/character/enemy/d2plus_rodin_sorcerer/textures/sorcerer_orm.texture",
+      "size": 349668,
+      "sha256": "7520704d6fe37152268c267f515a66828ab443367cc374a6fd1a19bd074e26b6"
+    },
+    {
+      "path": "data/hd/character/enemy/d2plus_rodin_sorcerer/textures/spellbook_alb.texture",
+      "size": 1398252,
+      "sha256": "c5da6b2c60fe010f566b5cbaafb8489e992f83d79e681e4c0ef66aad4454b7f5"
+    },
+    {
+      "path": "data/hd/character/enemy/d2plus_rodin_sorcerer/textures/spellbook_nrm.texture",
+      "size": 1398252,
+      "sha256": "0a49fabc5f6650c70d93696cda7b3dd77f4f3041a2f6579c08534dff0f1904f1"
+    },
+    {
+      "path": "data/hd/character/enemy/d2plus_rodin_sorcerer/textures/spellbook_orm.texture",
+      "size": 349668,
+      "sha256": "5d9a4d9164048847974c8c87ad8b9cb60844018057c28bfde95e02ffab6a8d67"
+    },
+    {
+      "path": "data/hd/character/enemy/d2plus_rodin_sorcerer/torso_lod0.model",
+      "size": 457360,
+      "sha256": "20454ac9de66862ad783ac14bc7e1f1ef72caa1c084fd8d404e7f7d9435b4918"
+    },
+    {
+      "path": "data/hd/character/enemy/d2plus_rodin_sorcerer/torso_lod1.model",
+      "size": 457112,
+      "sha256": "f8a1ad7565bf53dc9101103b1bd1dcaf1bd47f582f94ea77526b1b8930ef77c1"
+    },
+    {
+      "path": "data/hd/character/enemy/d2plus_rodin_sorcerer/torso_lod2.model",
+      "size": 457760,
+      "sha256": "e9f5f1d5c173df7b681446458b0204f6aec979d9f160197bc62c432789b98400"
+    },
+    {
+      "path": "data/hd/character/enemy/d2plus_rodin_sorcerer/torso_lod3.model",
+      "size": 457832,
+      "sha256": "22f60b8b892fb2782549c3e4f25862728d461c62133d7cd04c1adac54c5586fc"
+    },
+    {
+      "path": "data/hd/character/enemy/d2plus_rodin_sorcerer/torso_lod4.model",
+      "size": 457112,
+      "sha256": "1133f0a065cacc7e11cc45c6cd4486edf2db05ac128f7dfa15ce83b5a35ab63f"
+    },
+    {
+      "path": "data/hd/character/enemy/sovereign_warden.json",
+      "size": 6811,
+      "sha256": "72859de9728a6bb67e5dba7dab04ce97760a23af4179c0078b5a3ae459e0382f"
+    },
+    {
+      "path": "data/hd/character/enemy/sovereign_warden/animation/attack1.animation",
+      "size": 33788,
+      "sha256": "93931222c48f6f1d78d46ac08a0962acc90991834a53325e3c5d090eadeb6a34"
+    },
+    {
+      "path": "data/hd/character/enemy/sovereign_warden/animation/block.animation",
+      "size": 7812,
+      "sha256": "73f5a572bec5c282e51e5ebae2ff28f9763117d4f880df0f918b2754005f4ae3"
+    },
+    {
+      "path": "data/hd/character/enemy/sovereign_warden/animation/combined.animations",
+      "size": 150826,
+      "sha256": "61587e9b9f07e26dcb8ac061fefa60c15842a741e3457fdb361b04b786396257"
+    },
+    {
+      "path": "data/hd/character/enemy/sovereign_warden/animation/combined.timelines",
+      "size": 4171,
+      "sha256": "dcbabca0ff70bc97dff2ab8f5bdad1abefb6578b064d95245859238c9e7e7748"
+    },
+    {
+      "path": "data/hd/character/enemy/sovereign_warden/animation/dead.animation",
+      "size": 6256,
+      "sha256": "66e85a8c8e0c8a83cb73bd41406a67060289f2b55ab31810ed67e4fc120f055e"
+    },
+    {
+      "path": "data/hd/character/enemy/sovereign_warden/animation/death.animation",
+      "size": 53248,
+      "sha256": "8d0c38e1ac63c97fad801156dcb70a353de3b2c9d92c3ab656033e44dd2a45d1"
+    },
+    {
+      "path": "data/hd/character/enemy/sovereign_warden/animation/gethit.animation",
+      "size": 7304,
+      "sha256": "9c352e8339e7d2a755777f5d03e5a1256a2555359cfca0ea4dfe4d64791025f6"
+    },
+    {
+      "path": "data/hd/character/enemy/sovereign_warden/animation/knockback.animation",
+      "size": 7628,
+      "sha256": "ae7d7172eba8c39cbf9216460d40633adf6876796c243446913a1c4d353b59aa"
+    },
+    {
+      "path": "data/hd/character/enemy/sovereign_warden/animation/neutral.animation",
+      "size": 39044,
+      "sha256": "01bbddee8c9bbfefc9a12fba10375e89363967f95683aadd43ee2c3dd4b3ca79"
+    },
+    {
+      "path": "data/hd/character/enemy/sovereign_warden/animation/walk.animation",
+      "size": 36096,
+      "sha256": "b65edf6f70e4e85976162f5a39c503dccb2384304f378858c7b808664d43036a"
+    },
+    {
+      "path": "data/hd/character/enemy/sovereign_warden/skeleton/sovereign_warden.skeleton",
+      "size": 14448,
+      "sha256": "181ae423598a5b4e78eece17452b598d88ff9afcaa6eb580e5640a6aa19a03f2"
+    },
+    {
+      "path": "data/hd/character/enemy/sovereign_warden/state_machine.json",
+      "size": 60939,
+      "sha256": "d6567ec2bafa42338a4cb96b3c276ab0c88d773af0dad008b7372834ae9e8b2a"
+    },
+    {
+      "path": "data/hd/character/enemy/sovereign_warden/torso.model",
+      "size": 956048,
+      "sha256": "5295403559a1a3004c5fa25e6d0eb6fb9ba8ef71b2cac38592b0b6e073b180ae"
+    },
+    {
+      "path": "data/hd/character/enemy/sovereign_warden/torso_lod0.model",
+      "size": 956048,
+      "sha256": "5295403559a1a3004c5fa25e6d0eb6fb9ba8ef71b2cac38592b0b6e073b180ae"
+    },
+    {
+      "path": "data/hd/character/enemy/sovereign_warden/torso_lod1.model",
+      "size": 957004,
+      "sha256": "e6364f3598665fe9707ba829a70fd7418717a7108f9850f171d5a89298554807"
+    },
+    {
+      "path": "data/hd/character/enemy/sovereign_warden/torso_lod2.model",
+      "size": 957120,
+      "sha256": "32aa3654568d8bb6dfa25f8514eee795d284b9ea0bbc5038714a30e319018d8d"
+    },
+    {
+      "path": "data/hd/character/enemy/sovereign_warden/torso_lod3.model",
+      "size": 957120,
+      "sha256": "60f5ca220544463452353f4673e5501d9279b9a6618f1f75e156b6a5fa5eb4c8"
+    },
+    {
+      "path": "data/hd/character/enemy/sovereign_warden/torso_lod4.model",
+      "size": 957120,
+      "sha256": "61a2e77deb12a4615a20ae0840a69d5a97c34e4e21fb50ae489b9cbbc62ad8e6"
+    },
+    {
+      "path": "data/hd/character/monsters.json",
+      "size": 22508,
+      "sha256": "31e9bbcade82984a7201d892534cfdc287e973ffdc9a2453b5b68dd3bf917bf1"
+    },
+    {
+      "path": "data/hd/model_lod_desc.bin",
+      "size": 5601988,
+      "sha256": "18ca5ed0a40cf76f64ee9934ecfff3851fd2030731875db307e6a29e09efd777"
+    }
+  ],
+  "profiles": [
+    {
+      "id": "alpha-v20b-current",
+      "files": [
+        {
+          "path": "data/hd/character/enemy/sovereign_warden/textures/warden_alb.texture",
+          "size": 11184944,
+          "sha256": "6d4c50df319559616c380abe0b2d81ab82441c9e20d4cbd9e0d3adeba210b855"
+        },
+        {
+          "path": "data/hd/character/enemy/sovereign_warden/textures/warden_nrm.texture",
+          "size": 11184944,
+          "sha256": "e80827dba4b88ab4d9cbfff592560422f28a95e6a229ef1d92e7b16578a98b21"
+        },
+        {
+          "path": "data/hd/character/enemy/sovereign_warden/textures/warden_orm.texture",
+          "size": 11184944,
+          "sha256": "509f1dfc68d13b6fc2a3503ffca2d23192c9d0d94c684c28307e7f38a53bd275"
+        },
+        {
+          "path": "data/hd/texture_desc_cache.json",
+          "size": 22108957,
+          "sha256": "5bcc9e5c4e94968035c922438646259d271b0973eb8e0e50e21f76a030274ee3"
+        }
+      ]
+    }
+  ]
+}

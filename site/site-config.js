@@ -1,1 +1,1 @@
-window.D2PLUS_SITE={"repository": "D2Plus-D2R/D2PLUS-Launcher", "releaseTag": "v2.0a-alpha", "releasePublished": true};
+window.D2PLUS_SITE={"repository": "D2Plus-D2R/D2PLUS-Launcher", "releaseTag": "v2.0b-alpha", "releasePublished": true};

@@ -1,6 +1,6 @@
-Alpha V2.0a, launcher 2.0.1-alpha. After updating, use Setup > Install Alpha V2.0a to reinstall the corrected game files. Keep the existing mod folder and save path.
+Alpha V2.0b, launcher 2.0.2-alpha. After updating, use Setup > Install Alpha V2.0b to reinstall the corrected game files. Keep the existing mod folder and save path.
 
-D2PLUS Launcher Alpha V2.0a - Windows x64
+D2PLUS Launcher Alpha V2.0b - Windows x64
 
 Run the Setup EXE, or extract the complete portable ZIP and open D2PLUS Launcher.exe.
 The launcher includes the complete gameplay snapshot, offline wiki, hero editor,
@@ -9,7 +9,7 @@ and optional damage companion. No separate runtime installation is required.
 EASIEST SETUP
 1. Close Diablo II: Resurrected.
 2. In launcher Setup, Browse to your installed D2R.exe.
-3. Choose Install Alpha V2.0a. The launcher verifies and installs its bundled files,
+3. Choose Install Alpha V2.0b. The launcher verifies and installs its bundled files,
    retains previous mod output as a backup, and sets the launch arguments.
 4. Click Launch D2PLUS. Select an offline character in the game.
 
@@ -37,3 +37,11 @@ validation remain separate. The Windows installer has no code-signing certificat
 
 
 Character saves: Open Saves opens the configured mod savepath. Close D2R, then Back Up Saves creates a timestamped, verified copy including the shared stash. Open Backups opens the latest copy. Backups live under %LOCALAPPDATA%/D2PLUS/OfflineSuite/save-backups. Getting Started opens the included guide.
+
+FILE SCANNING AND UPDATES
+Install & Updates can scan the launcher and game files and stage verified repairs.
+Automatic checks are enabled by default and can be switched off. Updates use
+signed file lists and download needed file ranges or small packs, then apply
+on launcher restart while D2R is closed. Rollback copies are retained. Settings
+and characters remain in place. Stable bootstrap/runtime updates may still
+require a full installer.

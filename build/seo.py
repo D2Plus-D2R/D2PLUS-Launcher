@@ -17,8 +17,8 @@ import xml.etree.ElementTree as ET
 
 ORIGIN = 'https://d2-plus.net'
 START, END = '<!-- D2PLUS SEO: start -->', '<!-- D2PLUS SEO: end -->'
-DEFAULT_IMAGE = '/assets/d2plus-alpha-v20a-splash.png'
-ALIASES = {'wiki/accursed.html': 'accursed.html',
+DEFAULT_IMAGE = '/assets/d2plus-alpha-v20b-splash.png'
+ALIASES = {'wiki/alpha-v20b.html': 'news-alpha-v20b.html', 'wiki/accursed.html': 'accursed.html',
            'wiki/alpha-v14.html': 'news-alpha-v14.html'}
 TITLES = {'getting-started.html': 'How to Install D2PLUS — D2RMM, Launcher & Save Backups',
           'news-alpha-v20a.html': 'D2PLUS Alpha V2.0a — Reward Bag Drop Fix for D2R',

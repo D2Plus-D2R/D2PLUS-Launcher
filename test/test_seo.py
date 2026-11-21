@@ -17,7 +17,7 @@ class SearchMetadataTests(unittest.TestCase):
         cache.mkdir(exist_ok=True)
         self.tmp = tempfile.TemporaryDirectory(prefix='seo-test-', dir=cache)
         self.root = Path(self.tmp.name)
-        for asset in ['d2plus-alpha-v20a-splash.png', 'd2plus-icon.png']:
+        for asset in ['d2plus-alpha-v20b-splash.png', 'd2plus-icon.png']:
             self.write('assets/' + asset, 'fixture image')
         self.write('index.html', self.page('D2PLUS offline mod', 'Download the D2PLUS offline mod and read its installation guide.'))
         self.write('getting-started.html', self.page('Install D2PLUS', 'Install the offline D2RMM package and preserve your existing save path.'))
@@ -46,7 +46,7 @@ class SearchMetadataTests(unittest.TestCase):
         seo.generate(self.root)
         home = self.parsed('index.html')
         self.assertEqual(home.meta('og:url'), ['https://d2-plus.net/'])
-        self.assertEqual(home.meta('og:image'), ['https://d2-plus.net/assets/d2plus-alpha-v20a-splash.png'])
+        self.assertEqual(home.meta('og:image'), ['https://d2-plus.net/assets/d2plus-alpha-v20b-splash.png'])
         schema = next(json.loads(s['text']) for s in home.scripts if s['attrs'].get('type') == 'application/ld+json')
         self.assertEqual({n['@type'] for n in schema['@graph']}, {'WebPage', 'Organization', 'WebSite', 'SoftwareApplication'})
         self.assertFalse(any('aggregateRating' in n or 'review' in n for n in schema['@graph']))
@@ -94,7 +94,7 @@ class SearchMetadataTests(unittest.TestCase):
         page.write_text(original.replace('</head>', '<meta name="description" content="duplicate"></head>'))
         with self.assertRaisesRegex(ValueError, 'duplicate description'): seo.validate(self.root)
         page.write_text(original)
-        (self.root / 'assets/d2plus-alpha-v20a-splash.png').unlink()
+        (self.root / 'assets/d2plus-alpha-v20b-splash.png').unlink()
         with self.assertRaisesRegex(ValueError, 'Missing social artwork'): seo.validate(self.root)
 
     def test_validator_rejects_indexable_tools_even_when_excluded_from_sitemap(self):

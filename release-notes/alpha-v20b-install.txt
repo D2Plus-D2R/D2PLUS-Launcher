@@ -1,0 +1,18 @@
+D2PLUS Alpha V2.0b - fresh complete D2RMM mod
+
+Close Diablo II: Resurrected first. Extract this ZIP into D2RMM/mods, preserving
+the D2PLUS_Alpha_v20b_Complete folder name. Disable previous complete D2PLUS
+packages and overlapping test addons. Enable D2PLUS - Alpha V2.0b Complete and
+click Install Mods. Keep your existing output folder name and save path.
+
+This package includes all gameplay files; no previous D2PLUS mod is required.
+Character saves are not included or edited. Preserve your usual save backup.
+
+The V2.0b launcher includes scanning and signed file updates. Installing that
+launcher once enables future ordinary updates without downloading another full
+launcher. Updates are staged, verified and applied on launcher restart, while
+D2R is closed. Settings and saves remain in their existing locations.
+
+The Warden memory reduction is intended to reduce loading pressure. It has
+passed file-format and checksum checks, but crash prevention on affected
+machines has not been confirmed. See CHANGELOG.txt for the exact scope.

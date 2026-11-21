@@ -14,4 +14,9 @@ release-inputs/reference-v20a-report.json -text
 release-inputs/launcher-v20a.json -text
 release-inputs/v20-base.json -text
 
+# Alpha V2.0b byte-pinned release inputs and signed update channel.
+release-inputs/alpha-v20b-* -text
+release-inputs/v20a-base.json -text
+updates/*.json -text
+
 release-inputs/v20-base.json -text

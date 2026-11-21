@@ -1,0 +1,101 @@
+name: Publish Alpha V2.0b
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/publish-v20b.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+concurrency:
+  group: alpha-v20b-publication
+  cancel-in-progress: false
+env:
+  PYTHONUTF8: '1'
+jobs:
+  package:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12.14'
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '22.12.0'
+      - run: python -m pip install Pillow==11.3.0
+      - run: npm ci --ignore-scripts
+      - name: Restore reviewed sources and rebuild fresh complete mod
+        run: |
+          python build/restore-suite-v20b.py
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          python build/prepare-v20b.py
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          python build/site.py
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          python build/restore-suite-v20b.py
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          python build/validate-v20b.py
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+      - name: Test launcher, full installer and public reference
+        run: |
+          npm test
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          npm run test:ui
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          $env:D2PLUS_TEST_FULL_ARCHIVE = (Resolve-Path gameplay/D2PLUS_AlphaV2.0b_Installed_Snapshot.zip).Path
+          node --test test/installer-regression.test.cjs
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          python -m unittest discover -s test -p test_seo.py
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          python build/seo.py --check --output _site
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+      - name: Reproduce signed update packs without a private key
+        run: |
+          @'
+          from pathlib import Path
+          import json, shutil, zipfile
+          root=Path.cwd();source=root/'build-cache/update-game-source'
+          source.mkdir(parents=True,exist_ok=True)
+          with zipfile.ZipFile(root/'gameplay/D2PLUS_AlphaV2.0b_Installed_Snapshot.zip')as z:
+              for member in z.infolist():
+                  if not member.filename.startswith('D2RMM.mpq/data/'):continue
+                  name=member.filename.removeprefix('D2RMM.mpq/')
+                  assert '..' not in Path(name).parts and ':' not in name and '\\' not in name
+                  target=source/name;target.parent.mkdir(parents=True,exist_ok=True)
+                  with z.open(member)as src,target.open('wb')as dst:shutil.copyfileobj(src,dst,1024*1024)
+          (root/'build-cache/update-rebuild.json').write_text(json.dumps(dict(root=str(root),gameRoot=str(source),output=str(root/'dist/update-packs'),tag='v2.0b-alpha')),encoding='utf8')
+          '@ | python -
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          node build/rebuild-update-packs.cjs build-cache/update-rebuild.json
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          $scratch = (Resolve-Path build-cache/update-game-source).Path
+          $expected = Join-Path (Get-Location).Path 'build-cache\update-game-source'
+          if ($scratch -ne $expected) { throw 'Unexpected scratch path' }
+          Remove-Item -LiteralPath $scratch -Recurse -Force
+      - run: choco install nsis --version=3.11 --yes --no-progress
+      - name: Build and verify new Windows launcher
+        run: |
+          python build/package-v20b.py --makensis 'C:/Program Files (x86)/NSIS/makensis.exe'
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          python build/publish-v20b.py --verify-only
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+      - name: Publish verified mod, launcher and signed update packs
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python build/publish-v20b.py
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+  deploy:
+    needs: package
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy website after verified downloads are public
+        id: deployment
+        uses: actions/deploy-pages@v4

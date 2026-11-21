@@ -5,8 +5,8 @@ const {createSuite}=require('../scripts/serve-editor.cjs');
 const {allowedExternal,localUrl}=require('./policy.cjs');
 app.setName('D2PLUS Launcher');app.setAppUserModelId('D2PLUS.Launcher');
 let askingToClose=false;
-let win,suite,origin='http://127.0.0.1:8080',quitting=false,closed=false;const children=new Set();
-const singleton=app.requestSingleInstanceLock();if(!singleton)app.quit();
+let win,suite,origin='http://127.0.0.1:8080',quitting=false,closed=false,restartAfterClose=false;const children=new Set();
+const singleton=app.d2plusBootstrapLock||app.requestSingleInstanceLock();if(!singleton)app.quit();
 else{
  app.on('second-instance',()=>{if(win){if(win.isMinimized())win.restore();win.show();win.focus();}});
  app.on('before-quit',e=>{if(closed)return;e.preventDefault();shutdown();});
@@ -23,7 +23,7 @@ function openTool(url){for(const c of children){if(c.webContents.getURL().split(
  const child=new BrowserWindow({width:1280,height:900,minWidth:800,minHeight:600,autoHideMenuBar:true,title:url.includes('getting-started.html')?'D2PLUS Getting Started':url.includes('/wiki/')?'D2PLUS Offline Wiki':'D2PLUS Hero Editor',backgroundColor:'#101211',webPreferences:preferences(false)});child.setMenu(null);children.add(child);protect(child);child.on('closed',()=>children.delete(child));child.loadURL(url);}
 async function start(){
  session.defaultSession.setPermissionRequestHandler((_wc,_permission,cb)=>cb(false));session.defaultSession.setPermissionCheckHandler(()=>false);
- suite=createSuite({suiteRoot:path.resolve(__dirname,'..'),port:8080,monitor:true,onQuit:()=>shutdown(),openPath:async p=>{const error=await shell.openPath(p);if(error)throw Error(error)}});
+ suite=createSuite({suiteRoot:path.resolve(__dirname,'..'),port:8080,monitor:true,onQuit:()=>shutdown(),onUpdateRestart:()=>{restartAfterClose=true;return shutdown();},openPath:async p=>{const error=await shell.openPath(p);if(error)throw Error(error)}});
  await new Promise((resolve,reject)=>{suite.server.once('error',e=>reject(Error(e.code==='EADDRINUSE'?'Port 8080 is in use. Close the previous Offline Suite or launcher console, then open D2PLUS Launcher.exe again.':e.message)));suite.server.listen(8080,'127.0.0.1',resolve);});
  const area=screen.getPrimaryDisplay().workAreaSize;const scale=Math.min(1,area.width/1536,(area.height-30)/961);const width=Math.round(1536*scale),height=Math.round(961*scale);
  win=new BrowserWindow({width,height,minWidth:960,minHeight:601,useContentSize:true,frame:false,show:false,autoHideMenuBar:true,title:'D2PLUS Launcher',icon:path.join(__dirname,'../docs/img/icons/favicon.png'),backgroundColor:'#070908',webPreferences:preferences(true)});win.setMenu(null);protect(win,true);
@@ -31,5 +31,5 @@ async function start(){
  win.once('ready-to-show',()=>win.show());await win.loadURL(origin+'/');
 }
 async function shutdown(){if(quitting||closed||askingToClose)return;if(children.size&&win&&!win.isDestroyed()){askingToClose=true;
- const answer=await dialog.showMessageBox(win,{type:'question',title:'Close D2PLUS Launcher?',message:'The wiki and hero editor windows will close too.',detail:'Export any character edits before closing. D2R itself will remain running.',buttons:['Keep launcher open','Close launcher'],defaultId:0,cancelId:0});askingToClose=false;if(answer.response!==1)return;
- }quitting=true;try{if(suite){await suite.close();}}catch(e){console.error(e.message);}closed=true;for(const c of children)c.destroy();children.clear();if(win&&!win.isDestroyed())win.destroy();app.quit();}
+ const answer=await dialog.showMessageBox(win,{type:'question',title:'Close D2PLUS Launcher?',message:'The wiki and hero editor windows will close too.',detail:'Export any character edits before closing. D2R itself will remain running.',buttons:['Keep launcher open','Close launcher'],defaultId:0,cancelId:0});askingToClose=false;if(answer.response!==1){restartAfterClose=false;return;}
+ }quitting=true;try{if(suite){await suite.close();}}catch(e){console.error(e.message);}closed=true;for(const c of children)c.destroy();children.clear();if(win&&!win.isDestroyed())win.destroy();if(restartAfterClose)app.relaunch();app.quit();}

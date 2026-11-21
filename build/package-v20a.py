@@ -46,6 +46,8 @@ app.mkdir(parents=True, exist_ok=True)
 for name in ['desktop', 'scripts', 'docs', 'companion', 'licenses', 'test']:
     shutil.copytree(ROOT / name, app / name, dirs_exist_ok=True)
 manifest = json.loads((ROOT / 'gameplay/manifest.json').read_text(encoding='utf-8'))
+integrity = json.loads((ROOT / 'gameplay/encounter-integrity.json').read_text(encoding='utf-8'))
+assert integrity['schemaVersion'] == 1 and integrity['archiveSHA256'] == manifest['sha256'], 'Encounter fingerprints must match the packaged gameplay archive'
 gameplay_archive = manifest['name']
 assert Path(gameplay_archive).name == gameplay_archive and 'AlphaV2.0a' in gameplay_archive
 assert (ROOT / 'gameplay' / gameplay_archive).stat().st_size == manifest['size']

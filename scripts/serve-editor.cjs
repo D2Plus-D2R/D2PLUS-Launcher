@@ -3,11 +3,12 @@ const http=require('node:http'),fs=require('node:fs'),path=require('node:path'),
 const {Launcher,VERSION,modName}=require('./launcher-core.cjs');
 const {WindowsAdapter,powershell}=require('./windows-adapter.cjs');
 const {SetupService}=require('./setup-service.cjs');
-function createSuite({suiteRoot=path.resolve(__dirname,'..'),stateDir=path.join(process.env.LOCALAPPDATA||path.join(os.homedir(),'.local','share'),'D2PLUS','OfflineSuite'),adapter,port=8080,monitor=true,onQuit=null,openPath=null}={}) {
+function createSuite({suiteRoot=path.resolve(__dirname,'..'),stateDir=path.join(process.env.LOCALAPPDATA||path.join(os.homedir(),'.local','share'),'D2PLUS','OfflineSuite'),adapter,port=8080,monitor=true,onQuit=null,onUpdateRestart=null,openPath=null}={}) {
   const root=path.join(suiteRoot,'docs'),token=crypto.randomBytes(32).toString('hex');
   adapter=adapter||new WindowsAdapter({suiteRoot,stateDir});
   const launcher=new Launcher({adapter,suiteRoot,settingsFile:path.join(stateDir,'settings.json')});
   const setup=new SetupService({launcher,adapter,stateDir});
+  const updates=new (require('./update-service.cjs').UpdateService)({launcher,stateDir});
   const saves=new (require('./save-service.cjs').SaveService)({launcher,adapter,stateDir,openPath:openPath||((p)=>adapter.openSaveFolder(p))});
   const mime={'.html':'text/html; charset=utf-8','.js':'text/javascript','.css':'text/css','.json':'application/json','.webp':'image/webp','.png':'image/png','.svg':'image/svg+xml','.woff':'font/woff','.woff2':'font/woff2','.ttf':'font/ttf','.jpg':'image/jpeg','.ico':'image/x-icon'};
   const reply=(res,code,data)=>{res.writeHead(code,{'Content-Type':'application/json','Cache-Control':'no-store','X-Content-Type-Options':'nosniff','Cross-Origin-Resource-Policy':'same-origin'});res.end(JSON.stringify(data));};
@@ -21,7 +22,7 @@ function createSuite({suiteRoot=path.resolve(__dirname,'..'),stateDir=path.join(
     if(pathname.startsWith('/api/')){
       try{
         if(req.method==='GET' && pathname==='/api/health'){reply(res,200,{app:'D2PLUS Offline Suite',version:VERSION});return;}
-        if(req.method==='GET' && pathname==='/api/status'){reply(res,200,{...launcher.snapshot(),setup:setup.snapshot(),saves:await saves.status(),token});return;}
+        if(req.method==='GET' && pathname==='/api/status'){reply(res,200,{...launcher.snapshot(),updates:updates.snapshot(),setup:setup.snapshot(),saves:await saves.status(),token});return;}
         if(req.method!=='POST'){reply(res,405,{error:'POST required.'});return;}
         if(req.headers['x-d2plus-token']!==token){reply(res,403,{error:'Missing launcher session token. Reload this page.'});return;}
         if(!String(req.headers['content-type']).startsWith('application/json')){reply(res,415,{error:'JSON required.'});return;}
@@ -30,6 +31,7 @@ function createSuite({suiteRoot=path.resolve(__dirname,'..'),stateDir=path.join(
         const result=await launcher.serialize(async()=>{
           switch(pathname){
             case '/api/settings': {
+              if(updates.job.state==='Ready'&&['gameExe','modDirectory'].some(k=>data[k]!==undefined&&data[k]!==launcher.config[k]))throw Error('Apply or discard the staged update before changing game folders.');
               if(fs.existsSync(launcher.settingsFile)&&!fs.existsSync(launcher.settingsFile+'.before-prototype'))fs.copyFileSync(launcher.settingsFile,launcher.settingsFile+'.before-prototype');
               return launcher.save(data);
             }
@@ -38,13 +40,17 @@ function createSuite({suiteRoot=path.resolve(__dirname,'..'),stateDir=path.join(
             case '/api/backup-saves': return saves.backup();
             case '/api/open-save-backups': return saves.openBackup();
             case '/api/setup-check': return setup.check();
-            case '/api/install-gameplay': return setup.install();
+            case '/api/scan-files': if(setup.job?.state==='Installing')throw Error('Wait for installation to finish.');return updates.start('scan');
+            case '/api/check-updates': if(setup.job?.state==='Installing')throw Error('Wait for installation to finish.');return updates.start('check');
+            case '/api/discard-update': return updates.discard();
+            case '/api/restart-update': if(updates.job.state!=='Ready')throw Error('No verified update is ready.');if(!onUpdateRestart)throw Error('Close and reopen the desktop launcher to apply the staged update.');setTimeout(()=>onUpdateRestart(),150);return {restarting:true};
+            case '/api/install-gameplay': if(updates.task||updates.job.state==='Ready')throw Error('Finish the staged update before reinstalling.');return setup.install();
             case '/api/scan-mods': return setup.scanMods(data.gameExe);
             case '/api/open-component': return setup.open(data.component);
             case '/api/download': return setup.startDownload(data.component);
             case '/api/cancel-download': return setup.cancel();
             case '/api/quit': if(onQuit){setTimeout(()=>onQuit(),150);return {closing:true};}setTimeout(async()=>{if(timer)clearInterval(timer);await setup.close();try{await launcher.serialize(()=>launcher.shutdown());}catch(e){console.error(e.message);}server.close();},150);return {closing:true};
-            case '/api/launch': return launcher.launchGame();
+            case '/api/launch': if(updates.task||updates.job.state==='Ready')throw Error('Wait for the update scan to finish, or restart to apply the verified update.');return launcher.launchGame();
             case '/api/stop': return launcher.disable();
             case '/api/retry': return launcher.retry();
             case '/api/inspect': return launcher.inspect();
@@ -72,8 +78,10 @@ function createSuite({suiteRoot=path.resolve(__dirname,'..'),stateDir=path.join(
     const stream=fs.createReadStream(filename);stream.on('error',()=>res.destroy());stream.pipe(res);
   });
   let ticking=false;const timer=monitor?setInterval(()=>{if(ticking)return;ticking=true;launcher.serialize(()=>launcher.tick()).catch(e=>console.error(e.message)).finally(()=>{ticking=false;});},2000):null;
-  server.on('close',()=>{if(timer)clearInterval(timer);});
-  return {server,launcher,close:async()=>{if(timer)clearInterval(timer);await setup.close();await launcher.serialize(()=>launcher.shutdown());if(server.listening)await new Promise(resolve=>server.close(resolve));}};
+  server.on('close',()=>{if(timer)clearInterval(timer);if(updateTimer)clearInterval(updateTimer);});
+  const updateTimer=monitor?setInterval(()=>{if(launcher.config.automaticUpdates&&!updates.task&&!['Ready','Scanning','Downloading'].includes(updates.job.state)&&setup.job?.state!=='Installing')updates.start('check');},4*60*60*1000):null;
+  if(monitor)server.once('listening',()=>{if(launcher.config.automaticUpdates)updates.start('check');});
+  return {server,launcher,updates,close:async()=>{if(timer)clearInterval(timer);if(updateTimer)clearInterval(updateTimer);await updates.close();await setup.close();await launcher.serialize(()=>launcher.shutdown());if(server.listening)await new Promise(resolve=>server.close(resolve));}};
 }
 if(require.main===module){
   const suite=createSuite();let stopping=false;

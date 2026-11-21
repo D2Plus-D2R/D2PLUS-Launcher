@@ -6,7 +6,7 @@ function powershell(script,data={},timeout=20000){
   if(process.platform!=='win32')return Promise.reject(new Error('This operation requires Windows.'));
   return new Promise((resolve,reject)=>{
     const executable=path.join(process.env.SystemRoot||'C:\\Windows','System32','WindowsPowerShell','v1.0','powershell.exe');
-    const child=spawn(executable,['-NoLogo','-NoProfile','-NonInteractive','-STA','-EncodedCommand',Buffer.from(PS_PREFIX+script,'utf16le').toString('base64')],
+    const child=spawn(executable,['-NoLogo','-NoProfile','-NonInteractive','-ExecutionPolicy','Bypass','-STA','-EncodedCommand',Buffer.from(PS_PREFIX+script,'utf16le').toString('base64')],
       {windowsHide:true,env:{...process.env,D2PLUS_REQUEST:JSON.stringify(data)},stdio:['ignore','pipe','pipe']});
     let stdout='',stderr='',done=false;
     const timer=setTimeout(()=>{child.kill();finish(new Error('Windows operation timed out. Close any hidden file picker and retry.'));},timeout);
@@ -28,7 +28,7 @@ foreach($p in @(Get-CimInstance Win32_Process | Where-Object { $_.Name -in $name
 @{games=@($games);companions=@($companions)} | ConvertTo-Json -Depth 4 -Compress
 `;
 class WindowsAdapter {
-  constructor({suiteRoot,stateDir}){this.platform=process.platform;this.suiteRoot=suiteRoot;this.stateDir=stateDir;}
+  constructor({suiteRoot,stateDir}){this.platform=process.platform;this.suiteRoot=suiteRoot;this.stateDir=stateDir;this.integrity=new (require('./gameplay-integrity.cjs').GameplayIntegrity)(suiteRoot);}
   async savedGamesFolder(){
     if(this._savedGames)return this._savedGames;
     const r=await powershell(`$key='HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\User Shell Folders'; $v=[Microsoft.Win32.Registry]::GetValue($key,'{4C5C32FF-BB9D-43B0-B5B4-2D72E54EAAA4}',$null); if(!$v){$v=Join-Path $env:USERPROFILE 'Saved Games'}; @{path=[Environment]::ExpandEnvironmentVariables($v)} | ConvertTo-Json -Compress`,{});
@@ -44,11 +44,12 @@ class WindowsAdapter {
     const child=spawn(path.join(process.env.SystemRoot||'C:\\Windows','explorer.exe'),[folder],{windowsHide:true,stdio:'ignore'});
     await new Promise((resolve,reject)=>{child.once('spawn',resolve);child.once('error',reject);});child.unref();
   }
-  async validateFiles(c,mpq){
+  async validateFiles(c,mpq,options={}){
     for(const [file,kind]of [[c.gameExe,'file'],[mpq,'directory'],[c.workingDirectory||path.win32.dirname(c.gameExe),'directory']]) {
       const stat=await fs.promises.stat(file).catch(()=>null);
       if(!stat||(kind==='file'?!stat.isFile():!stat.isDirectory()))throw new Error(`Missing ${kind}: ${file}. Apply your D2RMM options with Install Mods first.`);
     }
+    return this.integrity.verify(mpq,options);
   }
   processes(companion){return powershell(PROCESS_SCRIPT,{companion});}
   inspectExe(exe){return powershell(`$f=Get-Item -LiteralPath $d.exe; if($f.PSIsContainer){throw 'Select an executable file'}; @{path=$f.FullName;fileVersion=$f.VersionInfo.FileVersion;productVersion=$f.VersionInfo.ProductVersion;sha256=(Get-FileHash -LiteralPath $f.FullName -Algorithm SHA256).Hash;compatibility='Unverified until companion startup checks pass'} | ConvertTo-Json -Compress`,{exe},60000);}

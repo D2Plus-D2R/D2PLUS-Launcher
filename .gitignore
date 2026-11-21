@@ -1,6 +1,7 @@
 node_modules/
 __pycache__/
 build-cache/
+build/uninstall-files-v20b.nsh
 dist/
 _site/
 release-assets/

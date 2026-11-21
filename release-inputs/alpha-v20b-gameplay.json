@@ -1,0 +1,50 @@
+{
+  "version": "2.0b",
+  "archiveSHA256": "26d3a5124edc2678e7f0870278996b2505b7468e9beec707ffcfd1986ac4318c",
+  "archiveBytes": 18608310,
+  "parts": [
+    {
+      "name": "alpha-v20b-gameplay.zip.part000",
+      "size": 18608310,
+      "sha256": "26d3a5124edc2678e7f0870278996b2505b7468e9beec707ffcfd1986ac4318c"
+    }
+  ],
+  "files": [
+    {
+      "path": "data/hd/character/enemy/d2plus_rodin_sorcerer/animation/combined.timelines",
+      "size": 7595,
+      "sha256": "8f2347dd298ad98621f754e1d41412dd20f8e189a7dd4e8ab5af631cc184e1ff",
+      "beforeSHA256": "4dcf1bf9dcb6ac0eb3bc11c65fde0dc8cccf769ad320ed78d47720eba61701dd"
+    },
+    {
+      "path": "data/hd/character/enemy/sovereign_warden/textures/warden_alb.texture",
+      "size": 11184944,
+      "sha256": "6d4c50df319559616c380abe0b2d81ab82441c9e20d4cbd9e0d3adeba210b855",
+      "beforeSHA256": "c7539973ad98f519d151594cd1954bc9328b5aa3865ad8ff6c1cb1ccb2e113bc"
+    },
+    {
+      "path": "data/hd/character/enemy/sovereign_warden/textures/warden_nrm.texture",
+      "size": 11184944,
+      "sha256": "e80827dba4b88ab4d9cbfff592560422f28a95e6a229ef1d92e7b16578a98b21",
+      "beforeSHA256": "c00819ba163e56244db92432010c003343561c4ec85dd47643ccc8e7b15c7a0f"
+    },
+    {
+      "path": "data/hd/character/enemy/sovereign_warden/textures/warden_orm.texture",
+      "size": 11184944,
+      "sha256": "509f1dfc68d13b6fc2a3503ffca2d23192c9d0d94c684c28307e7f38a53bd275",
+      "beforeSHA256": "1473198a560d57713d4addd4bafc1405abcb55471e56537d32131284f33a6b0b"
+    },
+    {
+      "path": "data/hd/texture_desc_cache.json",
+      "size": 22108957,
+      "sha256": "5bcc9e5c4e94968035c922438646259d271b0973eb8e0e50e21f76a030274ee3",
+      "beforeSHA256": "037cd4408525a21cebe3a963be5228400876d465be672898de98b492e6df980e"
+    }
+  ],
+  "expectedFiles": 3124,
+  "nativeAnimationClipsChecked": 8,
+  "existingAnimationEventsPreserved": true,
+  "saveLayoutUnchanged": true,
+  "tablesUnchanged": true,
+  "runtimeCrashFixConfirmed": false
+}

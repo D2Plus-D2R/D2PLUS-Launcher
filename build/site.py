@@ -209,5 +209,8 @@ subprocess.run([sys.executable,str(root/'build/apply-reference-v20.py')],check=T
 # Search metadata must describe the final public pages, not a historical overlay.
 # The V2.0a delta restores the final reference after historical overlays.
 subprocess.run([sys.executable,str(root/'build/apply-reference-v20a.py')],check=True)
-subprocess.run([sys.executable,str(root/'build/apply-launcher-v20a.py')],check=True)
+if json.loads((root/'package.json').read_text())['version']=='2.0.2-alpha':
+    subprocess.run([sys.executable,str(root/'build/apply-v20b-presentation.py')],check=True)
+else:
+    subprocess.run([sys.executable,str(root/'build/apply-launcher-v20a.py')],check=True)
 subprocess.run([sys.executable,str(root/'build/seo.py'),'--output',str(out)],check=True)

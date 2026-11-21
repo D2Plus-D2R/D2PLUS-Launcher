@@ -20,6 +20,8 @@ app=out/'resources/app';app.mkdir(parents=True,exist_ok=True)
 for name in ['desktop','scripts','docs','companion','licenses','test']:
  shutil.copytree(ROOT/name,app/name,dirs_exist_ok=True)
 gameplay_manifest=json.loads((ROOT/'gameplay/manifest.json').read_text())
+integrity=json.loads((ROOT/'gameplay/encounter-integrity.json').read_text())
+assert integrity['schemaVersion']==1 and integrity['archiveSHA256']==gameplay_manifest['sha256'], 'Encounter fingerprints must match the packaged gameplay archive'
 gameplay_archive=gameplay_manifest['name']
 assert Path(gameplay_archive).name==gameplay_archive, 'Invalid gameplay archive name'
 shutil.copytree(ROOT/'gameplay',app/'gameplay',dirs_exist_ok=True,ignore=lambda directory,names:[name for name in names if name.endswith('.zip') and name!=gameplay_archive])

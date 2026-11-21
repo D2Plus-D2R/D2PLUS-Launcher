@@ -1,5 +1,5 @@
 'use strict';
-const $=id=>document.getElementById(id),VERSION='2.0.1-alpha';
+const $=id=>document.getElementById(id),VERSION='2.0.2-alpha';
 let token='',connected=false,busy=false,initialized=false,step=0,current={},dirty=false,gameReady=false,toastTimer;
 const fields=['gameExe','workingDirectory','d2rmmExe','modDirectory','arguments','companionExe','fontSize','showDps','dpsX','dpsY'];
 let saveState={};
@@ -13,13 +13,13 @@ async function act(fn){if(busy)return;if(!connected){toast('Reconnect the launch
 function showStep(n){step=Math.max(0,Math.min(4,n));document.querySelectorAll('.step').forEach(el=>el.hidden=Number(el.dataset.step)!==step);$('next').textContent=step===4?'Finish setup ✓':step===0?'Begin setup →':'Save & continue →';document.querySelector('.steps').replaceChildren(...labels.map((name,i)=>{const span=document.createElement('span');span.textContent=(i+1)+' '+name;span.className=i===step?'current':i<step?'done':'';return span;}));$('review').textContent='Game: '+($('gameExe').value||'Not selected')+'\nMod output: '+($('modDirectory').value||'Not selected')+'\nArguments: '+($('arguments').value||'Not set')+'\nD2RMM: '+($('d2rmmExe').value||'Not selected (optional if installed)')+'\nCompanion: '+($('companionExe').value||'Bundled D2PLUS source build');controls();}
 function openSetup(n=0){showStep(n);if(!$('wizard').open)$('wizard').showModal();}
 function setView(id){for(const v of document.querySelectorAll('.view'))v.hidden=v.id!==id;document.querySelectorAll('[data-view]').forEach(b=>b.classList.toggle('active',b.dataset.view===id));}
-function render(s){saveState=s.saves||{};$('saveFolder').textContent=saveState.folder||'Choose your installed mod in Settings.';$('saveNote').textContent=saveState.exists?'':saveState.message||'';$('backupNote').textContent=saveState.lastBackup?'Last verified backup: '+new Date(saveState.lastBackup.created).toLocaleString():'';current=s.config;$('status').textContent=s.state;$('status').dataset.state=s.state;$('compatibility').textContent=s.compatibility;$('message').textContent=s.message||'';$('gameLabel').textContent=current.gameExe?current.gameExe.split(/[\\/]/).pop():'Not configured';$('modLabel').textContent=current.modDirectory?current.modDirectory.split(/[\\/]/).filter(Boolean).pop():'Choose your output';$('gameVersion').textContent=s.exeInfo?.fileVersion||'Not inspected';if(s.exeInfo)$('version').textContent='File version: '+s.exeInfo.fileVersion+' · Product: '+s.exeInfo.productVersion+' · Compatibility not assumed.';
+function render(s){renderUpdates(s.updates);saveState=s.saves||{};$('saveFolder').textContent=saveState.folder||'Choose your installed mod in Settings.';$('saveNote').textContent=saveState.exists?'':saveState.message||'';$('backupNote').textContent=saveState.lastBackup?'Last verified backup: '+new Date(saveState.lastBackup.created).toLocaleString():'';current=s.config;$('status').textContent=s.state;$('status').dataset.state=s.state;$('compatibility').textContent=s.compatibility;$('message').textContent=s.message||'';$('gameLabel').textContent=current.gameExe?current.gameExe.split(/[\\/]/).pop():'Not configured';$('modLabel').textContent=current.modDirectory?current.modDirectory.split(/[\\/]/).filter(Boolean).pop():'Choose your output';$('gameVersion').textContent=s.exeInfo?.fileVersion||'Not inspected';if(s.exeInfo)$('version').textContent='File version: '+s.exeInfo.fileVersion+' · Product: '+s.exeInfo.productVersion+' · Compatibility not assumed.';
  if(!busy){$('enableDamageNumbers').checked=current.enableDamageNumbers;$('resetOfflineMaps').checked=!!current.resetOfflineMaps;}
  $('readyLabel').textContent=gameReady?'Installation checked':current.gameExe?'Configured · verify before play':'Setup needed';$('lamp').classList.toggle('ok',gameReady);
  const job=s.setup?.download;for(const el of document.querySelectorAll('.download-status')){el.replaceChildren();if(job){const text=document.createElement('span');text.textContent=job.name+' — '+job.state+'. '+job.message+(job.bytes?' ('+(job.bytes/1048576).toFixed(1)+' MB'+(job.total?' / '+(job.total/1048576).toFixed(1)+' MB':'')+')':'');el.append(text);if(job.state==='Downloading'){const p=document.createElement('progress');if(job.total){p.max=job.total;p.value=job.bytes;}el.append(p);}}}
  if(!initialized){if(!dirty)fill(current);initialized=true;if(!current.setupComplete)openSetup(0);}
 }
-async function refresh(){try{const r=await fetch('/api/status',{cache:'no-store'});if(!r.ok)throw Error('Backend unavailable.');const s=await r.json();if(s.version!==VERSION)throw Error('A different suite is running on port 8080. Close its console, then start this prototype.');token=s.token;connected=true;$('connection').textContent='Connected locally • Launcher Alpha V2.0a desktop • Wiki Alpha V2.0a';render(s);}catch(e){connected=false;$('connection').textContent=e.message+' Open D2PLUS Launcher.exe to reconnect. Your typed fields stay on this page.';$('readyLabel').textContent='Backend disconnected';$('lamp').classList.remove('ok');}finally{controls();}}
+async function refresh(){try{const r=await fetch('/api/status',{cache:'no-store'});if(!r.ok)throw Error('Backend unavailable.');const s=await r.json();if(s.version!==VERSION)throw Error('A different suite is running on port 8080. Close its console, then start this prototype.');token=s.token;connected=true;$('connection').textContent='Connected locally • Launcher Alpha V2.0b desktop • Wiki Alpha V2.0b';render(s);}catch(e){connected=false;$('connection').textContent=e.message+' Open D2PLUS Launcher.exe to reconnect. Your typed fields stay on this page.';$('readyLabel').textContent='Backend disconnected';$('lamp').classList.remove('ok');}finally{controls();}}
 async function save(extra={}){const r=await api('settings',{...read(),...extra});current=r.config;dirty=false;gameReady=false;toast('Settings saved on this PC.');return r;}
 async function check(){await save();const r=await api('setup-check');gameReady=r.gameReady;const checks=[r.gameReady?'✓ Game and installed mod paths verified.':'Game: '+r.gameError,r.d2rmmReady?'✓ D2RMM found.':'D2RMM not selected or missing; optional for launching an installed mod.',r.companionReady?'✓ Companion executable found; compatibility remains unverified.':'Companion missing; wiki, editor and game remain available.',r.wikiReady?'✓ Offline wiki included.':'Wiki missing.',r.editorReady?'✓ Hero editor included.':'Editor missing.'];$('checkResults').textContent=checks.join(' ');$('checkResults').classList.toggle('good',r.gameReady);return r;}
 for(const id of fields)$(id).addEventListener('input',()=>{dirty=true;gameReady=false;});
@@ -48,4 +48,20 @@ function fitArtwork(){document.documentElement.style.setProperty('--scale',Math.
 fitArtwork();window.addEventListener('resize',fitArtwork);
 refresh();setInterval(refresh,2500);
 
-for(const b of document.querySelectorAll('[data-install-gameplay]'))b.onclick=()=>act(async()=>{await save();const result=await api('install-gameplay');const r=await fetch('/api/status',{cache:'no-store'});const state=await r.json();fill(state.config);current=state.config;dirty=false;gameReady=true;toast('Alpha V2.0a installed. Ready to launch.');if($('wizard').open)showStep(4);});
+for(const b of document.querySelectorAll('[data-install-gameplay]'))b.onclick=()=>act(async()=>{await save();const result=await api('install-gameplay');const r=await fetch('/api/status',{cache:'no-store'});const state=await r.json();fill(state.config);current=state.config;dirty=false;gameReady=true;toast('Alpha V2.0b installed. Ready to launch.');if($('wizard').open)showStep(4);});
+
+function renderUpdates(job={}){
+ if(!busy)$('automaticUpdates').checked=job.automatic!==false;
+ $('updateStatus').textContent=job.message||'Ready to check your installation.';
+ $('restartUpdate').hidden=job.state!=='Ready';$('discardUpdate').hidden=job.state!=='Ready';
+ const progress=$('updateProgress');progress.hidden=!['Scanning','Downloading'].includes(job.state);
+ if(job.state==='Downloading'&&job.downloadBytes){progress.max=job.downloadBytes;progress.value=job.downloaded||0;}
+ else if(job.total){progress.max=job.total;progress.value=job.checked||0;}else progress.removeAttribute('value');
+ $('updateFindings').replaceChildren(...(job.files||[]).slice(0,10).map(f=>{const li=document.createElement('li');li.textContent=f.status+': '+f.path;return li;}));
+}
+$('scanFiles').onclick=()=>act(async()=>{await api('scan-files');});
+$('checkUpdates').onclick=()=>act(async()=>{await api('check-updates');});
+$('restartUpdate').onclick=()=>act(async()=>{await api('restart-update');});
+$('automaticUpdates').onchange=()=>act(async()=>{await api('settings',{automaticUpdates:$('automaticUpdates').checked});});
+
+$('discardUpdate').onclick=()=>act(async()=>{await api('discard-update');});

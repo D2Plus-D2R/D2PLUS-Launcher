@@ -2,10 +2,10 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const crypto = require('node:crypto');
-const VERSION = '2.0.1-alpha';
+const VERSION = '2.0.2-alpha';
 const {mapArguments}=require('./map-options.cjs');
 const DEFAULTS = Object.freeze({gameExe:'', modDirectory:'', arguments:'', workingDirectory:'',
-  d2rmmExe:'', setupComplete:false, resetOfflineMaps:false, enableDamageNumbers:false, companionExe:'', showDps:false, dpsX:85, dpsY:15, fontSize:26});
+  d2rmmExe:'', setupComplete:false, automaticUpdates:true, resetOfflineMaps:false, enableDamageNumbers:false, companionExe:'', showDps:false, dpsX:85, dpsY:15, fontSize:26});
 const norm = s => path.win32.normalize(String(s || '')).replace(/\\+$/, '').toLowerCase();
 const identity = p => `${p.pid}:${p.started}`;
 // Windows command-line quoting: backslashes before double quotes follow CommandLineToArgvW rules.
@@ -95,18 +95,18 @@ class Launcher {
   async disable(){return this.save({enableDamageNumbers:false});}
   async retry(){await this.stopOwned();this.attempt=null;this.state=this.config.enableDamageNumbers?'Waiting for Game':'Disabled';this.message='Retry requested.';return this.snapshot();}
   async inspect(){this.exeInfo=await this.adapter.inspectExe(this.config.gameExe);return this.exeInfo;}
-  async validateGame(){
+  async validateGame(options={}){
     const c=this.config;if(!c.gameExe || !path.win32.isAbsolute(c.gameExe))throw new Error('Select your D2R executable first.');
     if(!/\.exe$/i.test(c.gameExe))throw new Error('Game executable must be an EXE.');
     const name=modName(c.arguments);
     if(!c.modDirectory||!path.win32.isAbsolute(c.modDirectory))throw new Error('Select the installed mod output folder.');
     const expected=path.win32.join(path.win32.dirname(c.gameExe),'mods',name);
     if(norm(c.modDirectory)!==norm(expected))throw new Error(`The -mod argument resolves to ${expected}. Select that output folder (junctions are allowed).`);
-    await this.adapter.validateFiles(c,path.win32.join(c.modDirectory,`${name}.mpq`));return name;
+    await this.adapter.validateFiles(c,path.win32.join(c.modDirectory,`${name}.mpq`),options);return name;
   }
   matching(p){try{return norm(p.exe)===norm(this.config.gameExe)&&modName(p.commandLine).toLowerCase()===modName(this.config.arguments).toLowerCase();}catch{return false;}}
   async launchGame(){
-    await this.validateGame();const all=await this.adapter.processes(this.companionPath());
+    await this.validateGame({force:true});const all=await this.adapter.processes(this.companionPath());
     const matches=all.games.filter(p=>this.matching(p));
     if(matches.length>1)throw new Error('Multiple configured D2R instances exist. Close extras before launching.');
     if(matches.length===1){this.message='D2PLUS is already running.';return {alreadyRunning:true,pid:matches[0].pid};}

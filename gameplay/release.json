@@ -1,17 +1,17 @@
 {
   "repository": "D2Plus-D2R/D2PLUS-Launcher",
-  "tag": "v2.0a-alpha",
-  "displayVersion": "Alpha V2.0a",
+  "tag": "v2.0b-alpha",
+  "displayVersion": "Alpha V2.0b",
   "files": [
     {
-      "name": "D2PLUS_AlphaV2.0a_Complete_D2RMM.zip",
-      "size": 1039000707,
-      "sha256": "97d761eb32604ee3854b7b655224fddbc8f9bfa9e7b19b9060a81833e9534204"
+      "name": "D2PLUS_AlphaV2.0b_Complete_D2RMM.zip",
+      "size": 1005336105,
+      "sha256": "9f95ee4c888e29876bef94dc98bdc518cb5779f245276098dc64c728da9f46f6"
     },
     {
-      "name": "D2PLUS_AlphaV2.0a_Installed_Snapshot.zip",
-      "size": 1038700769,
-      "sha256": "f13b132a99fd291db0ca04b9ad9b0322105dc1c8bb6cc94504ed57c903604009"
+      "name": "D2PLUS_AlphaV2.0b_Installed_Snapshot.zip",
+      "size": 1005037195,
+      "sha256": "524cf789ece50ac5affa4d975eccc83f50e38eb7a8c648bac5a42d9e1467185c"
     }
   ]
 }

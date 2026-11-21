@@ -1,0 +1,20 @@
+D2PLUS Alpha V2.0b - fixes and easier updates
+
+- Reduced the Warden's texture payload by 75%, from about 128 MiB to 32 MiB.
+  This lowers graphics loading pressure at encounters such as Andariel and
+  Duriel. It is a crash-risk mitigation; an affected-machine fix is unconfirmed.
+- Fixed an installer limit that rejected the complete gameplay package.
+  The installer now checks the signed-off package inventory and available space.
+- Added encounter-file checks before launch, with clear repair instructions.
+- Added a full file scan and signed incremental updates. The launcher downloads
+  only missing or changed files and applies them on restart while D2R is closed.
+  Rollback copies are retained. Updates preserve settings and character saves.
+- Changed large ZIP checksum checks to stream from disk, reducing memory use.
+- Completed the Act III custom sorcerer's missing animation timeline metadata
+  and aligned timeline lengths to the existing animation clips. Existing sound
+  and effect events were preserved.
+
+This is a fresh complete D2RMM mod. Disable older complete D2PLUS packages and
+overlapping test addons. Keep your existing D2RMM output name and save path.
+No balance tables, save-stat identities, character files, or real inventories
+were changed. In-game testing on affected machines is still needed.

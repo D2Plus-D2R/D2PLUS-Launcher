@@ -1,13 +1,13 @@
 {
   "name": "d2plus-launcher",
   "productName": "D2PLUS Launcher",
-  "version": "2.0.1-alpha",
+  "version": "2.0.2-alpha",
   "description": "D2PLUS offline desktop launcher",
-  "main": "desktop/main.cjs",
+  "main": "desktop/bootstrap.cjs",
   "private": true,
   "scripts": {
     "start": "electron .",
-    "test": "node --test test/launcher.test.cjs test/setup.test.cjs test/desktop.test.cjs test/v08.test.cjs test/v082.test.cjs test/v11.test.cjs test/save-service.test.cjs",
+    "test": "node --test test/launcher.test.cjs test/setup.test.cjs test/desktop.test.cjs test/v08.test.cjs test/v082.test.cjs test/v11.test.cjs test/save-service.test.cjs test/launcher-v20a.test.cjs test/gameplay-integrity.test.cjs test/installer-regression.test.cjs test/updates.test.cjs test/bootstrap.test.cjs test/update-publishing.test.cjs",
     "test:ui": "node --test test/setup-ui.test.cjs test/wiki.test.cjs test/guides-v14.test.cjs"
   },
   "devDependencies": {
