@@ -9,6 +9,9 @@ import xml.etree.ElementTree as ET
 SPEC = importlib.util.spec_from_file_location('seo', Path(__file__).resolve().parents[1] / 'build/seo.py')
 seo = importlib.util.module_from_spec(SPEC)
 SPEC.loader.exec_module(seo)
+DISCOVERY_SPEC = importlib.util.spec_from_file_location('discovery', Path(__file__).resolve().parents[1] / 'build/discovery.py')
+discovery = importlib.util.module_from_spec(DISCOVERY_SPEC)
+DISCOVERY_SPEC.loader.exec_module(discovery)
 
 
 class SearchMetadataTests(unittest.TestCase):
@@ -110,13 +113,40 @@ class SearchMetadataTests(unittest.TestCase):
         seo.generate(self.root)
         current = (self.root / 'wiki/dungeon-rewards.html').read_text()
         self.assertIn('flat 10% base', current)
-        self.assertIn('Alpha V2.0', self.parsed('wiki/dungeon-rewards.html').title)
+        self.assertIn('Dungeon Reward Bags', self.parsed('wiki/dungeon-rewards.html').title)
         self.assertIn(old, (self.root / 'news-alpha-v14.html').read_text())
 
     def test_current_reference_reward_guide_preserves_reviewed_encounter_tiers(self):
         body = 'Eligible bosses have a flat 10% base Dungeon Reward Bag roll. Existing encounter reward tiers are retained.'
         current = self.page('Reward bags · Alpha V2.0a', body).replace('</head>', '<meta name="d2plus-reference-version" content="Alpha V2.0a"></head>')
         self.assertEqual(seo.refresh_reward_guide(current), current)
+
+    def test_reference_pages_have_static_facts_links_and_canonical_sitemap_entries(self):
+        self.write('wiki/index.html', self.page('Wiki', 'Browse the D2PLUS equipment and skill reference for offline characters.'))
+        data = {'version': 'D2PLUS Alpha V2.0b', 'classes': ['Warlock'], 'records': [
+            {'kind': 'Skill', 'hero': 'Warlock', 'name': 'Hex & Flame', 'id': 'entry-1', 'level': 12,
+             'stats': [{'label': 'Maximum allocated points', 'value': '5'}], 'note': 'Burn <targets>\nSecond line'},
+            {'kind': 'Runeword', 'name': 'Test Oath', 'id': 'entry-2', 'sockets': 2, 'runes': ['El', 'Eld'],
+             'level': 11, 'base': 'Any Shield', 'stats': [{'label': 'Strength', 'value': '3 – 7'}]}]}
+        self.write('wiki/database.json', json.dumps(data))
+        original = (self.root / 'wiki/database.json').read_bytes()
+        routes = discovery.generate(self.root)
+        self.assertEqual(len(routes), 4)
+        text = (self.root / 'wiki/classes/warlock.html').read_text()
+        self.assertIn('Hex &amp; Flame', text)
+        self.assertIn('<td>12</td><td>5</td>', text)
+        self.assertIn('Burn &lt;targets&gt;<br>Second line', text)
+        recipe = (self.root / 'wiki/runewords/2-sockets.html').read_text()
+        self.assertIn('El → Eld', recipe)
+        self.assertIn('Strength: 3 – 7', recipe)
+        self.assertIn('not complete equipped-item totals', recipe)
+        seo.generate(self.root)
+        self.assertIn('https://d2-plus.net/wiki/classes/warlock.html', (self.root / 'sitemap.xml').read_text())
+        self.assertEqual(self.parsed('wiki/classes/index.html').meta('og:url'), ['https://d2-plus.net/wiki/classes/'])
+        discovery.generate(self.root)
+        seo.generate(self.root)
+        self.assertEqual((self.root / 'wiki/index.html').read_text().count('id="browse-reference"'), 1)
+        self.assertEqual((self.root / 'wiki/database.json').read_bytes(), original)
 
 
 if __name__ == '__main__': unittest.main()

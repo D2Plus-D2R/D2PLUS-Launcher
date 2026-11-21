@@ -32,8 +32,8 @@ historical description. Neither operation changes the pinned reference suite.
 
 The Google Search Console ownership tag in the homepage is preserved by the
 metadata pass. The V2.0a article has its own canonical URL and publication date;
-the V2.0 article remains historical. Software metadata uses `2.0.1-alpha`, while
-public copy uses `Alpha V2.0a`.
+the V2.0 article remains historical. Software metadata uses `2.0.2-alpha`, while
+public copy uses `Alpha V2.0b`.
 
 The public screenshot section is `site/screenshots.html`, linked from the
 homepage and guide navigation. Its reviewed image list is
@@ -71,3 +71,24 @@ Primary guidance used:
 - [Software application structured data](https://developers.google.com/search/docs/appearance/structured-data/software-app)
 - [Article structured data](https://developers.google.com/search/docs/appearance/structured-data/article)
 - [Breadcrumb structured data](https://developers.google.com/search/docs/appearance/structured-data/breadcrumb)
+
+## Browseable reference pages
+
+`build/discovery.py` runs after the final V2.0b presentation and before metadata.
+It renders eight complete class skill lists and runewords grouped by socket count,
+plus their two browse pages. Each page has visible HTML content, a unique title
+and description, ordinary links, breadcrumbs and a sitemap entry. The homepage
+and wiki link to both hubs. Fragment-based tools remain available.
+
+Names, unlock levels, allocation limits, rune order, base types and bonuses come
+from the final reviewed `wiki/database.json`; no damage benchmarks, item totals
+or farming probabilities are invented. Runeword bonuses are explicitly separate
+from the individual rune bonuses. `DISCOVERY-REPORT.json` records the exact data
+hash, record counts and generated routes. Only public output changes; the signed
+launcher and offline suite remain untouched.
+
+After deployment, inspect `/wiki/classes/` and `/wiki/runewords/` and submit
+`https://d2-plus.net/sitemap.xml` in the existing Google Search Console property.
+The homepage ownership tag is preserved. No Search Console credentials or traffic
+metrics are available through the connected tools, so no measured ranking gain
+is claimed. Review impressions, clicks and indexed pages over the following weeks.

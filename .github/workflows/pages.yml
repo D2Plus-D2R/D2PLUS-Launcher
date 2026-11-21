@@ -2,7 +2,7 @@ name: Publish D2PLUS page
 on:
   push:
     branches: [main]
-    paths: ['site/**', 'build/site.py', 'build/seo.py', 'build/screenshots.py', 'test/test_seo.py', '.github/workflows/pages.yml']
+    paths: ['site/**', 'build/site.py', 'build/seo.py', 'build/discovery.py', 'build/screenshots.py', 'test/test_seo.py', '.github/workflows/pages.yml']
   workflow_dispatch:
   workflow_run:
     workflows: [Build AlphaV1.1 Hotfix 1 packages, Publish signed Android v0.8]

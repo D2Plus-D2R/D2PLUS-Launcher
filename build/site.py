@@ -213,4 +213,6 @@ if json.loads((root/'package.json').read_text())['version']=='2.0.2-alpha':
     subprocess.run([sys.executable,str(root/'build/apply-v20b-presentation.py')],check=True)
 else:
     subprocess.run([sys.executable,str(root/'build/apply-launcher-v20a.py')],check=True)
+import discovery
+print('Public reference pages:', len(discovery.generate(out)))
 subprocess.run([sys.executable,str(root/'build/seo.py'),'--output',str(out)],check=True)

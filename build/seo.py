@@ -24,9 +24,9 @@ TITLES = {'getting-started.html': 'How to Install D2PLUS — D2RMM, Launcher & S
           'news-alpha-v20a.html': 'D2PLUS Alpha V2.0a — Reward Bag Drop Fix for D2R',
           'news-alpha-v20.html': 'D2PLUS Alpha V2.0 — New Dungeons, Bosses & Skills for D2R',
           'wiki/index.html': 'D2PLUS Wiki — Items, Skills, Recipes & Builds',
-          'wiki/dungeon-rewards.html': 'Dungeon Reward Bags · D2PLUS Alpha V2.0a'}
+          'wiki/dungeon-rewards.html': 'Dungeon Reward Bags · D2PLUS'}
 DESCRIPTIONS = {
-    'wiki/index.html': 'Explore D2PLUS Alpha V2.0a items, skills, recipes, runewords and build guides for the offline Diablo II: Resurrected mod.',
+    'wiki/index.html': 'Explore D2PLUS items, class skills, recipes, runewords and build guides for the offline Diablo II: Resurrected mod.',
     'wiki/charms.html': 'Learn D2PLUS charm weight, the 50-point limit, overburden penalties and the recipes and equipment rules for crafted Oaths.',
     'wiki/dungeon-rewards.html': 'Learn the D2PLUS flat 10% eligible-boss Dungeon Reward Bag rule, difficulty tiers, opening materials and upgrade recipes.',
     'wiki/runeword-changes.html': 'Compare D2PLUS custom runeword roles and socket limits, including legal bases and the difference between new crafts and saved rolls.',
@@ -143,6 +143,10 @@ def breadcrumb(relative: str, title: str) -> dict:
         trail.append(('Wiki', ORIGIN + '/wiki/'))
         if relative.startswith('wiki/builds/'):
             trail.append(('Build guides', ORIGIN + '/wiki/specialist-builds.html'))
+        if relative.startswith('wiki/classes/') and relative != 'wiki/classes/index.html':
+            trail.append(('Classes & skills', ORIGIN + '/wiki/classes/'))
+        if relative.startswith('wiki/runewords/') and relative != 'wiki/runewords/index.html':
+            trail.append(('Runeword recipes', ORIGIN + '/wiki/runewords/'))
     if relative != 'wiki/index.html': trail.append((title, public_url(relative)))
     return {'@type': 'BreadcrumbList', 'itemListElement': [
         {'@type': 'ListItem', 'position': n, 'name': name, 'item': url}
@@ -152,7 +156,7 @@ def breadcrumb(relative: str, title: str) -> dict:
 def make_metadata(relative: str, page: Page, output: Path) -> tuple[str, dict]:
     title = TITLES.get(relative) or page.title or (page.h1 + ' · D2PLUS')
     if not title.strip(): raise ValueError('Page needs a meaningful title: ' + relative)
-    description = (page.meta('description') or [DESCRIPTIONS.get(relative)])[0]
+    description = DESCRIPTIONS.get(relative) or (page.meta('description') or [None])[0]
     if not description:
         paragraph = next((p for p in page.paragraphs if len(p) > 65), '')
         description = paragraph[:180].rsplit(' ', 1)[0] if len(paragraph) > 180 else paragraph
@@ -160,7 +164,7 @@ def make_metadata(relative: str, page: Page, output: Path) -> tuple[str, dict]:
     canonical = public_url(ALIASES.get(relative, relative))
     excluded = noindex(relative, page)
     image = local_asset(output, (page.meta('og:image') or [DEFAULT_IMAGE])[0])
-    image_alt = (page.meta('og:image:alt') or ['D2PLUS Alpha V2.0a castle gates with warm light beyond the opening doors'])[0]
+    image_alt = (page.meta('og:image:alt') or ['D2PLUS castle gates with warm light beyond the opening doors'])[0]
     article = relative in NEWS_DATES or relative.startswith('wiki/builds/') or page.meta('seo:type') == ['article']
     entries = [f'<title>{escape(title)}</title>',
                f'<meta name="description" content="{escape(description, quote=True)}">',
