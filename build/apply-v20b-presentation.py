@@ -49,7 +49,7 @@ for base in [ROOT/'site',ROOT/'_site']:
             held.append(card);return f'<!-- held-tool-{len(held)-1} -->'
         return card
     text=re.sub(r'<article>.*?</article>',hold,text,flags=re.S)
-    for old,new in [('Alpha V2.0a','Alpha V2.0b'),('AlphaV2.0a','AlphaV2.0b'),('2.0.1-alpha','2.0.2-alpha'),('v2.0a-alpha','v2.0b-alpha'),('news-alpha-v20a.html','news-alpha-v20b.html')]:text=text.replace(old,new)
+    for old,new in [('Alpha V2.0a','Alpha V2.0b'),('AlphaV2.0a','AlphaV2.0b'),('2.0.1-alpha','2.0.2-alpha'),('v2.0a-alpha','v2.0b-alpha')]:text=text.replace(old,new)
     for i,card in enumerate(held):text=text.replace(f'<!-- held-tool-{i} -->',card)
     marker='id="v20b-fixes"'
     if marker not in text:
