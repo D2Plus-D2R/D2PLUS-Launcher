@@ -18,5 +18,6 @@ release-inputs/v20-base.json -text
 release-inputs/alpha-v20b-* -text
 release-inputs/v20a-base.json -text
 updates/*.json -text
+release-notes/alpha-v20b-install.txt -text
 
 release-inputs/v20-base.json -text

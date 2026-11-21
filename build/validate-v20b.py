@@ -68,6 +68,14 @@ def verify_native_reference(snapshot, expected):
 
 snapshot_path = ROOT / 'gameplay/D2PLUS_AlphaV2.0b_Installed_Snapshot.zip'
 complete_path = OUT / 'D2PLUS_AlphaV2.0b_Complete_D2RMM.zip'
+# Check the frozen publication pins before expensive extraction or packaging.
+release = json.loads((ROOT / 'gameplay/release.json').read_text(encoding='utf8'))
+targets = {snapshot_path.name: snapshot_path, complete_path.name: complete_path}
+assert release['tag'] == 'v2.0b-alpha' and {r['name'] for r in release['files']} == set(targets)
+for row in release['files']:
+    file = targets[row['name']]
+    with file.open('rb') as source: actual = hashlib.file_digest(source, 'sha256').hexdigest()
+    assert file.stat().st_size == row['size'] and actual == row['sha256'], 'Rebuilt archive differs from frozen release: ' + row['name'] + ' actual SHA256=' + actual
 with zipfile.ZipFile(snapshot_path) as snapshot, zipfile.ZipFile(complete_path) as complete, tempfile.TemporaryDirectory(prefix='d2plus-v20b-check-', dir=OUT) as temp:
     for archive in [snapshot, complete]:
         names = [checked(row.filename) for row in archive.infolist() if not row.is_dir()]
