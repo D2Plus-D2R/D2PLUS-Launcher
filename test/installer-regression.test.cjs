@@ -43,7 +43,7 @@ test('failed promotion restores the moved previous output',{skip:process.platfor
  assert.equal(fs.readFileSync(path.join(target,'keep.txt'),'utf8'),'preserve');
  assert.deepEqual(fs.readdirSync(path.join(f.root,'mods')),['MyMod']);
 });
-test('real guided install accepts full V2.0a archive above 2 GiB expanded and preserves upgrade savepath/backup',{
+test('real guided install accepts full V2.0b archive above 2 GiB expanded and preserves upgrade savepath/backup',{
  skip:process.platform!=='win32'||!process.env.D2PLUS_TEST_FULL_ARCHIVE,timeout:1800000
 },async t=>{
  const f=fixture(t);f.archive=process.env.D2PLUS_TEST_FULL_ARCHIVE;
@@ -53,14 +53,16 @@ test('real guided install accepts full V2.0a archive above 2 GiB expanded and pr
  const options={launcher,stateDir:path.join(f.root,'state'),archive:f.archive,sha256:manifest.sha256};
  const first=await installSnapshot(options);assert.equal(first.installed,true);assert.equal(first.backup,'');
  const receipt=JSON.parse(fs.readFileSync(path.join(config.modDirectory,'D2PLUS-INSTALL-RECEIPT.json')));
- assert.equal(receipt.fileCount,3124);assert(receipt.expandedBytes>2**31);assert(receipt.expandedBytes>2**31);
+ assert.equal(receipt.fileCount,3124);assert(receipt.expandedBytes>2**31);
  assert.equal(receipt.archiveSHA256,manifest.sha256);
  const mpq=path.join(config.modDirectory,'MyMod.mpq');assert(fs.existsSync(path.join(mpq,'data','hd','character','enemy','sovereign_warden.json')));
  const {GameplayIntegrity}=require('../scripts/gameplay-integrity.cjs');
  assert.equal((await new GameplayIntegrity(suite).verify(mpq,{force:true})).verified,true);
  fs.writeFileSync(path.join(mpq,'modinfo.json'),JSON.stringify({name:'MyMod',savepath:'Preserved Saves'}));
  fs.writeFileSync(path.join(config.modDirectory,'previous-marker.txt'),'previous output');
- const second=await installSnapshot(options);assert(second.backup.startsWith(path.join(f.root,'mods','MyMod.before-v20b-')));
+ const second=await installSnapshot(options);
+ assert.equal(fs.realpathSync(path.dirname(second.backup)).toLowerCase(),fs.realpathSync(path.join(f.root,'mods')).toLowerCase());
+ assert(path.basename(second.backup).startsWith('MyMod.before-v20b-'),second.backup);
  assert.equal(second.savepath,'Preserved Saves');assert.equal(fs.readFileSync(path.join(second.backup,'previous-marker.txt'),'utf8'),'previous output');
  assert.equal(JSON.parse(fs.readFileSync(path.join(mpq,'modinfo.json'))).savepath,'Preserved Saves');
  assert(!fs.readdirSync(path.join(f.root,'mods')).some(n=>n.startsWith('.d2plus-stage-')));
